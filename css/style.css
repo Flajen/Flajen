@@ -4,6 +4,7 @@ body {
 	padding: 0;
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
+	cursor: default;
 }
 
 div, a, p, h1, h2, h3, h4, ul, li, input, button {
@@ -23,6 +24,7 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	background: -webkit-linear-gradient(bottom left, #949494, #121212);
 	background: -moz-linear-gradient(bottom left, #949494, #121212);
 	background: linear-gradient(to top right, #949494, #121212);
+	padding-bottom: 430px;
 }
 
 /*cap*/
@@ -33,23 +35,38 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	text-transform: uppercase;
 }
 
-/*card*/
-.block {
+.cap img, h1 {
+	cursor: pointer;
 }
 
-.example1 {
+/*card*/
+.block {
+	cursor: default;
+	display: flex;
+	justify-content: space-between;
 	margin-top: 70px;
+}
+
+.example {
 	width: 301px;
 	height: 301px;
 	background: #fff;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
-	background: url('../img/card/WayUp.svg') no-repeat top;
 	box-shadow: 3px 6px 6px 3px #000;
+	cursor: pointer;
 }
 
-.example1:hover {
+.example:hover {
 	opacity: 0.8;
 	box-shadow: 3px 6px 10px 3px #000;
 	/*background: #ccc;*/
+}
+
+.wayup {
+	background: url('../img/card/WayUp.svg') no-repeat top;
+}
+
+.applab {
+	background: url('../img/card/AppLab.svg') no-repeat top;
 }

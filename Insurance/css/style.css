@@ -1,0 +1,211 @@
+/*main*/
+body {
+    color: #000;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+div, a, p, h1, h2, h3, h4, ul, li, input, button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1366px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*header*/
+.header {
+    padding-top: 7px;
+}
+
+.cap {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    color: #000;
+    text-decoration: none;
+}
+
+.nav {
+    color: #787878;
+    list-style-type: none; /* Убираем маркеры */
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+    display: inline-block;
+    float:left;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.nav:hover {
+    color: #FFAC30;
+}
+
+.other {
+    color:;
+    margin-left: 12px;
+}
+
+.user {
+    color: #787878;
+    margin-left: auto;
+    display: flex;
+}
+
+.user_nav {
+    position: relative;
+
+
+    margin-left: 12px
+}
+
+.user_nav:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+
+    background-color: #787878;
+    opacity: 1;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity 0.1s linear;
+}
+
+.user_nav:hover:after {
+    opacity: 0;
+
+    transition: opacity 0.1s linear;
+}
+
+/*info*/
+.info {
+    color: #fff;
+    margin-top: 7px;
+    background: url(../img/Fon.svg) no-repeat top;
+    padding-top: 123px;
+}
+
+.test {
+    font-size: 18px;
+    width: 690px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    color: #fff;
+    text-align: center;
+}
+
+.heading {
+    font-size: 64px;
+    font-weight: 700;
+    letter-spacing: 1.4px
+}
+
+.text {
+    margin-top: 25px;
+}
+
+.field {
+    width: 690px;
+    font-size: 20px;
+    padding: 18px 0 20px 20px;
+    margin: 38px auto 0 auto;
+    border-radius: 7px;
+    border: none;
+    outline:none;
+    position: relative;
+}
+
+.field:hover {
+    box-shadow: 0 0 50px 7px #000;
+    transition: 0.3s;
+}
+
+.field:not(:hover) {
+    transition: 0.3s;
+}
+
+.btn {
+    color: #fff;
+    background-color: #534D4D;
+    padding: 14px 20px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    right: 4px;
+    bottom: 37.5px;
+}
+
+.btn:hover {
+    background-color: #3f3a3a;
+}
+
+.example {
+    font-size: 14px;
+    margin-top: 17px;
+    text-align: left;
+}
+
+.example span {
+    cursor: pointer;
+    transition: all .3s ease;
+    display: inline-block;
+    border-bottom: 2px dotted hsl(0 0% 47% / 1);
+}
+
+.example span:hover {
+    color: #cdcdcd;
+}
+
+.link_security {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    cursor: default;
+}
+
+.security {
+    color: #54E963;
+    margin-top: 100px;
+    background: url('../img/Security.svg') no-repeat;
+    padding: 15px 50px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.security span {
+    border-bottom: 2px dotted hsl(132deg 48% 50%);
+}
+
+.security span:hover {
+    color: #2b6937;
+    border-bottom: 2px dotted hsl(132deg 42% 29%);
+}
+
+.services {
+    color: #000;
+    font-size: 64px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 33px;
+}
+
+.task {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}

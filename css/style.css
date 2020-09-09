@@ -1,0 +1,55 @@
+/*main*/
+body {
+	margin: 0;
+	padding: 0;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+
+div, a, p, h1, h2, h3, h4, ul, li, input, button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+	max-width: 1366px;
+	margin: 0 auto;
+}
+
+/*header*/
+.header {
+	background: #949494;
+	background: -webkit-linear-gradient(bottom left, #949494, #121212);
+	background: -moz-linear-gradient(bottom left, #949494, #121212);
+	background: linear-gradient(to top right, #949494, #121212);
+}
+
+/*cap*/
+.cap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+/*card*/
+.block {
+}
+
+.example1 {
+	margin-top: 70px;
+	width: 301px;
+	height: 301px;
+	background: #fff;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+	background: url('../img/card/WayUp.svg') no-repeat top;
+	box-shadow: 3px 6px 6px 3px #000;
+}
+
+.example1:hover {
+	opacity: 0.8;
+	box-shadow: 3px 6px 10px 3px #000;
+	/*background: #ccc;*/
+}

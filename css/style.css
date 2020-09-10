@@ -97,7 +97,11 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 
 
 /*Mobile*/
-/*@media screen and (max-width: 1200px) {}*/
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 1140px;
+	}
+}
 
 @media screen and (max-width: 992px) {
 	.container {
@@ -129,6 +133,18 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 
 @media screen and (max-width: 768px) {
 	.container {
-		width: 720;
+		width: 720px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: 540px;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: 100%;
 	}
 }

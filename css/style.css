@@ -14,7 +14,7 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 }
 
 .container {
-	max-width: 1366px;
+	max-width: 1070px;
 	margin: 0 auto;
 }
 
@@ -24,7 +24,7 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	background: -webkit-linear-gradient(bottom left, #949494, #121212);
 	background: -moz-linear-gradient(bottom left, #949494, #121212);
 	background: linear-gradient(to top right, #949494, #121212);
-	padding-bottom: 430px;
+	padding-bottom: 60px;
 }
 
 /*cap*/
@@ -43,17 +43,19 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 .block {
 	cursor: default;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	margin-top: 70px;
 }
 
 .example {
 	width: 301px;
 	height: 301px;
+	flex: 1 1 0;
+	margin-right: 50px;
 	background: #fff;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
-	box-shadow: 3px 6px 6px 3px #000;
+	box-shadow: 3px 6px 6px 3px #FFBC3A, 3px 6px 6px 3px #000;
 	cursor: pointer;
 }
 
@@ -73,4 +75,17 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 
 .insurance {
 	background: url('../img/card/Insurance.svg') no-repeat top;
+	margin: 0;
+}
+
+.more_block {
+	display: flex;
+}
+
+.card {
+	flex: 1 1 0;
+	max-width: 301px;
+	height: 301px;
+	background: #ccc;
+	margin-right: 80px
 }

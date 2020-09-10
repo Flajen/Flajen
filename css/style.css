@@ -5,7 +5,7 @@ body {
 	color: #fff;
 	font-family: 'Montserrat', sans-serif;
 	cursor: default;
-	overflow-x: hidden;
+	/*overflow-x: hidden;*/
 }
 
 div, a, p, h1, h2, h3, h4, ul, li, input, button {
@@ -34,6 +34,7 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	justify-content: center;
 	align-items: center;
 	text-transform: uppercase;
+	margin-bottom: 60px;
 }
 
 .cap img {
@@ -49,18 +50,18 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	cursor: default;
 	display: flex;
 	justify-content: center;
-	margin-top: 70px;
+	/*margin-top: 70px;*/
 }
 
 .example {
-	width: 301px;
-	height: 301px;
-	margin-right: 50px;
+	margin-right: 60px;
 	background: #fff;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
 	box-shadow: 2px 3px 10px 4px #FFBC3A;
 	cursor: pointer;
+	width: 301px;
+	height: 301px;
 }
 
 .example:hover {
@@ -96,43 +97,33 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 
 
 /*Mobile*/
-@media screen and (max-width: 1200px) {
-	.container {
-		width: 1140px;
-	}
-}
+/*@media screen and (max-width: 1200px) {}*/
 
 @media screen and (max-width: 992px) {
 	.container {
 		width: 960px;
 	}
 
+	.header {
+		padding-bottom: 10%;
+	}
+
+	.block {
+		display: block;
+		max-width: 950px;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+	}
+
+	.applab {
+		margin: 0;
+	}
+
 	.example {
-		width: 301px;
-		max-width: 70%;
-		height: 301px;
-		max-height: 70%;
-	}
-
-	.mob_block a {
-		margin: 0;
-	}
-
-	.link {
-		margin: 0;
-		padding: 0;
-	}
-
-	.link div {
-		margin: 0;
-		padding: 0;
-	}
-
-	.mob_example {
-	}
-
-	.insurance {
-		margin: 0;
+		display: inline-block;
+		position: relative;
+		margin-bottom: 60px;
 	}
 }
 

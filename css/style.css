@@ -55,7 +55,6 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 .example {
 	width: 301px;
 	height: 301px;
-	/*flex: 1 1 0;*/
 	margin-right: 50px;
 	background: #fff;
 	border-bottom-left-radius: 20px;
@@ -130,7 +129,6 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	}
 
 	.mob_example {
-		/*display: inline;*/
 	}
 
 	.insurance {
@@ -143,28 +141,3 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 		width: 720;
 	}
 }
-
-/*@media screen and (max-width: 576px) {
-	.container {
-		width: 90%;
-	}
-
-	.cap img {
-		width: 115px;
-	}
-
-	.cap h1 {
-		font-size: 18px;
-	}
-
-	.block {
-		display: block;
-	}
-
-	.example {
-		width: 226px;
-		height: 226px;
-		margin: 0;
-		padding: 0;
-	}
-}*/

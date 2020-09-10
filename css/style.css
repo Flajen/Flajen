@@ -140,11 +140,18 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	.container {
 		width: 720px;
 	}
+
+	.wayup {
+	}
 }
 
 @media screen and (max-width: 576px) {
 	.container {
 		width: 540px;
+	}
+
+	.wayup {
+    	margin: 0 0 60px 0;
 	}
 }
 

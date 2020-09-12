@@ -1,24 +1,38 @@
 // ==========================================
-let num = 1;
+var num = 1;
+let text = "товар";
 
 function change() {
-    document.querySelector(".place").innerHTML = num++ + " товаров";
+    document.querySelector(".place").innerHTML = num++ + " " + text;
+    if (num == 1) {
+		text;
+	}else if (num < 5) {
+		text = "товара";
+	}else {
+		text = "товаров"
+	};
 };
 
 const btn = document.querySelector(".button");
 
 btn.addEventListener("click", function() {
-	change()
+	change();
 });
+
 
 function add_cart() {
-	document.querySelector(".cart_more").style.display = 'block'
+	document.getElementById("showing").classList.toggle("showing");
+
 }
 
-const cart = document.querySelector(".cart_mouse");
+let cart = document.querySelector(".cart_mouse");
 
 cart.addEventListener("click", function() {
-	add_cart()
+	if (num == 1) {
+	}else {
+		add_cart();
+	};
 });
 
 
+// =========

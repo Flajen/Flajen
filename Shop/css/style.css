@@ -8,15 +8,34 @@ body {
 	cursor: default;
 }
 
-div, a, p, h1, h2, h3, h4, ul, li, input, button {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+}
+
+h1, h2, h3, h4, a, p {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 .container {
 	width: 1180px;
 	margin: 0 auto;
+}
+
+hr {
+	transform: rotate(-90deg);
+	width: 42px;
+	border-style: inset;
+	border: 1px solid #333;
+	margin: 0;
 }
 
 
@@ -68,12 +87,12 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 /*cart*/
 .cart {
 	position: relative;
+	display: flex;
 }
 
 .cart_mouse {
 	font-size: 12px;
-	max-width: 145px;
-	/*width: 130px;*/
+	max-width: 200px;
 	height: 36px;
 	padding: 5px 5px 5px 5px;
 	border: 1px solid #ccc;
@@ -85,6 +104,21 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
     align-content: center;
 	justify-content: center;
 	position: relative;
+	filter: saturate(10%);
+
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	z-index: 2;
+}
+
+.cart_mouse img {
+	width: 16px;
+	margin-right: 8px;
+}
+
+.cart_mouse img:hover {
 }
 
 .cart_mouse span {
@@ -93,6 +127,7 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 
 .cart_mouse:hover {
 	color: #0662c1;
+	filter: saturate(100%);
 }
 
 .cart_more {
@@ -105,6 +140,10 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	border-radius: 7px;
 	box-shadow: 0 0 15px 1px #222;
 	padding: 55px 10px 5px 10px;
+	z-index: 1;
+}
+
+.showing {
 	display: none;
 }
 
@@ -130,6 +169,14 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	margin-bottom: 10px;
 }
 
+.cart_amount {
+	margin-left: 5px;
+}
+
+.cart_price {
+	margin-left: 5px;
+}
+
 .cart_btn {
 	background: #ccc;
 	width: 80px;
@@ -149,20 +196,138 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 
 /*Find*/
 .find {
-	width: 100%;
-	height: 45px;
+	max-width: 100%;
+	height: 44px;
 	background: #086ED7;
 	background: -webkit-linear-gradient(top, #086ED7, #0658AC);
 	background: -moz-linear-gradient(top, #086ED7, #0658AC);
 	background: linear-gradient(to bottom, #086ED7, #0658AC);
 	border-radius: 7px;
 	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
 }
+
+.find_nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-right: 1px;
+}
+
+.find_nav:hover:after {
+	background: #096FD7;
+	background: -webkit-linear-gradient(bottom, #096FD7, #0759AC);
+	background: -moz-linear-gradient(bottom, #096FD7, #0759AC);
+	background: linear-gradient(to top, #096FD7, #0759AC);
+}
+
+.find_nav:before {
+	content: ""; /* создаём инлайн объект */
+	display: block; /* преобразуем его в блочный */
+	position: absolute; /* включаем асболютное позиционирование */
+	right: -22px; /*отступ будет 0 пикселей от правой точки блока */
+	/*top: 9.3px;*/
+	top: 21.5px;
+	width: 43.1px; /* блок займёт по ширине 100% ширины родительского */
+	height: 1px; /* высота самого блока */
+	background: #195B9E; /* задаём нужный цвет фоном */
+	transform: rotate(-90deg);
+}
+
+.find_menu ul {
+	display: none;
+}
+
+.find_menu li:hover > ul {
+	display: block;
+}
+
+.find_menu {
+	background: #086ED7;
+	background: -webkit-linear-gradient(top, #086ED7, #0658AC);
+	background: -moz-linear-gradient(top, #086ED7, #0658AC);
+	background: linear-gradient(to bottom, #086ED7, #0658AC);
+
+	border-radius: 7px;
+	position: relative;
+	display: inline-table;
+	color: #fff;
+}
+
+.find_menu li {
+	float: left;
+}
+
+.find_menu li:hover {
+	background-color: #086ED7;ы
+}
+
+.find_menu_one:hover {
+	border-radius: 7px 0 0 0;
+}
+
+.find_menu li a {
+	display: block;
+	padding: 12px 19px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.icon_down {
+	background: url("../img/down.png") no-repeat right;
+	margin-right: 13px;
+}
+
+.find_menu ul {
+	background: #086ED7;
+	border-radius: 0px 0 7px 7px;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	width: 280px;
+}
+
+.find_menu ul li {
+	float: none;
+	border-top: 1px solid #333;
+	position: relative;
+}
+
+.find_menu ul li a {
+	font-size: 12px;
+}
+
 
 /*Product*/
 .name {
-	font-size: 24px;
+	font-size: 26px;
 	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.branch {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.branch_links {
+	padding: 0 20px 0 0;
+	background: url("../img/right.png") no-repeat right;
+	text-decoration: none;
+	color: #333;
+	margin-right: 15px;
+}
+
+.branch_links:hover {
+	text-decoration: underline;
+	color: #0662c1;
+}
+
+.element {
+	background: none;
 }
 
 .button {
@@ -183,7 +348,3 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 .button:focus {
 	outline: none;
 }
-
-
-
-

@@ -3,28 +3,109 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Portfoli</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<title>Shop</title>
+	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/site.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
+	<script src="js/script.js" defer></script>
 </head>
 <body>
-	<div class="header">
+	<header class="header">
 		<div class="container">
-			<div class="cap">
-				<a href="https://vk.com/tatem_site" target="_blank">
-					<img src="img/Logo.png" alt="Logo">
-				</a>
-				<h1>Портфолио</h1>
+			<!-- <h1 class="logo">Логотип</h1> -->
+			<div class="nav">
+				<a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
+				<div class="menu">
+					<a href="#" class="menu_links">Расчёт плитки</a>
+					<a href="#" class="menu_links">Оплата</a>
+					<a href="#" class="menu_links">Доставка</a>
+					<a href="#" class="menu_links">Контакты</a>
+				</div>
+				<div class="contacts">
+					<div class="cart">
+						<div class="cart_more showing" id="showing">
+							<div class="cart_info">
+								<div class="gfdgdf">
+									<a href="#">
+										<img src="img/North_400x400.png" alt="" class="cart_img">
+									</a>
+									<!-- <button type="button" class="cart_btn">Удалить</button> -->
+								</div>
+								<div class="cart_about">
+									<h2 class="cart_heading"><a href="#" class="cart_name"></a></h2>
+									<p><span class="cart_amount"></span></p>
+									<p><span class="cart_price"></span></p>
+								</div>
+							</div>
+							<!-- <button type="button" class="cart_btn">Удалить</button> -->
+						</div>
+						<div class="cart_mouse"><img src="img/carth.png" alt="">Корзина:<span class="place">Пусто</span></div>
+					</div>
+					<a href="tel:+74994031844" class="telephone">+7 (499) 403-18-44</a>
+					<p class="info">Прием и обработка заказов осуществляется<br> менеджерами магазина ежедневно с 09:00 до 20:00</p>
+				</div>
 			</div>
-			<div class="block">
-				<a href="https://flajen.github.io/WayUp/" target="_blank" class="example wayup"></a>
-				<a href="https://flajen.github.io/AppLab/" target="_blank" class="example applab"></a>
-				<a href="https://flajen.github.io/Insurance/" target="_blank" class="example insurance"></a>
+			<div class="find">
+				<ul class="find_menu">
+					<li class="find_menu_one find_nav"><a href="#" class="icon_down">Лабрадорит</a>
+						<ul class="menu_section">
+							<li><a href="#">North Blue Полированная</a></li>
+							<li><a href="#">North Blue Антик</a></li>
+							<li><a href="#">Polar Night Полированная</a></li>
+							<li><a href="#">Polar Night Антик</a></li>
+						</ul>
+					</li>
+					<li class="find_nav"><a href="#" class="icon_down">Гранит</a>
+						<ul class="menu_section">
+							<li><a href="#">Красный гранит</a></li>
+						</ul>
+					</li>
+					<li class="find_nav"><a href="#" class="icon_down">Плитки по назначению</a>
+						<ul class="menu_section">
+							<li><a href="#">Плитка для внутренней отделки</a></li>
+							<li><a href="#">Плитка для внешней отделки</a></li>
+						</ul>
+					</li>
+					<li class="find_nav"><a href="#" class="icon_down">Текстуры плитки</a>
+						<ul class="menu_section">
+							<li><a href="#">Полированная</a></li>
+							<li><a href="#">Антик</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Распродажа</a></li>
+				</ul>
+			</div>
+			<h1 class="name">«North Blue» Полированная</h1>
+			<div class="branch">
+				<div class="branch_item">
+					<a href="#" class="branch_links">Главная</a>
+					<img src="img/right.png" alt="arrow_right" class="branch_next">
+				</div>
+				<div class="branch_item">
+					<a href="#" class="branch_links">Лабрадорит</a>
+					<img src="img/right.png" alt="arrow_right" class="branch_next">
+				</div>
+				<p class="element">«North Blue» Полированная</p>
+			</div>
+			<div class="product">
+				<div class="desktop">
+					<div class="product_wrapper_img">
+						<img src="img/product/North_Blue_polished_600x400.png" alt="" class="product_img" id="product_img">
+						<p class="product_size">600*400мм</p>
+						<img src="img/product/North_Blue_polished_400x400.png" alt="" class="product_img" id="product_img">
+						<p class="product_size">400*400мм</p>
+					</div>
+				</div>
+				<button type="submit" class="button" onclick="show('block')">В корзину</button>
 			</div>
 		</div>
-	</div>
-
-	<!-- <script type="text/javascript" src="js/script.js"></script> -->
+		<div class="checkout" id="checkout">
+			<div class="checkout_test">
+				<h2>Товар добавлен в корзину</h2>
+			</div>			
+		</div>
+		<div class="filter" id="filter" onclick="show('none')"></div>
+	</header>
 </body>
 </html>

@@ -32,6 +32,13 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 .logo {
     color: #000;
     text-decoration: none;
+    height: 70px;
+    border-radius: 7px;
+    box-shadow: -2px -2px 5px 3px #d3d3d3;
+}
+
+.logo:hover {
+    box-shadow: -2px -2px 5px 3px #b8b8b8;
 }
 
 .nav {

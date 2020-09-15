@@ -11,8 +11,8 @@ const products = document.querySelector(".product_img");
 
 // Функции
 function change() { // Изменения товара
-    document.querySelector(".place").innerHTML = num++ + " " + text;
-    if (num == 1) {
+	document.querySelector(".place").innerHTML = num++ + " " + text;
+	if (num == 1) {
 		text;
 	}else if (num < 5) {
 		text = "товара";
@@ -70,3 +70,28 @@ var show = function (state) {
 	document.getElementById("checkout").style.display = state;
 	document.getElementById("filter").style.display = state;
 };
+
+// JQuery
+$('#tabDescription').click(function(){
+	$('.recognition_btn').removeClass('recognition_active');
+	$('#description_outline').addClass('recognition_active');
+
+	$('.active').removeClass('active')
+	$('.description').addClass('active')
+});
+
+$('#tabSpecifications').click(function(){
+	$('.recognition_btn').removeClass('recognition_active');
+	$('#specifications_outline').addClass('recognition_active');
+
+	$('.active').removeClass('active')
+	$('.specifications').addClass('active')
+});
+
+$('#tabPickup').click(function(){
+	$('.recognition_btn').removeClass('recognition_active');
+	$('#pickup_outline').addClass('recognition_active');
+
+	$('.active').removeClass('active')
+	$('.pickup').addClass('active')
+});

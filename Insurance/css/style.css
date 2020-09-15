@@ -102,7 +102,7 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
     color: #fff;
     margin-top: 7px;
     background: url(../img/Fon.svg) no-repeat top;
-    padding-top: 123px;
+    padding: 170px 0;
 }
 
 .test {

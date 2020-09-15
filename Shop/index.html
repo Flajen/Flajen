@@ -6,7 +6,6 @@
 	<title>Shop</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/site.ico" type="image/x-icon">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
 	<script src="js/script.js" defer></script>
 </head>
@@ -130,6 +129,57 @@
 						<p class="product_delivery"><span>Заказ:</span> плитка кратно поддонам. Заказ меньше поддона возможен при условии самовывоза и самостоятельной погрузки.</p>
 					</div>
 				</div>
+				<div class="product_detail">
+					<div>
+						<button type="button" class="recognition_btn recognition_active" id="description_outline"><a href="" class="recognition" id="tabDescription" onclick="return false;">Описание</a></button>
+						<button type="button" class="recognition_btn" id="specifications_outline"><a href="" class="recognition" id="tabSpecifications" onclick="return false;">Характеристики</a></button>
+						<button type="button" class="recognition_btn" id="pickup_outline"><a href="" class="recognition" id="tabPickup" onclick="return false;">Самовывоз со склада в Мытищи</a></button>
+					</div>
+					<div class="transitions_info">
+						<div class="description active">
+							<p>Лабрадорит – природный камень, считающийся одним из самых дорогих в мире. Из него также производят ювелирные изделия. По своим свойствам схож с гранитом. Гранит, проверенный временем. Не меняет своего цвета. Выглядит одинаково эффектно на любом расстоянии.</p>
+						</div>
+						<div class="specifications">
+							<div class="element_block">
+								<div class="block_indent">
+									<p>Количество штук в поддоне</p>
+								</div>
+								<div>
+									<span id="pieces">в зависимости от толщины</span>
+								</div>
+							</div>
+							<div class="element_block block_fon">
+								<div class="block_indent">
+									<p>Назначение</p>
+								</div>
+								<div>
+									<span id="application">Для пола и стен</span>
+								</div>
+							</div>
+							<div class="element_block">
+								<div class="block_indent">
+									<p>Поверхность</p>
+								</div>
+								<div>
+									<span id="surface">Полированная/Антик</span>
+								</div>
+							</div>
+							<div class="element_block">
+								<div class="block_indent">
+									<p>Формат</p>
+								</div>
+								<div>
+									<span id="format">20х80 мм. <span class="format">(то что выбрал пользователь например 600*400*14мм)</span></span>
+								</div>
+							</div>
+						</div>
+						<div class="pickup">
+							<p><strong>Режим работы склада:</strong></p>
+							<p>В рабочие дни с &nbsp;09:00 до 17:00</p>
+							<u>ВАЖНО!&nbsp;&nbsp;Самовывоз товара производится только после оплаты заказа и получения подтверждения от менеджера о дате и времени отгрузки.</u>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		<div class="checkout" id="checkout">
@@ -145,7 +195,7 @@
 		<div class="filter" id="filter" onclick="show('none')"></div>
 	</header>
 	<footer class="footer" id="footer">
-		<div class="container">
+		<div class="f_container">
 			<p class="footer_about">© <a href="#">Labradorite</a> 2012 - 2020. Официальный интернет-магазин плитки из гранита и лабрадорита</p>
 		</div>
 	</footer>

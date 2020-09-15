@@ -1,97 +1,673 @@
-// Переменные
-var num = 1; // Кол-во корзины
-let text = "товар"; // Правильность написания
-let amount = 1; // Кол-во товара
-let price = 132;
-
-// Кнопки
-const btn = document.querySelector(".button");
-const cart = document.querySelector(".cart_mouse");
-const products = document.querySelector(".product_img");
-
-// Функции
-function change() { // Изменения товара
-	document.querySelector(".place").innerHTML = num++ + " " + text;
-	if (num == 1) {
-		text;
-	}else if (num < 5) {
-		text = "товара";
-	}else {
-		text = "товаров"
-	};
-};
-
-function add_cart() { // Показ корзины
-	document.getElementById("showing").classList.toggle("showing");
+/*Main*/
+body {
+	margin: 0;
+	color: #4b4f58;
+	font-size: 12px;
+	font-weight: 400;
+	cursor: default;
+	display: flex; 
+	flex-direction: column; 
+	height: 100%; 
+	height: -webkit-fill-available;
 }
 
-function add_product() { // Выбор продука
-	document.getElementById("product_img").classList.add("product_img_active");
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    font-family: Tahoma,"Helvetica Neue",Helvetica,Geneva,Arial,sans-serif;
 }
 
-// Клик
-btn.addEventListener("click", function() {
-	change();
+h1, h2, h3, h4, a, p {
+	margin: 0;
+	padding: 0;
+}
 
-	document.querySelector(".cart_heading").innerHTML = "«North Blue» Полированная 600/400";
+ul, li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
 
-	document.querySelector(".cart_amount").innerHTML = "Количество: " + amount++;
+.container {
+	width: 1160px;
+	margin: 0 auto;
+}
 
-	document.querySelector(".cart_price").innerHTML = "Цена: " + price++ + " руб.";
-});
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
 
-cart.addEventListener("click", function() {
-	if (num == 1) {
-	}else {
-		add_cart();
-	};
-});
-
-products.addEventListener("click", function() {
-	add_product();
-});
+input:active, :hover, :focus {
+	outline: none;
+}
 
 
-var products4343 = {
-	"1" : {
-		"name" : "«North Blue» Полированная",
-		"amount" : 15,
-		"cost" : 1088.00,
-		"img" : "img/product/North_Blue_polished_400x400.png",
-	},
-};
+/*Header*/
+.header {
+	padding: 15px 0;
+	flex: 1 0 auto;
+}
 
-var out = '';
-for (var key in products4343) {
+/*Content*/
+.logo {
+	width: 275px;
+	/*height: */
+}
 
-};
+/*Nav*/
+.nav {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
 
-var show = function (state) {
-	document.getElementById("checkout").style.display = state;
-	document.getElementById("filter").style.display = state;
-};
+.menu {
+	margin-left: 30px;
+}
 
-// JQuery
-$('#tabDescription').click(function(){
-	$('.recognition_btn').removeClass('recognition_active');
-	$('#description_outline').addClass('recognition_active');
+.menu_links {
+	margin-right: 20px;
+	text-decoration: none;
+	color: #333;
+	letter-spacing: 0.04em;
+}
 
-	$('.active').removeClass('active')
-	$('.description').addClass('active')
-});
+.contacts {
+	width: 390px;
+	margin-left: auto;
+	text-align: right;
+}
 
-$('#tabSpecifications').click(function(){
-	$('.recognition_btn').removeClass('recognition_active');
-	$('#specifications_outline').addClass('recognition_active');
+.telephone {
+	font-size: 24px;
+	font-weight: 700;
+	text-decoration: none;
+	color: #4b4f58;
+}
 
-	$('.active').removeClass('active')
-	$('.specifications').addClass('active')
-});
+.info {
+	line-height: 1.6em;
+}
 
-$('#tabPickup').click(function(){
-	$('.recognition_btn').removeClass('recognition_active');
-	$('#pickup_outline').addClass('recognition_active');
+/*cart*/
+.cart {
+	position: relative;
+	display: flex;
+}
 
-	$('.active').removeClass('active')
-	$('.pickup').addClass('active')
-});
+.cart_mouse {
+	font-size: 12px;
+	max-width: 200px;
+	height: 36px;
+	padding: 5px 5px 5px 5px;
+	border: 1px solid #ccc;
+	border-radius: 7px;
+	margin-left: auto;
+	cursor: pointer;
+	display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+	justify-content: center;
+	position: relative;
+	filter: saturate(10%);
+
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	user-select: none;
+	z-index: 2;
+}
+
+.cart_mouse img {
+	width: 16px;
+	margin-right: 8px;
+}
+
+.cart_mouse img:hover {
+}
+
+.cart_mouse:hover {
+	color: #0662c1;
+	filter: saturate(100%);
+}
+
+.cart_more {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	right: -4px;
+	top: -4px;
+	background: #fff;
+	background: linear-gradient(180deg, #FFFFFF 0%, #FFFFFF 85%, #EBEBEC 85%, #EBEBEC 100%);
+	border-radius: 7px;
+	box-shadow: 0 0 15px 1px #222;
+	padding: 45px 7px 65px 7px;
+	z-index: 1;
+	overflow: auto;
+}
+
+.cart_more:before {
+	background: #666;
+	position: absolute;
+	bottom: 5;
+	top: 0;
+	left: 1;
+	z-index: 100;
+}
+
+.showing {
+	display: none;
+}
+
+.cart_info {
+	display: flex;
+	text-align: left;
+	align-items: center;
+}
+
+.cart_img {
+	width: 100px;
+	height: 100px;
+}
+
+.cart_about {
+	width: ;
+	margin-left: 10px;
+	font-size: 12px;
+	line-height: 1.6em
+}
+
+.cart_heading {
+	width: 270px;
+	height: 40px;
+	font-size: 16px;
+	margin-bottom: 10px;
+}
+
+.cart_btn {
+	background: #ccc;
+	width: 80px;
+	padding: 7px 0;
+	border: none;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+.cart_btn:focus {
+	outline: none;
+}
+
+.cart_btn:hover {
+	background: #939393
+}
+
+.place {
+	margin-left: 3px;
+}
+
+/*Find*/
+.find {
+	max-width: 100%;
+	height: 44px;
+	background: #086ED7;
+	background: -webkit-linear-gradient(top, #086ED7, #0658AC);
+	background: -moz-linear-gradient(top, #086ED7, #0658AC);
+	background: linear-gradient(to bottom, #086ED7, #0658AC);
+	border-radius: 7px;
+	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
+}
+
+.find_nav {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-right: 1px;
+}
+
+.find_nav:hover:after {
+	background: #096FD7;
+	background: -webkit-linear-gradient(bottom, #096FD7, #0759AC);
+	background: -moz-linear-gradient(bottom, #096FD7, #0759AC);
+	background: linear-gradient(to top, #096FD7, #0759AC);
+}
+
+.find_nav:before {
+	content: ""; /* создаём инлайн объект */
+	display: block; /* преобразуем его в блочный */
+	position: absolute; /* включаем асболютное позиционирование */
+	right: -22px; /*отступ будет 0 пикселей от правой точки блока */
+	/*top: 9.3px;*/
+	top: 21.5px;
+	width: 43.1px; /* блок займёт по ширине 100% ширины родительского */
+	height: 1px; /* высота самого блока */
+	background: #195B9E; /* задаём нужный цвет фоном */
+	transform: rotate(-90deg);
+}
+
+.find_menu ul {
+	display: none;
+}
+
+.find_menu li:hover ul {
+	display: block;
+}
+
+.find_menu {
+	background: #086ED7;
+	background: -webkit-linear-gradient(top, #086ED7, #0658AC);
+	background: -moz-linear-gradient(top, #086ED7, #0658AC);
+	background: linear-gradient(to bottom, #086ED7, #0658AC);
+
+	border-radius: 7px;
+	position: relative;
+	display: inline-table;
+	color: #fff;
+}
+
+.find_menu li {
+	float: left;
+}
+
+.find_menu li:hover {
+	background-color: #086ED7;
+}
+
+.find_menu_one:hover {
+	border-radius: 7px 0 0 0;
+}
+
+.find_menu li a {
+	display: block;
+	padding: 13px 17px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+.icon_down {
+	background: url("../img/down.png") no-repeat right;
+	margin-right: 13px;
+}
+
+.find_menu ul {
+	background: #086ED7;
+	border-radius: 0 0 7px 7px;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+	width: 140%;
+}
+
+.menu_section li {
+	float: none;
+	position: relative;
+	display: table-row;
+}
+.menu_section li:hover {
+	text-decoration: underline;
+	background: none;
+}
+
+.menu_section li a {
+	font-size: 12px;
+	margin: 5px 0 5px 10px;
+	padding: 0;
+}
+
+/*Product*/
+.name {
+	font-size: 30px;
+	font-weight: 400;
+	margin-bottom: 20px;
+}
+
+.branch {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.branch_item {
+	color: #333;
+	font-size: 10px;
+}
+
+.branch_links {
+	text-decoration: none;
+	color: #333;
+}
+
+.branch_links:hover {
+	text-decoration: underline;
+	color: #0662c1;
+}
+
+.branch_next {
+	margin: 0 10px;
+}
+
+.element {
+	opacity: 0.7;
+}
+
+
+.desktop {
+	display: flex
+}
+
+.product_wrapper_img {
+	width: 442px;
+	height: 300px;
+	align-items: center;
+	text-align: center;
+	padding: 10px;
+}
+
+.product_img {
+	height: 120px;
+	cursor: pointer;
+}
+
+.product_img_active {
+	border: 2px solid #f01919;
+}
+
+.product_size {
+	margin-top: 2px;
+	margin-bottom: 17px
+}
+
+.product_info {
+	margin-top: 15px;
+}
+
+/*product_info_about*/
+.product_info_about {
+	width: 442px;
+	margin-bottom: 30px;
+}
+
+.stock {
+	color: #fff;
+	background-color: #b1cd03;
+	max-width: 110px;
+	padding: 5px 10px;
+	text-align: center;
+	border-radius: 7px;
+}
+
+.price {
+	font-size: 13px
+}
+
+#product_price {
+	font-size: 26px;
+}
+
+.enter_people {
+	width: 169px;
+	height: 28px;
+	margin: 2px 2px 0 0;
+	text-align:center;
+	border: 1px solid #ccc;
+	font-size: 13px;
+}
+
+.choice_size {
+	display: flex;
+	margin-top: 7px;
+	width: 200px;
+}
+
+.size_separation {
+	max-width: 30px;
+	width: 100%;
+	margin-right: auto;
+	text-align: center;
+}
+
+.size_separation p {
+
+}
+
+.choice_people {
+	width: 100%;
+	height: 28px;
+	display: flex;
+	margin-left: auto;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+.product_delivery {
+	font-size: 13px;
+	line-height: 1.4em;
+	margin-top: 15px;
+	max-width: 91%;
+}
+
+.product_delivery span {
+	color: #b22222;
+}
+
+
+
+.margin_button {
+	padding: .9375rem 10px;
+    border-style: solid;
+    border-width: .0625px 0;
+    border-color: #e2e3e4;
+    margin-top: 15px;
+}
+
+.button {
+	width: 103px;
+	padding: 13px 0;
+	color: #fff;
+	font-weight: 700;
+	background: #d70000;
+	border: none;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+.button:hover {
+	background: #FC0000;
+}
+
+.button:focus {
+	outline: none;
+}
+
+
+/*product_detail*/
+.product_detail {
+	width: 875px;
+}
+
+/*recognition_transitions*/
+.recognition_btn {
+	width: auto;
+	padding: 15px 20px;
+	border-radius: 7px;
+    background: #fff;
+    margin-right: 10px;
+    border:none;
+}
+
+.recognition {
+	font-size: 22px;
+	color: #086ED7;
+	border-bottom: 1px dashed;
+	text-decoration: none;
+}
+
+.recognition:hover {
+	border: none;
+	color: #4b4f58;
+}
+
+.recognition_active {
+	border: .0625rem solid #E2E3E4;
+	border-radius: 7px;
+	padding: 13px 20px;
+}
+
+.recognition_active .recognition {
+	border: none;
+	color: #4b4f58;
+}
+
+.recognition_active .recognition:hover {
+	color: #086ED7;
+}
+
+/*transitions_info*/
+.transitions_info {
+	font-size: 14px;
+}
+
+/*description*/
+.description {
+	display: none;
+}
+
+.description p {
+	line-height: 1.5em;
+	padding: 20px;
+}
+
+/*specifications*/
+.specifications {
+	width: 100%;
+	height: 100%;
+	padding: 10px 20px;
+	font-size: 12px;
+	display: none;
+}
+
+.element_block {
+	width: 100%;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	padding: 20px;
+}
+
+.block_indent {
+	width: 45%;
+}
+
+.block_fon {
+	background: #F8F8F8;
+}
+
+.format {
+	color: red;
+	font-style: italic;
+}
+
+/*pickup*/
+.pickup {
+	width: 855px;
+	padding: 20px;
+	display: none;
+}
+
+.pickup p {
+	margin-bottom: 20px;
+}
+
+.pickup u {
+	color: red;
+	line-height: 1.5em;
+}
+
+
+/*transitions_info active*/
+.active {
+	display: block;
+}
+
+
+
+
+
+
+/*checkout*/
+#checkout {
+	display: none;
+}
+
+.checkout {
+	position: absolute;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	display: block;
+}
+
+.checkout_test {
+	position: fixed;
+	widows: 400px;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 15px;
+	z-index: 10;
+
+	box-shadow: 0 0 15px 2px #000;
+	background: #fff;
+	border-radius: 7px
+}
+
+#filter {
+	background: rgba(0,0,0,.5);
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: 5;
+	display: none;
+}
+
+/*footer*/
+.footer {
+	flex: 0 0 auto;
+	width: 100%;
+	height: 99px;
+	background: #F3F3F3;
+	display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-top: 110px;
+    margin-bottom: 40px;
+}
+
+.f_container {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.footer_about {
+	color: #94969b;
+	font-size: 13px;
+}
+
+.footer_about a {
+	color: #086ED7;
+	text-decoration: none;
+}
+
+.footer_about a:hover {
+	color: #4b4f58;
+	text-decoration: underline;
+}

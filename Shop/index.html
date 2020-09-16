@@ -12,7 +12,6 @@
 <body>
 	<header class="header" id="header">
 		<div class="container">
-			<!-- <h1 class="logo">Логотип</h1> -->
 			<div class="nav">
 				<a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
 				<div class="menu">
@@ -20,6 +19,15 @@
 					<a href="#" class="menu_links">Оплата</a>
 					<a href="#" class="menu_links">Доставка</a>
 					<a href="#" class="menu_links">Контакты</a>
+				</div>
+				<div class="burger_menu burger_menu_acti2ve">
+					<a href="#" class="burger_menu_btn">
+						<span class="burger_menu_lines"></span>
+					</a>
+
+					<nav class="burger_menu_nav">
+						
+					</nav>
 				</div>
 				<div class="contacts">
 					<div class="cart">
@@ -114,12 +122,18 @@
 						<p class="product_info">Толщина:</p>
 						<div class="choice_size">
 							<div class="size_separation">
-								<p>14мм:</p>
-								<input type="checkbox" id="" class="choice_people">
+								<label class="label_size">
+									<p>14мм:</p>
+									<input type="radio" id="first_choice" class="choice_people" name="size">
+									<span class="fake_choice"></span>
+								</label>
 							</div>
 							<div class="size_separation">
-								<p>17мм:</p>
-								<input type="checkbox" id="" class="choice_people">
+								<label class="">
+									<p>17мм:</p>
+									<input type="radio" id="" class="choice_people" name="size">
+									<span class="fake_choice"></span>
+								</label>
 							</div>
 						</div>
 						<div class="margin_button">

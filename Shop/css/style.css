@@ -1,3 +1,6 @@
+
+/*Desktop*/
+
 /*Main*/
 body {
 	margin: 0;
@@ -74,6 +77,10 @@ input:active, :hover, :focus {
 	text-decoration: none;
 	color: #333;
 	letter-spacing: 0.04em;
+}
+
+.menu_links:hover {
+	color: #0662c1;
 }
 
 .contacts {
@@ -335,7 +342,7 @@ input:active, :hover, :focus {
 
 .branch_item {
 	color: #333;
-	font-size: 10px;
+	font-size: 11px;
 }
 
 .branch_links {
@@ -432,17 +439,50 @@ input:active, :hover, :focus {
 	text-align: center;
 }
 
-.size_separation p {
-
+.label_size {
 }
 
 .choice_people {
+	display: none;
+}
+
+.fake_choice {
 	width: 100%;
 	height: 28px;
-	display: flex;
-	margin-left: auto;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+	border: 1px solid black;
+	display: inline-block;
+	position: relative;
+	border-radius: 50%;
+	padding: 0;
+	margin-top: 5px;
+}
+
+.fake_choice:hover {
+	background: rgba(0, 0, 0, .1);
+}
+
+.fake_choice::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 13px;
+	height: 13px;
+	background: #000;
+	opacity: 0;
+	transition: .05s;
+	border-radius: 50%;
+}
+
+
+.choice_people:checked + .fake_choice::before {
+	opacity: 1;
+}
+
+.fake_choice_active + .fake_choice::before{
+	opacity: 1;
 }
 
 .product_delivery {
@@ -670,4 +710,106 @@ input:active, :hover, :focus {
 .footer_about a:hover {
 	color: #4b4f58;
 	text-decoration: underline;
+}
+
+
+/*Mobile*/
+
+@media screen and (max-width:1140px) {
+	.container {
+		width: 1140px;
+		padding: 10px;
+	}
+
+	.nav {
+		margin: 10px;
+	}
+}
+
+@media screen and (max-width:992px) {
+	.container {
+		width: 960px;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.burger_menu_btn {
+		position: fixed;
+		top: 15px;
+		left: 15px;
+		z-index: 30;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: #2a2a2a;
+	}
+
+	.burger_menu_btn:hover .burger_menu_lines {
+		filter: brightness(0.7);
+	}
+
+	.burger_menu_lines,
+	.burger_menu_lines::after,
+	.burger_menu_lines::before {
+		position: absolute;
+		width: 25px;
+		height: 4px;
+		background: #fff;
+	}
+
+	.burger_menu_lines {
+		top: 50%;
+		left: 50%;
+		transform: translate( -50%, -50%);
+	}
+
+	.burger_menu_lines::before {
+		content: "";
+		top: -10px;
+	}
+
+	.burger_menu_lines::after {
+		content: "";
+		top: 10px;
+	}
+
+	.burger_menu_active .burger_menu_lines {
+		background: transparent;
+	}
+
+	.burger_menu_active .burger_menu_lines::before {
+		top: 0;
+		transform: rotate(45deg);
+	}
+
+	.burger_menu_active .burger_menu_lines::after {
+		top: 0;
+		transform: rotate(-45deg);
+	}
+
+	.footer_about {
+		padding: 10px;
+	}
+}
+
+@media screen and (max-width:768px) {
+	.container {
+		width: 720px;
+	}
+
+	.product_detail {
+		width: 100%;
+	}
+
+	.pickup {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width:576px) {
+	.container {
+		width: 540px;
+	}
 }

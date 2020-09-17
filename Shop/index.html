@@ -20,20 +20,23 @@
 					<a href="#" class="menu_links">Доставка</a>
 					<a href="#" class="menu_links">Контакты</a>
 				</div>
-				<div class="burger_menu burger_menu_acti2ve">
+				<div class="burger_menu">
 					<a href="#" class="burger_menu_btn">
 						<span class="burger_menu_lines"></span>
 					</a>
-
 					<nav class="burger_menu_nav">
-						
+						<a href="#" class="burger_menu_links">Расчёт плитки</a>
+						<a href="#" class="burger_menu_links">Оплата</a>
+						<a href="#" class="burger_menu_links">Доставка</a>
+						<a href="#" class="burger_menu_links">Контакты</a>
 					</nav>
+					<div class="burger_menu_overlay"></div>
 				</div>
 				<div class="contacts">
 					<div class="cart">
 						<div class="cart_more showing" id="showing">
 							<div class="cart_info">
-								<div class="gfdgdf">
+								<div class="">
 									<a href="#">
 										<img src="img/North_400x400.png" alt="" class="cart_img">
 									</a>
@@ -49,7 +52,7 @@
 						</div>
 						<div class="cart_mouse"><img src="img/carth.png" alt="">Корзина:<span class="place">Пусто</span></div>
 					</div>
-					<a href="tel:+74994031844" class="telephone">+7 (499) 403-18-44</a>
+					<a href="tel:+74994031844" class="telephone"><span>+7 (499) 403-18-44</span></a>
 					<p class="info">Прием и обработка заказов осуществляется<br> менеджерами магазина ежедневно с 09:00 до 20:00</p>
 				</div>
 			</div>
@@ -98,10 +101,16 @@
 			<div class="product">
 				<div class="desktop">
 					<div class="product_wrapper_img">
-						<img src="img/product/North_Blue_polished_600x400.png" alt="" class="product_img" id="product_img">
-						<p class="product_size">600*400мм</p>
-						<img src="img/product/North_Blue_polished_400x400.png" alt="" class="product_img" id="product_img">
-						<p class="product_size">400*400мм</p>
+						<label class="label_product">
+							<input type="radio" class="choice_img" name="img_product">
+							<span class="product_img_fake"><img src="img/product/North_Blue_polished_600x400.png" alt="" class="product_img" id="product_img"></span>
+							<p>600*400мм</p>
+						</label>
+						<label class="label_product">
+							<input type="radio" class="choice_img" name="img_product">
+							<span class="product_img_fake"><img src="img/product/North_Blue_polished_400x400.png" alt="" class="product_img" id="product_img"></span>
+							<p>400*400мм</p>
+						</label>
 					</div>
 					<div class="product_info_about">
 						<p class="product_info heft">Вес: <span>25,463</span> кг.</p>
@@ -122,16 +131,16 @@
 						<p class="product_info">Толщина:</p>
 						<div class="choice_size">
 							<div class="size_separation">
-								<label class="label_size">
+								<label>
 									<p>14мм:</p>
 									<input type="radio" id="first_choice" class="choice_people" name="size">
 									<span class="fake_choice"></span>
 								</label>
 							</div>
 							<div class="size_separation">
-								<label class="">
+								<label>
 									<p>17мм:</p>
-									<input type="radio" id="" class="choice_people" name="size">
+									<input type="radio" id="second_choice" class="choice_people" name="size">
 									<span class="fake_choice"></span>
 								</label>
 							</div>
@@ -144,10 +153,11 @@
 					</div>
 				</div>
 				<div class="product_detail">
-					<div>
-						<button type="button" class="recognition_btn recognition_active" id="description_outline"><a href="" class="recognition" id="tabDescription" onclick="return false;">Описание</a></button>
-						<button type="button" class="recognition_btn" id="specifications_outline"><a href="" class="recognition" id="tabSpecifications" onclick="return false;">Характеристики</a></button>
-						<button type="button" class="recognition_btn" id="pickup_outline"><a href="" class="recognition" id="tabPickup" onclick="return false;">Самовывоз со склада в Мытищи</a></button>
+					<div class="detail_wrapper">
+						<!-- onclick="return false;" - отключение тега a -->
+						<button type="button" class="recognition_btn recognition_active" id="description_outline"><a href="#tabDescription" class="recognition" id="tabDescription">Описание</a></button>
+						<button type="button" class="recognition_btn" id="specifications_outline"><a href="#tabSpecifications" class="recognition" id="tabSpecifications">Характеристики</a></button>
+						<button type="button" class="recognition_btn" id="pickup_outline"><a href="#tabPickup" class="recognition" id="tabPickup" >Самовывоз со склада в Мытищи</a></button>
 					</div>
 					<div class="transitions_info">
 						<div class="description active">

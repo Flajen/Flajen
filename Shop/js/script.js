@@ -26,7 +26,7 @@ function add_cart() { // Показ корзины
 }
 
 function add_product() { // Выбор продука
-	document.getElementById("product_img").classList.add("product_img_active");
+	document.getElementById("product_img").classList.add("produ2ct_img_active");
 }
 
 // Клик
@@ -95,3 +95,31 @@ $('#tabPickup').click(function(){
 	$('.active').removeClass('active')
 	$('.pickup').addClass('active')
 });
+
+function burgerMenu(selector) {
+	let menu = $(selector);
+	let burgerButton = menu.find('.burger_menu_btn');
+	let links = menu.find('.burger_menu_links');
+	let overlay = menu.find('.burger_menu_overlay');
+
+	burgerButton.on('click', (e) => {
+		e.preventDefault();
+		toggleMenu();
+	})
+
+	links.on('click', (e) => { toggleMenu(); })
+
+	overlay.on('click', (e) => { toggleMenu(); })
+
+	function toggleMenu() {
+		menu.toggleClass('burger_menu_active')
+
+		if (menu.hasClass('burger_menu_active')) {
+			$('body').css('overflow', 'hidden');
+		} else {
+			$('body').css('overflow', 'visible');
+		}
+	}
+};
+
+burgerMenu('.burger_menu');

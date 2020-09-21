@@ -3,89 +3,131 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<title>Shop</title>
+	<title>Labradorite official</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/site.ico" type="image/x-icon">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script> 
 	<script src="js/script.js" defer></script>
 </head>
 <body>
-	<header class="header" id="header">
-		<div class="container">
-			<div class="nav">
+
+<header class="header" id="header">
+	<div class="container">
+		<div class="nav">
+			<div class="logo_wrapper">
 				<a href="#"><img src="img/logo.png" alt="logo" class="logo"></a>
-				<div class="menu">
-					<a href="#" class="menu_links">Расчёт плитки</a>
-					<a href="#" class="menu_links">Оплата</a>
-					<a href="#" class="menu_links">Доставка</a>
-					<a href="#" class="menu_links">Контакты</a>
-				</div>
-				<div class="burger_menu">
-					<a href="#" class="burger_menu_btn">
-						<span class="burger_menu_lines"></span>
-					</a>
-					<nav class="burger_menu_nav">
-						<a href="#" class="burger_menu_links">Расчёт плитки</a>
-						<a href="#" class="burger_menu_links">Оплата</a>
-						<a href="#" class="burger_menu_links">Доставка</a>
-						<a href="#" class="burger_menu_links">Контакты</a>
-					</nav>
-					<div class="burger_menu_overlay"></div>
-				</div>
-				<div class="contacts">
-					<div class="cart">
-						<div class="cart_more showing" id="showing">
-							<div class="cart_info">
-								<div class="">
+			</div>
+			<div class="logo_text_wrapper">
+				<h1 class="logo_text">LABRADORITE</h1>
+			</div>
+			<div class="menu">
+				<a href="#" class="menu_links">Расчёт плитки</a>
+				<a href="#" class="menu_links">Оплата</a>
+				<a href="#" class="menu_links">Доставка</a>
+				<a href="#" class="menu_links">Контакты</a>
+			</div>
+			<div class="burger_menu">
+				<a href="#" class="burger_menu_btn">
+					<span class="burger_menu_lines"></span>
+				</a>
+				<nav class="burger_menu_nav">
+					<a href="#" class="burger_menu_links">Расчёт плитки</a>
+					<a href="#" class="burger_menu_links">Оплата</a>
+					<a href="#" class="burger_menu_links">Доставка</a>
+					<a href="#" class="burger_menu_links">Контакты</a>
+				</nav>
+				<div class="burger_menu_overlay"></div>
+			</div>
+			<div class="contacts">
+				<div class="cart">
+					<div class="cart_more" id="showing">
+						<div class="cart_info" id="cart_info"> <!-- remove_product -->
+							<div class="cart_card" id="indeficationOne">
+								<div>
 									<a href="#">
-										<img src="img/North_400x400.png" alt="" class="cart_img">
+										<img src="img/product/North_Blue_polished_600x400.png" alt="" class="cart_img_product">
 									</a>
-									<!-- <button type="button" class="cart_btn">Удалить</button> -->
+								<!-- <button type="button" class="cart_btn">Удалить</button> -->
 								</div>
 								<div class="cart_about">
-									<h2 class="cart_heading"><a href="#" class="cart_name"></a></h2>
-									<p><span class="cart_amount"></span></p>
-									<p><span class="cart_price"></span></p>
+									<h2 class="cart_heading"><a href="#" class="cart_heading_name">«North Blue» Полированная 600/400</a></h2>
+									<p>Количество: <span class="cart_amount">1</span> шт.</p>
+									<p>Цена: <span class="cart_price">1080</span> руб.</p>
 								</div>
 							</div>
-							<!-- <button type="button" class="cart_btn">Удалить</button> -->
+							<button type="button" class="cart_btn cart_btn_product" id="indefication_one">Удалить</button>
+
+							<div class="cart_card" id="indeficationTwo">
+								<div>
+									<a href="#">
+										<img src="img/product/North_Blue_polished_400x400.png" alt="" class="cart_img_product">
+									</a>
+								<!-- <button type="button" class="cart_btn">Удалить</button> -->
+								</div>
+								<div class="cart_about">
+									<h2 class="cart_heading"><a href="#" class="cart_heading_name">«North Blue» Полированная 400/400</a></h2>
+									<p>Количество: <span class="cart_amount">1</span> шт.</p>
+									<p>Цена: <span class="cart_price">1080</span> руб.</p>
+								</div>
+							</div>
+							<button type="button" class="cart_btn cart_btn_product" id="indefication_two">Удалить</button>
+							
+							<div class="cart_footer">
+								<div>
+									<h2>Итого: <span class="cart_price_all">0</span> руб.</h2>
+									<button type="button" class="cart_price_btn"><a href="#" class="cart_price_link" onclick="return false;">Оформить</a></button>
+								</div>
+								<button type="button" class="cart_btn" id="indefication">Удалить</button>
+							</div>
 						</div>
-						<div class="cart_mouse"><img src="img/carth.png" alt="">Корзина:<span class="place">Пусто</span></div>
+						<!-- <button type="button" class="cart_btn">Удалить</button> -->
 					</div>
-					<a href="tel:+74994031844" class="telephone"><span>+7 (499) 403-18-44</span></a>
-					<p class="info">Прием и обработка заказов осуществляется<br> менеджерами магазина ежедневно с 09:00 до 20:00</p>
+					<div class="cart_mouse"><img src="img/carth.png" alt="">Корзина:<span class="place">Пусто</span></div>
 				</div>
+				<a href="tel:+74994031844" class="telephone"><span>+7 (499) 403-18-44</span></a>
+				<p class="info">Прием и обработка заказов осуществляется<br> менеджерами магазина ежедневно с 09:00 до 20:00</p>
 			</div>
-			<div class="find">
-				<ul class="find_menu">
-					<li class="find_menu_one find_nav"><a href="#" class="icon_down">Лабрадорит</a>
-						<ul class="menu_section">
-							<li><a href="#">North Blue Полированная</a></li>
-							<li><a href="#">North Blue Антик</a></li>
-							<li><a href="#">Polar Night Полированная</a></li>
-							<li><a href="#">Polar Night Антик</a></li>
-						</ul>
-					</li>
-					<li class="find_nav"><a href="#" class="icon_down">Гранит</a>
-						<ul class="menu_section">
-							<li><a href="#">Красный гранит</a></li>
-						</ul>
-					</li>
-					<li class="find_nav"><a href="#" class="icon_down">Плитки по назначению</a>
-						<ul class="menu_section">
-							<li><a href="#">Плитка для внутренней отделки</a></li>
-							<li><a href="#">Плитка для внешней отделки</a></li>
-						</ul>
-					</li>
-					<li class="find_nav"><a href="#" class="icon_down">Текстуры плитки</a>
-						<ul class="menu_section">
-							<li><a href="#">Полированная</a></li>
-							<li><a href="#">Антик</a></li>
-						</ul>
-					</li>
-					<li><a href="#">Распродажа</a></li>
-				</ul>
+		</div>
+		<div class="mobile_find">
+			<button type="button" class="mobile_find_btn"><span class="mobile_find_margin"><p>Каталог</p><img src="img/down.png" alt=""></span></button>
+			<div class="mobile_find_field">
 			</div>
+		</div>
+		<div class="find">
+			<ul class="find_menu">
+				<li class="find_menu_one find_nav"><a href="#" class="icon_down">Лабрадорит</a>
+					<ul class="menu_section">
+						<li><a href="#">North Blue Полированная</a></li>
+						<li><a href="#">North Blue Антик</a></li>
+						<li><a href="#">Polar Night Полированная</a></li>
+						<li><a href="#">Polar Night Антик</a></li>
+					</ul>
+				</li>
+				<li class="find_nav"><a href="#" class="icon_down">Гранит</a>
+					<ul class="menu_section">
+						<li><a href="#">Красный гранит</a></li>
+					</ul>
+				</li>
+				<li class="find_nav"><a href="#" class="icon_down">Плитки по назначению</a>
+					<ul class="menu_section">
+						<li><a href="#">Плитка для внутренней отделки</a></li>
+						<li><a href="#">Плитка для внешней отделки</a></li>
+					</ul>
+				</li>
+				<li class="find_nav"><a href="#" class="icon_down">Текстуры плитки</a>
+					<ul class="menu_section">
+						<li><a href="#">Полированная</a></li>
+						<li><a href="#">Антик</a></li>
+					</ul>
+				</li>
+				<li class="find_nav"><a href="#">Распродажа</a></li>
+			</ul>
+		</div>
+</header>
+
+<section class="page_product">
+	<div class="container">
+		<div class="wrapper_branch">
 			<h1 class="name">«North Blue» Полированная</h1>
 			<div class="branch">
 				<div class="branch_item">
@@ -98,130 +140,228 @@
 				</div>
 				<p class="element">«North Blue» Полированная</p>
 			</div>
-			<div class="product">
-				<div class="desktop">
-					<div class="product_wrapper_img">
-						<label class="label_product">
-							<input type="radio" class="choice_img" name="img_product">
-							<span class="product_img_fake"><img src="img/product/North_Blue_polished_600x400.png" alt="" class="product_img" id="product_img"></span>
-							<p>600*400мм</p>
-						</label>
-						<label class="label_product">
-							<input type="radio" class="choice_img" name="img_product">
-							<span class="product_img_fake"><img src="img/product/North_Blue_polished_400x400.png" alt="" class="product_img" id="product_img"></span>
-							<p>400*400мм</p>
-						</label>
-					</div>
-					<div class="product_info_about">
-						<p class="product_info heft">Вес: <span>25,463</span> кг.</p>
-						<p class="product_info measurements">Ед. измерения: м2</p>
-						<p class="product_info stock">Есть в наличии</p>
-						<div>
-							<p class="product_info price">Цена:</p>
-							<p><span id="product_price">1 080,00</span> руб. /м2</p>
-						</div>
-						<div class="product_info">
-							<p>Количество м2:</p>
-							<input type="number" max="32767" min="1.44" step="1.44" value="0.24" id="" class="enter_people">м2
-						</div>
-						<div class="product_info">
-							<p>Количество шт:</p>
-							<input type="number" max="32767" min="1" value="1" id="" class="enter_people">шт
-						</div>
-						<p class="product_info">Толщина:</p>
-						<div class="choice_size">
-							<div class="size_separation">
-								<label>
-									<p>14мм:</p>
-									<input type="radio" id="first_choice" class="choice_people" name="size">
-									<span class="fake_choice"></span>
-								</label>
-							</div>
-							<div class="size_separation">
-								<label>
-									<p>17мм:</p>
-									<input type="radio" id="second_choice" class="choice_people" name="size">
-									<span class="fake_choice"></span>
-								</label>
-							</div>
-						</div>
-						<div class="margin_button">
-							<button type="submit" class="button" onclick="show('block')">В корзину</button>
-						</div>
-						<p class="product_delivery"><span>Самовывоз:</span> на следующий день после оплаты со склада в Наро-Фоминский район, п. Калининец ул. Фабричная, д. 1а (30 км от МКАД).</p>
-						<p class="product_delivery"><span>Заказ:</span> плитка кратно поддонам. Заказ меньше поддона возможен при условии самовывоза и самостоятельной погрузки.</p>
-					</div>
+		</div>
+		<div class="product">
+			<div class="desktop">
+				<div class="product_wrapper_img">
+					<label class="label_product">
+						<input type="radio" class="choice_img pif_active" name="img_product">
+						<span class="product_img_fake"><img src="img/product/North_Blue_polished_600x400.png" alt="" class="product_img" id="product_img"></span>
+						<p>600*400мм</p>
+					</label>
+					<label class="label_product">
+						<input type="radio" class="choice_img" name="img_product">
+						<span class="product_img_fake"><img src="img/product/North_Blue_polished_400x400.png" alt="" class="product_img" id="product_img"></span>
+						<p>400*400мм</p>
+					</label>
 				</div>
-				<div class="product_detail">
-					<div class="detail_wrapper">
-						<!-- onclick="return false;" - отключение тега a -->
-						<button type="button" class="recognition_btn recognition_active" id="description_outline"><a href="#tabDescription" class="recognition" id="tabDescription">Описание</a></button>
-						<button type="button" class="recognition_btn" id="specifications_outline"><a href="#tabSpecifications" class="recognition" id="tabSpecifications">Характеристики</a></button>
-						<button type="button" class="recognition_btn" id="pickup_outline"><a href="#tabPickup" class="recognition" id="tabPickup" >Самовывоз со склада в Мытищи</a></button>
+				<div class="product_info_about">
+					<p class="product_info heft">Вес: <span>25,463</span> кг.</p>
+					<p class="product_info measurements">Ед. измерения: м2</p>
+					<p class="product_info stock">Есть в наличии</p>
+					<div>
+						<p class="product_info price">Цена:</p>
+						<p><span id="product_price">1 080,00</span> руб. /м2</p>
 					</div>
-					<div class="transitions_info">
-						<div class="description active">
-							<p>Лабрадорит – природный камень, считающийся одним из самых дорогих в мире. Из него также производят ювелирные изделия. По своим свойствам схож с гранитом. Гранит, проверенный временем. Не меняет своего цвета. Выглядит одинаково эффектно на любом расстоянии.</p>
+					<div class="product_info">
+						<p>Количество м2:</p> <!-- min="1.12" step="1.12" value="0.16" -->						
+						<input type="number" max="32767" min="1.20" step="1.20" value="0.24" class="enter_people" id="meter" name="meter">м2
+						<button type="button" class="enter_people_btn" id="meter_minus"></button>
+						<button type="button" class="enter_people_btn ep_two" id="meter_plus"></button>
+					</div>
+					<div class="product_info">
+						<p>Количество шт:</p>
+						<input type="number" max="32767" min="1" step="1" value="1" class="enter_people" id="thing">шт
+						<button type="button" class="enter_people_btn" id="thing_minus"></button>
+						<button type="button" class="enter_people_btn ep_two" id="thing_plus"></button>
+					</div>
+					<p class="product_info">Толщина:</p>
+					<div class="choice_size">
+						<div class="size_separation">
+							<label>
+								<p>14мм:</p>
+								<input type="radio" id="first_choice" class="choice_people cp_active" name="size" checked>
+								<span class="fake_choice"></span>
+							</label>
 						</div>
-						<div class="specifications">
-							<div class="element_block">
-								<div class="block_indent">
-									<p>Количество штук в поддоне</p>
-								</div>
-								<div>
-									<span id="pieces">в зависимости от толщины</span>
-								</div>
+						<div class="size_separation">
+							<label>
+								<p>17мм:</p>
+								<input type="radio" id="second_choice" class="choice_people" name="size">
+								<span class="fake_choice"></span>
+							</label>
+						</div>
+					</div>
+					<div class="margin_button">
+						<button type="submit" class="button" onclick="show('block')">В корзину</button>
+					</div>
+					<p class="product_delivery"><span>Самовывоз:</span> на следующий день после оплаты со склада в Наро-Фоминский район, п. Калининец ул. Фабричная, д. 1а (30 км от МКАД).</p>
+					<p class="product_delivery"><span>Заказ:</span> плитка кратно поддонам. Заказ меньше поддона возможен при условии самовывоза и самостоятельной погрузки.</p>
+				</div>
+			</div>
+			<div class="product_detail">
+				<div class="detail_wrapper">
+					<!-- onclick="return false;" - отключение тега a -->
+					<button type="button" class="recognition_btn recognition_active" id="description_outline"><a href="#tabDescription" class="recognition" id="tabDescription">Описание</a></button>
+					<button type="button" class="recognition_btn" id="specifications_outline"><a href="#tabSpecifications" class="recognition" id="tabSpecifications">Характеристики</a></button>
+					<button type="button" class="recognition_btn" id="pickup_outline"><a href="#tabPickup" class="recognition" id="tabPickup" >Самовывоз со склада в Мытищи</a></button>
+				</div>
+				<div class="transitions_info">
+					<div class="description active">
+						<p>Лабрадорит – природный камень, считающийся одним из самых дорогих в мире. Из него также производят ювелирные изделия. По своим свойствам схож с гранитом. Гранит, проверенный временем. Не меняет своего цвета. Выглядит одинаково эффектно на любом расстоянии.</p>
+					</div>
+					<div class="specifications">
+						<div class="element_block">
+							<div class="block_indent">
+								<p>Количество штук в поддоне</p>
 							</div>
-							<div class="element_block block_fon">
-								<div class="block_indent">
-									<p>Назначение</p>
-								</div>
-								<div>
-									<span id="application">Для пола и стен</span>
-								</div>
-							</div>
-							<div class="element_block">
-								<div class="block_indent">
-									<p>Поверхность</p>
-								</div>
-								<div>
-									<span id="surface">Полированная/Антик</span>
-								</div>
-							</div>
-							<div class="element_block">
-								<div class="block_indent">
-									<p>Формат</p>
-								</div>
-								<div>
-									<span id="format">20х80 мм. <span class="format">(то что выбрал пользователь например 600*400*14мм)</span></span>
-								</div>
+							<div>
+								<span id="pieces">в зависимости от толщины</span>
 							</div>
 						</div>
-						<div class="pickup">
-							<p><strong>Режим работы склада:</strong></p>
-							<p>В рабочие дни с &nbsp;09:00 до 17:00</p>
-							<u>ВАЖНО!&nbsp;&nbsp;Самовывоз товара производится только после оплаты заказа и получения подтверждения от менеджера о дате и времени отгрузки.</u>
+						<div class="element_block block_fon">
+							<div class="block_indent">
+								<p>Назначение</p>
+							</div>
+							<div>
+								<span id="application">Для пола и стен</span>
+							</div>
 						</div>
+						<div class="element_block">
+							<div class="block_indent">
+								<p>Поверхность</p>
+							</div>
+							<div>
+								<span id="surface">Полированная/Антик</span>
+							</div>
+						</div>
+						<div class="element_block">
+							<div class="block_indent">
+								<p>Формат</p>
+							</div>
+							<div>
+								<span id="format">20х80 мм. <span class="format">(то что выбрал пользователь например 600*400*14мм)</span></span>
+							</div>
+						</div>
+					</div>
+					<div class="pickup">
+						<p><strong>Режим работы склада:</strong></p>
+						<p>В рабочие дни с &nbsp;09:00 до 17:00</p>
+						<u>ВАЖНО!&nbsp;&nbsp;Самовывоз товара производится только после оплаты заказа и получения подтверждения от менеджера о дате и времени отгрузки.</u>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="checkout" id="checkout">
-			<div class="checkout_test">
-				<div class="checkout_name">
-					<a href=""><img src="img/product/North_Blue_polished_600x400.png" alt="" class=""></a>
-					<div>
+	</div>
+</section>
+
+<section class="page_cart">
+	<div class="container">
+		<h1 class="name">Корзина</h1>
+		<div class="cart_sections">
+			<table class="cart_full">
+				<thead class="cart_full_head">
+					<tr class="cart_underline">
+						<th class="head_full_item cart_product"><span class="cart_full_text">Товар</span></th>
+						<th class="head_full_item cart_product_price"><span class="cart_full_text">Цена за ед.</span></th>
+						<th class="head_full_item cart_product_amount"><span class="cart_full_text">Количество</span></th>
+						<th class="head_full_item cart_product_cost"><span class="cart_full_text">Стоимость</span></th>
+						<th class="head_full_item cart_product_remove">
+							<a href="#" class="remove_fon" id="delet_all"><img src="img/remove.png" alt="cross" class="remove_img"></a>
+						</th>
+					</tr>
+				</thead>
+				<tbody class="cart_full_body">
+					<tr class="">
+						<th class="body_full_item">
+							<div class="cart_img">
+								<div class="frame_img"><a href="#"><img src="img/product/North_Blue_polished_600x400.png" alt="none" class="img_product_body"></a></div>
+								<div class="frame_text"><a href="#" class="text_product_body">«North Blue» Полированная 600/400</a></div>
+							</div>
+						</th>
+						<th class="body_full_item cart_product_price"><p> 1088 руб.</p></th>
+						<th class="body_full_item cart_product_amount">
+							<div class="spin_product_body">
+								<div class="spin_other">
+									<div>
+										<input type="number" class="field_product_body" min="1.44" value="0.24" step="1.44">
+									</div>
+									<div class="plus_minus_body">
+										<a href="#" class="arrows_product_body" onclick="return false;"><img src="img/tbody/up.png" alt=""></a>
+										<a href="#" class="arrows_product_body" onclick="return false;"><img src="img/tbody/down.png" alt=""></a>
+									</div>
+									<span class="units">м2</span>
+								</div>
+								<div class="cart_quantity_product">
+									<span class="product_body_quantity">1 шт.</span>
+								</div>
+							</div>
+						</th>
+						<th class="body_full_item cart_product_cost"><span class="price_product_body">1088 руб.</span></th>
+						<th class="head_full_item cart_product_remove"><a href="#" class="cart_full_text remove_fon" id="delet_product"><img src="img/remove.png" alt="cross" class="remove_img"></a></th>
+					</tr>
+				</tbody>
+				<tfoot class="cart_full_foot">
+					<tr class="foot_full_item"><th><div></div></th></tr>
+					<tr class="foot_full_item all_price_product_foot">
+						<th class="foot_field">
+							<div class="gdfgdfgdf">
+								<p>Итого: <span class="all_price_product">0 руб</span></p>
+							</div>
+						</th>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</div>
+</section>
+
+<footer class="footer" id="footer">
+	<div class="f_container">
+		<p class="footer_about">© <a href="#">Labradorite</a> 2012 - 2020. Официальный интернет-магазин плитки из гранита и лабрадорита</p>
+	</div>
+
+	<div class="checkout" id="checkout">
+		<div class="checkout_field">
+			<div class="checkout_name">
+				<div class="checkout_up_field">
+					<a href=""><img src="img/product/North_Blue_polished_600x400.png" alt="prod" class="checkout_img"></a>
+					<div class="checkout_text">
 						<h2>Товар добавлен в корзину</h2>
+						<a href="#">«North Blue» Полированная</a>
+						<span>Размер: <span id="size_checkout">600/400</span></span>
+					</div>
+					<div class="calc_formula_wrapper">
+						<div class="calc_formula">
+							<p>1088 руб./м2</p>
+							<span>100 x 1088=108800</span>
+							<div class="calc_field">
+								<input type="number" class="calc_sum" min="1.44" value="0.24" step="1.44">
+								<div class="arrow_alignment">
+									<a href="#" class="calc_arrow" onclick="return false;"><img src="img/tbody/up.png" alt="" class="calc_arrow"></a>
+									<a href="#" class="calc_arrow " onclick="return false;"><img src="img/tbody/down.png" alt="" class="calc_arrow"></a>
+								</div>
+								<span>м2</span>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>			
-		</div>
-		<div class="filter" id="filter" onclick="show('none')"></div>
-	</header>
-	<footer class="footer" id="footer">
-		<div class="f_container">
-			<p class="footer_about">© <a href="#">Labradorite</a> 2012 - 2020. Официальный интернет-магазин плитки из гранита и лабрадорита</p>
-		</div>
-	</footer>
+				<div class="checkout_down_field">
+					<div class="checkout_info">
+						<p>В вашей <a href="#" class="checkout_cart_link">корзине</a> <span>2 товара</span></p>
+						<p>На сумму <span class="checkout_cart_sum">0 руб.</span></p>
+					</div>
+					<div class="checkout_btn_wrapper">
+						<button class="checkout_btn btn_proceed">Продолжить покупки</button>
+						<button class="checkout_btn btn_arrange">Оформить заказ</button>
+					</div>
+				</div>
+			</div>
+		</div>			
+	</div>
+	<div class="filter" id="filter" onclick="show('none')"></div>
+	<div class="filter_png" id="filterPng" onclick="show('none')"></div>
+</footer>
+
 </body>
 </html>

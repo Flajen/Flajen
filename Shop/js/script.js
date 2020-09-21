@@ -296,6 +296,16 @@ $('.cart_price_btn').click(function() {
 	$('.filter_png').remove();
 })
 
+$('.btn_arrange').click(function() {
+	open_cart();
+	$('#filterPng').attr('style', 'display:block');
+	$('.showing').remove();
+	$('.cart_mouse').remove()
+	$('.filter_png').remove();
+	$('.checkout_field').remove();
+	$('#filter').remove();
+})
+
 $('#delet_cm_product_one').click(function() {
 	$('.cm_produtct_one').remove();
 })

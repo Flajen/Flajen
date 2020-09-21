@@ -146,7 +146,7 @@
 				<div class="product_wrapper_img">
 					<label class="label_product">
 						<input type="radio" class="choice_img pif_active" name="img_product">
-						<span class="product_img_fake"><img src="img/product/North_Blue_polished_600x400.png" alt="" class="product_img" id="product_img"></span>
+						<span class="product_img_fake"><img src="img/product/North_Blue_polished_600x400.png" alt="" class=" " id="product_img"></span>
 						<p>600*400мм</p>
 					</label>
 					<label class="label_product">
@@ -257,61 +257,113 @@
 
 <section class="page_cart">
 	<div class="container">
-		<h1 class="name">Корзина</h1>
-		<div class="cart_sections">
-			<table class="cart_full">
-				<thead class="cart_full_head">
-					<tr class="cart_underline">
-						<th class="head_full_item cart_product"><span class="cart_full_text">Товар</span></th>
-						<th class="head_full_item cart_product_price"><span class="cart_full_text">Цена за ед.</span></th>
-						<th class="head_full_item cart_product_amount"><span class="cart_full_text">Количество</span></th>
-						<th class="head_full_item cart_product_cost"><span class="cart_full_text">Стоимость</span></th>
-						<th class="head_full_item cart_product_remove">
-							<a href="#" class="remove_fon" id="delet_all"><img src="img/remove.png" alt="cross" class="remove_img"></a>
-						</th>
-					</tr>
-				</thead>
-				<tbody class="cart_full_body">
-					<tr class="">
-						<th class="body_full_item">
-							<div class="cart_img">
-								<div class="frame_img"><a href="#"><img src="img/product/North_Blue_polished_600x400.png" alt="none" class="img_product_body"></a></div>
-								<div class="frame_text"><a href="#" class="text_product_body">«North Blue» Полированная 600/400</a></div>
+		<div class="section_product">
+			<h1 class="name">Корзина</h1>
+			<div class="cart_sections">
+				<div class="cart_mobile cm_produtct_one">
+					<div class="cm_img">
+						<a href="#">
+							<img src="img/product/North_Blue_polished_600x400.png" alt="" class="cart_img_product">
+						</a>
+					<!-- <button type="button" class="cart_btn">Удалить</button> -->
+					</div>
+					<div class="cm_about">
+						<h2 class="cm_heading"><a href="#" class="cart_heading_name">«North Blue» Полированная 600/400</a></h2>
+						<div class="cm_info">
+							<div>
+								<p>Количество: <span class="cart_amount">1</span> шт.</p>
+								<p>Цена: <span class="cart_price">1080</span> руб.</p>
 							</div>
-						</th>
-						<th class="body_full_item cart_product_price"><p> 1088 руб.</p></th>
-						<th class="body_full_item cart_product_amount">
-							<div class="spin_product_body">
-								<div class="spin_other">
-									<div>
-										<input type="number" class="field_product_body" min="1.44" value="0.24" step="1.44">
-									</div>
-									<div class="plus_minus_body">
-										<a href="#" class="arrows_product_body" onclick="return false;"><img src="img/tbody/up.png" alt=""></a>
-										<a href="#" class="arrows_product_body" onclick="return false;"><img src="img/tbody/down.png" alt=""></a>
-									</div>
-									<span class="units">м2</span>
+							<div class="cm_info_field">
+								<input type="number" value="1" class="cm_btn">
+								<p>шт.</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="remove_fon" id="delet_cm_product_one"><img src="img/remove.png" alt="cross" class="remove_img"></a>
+				</div>
+				<div class="cart_mobile cm_produtct_two">
+					<div class="cm_img">
+						<a href="#">
+							<img src="img/product/North_Blue_polished_400x400.png" alt="" class="cart_img_product">
+						</a>
+					<!-- <button type="button" class="cart_btn">Удалить</button> -->
+					</div>
+					<div class="cm_about">
+						<h2 class="cm_heading"><a href="#" class="cart_heading_name">«North Blue» Полированная 400/400</a></h2>
+						<div class="cm_info">
+							<div>
+								<p>Количество: <span class="cart_amount">1</span> шт.</p>
+								<p>Цена: <span class="cart_price">1080</span> руб.</p>
+							</div>
+							<div class="cm_info_field">
+								<input type="number" value="1" class="cm_btn">
+								<p>шт.</p>
+							</div>
+						</div>
+					</div>
+					<a href="#" class="remove_fon" id="delet_cm_product_two"><img src="img/remove.png" alt="cross" class="remove_img"></a>
+				</div>
+				<div class="cs_group">
+					<p>Итого: <span class="all_price_product">0 руб</span></p>
+				</div>
+				<div class="cs_purchase">
+					<button type="button" class="cart_price_btn"><a href="#" class="cart_price_link" onclick="return false;">Оформить</a></button>
+				</div>
+				<table class="cart_full">
+					<thead class="cart_full_head">
+						<tr class="cart_underline">
+							<th class="head_full_item cart_product"><span class="cart_full_text">Товар</span></th>
+							<th class="head_full_item cart_product_price"><span class="cart_full_text">Цена за ед.</span></th>
+							<th class="head_full_item cart_product_amount"><span class="cart_full_text">Количество</span></th>
+							<th class="head_full_item cart_product_cost"><span class="cart_full_text">Стоимость</span></th>
+							<th class="head_full_item cart_product_remove">
+								<a href="#" class="remove_fon" id="delet_all"><img src="img/remove.png" alt="cross" class="remove_img"></a>
+							</th>
+						</tr>
+					</thead>
+					<tbody class="cart_full_body">
+						<tr class="">
+							<th class="body_full_item">
+								<div class="cart_img">
+									<div class="frame_img"><a href="#"><img src="img/product/North_Blue_polished_600x400.png" alt="none" class="img_product_body"></a></div>
+									<div class="frame_text"><a href="#" class="text_product_body">«North Blue» Полированная 600/400</a></div>
 								</div>
-								<div class="cart_quantity_product">
-									<span class="product_body_quantity">1 шт.</span>
+							</th>
+							<th class="body_full_item cart_product_price"><p> 1088 руб.</p></th>
+							<th class="body_full_item cart_product_amount">
+								<div class="spin_product_body">
+									<div class="spin_other">
+										<div>
+											<input type="number" class="field_product_body" min="1.44" value="0.24" step="1.44">
+										</div>
+										<div class="plus_minus_body">
+											<a href="#" class="arrows_product_body" onclick="return false;"><img src="img/tbody/up.png" alt=""></a>
+											<a href="#" class="arrows_product_body" onclick="return false;"><img src="img/tbody/down.png" alt=""></a>
+										</div>
+										<span class="units">м2</span>
+									</div>
+									<div class="cart_quantity_product">
+										<span class="product_body_quantity">1 шт.</span>
+									</div>
 								</div>
-							</div>
-						</th>
-						<th class="body_full_item cart_product_cost"><span class="price_product_body">1088 руб.</span></th>
-						<th class="head_full_item cart_product_remove"><a href="#" class="cart_full_text remove_fon" id="delet_product"><img src="img/remove.png" alt="cross" class="remove_img"></a></th>
-					</tr>
-				</tbody>
-				<tfoot class="cart_full_foot">
-					<tr class="foot_full_item"><th><div></div></th></tr>
-					<tr class="foot_full_item all_price_product_foot">
-						<th class="foot_field">
-							<div class="gdfgdfgdf">
-								<p>Итого: <span class="all_price_product">0 руб</span></p>
-							</div>
-						</th>
-					</tr>
-				</tfoot>
-			</table>
+							</th>
+							<th class="body_full_item cart_product_cost"><span class="price_product_body">1088 руб.</span></th>
+							<th class="head_full_item cart_product_remove"><a href="#" class="cart_full_text remove_fon" id="delet_product"><img src="img/remove.png" alt="cross" class="remove_img"></a></th>
+						</tr>
+					</tbody>
+					<tfoot class="cart_full_foot">
+						<tr class="foot_full_item"><th><div></div></th></tr>
+						<tr class="foot_full_item all_price_product_foot">
+							<th class="foot_field">
+								<div class="gdfgdfgdf">
+									<p>Итого: <span class="all_price_product">0 руб</span></p>
+								</div>
+							</th>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
 		</div>
 	</div>
 </section>

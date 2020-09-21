@@ -413,7 +413,7 @@ th {
 
 /*Page_product*/
 .page_product {
-	display: none;
+	/*display: none;*/
 	flex: 1 0 auto;
 }
 
@@ -973,7 +973,7 @@ th {
 
 /*Page_cart*/
 .page_cart {
-	/*display: none;*/
+	display: none;
 	flex: 1 0 auto;
 }
 
@@ -1181,6 +1181,10 @@ th {
 	display: none;
 }
 
+.cart_mobile_version {
+	display: none;
+}
+
 
 /*Mobile*/
 
@@ -1381,6 +1385,15 @@ th {
 		padding: 0;
 		margin-bottom: 120px;
 	}
+
+	.cart_mobile_version {
+		display: block;
+	}
+
+	.cart_desktop_version {
+		display: none;
+	}
+
 
 	.burger_menu_btn {
 		position: absolute;
@@ -1689,7 +1702,7 @@ th {
 	}
 
 	.cart_full {
-		display: none;
+		/*display: none;*/
 	}
 
 	.find_nav:before {

@@ -236,6 +236,10 @@ a {
 	font-weight: 600; 
 	cursor: pointer;
 	transition: .2s;
+	/* Убираем выделение */
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none; 
 }
 
 .cw_text:hover {
@@ -253,7 +257,34 @@ a {
 	transition: .2s;
 }
 
-/*.cw_checkbox:checked + .cw_text::before {
-	opacity: 1;
-}*/
+/* wrapper_slider */
+.ws_up {
+	margin-top: 75px;
+	text-align: center;
+}
 
+.wu_heading {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text_lotte {
+	font-size: 36px;
+	font-weight: 600;
+	padding: 0 20px;
+}
+
+.arrow_lotte {
+	width: 35px;
+	height: 42px;
+	opacity: 0.5;
+	filter: brightness(10%);
+	transition: .2s;
+	cursor: pointer;
+}
+
+.arrow_lotte:hover {
+	filter: brightness(50%);
+	transition: .2s;
+}

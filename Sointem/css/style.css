@@ -1,0 +1,259 @@
+body {
+	color: #747474;
+	font-size: 28px;
+	margin: 0;
+	padding: 0;
+	cursor: default;
+	overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, a, p {
+	margin: 0;
+	padding: 0;
+}
+
+ul, li {
+	list-style: none; /*убираем маркеры списка*/
+  	margin: 0; /*убираем верхнее и нижнее поле, равное 1em*/
+  	padding-left: 0; /*убираем левый отступ, равный 40px*/
+}
+
+a {
+	text-decoration: none; /*убираем подчеркивание текста ссылок*/
+	color: #2B2A29;
+}
+
+.container {
+	max-width: 100%;
+	width: 1310px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+
+/* Header */
+.header {
+	padding-top: 54px;
+}
+
+.background {
+	position: absolute;
+	width: 1920px;
+	height: 1080px;
+	left: 0px;
+	top: 0px;
+
+	background: rgba(216, 216, 216, 0.0001);
+	filter: blur(20px);
+
+}
+
+/* menu */
+.menu {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 170px;
+}
+
+.logo {
+	width: 171px;
+	height: 87px;
+}
+
+.nav__links {
+	display: inline;
+	margin-left: 63px;
+}
+
+.nav__links a {
+	transition: .2s;
+}
+
+.nav__links a:hover {
+	color: #545250;
+	transition: .2s;
+}
+
+/* desktop */
+.desktop {
+	color: #403F3F;
+	font-size: 32px;
+}
+
+.d_heading {
+	font-size: 48px;
+	margin-bottom: 37px;
+	font-weight: 600;
+}
+
+.d_text {
+	max-width: 1100px;
+	margin-bottom: 80px;
+}
+
+.d_btn {
+	color: #fff;
+	width: 480px; 
+	background-color: #749D35;
+	padding: 20px 50px;
+	border-radius: 50px;
+	font-weight: 600;
+}
+
+.d_btn:hover {
+	background-color: #8aac55;
+}
+
+
+
+/* Характеристики заголовка */
+.heading_all {
+	font-size: 48px;
+	font-weight: 600;
+	color: #636363;
+	text-align: center;
+	position: relative;
+	/* Прячем часть линий, выходящие за пределы блока */
+    overflow: hidden;
+}
+
+.heading_all:before,
+.heading_all:after {
+    /* Свойство content необходимо указывать хотя бы пустое, иначе псевдоэлементы не отобразятся */
+    content: "";
+    /* Свойства линий, выравнивание по центру по вертикали */
+    display: inline-block;
+    vertical-align: middle;
+    /* Ширина - 100% и указываем толщину линии */
+    width: 416px;
+    height: 3px;
+    /* Цвет линии */
+    background-color: #AECA20;
+    /* Возможность для пседоэлементов изменить позицию линии */
+    position: relative;
+}
+
+.heading_all:before {
+	/* Ставим левую линию слева от текста, смещая ее на 100% влево */
+    margin-left: -100%;
+    /* Отступ линии от заголовка */
+    left: -91px;
+}
+.heading_all:after {
+    /* Ставим правую линию справа от текста, смещая ее на 100% вправо */
+    margin-right: -100%;
+    /* Отступ линии от заголовка */
+    right: -91px;
+}
+
+
+
+/* About_company */
+.about_company {
+	padding-top: 500px;
+}
+
+/* company */
+.company {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 130px;
+}
+
+
+
+/* Макеты для текста и фото*/
+.text_all {
+	margin-right: 61px;
+	line-height: 39.56px;
+}
+
+.img_all {
+	border-radius: 20px;
+}
+
+
+
+/* Offer */
+.offer {
+	padding-top: 293px;
+}
+
+.o_first {
+	display: flex;
+	margin-top: 130px;
+}
+
+.f_text {
+	margin-right: 82px;
+}
+
+.o_second {
+	display: flex;
+	margin-top: 168px;
+}
+
+.s_text {
+	margin: 0 0 0 80px;
+}
+
+
+
+/* Portfolio */
+.portfolio {
+	padding-top: 308px;
+	padding-bottom: 100px; /*Удалить*/
+}
+
+/* choice_work */
+.choice_work {
+	margin: 0 auto;
+	width: 660px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 80px;
+}
+
+.cw_checkbox {
+	display: none;
+}
+
+.cw_text {
+	color: #C4C4C4;
+	font-size: 36px;
+	font-weight: 600; 
+	cursor: pointer;
+	transition: .2s;
+}
+
+.cw_text:hover {
+	color: #a2a2a2;
+	transition: .2s;
+}
+
+.active {
+	color: #AECA20;
+	/*opacity: 0.2;*/
+}
+
+.active:hover {
+	color: #97aa39;
+	transition: .2s;
+}
+
+/*.cw_checkbox:checked + .cw_text::before {
+	opacity: 1;
+}*/
+

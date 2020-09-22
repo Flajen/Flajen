@@ -285,6 +285,7 @@ a {
 }
 
 .arrow_lotte:hover {
-	filter: brightness(50%);
+	opacity: 0.9;
+	filter: brightness(85%);
 	transition: .2s;
 }

@@ -1,8 +1,53 @@
 // Переменные
+var fixed_offset = 25;
 
 // Функции
 
 // Скрипты
+
+// Плавный скролл
+$("body").on('click', '[href*="#"]', function(e){
+  $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+  e.preventDefault();
+});
+
+// Скролл по кнопке
+// Форма
+$('.d_btn').click(() => {
+    $('html, body').animate({
+        scrollTop: $('.c_wrapper_img').offset().top - fixed_offset
+    }, 400);
+});
+// О нас
+$('.Nabout').click(() => {
+    $('html, body').animate({
+        scrollTop: $('#Sabout').offset().top - fixed_offset
+    }, 400);
+});
+// Услуги
+$('.Nservices').click(() => {
+    $('html, body').animate({
+        scrollTop: $('#Sservices').offset().top - fixed_offset
+    }, 400);
+});
+// Наши работы
+$('.Nwork').click(() => {
+    $('html, body').animate({
+        scrollTop: $('#Swork').offset().top - fixed_offset
+    }, 400);
+});
+// Лицензии
+$('.Nlicenses').click(() => {
+    $('html, body').animate({
+        scrollTop: $('#Slicenses').offset().top - fixed_offset
+    }, 400);
+});
+// Наши заказчики
+$('.Ncustomer').click(() => {
+    $('html, body').animate({
+        scrollTop: $('#Scustomer').offset().top - fixed_offset
+    }, 400);
+});
 
 // Переключение вкладок
 $('#cw_one').click( function() {

@@ -4,12 +4,14 @@ var fixed_offset = 25;
 // Функции
 
 // Скрипты
+// Отключения перехода тега а
+// $('a.current-page').click(function() { return false; });
 
 // Плавный скролл
-$("body").on('click', '[href*="#"]', function(e){
-  $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
-  e.preventDefault();
-});
+// $("body").on('click', '[href*="#"]', function(e){
+//   $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+//   e.preventDefault();
+// });
 
 // Скролл по кнопке
 // Форма

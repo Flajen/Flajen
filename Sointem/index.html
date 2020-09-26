@@ -2,11 +2,10 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">--> <!-- Для адаптации под мобильные устройства -->
 	<title>Sointem</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="shortcut icon" href="img/site.png" type="image/png"> <!-- Иконка сайта -->
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 	<!-- --------------------Подключение-------------------- -->
 	<script src="js/script.js" defer></script>
 	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -15,7 +14,7 @@
 <body>
 	
 <header class="header">
-	<img src="img/main/background.jpg" alt="fon" class="background">
+	<img src="img/main/background.png" alt="fon" class="background">
 	<div class="container">
 		<div class="menu">
 			<img src="img/main/logo.png" alt="" class="logo">
@@ -25,7 +24,6 @@
 				<li class="nav__links"><a href="#" class="Nwork">Наши работы</a></li>
 				<li class="nav__links"><a href="#" class="Nlicenses">Лицензии</a></li>
 				<li class="nav__links"><a href="#" class="Ncustomer">Наши заказчики</a></li>
-				<!-- <li class="nav__links"><a href="#"></a></li> - Пример -->
 			</ul>
 		</div>
 		<div class="desktop">
@@ -63,164 +61,227 @@
 <section class="portfolio">
 	<div class="container">
 		<h1 class="heading_all" id="Swork">Наши работы</h1>
-		<!-- <div class="choice_work">
-			<label>	--------------------------------------------------------------------------------\
-				<input type="radio" name="work" id="cw__work_one" class="cw_checkbox" checked>		 |
-				<span class="cw_text active" id="cw_one">Здания</span>								 |
-			</label>																				 \
-			<label>																					  | - Кнопки здания и частные объекты																				   /
-				<input type="radio" name="work" id="cw__work_two" class="cw_checkbox">				 |
-				<span class="cw_text" id="cw_two">Частные<br> объекты</span>						 |
-			</label> -------------------------------------------------------------------------------/
-		</div> -->
 		<div class="wrapper_slider">
 			<div class="ws_up">
 				<div class="wu_heading">
 					<img src="img/portfolio/arrow/left.png" alt="" class="arrow_lotte" id="prev_arrow">
-					<h2 class="text_bussines">Бизнес-центр LOTTE</h2>
+					<h2 class="text_bussines">ЛОТТЕ Москва</h2>
 					<img src="img/portfolio/arrow/right.png" alt="" class="arrow_lotte" id="next_arrow">
 				</div>
-				<!-- <span id="text_area">Площадь – 70 340 м2</span> --------------------------------------| Добавить в скваттер -->
 			</div>
 			<div class="slider_container">
 				<div class="s_track">
+					<!-- ЛОТТЕ Москва -->
 					<div class="s_item s_active">
 						<div class="s_info">
-							<ul class="s_info_all" id="sim_one">
-								Системы общеобменной вентиляции
-								<li>Приточная вентиляция.</li>
-								<li>Вытяжная вентиляция.</li>
+							<ul class="s_info_all">
+								<span>Проведенные работы</span>
+								<li>Проектирование.</li>
+								<li>Монтаж и запуск систем отопления, вентиляции и теплоснобжения.</li>
 							</ul>
-							<ul class="s_info_all" id="sim_two">
-								Теплоснабжение
-								<li>Теплоснабжение системы отопления.</li>
-								<li>Теплоснабжение воздушно-тепловых завес.</li>
-							</ul>
-							<p class="text_info" id="sim_three">По заказу АО “ЛОТТЕ ИНЖИНИРИНГ &<br> КОНСТРАКШН КО., ЛТД”</p>
+							<p class="text_info" id="sim_three">Площадь – 58 000 м2</p>
 						</div>
-						<div class="s_img">
-							<div class="si_scrolling">
-								<img src="img/slider/one/1.png" alt="1" class="img_animation ia_one img_active">
-								<img src="img/slider/one/2.jpg" alt="2" class="img_animation ia_one">
+						<div class="simg_wrapper">
+							<div class="s_img">
+								<div class="si_scrolling">
+									<img src="img/slider/one/1.png" alt="1" class="img_animation ia_one img_active">
+									<img src="img/slider/one/2.jpg" alt="2" class="img_animation ia_one">
+								</div>
+								<div class="si_arrow">
+									<img src="img/slider/btn/back.png" alt="back_btn" class="img_btn back_btn">
+									<img src="img/slider/btn/next.png" alt="next_btn" class="img_btn next_btn">
+								</div>
+								<div class="s_pick">
+									<div class="pick pick_one pick_active"></div>
+									<div class="pick pick_one"></div>
+								</div>
 							</div>
-							<div class="s_pick">
-								<div class="pick pick_one pick_active"></div>
-								<div class="pick pick_one"></div>
-							</div>
-						</div>
-					</div>
-					<div class="s_item">
-						<div class="s_info">
-							<ul class="s_info_all" id="sim_one">
-								Системы общеобменной вентиляции
-								<li>Приточная вентиляция.</li>
-								<li>Вытяжная вентиляция.</li>
-							</ul>
-							<ul class="s_info_all" id="sim_two">
-								Теплоснабжение
-								<li>Теплоснабжение системы отопления.</li>
-								<li>Теплоснабжение воздушно-тепловых завес.</li>
-							</ul>
-							<p class="text_info" id="sim_three">По заказу АО “ЛОТТЕ ИНЖИНИРИНГ &<br> КОНСТРАКШН КО., ЛТД”</p>
-						</div>
-						<div class="s_img">
-							<div class="si_scrolling">
-								<img src="img/slider/two/1.jpg" alt="1" class="img_animation ia_two img_active">
-								<img src="img/slider/two/2.jpg" alt="2" class="img_animation ia_two">
-								<img src="img/slider/two/5.jpg" alt="3" class="img_animation ia_two">
-							</div>
-							<div class="s_pick">
-								<div class="pick pick_two pick_active"></div>
-								<div class="pick pick_two"></div>
-								<div class="pick pick_two"></div>
-							</div>
+							<p class="area">г.Москва, Профсоюзная улица, д.65, корпус 1</p>
 						</div>
 					</div>
+					<!-- Рольф TOYOTA-LEXUS -->
 					<div class="s_item">
 						<div class="s_info">
-							<ul class="s_info_all" id="sim_one">
-								Системы общеобменной вентиляции
-								<li>Приточная вентиляция.</li>
-								<li>Вытяжная вентиляция.</li>
+							<ul class="s_info_all">
+								<span>Проведенные работы</span>
+								<li>Проектирование.</li>
+								<li>Монтаж и запуск систем вентиляции и кондиционирования.</li>
 							</ul>
-							<ul class="s_info_all" id="sim_two">
-								Теплоснабжение
-								<li>Теплоснабжение системы отопления.</li>
-								<li>Теплоснабжение воздушно-тепловых завес.</li>
-							</ul>
-							<p class="text_info" id="sim_three">По заказу АО “ЛОТТЕ ИНЖИНИРИНГ &<br> КОНСТРАКШН КО., ЛТД”</p>
+							<p class="text_info" id="sim_three">Площадь – 3830 м2</p>
 						</div>
-						<div class="s_img">
-							<div class="si_scrolling">
-								<img src="img/slider/three/1.jpg" alt="1" class="img_animation ia_three img_active">
-								<img src="img/slider/three/2.jpg" alt="2" class="img_animation ia_three">
-								<img src="img/slider/three/5.jpg" alt="3" class="img_animation ia_three">
-								<img src="img/slider/three/7.jpg" alt="4" class="img_animation ia_three">
+						<div class="simg_wrapper">
+							<div class="s_img">
+								<div class="si_scrolling">
+									<img src="img/slider/two/1.jpg" alt="1" class="img_animation ia_two img_active">
+									<img src="img/slider/two/2.jpg" alt="2" class="img_animation ia_two">
+								</div>
+								<div class="si_arrow">
+									<img src="img/slider/btn/back.png" alt="back_btn" class="img_btn back_btn">
+									<img src="img/slider/btn/next.png" alt="next_btn" class="img_btn next_btn">
+								</div>
+								<div class="s_pick">
+									<div class="pick pick_two pick_active"></div>
+									<div class="pick pick_two"></div>
+								</div>
 							</div>
-							<div class="s_pick">
-								<div class="pick pick_three pick_active"></div>
-								<div class="pick pick_three"></div>
-								<div class="pick pick_three"></div>
-								<div class="pick pick_three"></div>
-							</div>
+							<p class="area">г.Москва, Остаповский проезд, д.4</p>
 						</div>
 					</div>
+					<!-- РАНХиГС -->
 					<div class="s_item">
 						<div class="s_info">
-							<ul class="s_info_all" id="sim_one">
-								Системы общеобменной вентиляции
-								<li>Приточная вентиляция.</li>
-								<li>Вытяжная вентиляция.</li>
+							<ul class="s_info_all">
+								<span>Проведенные работы</span>
+								<li>Проектирование.</li>
+								<li>Монтаж, запуск систем вентиляции и кондиционирования.</li>
 							</ul>
-							<ul class="s_info_all" id="sim_two">
-								Теплоснабжение
-								<li>Теплоснабжение системы отопления.</li>
-								<li>Теплоснабжение воздушно-тепловых завес.</li>
-							</ul>
-							<p class="text_info" id="sim_three">По заказу АО “ЛОТТЕ ИНЖИНИРИНГ &<br> КОНСТРАКШН КО., ЛТД”</p>
+							<p class="text_info" id="sim_three">Площадь – 12 000 м2</p>
 						</div>
-						<div class="s_img">
-							<div class="si_scrolling">
-								<img src="img/slider/four/1.jpg" alt="1" class="img_animation ia_four img_active">
-								<img src="img/slider/four/3.jpg" alt="2" class="img_animation ia_four">
-								<img src="img/slider/four/4.jpg" alt="3" class="img_animation ia_four">
-								<img src="img/slider/four/7.jpg" alt="4" class="img_animation ia_four">
+						<div class="simg_wrapper">
+							<div class="s_img">
+								<div class="si_scrolling">
+									<img src="img/slider/three/1.jpg" alt="1" class="img_animation ia_three img_active">
+									<img src="img/slider/three/2.jpg" alt="2" class="img_animation ia_three">
+								</div>
+								<div class="si_arrow">
+									<img src="img/slider/btn/back.png" alt="back_btn" class="img_btn back_btn">
+									<img src="img/slider/btn/next.png" alt="next_btn" class="img_btn next_btn">
+								</div>
+								<div class="s_pick">
+									<div class="pick pick_three pick_active"></div>
+									<div class="pick pick_three"></div>
+								</div>
 							</div>
-							<div class="s_pick">
-								<div class="pick pick_four pick_active"></div>
-								<div class="pick pick_four"></div>
-								<div class="pick pick_four"></div>
-								<div class="pick pick_four"></div>
-							</div>
+							<p class="area">г.Москва, Проспект Вернадского, 98</p>
 						</div>
 					</div>
+					<!-- Рольф MAZDA,MITSUBISI -->
 					<div class="s_item">
 						<div class="s_info">
-							<ul class="s_info_all" id="sim_one">
-								Системы общеобменной вентиляции
-								<li>Приточная вентиляция.</li>
-								<li>Вытяжная вентиляция.</li>
+							<ul class="s_info_all">
+								<span>Проведенные работы</span>
+								<li>Проектирование.</li>
+								<li>Монтаж, запуск систем вентиляции и кондиционирования.</li>
 							</ul>
-							<ul class="s_info_all" id="sim_two">
-								Теплоснабжение
-								<li>Теплоснабжение системы отопления.</li>
-								<li>Теплоснабжение воздушно-тепловых завес.</li>
-							</ul>
-							<p class="text_info" id="sim_three">По заказу АО “ЛОТТЕ ИНЖИНИРИНГ &<br> КОНСТРАКШН КО., ЛТД”</p>
+							<p class="text_info" id="sim_three">Площадь – 23 000 м2</p>
 						</div>
-						<div class="s_img">
-							<div class="si_scrolling">
-								<img src="img/slider/five/1.jpg" alt="1" class="img_animation ia_five img_active">
-								<img src="img/slider/five/2.jpg" alt="2" class="img_animation ia_five">
-								<img src="img/slider/five/3.jpg" alt="3" class="img_animation ia_five">
-								<img src="img/slider/five/5.jpg" alt="4" class="img_animation ia_five">
+						<div class="simg_wrapper">
+							<div class="s_img">
+								<div class="si_scrolling">
+									<img src="img/slider/four/3.jpg" alt="1" class="img_animation ia_four img_active">
+									<img src="img/slider/four/2.jpg" alt="2" class="img_animation ia_four">
+									<!-- <img src="img/slider/four/1.jpg" alt="3" class="img_animation ia_four"> -->
+								</div>
+								<div class="si_arrow">
+									<img src="img/slider/btn/back.png" alt="back_btn" class="img_btn back_btn">
+									<img src="img/slider/btn/next.png" alt="next_btn" class="img_btn next_btn">
+								</div>
+								<div class="s_pick">
+									<div class="pick pick_four pick_active"></div>
+									<div class="pick pick_four"></div>
+									<!-- <div class="pick pick_four"></div> -->
+								</div>
 							</div>
-							<div class="s_pick">
-								<div class="pick pick_five pick_active"></div>
-								<div class="pick pick_five"></div>
-								<div class="pick pick_five"></div>
-								<div class="pick pick_five"></div>
+							<p class="area">г.Москва, Рязанский проспект, 24 корпус 3</p>
+						</div>
+					</div>
+					<!-- ЛОТТЕ Плаза -->
+					<div class="s_item">
+						<div class="s_info sia_section">
+							<ul class="s_info_all">
+								<span>Проведенные работы</span>
+								<li>Проектирование.</li>
+								<li>Монтаж систем вентиляции и кондиционирования в офисе компании «BP».</li>
+							</ul>
+							<p class="text_info" id="sim_three">Площадь – 2500 м2</p>
+						</div>
+						<div class="simg_wrapper">
+							<div class="s_img">
+								<div class="si_scrolling">
+								</div>
+								<div class="s_pick">
+								</div>
 							</div>
+							<p class="area">г.Москва, Новинский бульвар, д.8, 17 и 18 этаж</p>
+						</div>
+					</div>
+					<!-- ВЭРОНД -->
+					<div class="s_item">
+						<div class="s_info sia_section">
+							<ul class="s_info_all">
+								<span>Проведенные работы</span>
+								<li>Проектирование.</li>
+								<li>Монтаж систем вентиляции и кондиционирования.</li>
+							</ul>
+							<p class="text_info" id="sim_three">Площадь – 878 м2</p>
+						</div>
+						<div class="simg_wrapper">
+							<div class="s_img">
+								<div class="si_scrolling">
+								</div>
+								<div class="s_pick">
+								</div>
+							</div>
+							<p class="area">г.Москва, Семеновская площадь д.5</p>
+						</div>
+					</div>
+					<!-- Школа -->
+					<div class="s_item">
+						<div class="s_info sia_section">
+							<ul class="s_info_all">
+								<span>Проведенные работы</span>
+								<li>Монтаж систем вентиляции и кондиционирования.</li>
+							</ul>
+							<p class="text_info" id="sim_three">Площадь – 14 000 м2</p>
+						</div>
+						<div class="simg_wrapper">
+							<div class="s_img">
+								<div class="si_scrolling">
+								</div>
+								<div class="s_pick">
+								</div>
+							</div>
+							<p class="area">м-рн Одинцово-1</p>
+						</div>
+					</div>
+					<!-- Башня Федерация -->
+					<div class="s_item">
+						<div class="s_info">
+							<ul class="s_info_all">
+								<span>Проведенные работы</span>
+								<li>Проектирование.</li>
+								<li>Монтаж систем вентиляции и кондиционирования офиса.</li>
+							</ul>
+							<p class="text_info" id="sim_three">Площадь – 390 м2</p>
+						</div>
+						<div class="simg_wrapper">
+							<div class="s_img">
+								<div class="si_scrolling">
+									<img src="img/slider/nine/1.jpg" alt="1" class="img_animation ia_eight img_active">
+								</div>
+								<div class="s_pick">
+								</div>
+							</div>
+							<p class="area">г.Москва, Пресненская набережная, д.12, 53 этаж</p>
+						</div>
+					</div>
+					<!-- Башня на Набережной -->
+					<div class="s_item">
+						<div class="s_info">
+							<ul class="s_info_all">
+								<span>Проведенные работы</span>
+								<li>Монтаж систем вентиляции в офисе компании "Элли Лилли Восток".</li>
+							</ul>
+							<p class="text_info" id="sim_three"></p>
+						</div>
+						<div class="simg_wrapper">
+							<div class="s_img">
+								<div class="si_scrolling">
+								</div>
+								<div class="s_pick">
+								</div>
+							</div>
+							<p class="area">Москва Сити</p>
 						</div>
 					</div>
 				</div>
@@ -235,7 +296,6 @@
 		<div class="l_img">
 			<a href="img/licenses/insurance.PNG" target="_blank" class="li_wrapper"><img src="img/licenses/insurance.PNG" alt="insurance" class="l_all l_ins"></a>
 			<a href="img/licenses/licenses.PNG" target="_blank" class="ll_wrapper"><img src="img/licenses/licenses.PNG" alt="licenses" class="l_all l_lic"></a>
-			<a href="img/licenses/quality.png" target="_blank" class="lq_wrapper"><img src="img/licenses/quality.png" alt="quality" class="l_all l_qua"></a>
 		</div>
 	</div>
 </section>

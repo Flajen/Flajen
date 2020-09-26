@@ -1,5 +1,5 @@
 /*---------------Fonts---------------*/
-@font-face{
+/*@font-face{
 
 	font-family: 'palatino';
 	src: url('../fonts/palatino.eot');
@@ -16,6 +16,21 @@
 	url('../fonts/proxima.svg#proxima') format('svg');
 	font-weight: normal;
 	font-style: normal;
+}*/
+
+@font-face{
+    font-family: Proxima;
+    src: url("../fonts/proxima.ttf");
+}
+
+@font-face{
+    font-family: Palatino;
+    src: url("../fonts/palatino.ttf")
+}
+
+html, html a {
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
 }
 /*---------------Fonts---------------*/
 
@@ -26,17 +41,17 @@ body {
 	padding: 0;
 	cursor: default;
 	overflow-x: hidden;
+	font-family: 'proxima';
 }
 
 *,
 *:before,
 *:after {
     box-sizing: border-box;
-    font-family: 'proxima';
     font-weight: 400;
 }
 
-h1, h2, h3, h4, a, p {
+h1, h2, h3, h4, a, p, button {
 	margin: 0;
 	padding: 0;
 	font-family: 'palatino';
@@ -85,9 +100,8 @@ button::-moz-focus-inner {
 	left: 0px;
 	top: 0px;
 
-	background: rgba(216, 216, 216, 0.0001);
+	background: rgba(216, 216, 216, 0.3);
 	filter: blur(20px);
-
 }
 
 /* menu */
@@ -101,6 +115,10 @@ button::-moz-focus-inner {
 .logo {
 	width: 171px;
 	height: 87px;
+	/* Убираем выделение */
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	user-select: none;
 }
 
 .nav__links {
@@ -284,7 +302,6 @@ button::-moz-focus-inner {
 
 .active {
 	color: #AECA20;
-	/*opacity: 0.2;*/
 }
 
 .active:hover {
@@ -339,7 +356,6 @@ button::-moz-focus-inner {
 
 .s_track {
 	display: flex;
-	/*background: #777;*/
 	transition: .2s;
 	overflow: hidden;
 	align-items: center;
@@ -349,7 +365,6 @@ button::-moz-focus-inner {
 }
 
 .s_item {
-	/*display: flex;*/
 	justify-content: space-between;
 	min-width: 100%;
 	align-items: center;
@@ -366,14 +381,41 @@ button::-moz-focus-inner {
 	transition: .3s;
 }
 
+.s_info {
+	height: 400px;
+	display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
 .s_info_all {
-	margin: 0 24px 20px 0;
+	margin: 0 24px 70px 0;
+	line-height: 1.5em;
+}
+
+.sia_section {
+	display: flex;
+	flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.s_info_all span {
 	line-height: 1.5em;
 	font-weight: 600;
 }
 
 .s_info_all li:before {
 	content: "– ";
+}
+
+.area {
+	width: 700px;
+	margin-left: auto;
+}
+
+.simg_wrapper {
+	text-align: right;
+	position: relative;
 }
 
 .s_img {
@@ -387,7 +429,7 @@ button::-moz-focus-inner {
 
 .img_animation {
 	width: 700px;
-	height: 420px;
+	height: 400px;
 	border-radius: 20px;
 	top: 0;
 	left: 0;
@@ -406,6 +448,26 @@ button::-moz-focus-inner {
 	left: 0;
 	align-items: center;
 	display: flex;
+}
+/*Стрелки*/
+.si_arrow {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 700px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.img_btn {
+	filter: brightness(10);
+	transition: .2s;
+}
+
+.img_btn:hover {
+	filter: brightness(1);
+	transition: .2s;
 }
 
 /*Боксы*/
@@ -458,7 +520,7 @@ button::-moz-focus-inner {
 	width: 100%;
 	height: 620px;
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 	position: relative;
 }
@@ -469,15 +531,11 @@ button::-moz-focus-inner {
 
 .l_all {
 	box-shadow: 0 0 8px 2px #222;
-	position: absolute;
-}
-
-.li_wrapper {
-	height: 410px;
 }
 
 .l_ins {
-	height: 410px;
+	width: 430px;
+	height: 610px;
 	left: 140px;
 	z-index: 1;
 }
@@ -491,18 +549,7 @@ button::-moz-focus-inner {
 .l_lic {
 	width: 430px;
 	height: 610px;
-	left: 430px;
 	z-index: 2;
-}
-
-.lq_wrapper {
-	height: 410px;
-}
-
-.l_qua {
-	height: 410px;
-	left: 860px;
-	z-index: 1;
 }
 
 
@@ -514,6 +561,11 @@ button::-moz-focus-inner {
 
 .logo_company {
 	margin-top: 96px;
+	display: flex;
+	justify-content: center;
+}
+
+.lc_wrapper {
 	display: flex;
 	align-items: center;
 }
@@ -600,7 +652,6 @@ button::-moz-focus-inner {
 
 /* Footer */
 .footer {
-	/*padding-top: 151px;*/
 	position: relative;
 	background-color: #FAFAFA;
 	background-image: url('../img/footer/end-city.png') no-repeat center;
@@ -608,8 +659,6 @@ button::-moz-focus-inner {
 
 .f_info {
 	height: 300px;
-	/*position: relative;*/
-	/*border: 1px #222 solid;*/
 	padding-top: 56px;
 }
 
@@ -651,5 +700,4 @@ button::-moz-focus-inner {
 
 .copyright {
 	font-weight: 600;
-
 }

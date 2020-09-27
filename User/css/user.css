@@ -1,10 +1,18 @@
 /*main*/
+html{
+    height: 100%;
+}
+
 body {
     color: #000;
     font-size: 18px;
     margin: 0;
     padding: 0;
     cursor: default;
+    /*Разделение экрана*/
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 div, a, p, h1, h2, h3, h4, ul, li, input, button, textarea {
@@ -22,11 +30,16 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button, textarea {
 /*header*/
 .header {
     padding-top: 7px;
+    flex: 0 0 auto;
 }
 
 .cap {
     display: flex;
     align-items: center;
+    /*Убирание выделения*/
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    user-select: none; 
 }
 
 .logo {
@@ -50,14 +63,15 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button, textarea {
     float:left;
     margin-left: 40px;
     cursor: pointer;
+    transition: .2s;
 }
 
 .nav:hover {
     color: #FFAC30;
+    transition: .2s;
 }
 
 .other {
-    color:;
     margin-left: 12px;
 }
 
@@ -69,8 +83,6 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button, textarea {
 
 .user_nav {
     position: relative;
-
-
     margin-left: 12px
 }
 
@@ -98,9 +110,11 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button, textarea {
 }
 
 
-/*authentication*/
+
+/* Authentication */
 .authentication {
     padding-top: 40px;
+    flex: 1 0 auto;
 }
 
 .wrapper {
@@ -137,12 +151,24 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button, textarea {
     margin-bottom: 20px;
 }
 
+.links {
+    text-decoration: none;
+    color: #8a82ff;
+    border: none;
+    transition: .2s;
+}
+
+.links:hover {
+    color: #5f54fc;
+    border-bottom: 1px #5f54fc dashed;
+    transition: .2s;
+}
+
 .field_describe {
     max-width: 100%;
     min-width: 100%;
     max-height: 400px;
     min-height: 70px;
-    /*padding: 3px 0 3px 20px;*/
 }
 
 .contacts {
@@ -184,4 +210,100 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button, textarea {
     height: 20px;
     border-radius: 10px;
     margin-right: 10px;
+}
+
+/* Оформление FAQ */
+.heading_faq {
+    margin: 60px 0 10px 5px;
+}
+
+.questions {
+    font-size: 16px;
+    line-height: 1.5em;
+    position: relative;
+    transition: .2s;
+}
+
+.questions:hover {
+    color: #494848;
+    transition: .2s;
+}
+
+.questions:hover::after { 
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 15%; top: 20px; /* Положение подсказки */
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    background: rgba(43,43,36,0.95); /* Полупрозрачный цвет фона */
+    font-family: Arial, sans-serif; /* Гарнитура шрифта */
+    padding: 5px 10px; /* Поля */
+    font-size: 13.5px;
+    line-height: 1.3em;
+    color: #fff;
+    border: 1px solid #333; /* Параметры рамки */
+    border-radius: 7px;
+}
+
+.q_grey {
+    color: #787878;
+}
+
+
+
+/* Footer */
+.footer {
+    margin-top: 50px;
+    padding: 40px 0;
+    background: #ccc;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.f_column {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.c_deparment {
+    display: flex;
+    flex-direction: column;
+}
+
+.cd_margin {
+    margin-bottom: 30px;
+}
+
+.f_links {
+    color: #787878;
+    margin-bottom: 35px;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.f_links:hover {
+    color: #FFAC30;
+    transition: .2s;
+}
+
+.c_contacts {
+    margin-top: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.link_social {
+    margin-left: 15px;
+}
+
+.img_social {
+    filter: invert(0);
+    transition: .2s;
+}
+
+.img_social:hover {
+    filter: invert(5);
+    transition: .2s;
 }

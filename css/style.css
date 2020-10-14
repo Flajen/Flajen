@@ -78,8 +78,7 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 
 	margin-right: 70px;
 	background: #fff;
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
+	border-radius: 0 0 20px 20px;
 	box-shadow: 2px 3px 10px 4px #FFBC3A;
 	cursor: pointer;
 	width: 301px;
@@ -102,6 +101,11 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 
 .sointem {
 	background: url('../img/card/Sointem.svg') no-repeat top;
+	margin: 0;
+}
+
+.inetcafe {
+	background: url('../img/card/InetCafe.svg') no-repeat top;
 	margin: 0;
 }
 

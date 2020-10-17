@@ -86,7 +86,6 @@ li {
 	font-size: 40px;
 	font-weight: 400;
 	line-height: 42.26px;
-	letter-spacing: 7.5%;
 }
 .under {
 	font-size: 16px;
@@ -382,4 +381,56 @@ li {
 	font-size: 28px;
 	font-weight: 500;
 	margin-bottom: 18px;
+}
+
+
+
+/*Форма*/
+.form {
+	padding-top: 192px;
+	padding-bottom: 300px;
+}
+.wrapper_from {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.form_img {
+	margin-right: 80px;
+}
+.form_other {
+	width: 675px;
+	height: 700px;
+}
+.form_other h2 {
+	font-size: 32px;
+	font-weight: 400;
+	line-height: 1.6em;
+	margin-bottom: 15px;
+}
+.form_application {
+	display: flex;
+	flex-direction: column;
+	float: left;
+}
+.form_application input, textarea {
+	max-width: 592px;
+	width: 592px;
+	max-height: 400px;
+	font-size: 30px;
+	padding: 13px 16px;
+	border: 1px #C6C6C6 solid;
+	margin-top: 32px;
+}
+.question {
+	height: 136px;
+	vertical-align: top;
+}
+.form_application button {
+	width: 317px;
+	font-size: 30px;
+	color: #fff;
+	padding: 15px 80px;
+	background: #449BB2;
+	margin-top: 48px;
 }

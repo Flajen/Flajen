@@ -137,7 +137,7 @@ li {
 	margin-top: 71px;
 	transition: all 0.2s linear;
 }
-.reception_btn:hover, .services_btn:hover {
+.reception_btn:hover, .services_btn:hover, .form_application button:hover {
 	box-shadow: 4px 6px 10px 1px #555;
 }
 
@@ -432,4 +432,5 @@ li {
 	padding: 15px 80px;
 	background: #449BB2;
 	margin-top: 48px;
+	transition: all 0.2s linear;
 }

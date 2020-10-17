@@ -1,0 +1,385 @@
+/* Основные настройки */
+body {
+	height: 100%;
+	font-size: 24px;
+	overflow-x: hidden;
+	cursor: default;
+}
+
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	color: #5B5B5B;
+	font-family: 'Raleway', sans-serif;
+}
+
+ul {
+
+}
+li {
+	list-style-type: none;
+}
+
+.container {
+	width: 1312px;
+	padding: 0 2px;
+	margin: 0 auto;
+}
+
+
+
+/* Главный экран */
+.header {
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	z-index: 1;
+}
+.img_back {
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+	/*Шапка*/
+.wrapper__cap {
+	position: fixed;
+	background: #449BB2;
+	width: 100%;
+	height: 104px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	transition: all 0.2s linear;
+	transform: translateY(0);
+	z-index: 1000;
+}
+.wrapper__cap_active {
+	transform: translateY(-150px);
+	height: 84px;
+}
+.wrapper__cap a {
+	text-decoration: none;
+}
+.cap {
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*Лого*/
+.wrapper__logo {
+	align-items: center;
+	text-align: center;
+}
+.logo {
+	text-decoration: none;
+	color: #fff;
+	font-size: 40px;
+	font-weight: 400;
+	line-height: 42.26px;
+	letter-spacing: 7.5%;
+}
+.under {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 18.78px;
+	color: #fff;
+}
+/*Меню*/
+.nav {
+	display: flex;
+}
+.nav__links {
+	color: #fff;
+	margin-left: 40px;
+}
+.nav__links a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+	transition: all 0.2s linear;
+}
+.nav__links:hover, .nav__links a:hover {
+	color: #d3d3d3;
+}
+
+	/*Контент*/
+.wrapper__header {
+	position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.header_heading {
+	color: #fff;
+	font-size: 64px;
+	font-weight: 600;
+}
+.header_text {
+	color: #fff;
+	font-size: 30px;
+	line-height: 1.4em;
+	margin-top: 23px;
+}
+.reception_btn {
+	font-size: 30px;
+	color: #fff;
+	background: #449BB2;
+	cursor: pointer;
+	padding: 18px 30px;
+	margin-top: 71px;
+	transition: all 0.2s linear;
+}
+.reception_btn:hover, .services_btn:hover {
+	box-shadow: 4px 6px 10px 1px #555;
+}
+
+
+
+/*О нас*/
+.about {
+	padding-top: 140px;
+}
+.about_heading {
+	color: #449BB2;
+	font-size: 38px;
+	font-weight: 500;
+}
+.about_text {
+	font-size: 28px;
+	margin-top: 25px;
+	line-height: 1.5em;
+}
+/*Наши плюсы*/
+.plus {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 150px;
+}
+.item {
+}
+.item_img {
+	width: 304px;
+	height: 256px;
+	background: rgba(1, 1, 1, 0.1);
+	border-radius: 50px;
+	position: relative;
+}
+.img_one:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: url(../img/about/imgs.svg) no-repeat;
+	background-position: -30px -240px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.img_two:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: url(../img/about/imgs.svg) no-repeat;
+	background-position: -340px -260px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.img_three:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: url(../img/about/imgs.svg) no-repeat;
+	background-position: -10px -1px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.img_four:before {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background: url(../img/about/imgs.svg) no-repeat;
+	background-position: -330px -10px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.item_text {
+	margin-top: 24px;
+	text-align: center;
+}
+/*Услуги*/
+.services_heading {
+	font-size: 40px;
+	font-weight: 600;
+	margin-top: 194px;
+	text-align: left;
+}
+.wrapper_block {
+	margin-top: 54px;
+	text-align: center;
+}
+.block {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 32px;
+}
+.item_block {
+	position: relative;
+	z-index: 0;
+	width: 640px;
+	height: 328px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	overflow: hidden;
+	padding: 25px;
+	cursor: pointer;
+	transition: all 0.2s linear;
+	text-align: left;
+}
+.item_block:before {
+	content: '';
+	width: 105%;
+	height: 105%;
+	background: rgba(255, 255, 255, 0.1);
+	background: -webkit-linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+	background: -moz-linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	left: 0;
+}
+.item_block:hover {
+	transform: translate(-5px, -5px);
+	box-shadow: 7px 6px 15px 2px #222;
+}
+.img_serv {
+	width: 660px;
+	position: absolute;
+	filter: blur(3px);
+	bottom: -10px;
+	left: -10px;
+}
+.heading {
+	font-size: 24px;
+	font-weight: 500;
+	color: #fff;
+	z-index: 10;
+	margin-bottom: 10px;
+	text-shadow: 0 0 20px black;
+}
+.text {
+	font-size: 18px;
+	color: #fff;
+	z-index: 10;
+	text-shadow: 0 0  20px black;
+	line-height: 1.6em;
+}
+.services_btn {
+	color: #fff;
+	background: #449BB2;
+	font-size: 24px;
+	padding: 16px 84px;
+	margin-top: 80px;
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+
+
+
+/*Отзывы*/
+.review {
+	padding-top: 10px;
+	text-align: center;
+}
+.wrapper_review {
+	display: flex;
+	justify-content: space-between;
+	text-align: left;
+	margin-top: 63px;
+}
+.review_plate {
+	width: 640px;
+	height: 232px;
+	border: 1px #222 solid;
+	padding: 20px 24px;
+	margin-bottom: 55px;
+	transition: all 0.2s linear;
+	cursor: pointer;
+}
+.review_plate:hover {
+	transform: translate(-5px, -5px);
+	box-shadow: 7px 6px 15px 2px #222;
+}
+.review_plate h3 {
+	font-size: 30px;
+	font-weight: 500;
+	margin-bottom: 13px;
+}
+.review_plate span {
+	color: #C4C4C4;
+	font-size: 22px;
+}
+.review_plate p{
+	margin-top: 19px;
+}
+.review_btn {
+	color: #449BB2;
+	transition: all 0.2s linear;
+}
+.review_btn:hover {
+	opacity: 0.7;
+}
+
+
+
+/*Статьи*/
+.articles {
+	padding-top: 153px;
+}
+.articles_heading {
+	margin: 0 0 10px 0;
+}
+.wrapper_articles {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 54px;
+}
+.articles_plate {
+	width: 640px;
+	padding-left: 223px;
+	align-items: center;
+	cursor: pointer;
+	transition: all 0.2s linear;
+}
+.articles_plate:hover {
+	transform: translate(-5px, -5px);
+}
+.ap_one {
+	background: url(../img/articles/1.jpg) no-repeat left;
+}
+.ap_two {
+	background: url(../img/articles/2.jpg) no-repeat left;
+}
+.ap_three {
+	background: url(../img/articles/3.jpg) no-repeat left;
+}
+.ap_four {
+	background: url(../img/articles/4.jpg) no-repeat left;
+}
+.articles_plate h3 {
+	font-size: 28px;
+	font-weight: 500;
+	margin-bottom: 18px;
+}

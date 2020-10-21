@@ -9,13 +9,11 @@ body {
 	cursor: default;
 	overflow-x: hidden;
 }
-
 div, a, p, h1, h2, h3, h4, ul, li, input, button {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 .container {
 	width: 1170px;
 	margin: 0 auto;
@@ -29,7 +27,6 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	position: relative;
 	z-index: 1;
 }
-
 .background {
 	width: 100%;
 	height: 100%;
@@ -51,12 +48,10 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	z-index: 10;
 	color: #fff;
 }
-
 .cap img {
 	cursor: pointer;
 	transition: all 0.3s linear;
 }
-
 .cap img:hover {
 	opacity: 0.8;
 }
@@ -71,7 +66,6 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	margin: 30px 0 70px 0;
 	margin-bottom: 70px;
 }
-
 .example {
 	display: inline-block;
 	position: relative;
@@ -85,7 +79,6 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 	height: 301px;
 	transition: all 0.3s linear;
 }
-
 .example:hover {
 	opacity: 0.8;
 	box-shadow: 3px 6px 10px 3px #333;
@@ -94,20 +87,16 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 .wayup {
 	background: url('../img/card/WayUp.svg') no-repeat top;
 }
-
 .applab {
 	background: url('../img/card/AppLab.svg') no-repeat top;
 }
-
 .sointem {
 	background: url('../img/card/Sointem.svg') no-repeat top;
 	margin: 0;
 }
-
 .inetcafe {
 	background: url('../img/card/InetCafe.svg') no-repeat top;
 }
-
 .grandvet {
 	background: url('../img/card/GrandVet.svg') no-repeat top;
 	margin: 0;
@@ -173,16 +162,20 @@ div, a, p, h1, h2, h3, h4, ul, li, input, button {
 
 @media screen and (max-width: 576px) {
 	.container {
-		width: 540px;
+		width: 100%;
+		padding: 10px;
+	}
+	.cap img {
+		height: 100px;
+	}
+	.cap h1 {
+		font-size: 22px;
 	}
 
 	.wayup {
     	margin: 0 0 60px 0;
 	}
-}
-
-@media screen and (max-width: 576px) {
-	.container {
-		width: 100%;
+	.inetcafe {
+		margin: 0 0 60px 0;
 	}
 }

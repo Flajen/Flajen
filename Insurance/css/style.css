@@ -3,13 +3,13 @@ body {
     color: #222;
     font-size: 16px;
     font-weight: 500;
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background: #fff;
     cursor: default;
+    padding-top: 70px;
 }
-
 *,
 *:after,
 *:before {
@@ -19,7 +19,6 @@ body {
     outline: none;
     border: none;
 }
-
 li {
     list-style-type: none; /* Убираем маркеры */
 }
@@ -27,15 +26,12 @@ ul {
     margin-left: 0; /* Отступ слева в браузере IE и Opera */
     padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
 }
-
 h1, h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
-
 button, input {
-    font-family: 'Comfortaa', cursive;
+    font-family: 'Roboto', sans-serif;
 }
-
 /* Контайнер */
 .container {
     max-width: 100%;
@@ -44,51 +40,43 @@ button, input {
     z-index: 1;
 }
 
-/* Анимации */
+
 
 /* Шапка */
 .header_cap {
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     margin: 0 auto;
     margin-bottom: 20px;
     background: #fff;
     z-index: 10;
+    transition: all 0.2s linear;
 }
-
 .cap_active_none {
-    position: fixed;
     transform: translateY(-100%);
     z-index: 10;
 }
-
-.cap_active_animation {
-    transition: 0.2s linear;
-    transform: translateY(-100%);
-    z-index: 10;
-}
-
-.cap_active {
-    position: fixed;
-    background: #fff;
-    box-shadow: 0 0 10px 1px #c1c1c1;
-    transition: 0.2s linear;
-    transform: translateY(0);
-    z-index: 10;
-}
-
 .cap_wrapper {
     display: flex;
     height: 70px;
     align-items: center;
     padding: 2px 0;
 }
-
 .logo {
-    height: 60px;
+    height: 50px;
+    align-items: center;
+    border-radius: 15px;
+    box-shadow: 0 0 10px 1px #555;
+    transform: scale(1.05);
+    transition: all 0.2s linear;
 }
-
+.logo:hover {
+    opacity: 0.95;
+    transform: scale(1.04);
+    box-shadow: 0px 0px 10px 0.5px #555;
+    transition: all 0.2s linear;
+}
 .nav_menu {
     width: 100%;
     display: flex;
@@ -105,59 +93,76 @@ button, input {
 .ul_wrapper {
     display: flex;
 }
-
 .a_links {
     color: #222;
     text-decoration: none;
     margin-left: 40px;
     transition: 0.2s linear;
+    font-weight: 500;
 }
-
 .a_links:hover {
     color: rgb(10, 186, 181);
     transition: 0.2s linear;
 }
-
 .none {
     margin: 0 6px;
 }
-
+/*Личный кабинет*/
+.personal_wrapper {
+    position: relative;
+}
+.personal_block {
+    position: absolute;
+    width: 150px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 0.5px #555;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px;
+    align-items: center;
+    text-align: center;
+    display: none;
+}
+.personal_block a {
+    margin: 0;
+}
+.personal_block li {
+    line-height: 3em;
+}
 .user_links {
     margin: 0;
     position: relative;
+    cursor: pointer;
 }
-
 .user_links:before {
     content: "";
     width: 100%;
-    height: 2px;
+    height: 1.4px;
     z-index: 1;
-    background: rgb(10, 186, 181);
+    background: #222;
     position: absolute;
     bottom: -2px;
     left: 0;
-    opacity: 0;
-    transition: opacity 0.3s linear;
+    transition: all 0.2s linear;
 }
-
 .user_links:hover:before {
-    opacity: 1;
+    background: rgb(10, 186, 181);
+    transition: all 0.2s linear;
 }
-
 .heading {
     font-size: 38px;
     display: flex;
     justify-content: center;
     margin: 10px 0;
 }
-
 .links {
     text-decoration: none;
     color: #8a82ff;
     border: none;
     transition: 0.2s linear;
 }
-
 .links:hover {
     color: #5f54fc;
     border-bottom: 1px #5f54fc dashed;
@@ -172,15 +177,12 @@ button, input {
     display: flex;
     flex-direction: column;
     background: #fff;
-    padding-top: 70px;
 }
-
 .header_info {
     color: #fff;
     width: 100%;
     background: url('../img/header/desktop_info.svg') no-repeat top center;
 }
-
 .info_wrapper {
     width: 100%;
     height: 530px;
@@ -191,17 +193,14 @@ button, input {
     flex-direction: column;
     align-items: center;
 }
-
 .iw_heading {
     font-size: 22px;
 }
-
 .iw_text {
     font-size: 12px;
     margin-top: 7px;
     color: #ccc;
 }
-
 .link_changing {
     border-bottom: 1px #ccc dashed;
     transition: 0.2s linear;
@@ -211,7 +210,6 @@ button, input {
     -khtml-user-select: none;
     user-select: none;  
 }
-
 .link_changing:hover {
     color: #fff;
     border-bottom: 1px #fff dashed;
@@ -228,13 +226,11 @@ button, input {
     border-radius: 10px;
     transition: 0.15s linear;
 }
-
 .help_find:hover {
     box-shadow: 0 0 10px 1px rgb(10, 186, 181);
     border-radius: 10px;
     transition: 0.15s linear;
 }
-
 .hf_field {
     color: #444;
     width: 100%;
@@ -243,12 +239,14 @@ button, input {
     border-radius: 10px;
     position: relative;
 }
-
+.hff_active {
+    box-shadow: 0 0 10px 5px rgb(10, 186, 181);
+}
 .hf_btn {
     color: #fff;
     width: 140px;
     font-size: 18px;
-    padding: 15.5px;
+    padding: 15px;
     position: absolute;
     right: 1.9px;
     top: 1.9px;
@@ -256,30 +254,122 @@ button, input {
     background: #222;
     transition: 0.2s linear;
 }
-
 .hf_btn:hover {
     background: rgb(10, 186, 181);
-    transition: 0.2s linear;
 }
 
     /* Слйдер услуг */
+.img_task {
+    width: 310px;
+    cursor: pointer;
+}
 .img_task:hover {
     opacity: 0.8;
 }
-
-.btn_wrapper {
-    display: flex;
-    justify-content: space-between;
-    position: relative;
+/* Слайдер */
+.slick-slider{}
+/* Слайдер запущен */
+.slick-slider.slick-initialized{}
+/* Слайдер с точками */
+.slick-slider.slick-dotted{}
+/* Ограничивающая оболочка */
+.slick-list {
+    overflow: hidden;
 }
-
-.btn_task {
-    width: 40px;
-    height: 40px;
-    /*position: absolute;*/
-    left: 0px;
+/* Лента слайдов */
+.slick-track{
+    display: flex;
+    align-items: center;
+}
+/* Слайд */
+.slick-slide{}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active{
+    opacity: 0.7;
+}
+/* Слайд основной */
+.slick-slide.slick-current{
+}
+/* Слайд по центру */
+.slick-slide.slick-center{
+    opacity: 1;
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned{}
+/* Стрелка */
+.slick-arrow{
+    position: absolute;
+    margin: -45px 0 0 0;
     top: 50%;
-    z-index: 2;
+    z-index: 5;
+    font-size: 0;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+    left: 0;
+    background: url('../img/header/btn/left.png') 0 0 / 100% no-repeat;
+    transition: all 0.2s linear;
+}
+.slick-arrow.slick-prev:hover {
+    transform: scale(1.05)
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+    right: 0;
+    background: url('../img/header/btn/right.png') 0 0 / 100% no-repeat;
+    transition: all 0.2s linear;
+}
+.slick-arrow.slick-next:hover {
+    transform: scale(1.05)
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled{}
+/* Точки (булиты) */
+.slick-dots{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slick-dots li{}
+/* Активная точка */
+.slick-dots li.slick-active{}
+/* Элемент точки */
+.slick-dots li button{
+    font-size: 0;
+    width: 15px;
+    height: 15px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 5px 5px;
+}
+/* Активная точка */
+.slick-dots li.slick-active button{
+    background: rgb(10, 186, 181);
+    border: 1.5px solid #000;
+    box-shadow: 0 0 10px 0.2px rgb(10, 186, 181);
+    transition: all 0.2s linear;
+}
+/*Конкретный слайдер*/
+.slider_wrapper {
+    max-width: 100%;
+    width: 1200px;
+    margin: 0 auto;
+    z-index: 1;
+}
+.slider {
+    position: relative;
+    padding: 0 65px;
+}
+.slider__item {
+    text-align: center;
+    align-items: center;
+    opacity: 0.5;
+    transition: all 0.2s linear;
 }
 
 
@@ -291,12 +381,11 @@ button, input {
     display: flex;
     flex-direction: column;
 }
-
 .wrapper {
     display: flex;
 }
-
 .field_wrapper {
+    max-width: 100%;
     width: 700px;
     background: #fafafa;
     box-shadow: 2px 1px 10px 1px #c1c1c1;
@@ -306,18 +395,15 @@ button, input {
     color: #787878;
     font-size: 16px;
 }
-
 .request {
     color: #000;
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 20px;
 }
-
 .field_heading {
     margin-bottom: 10px;
 }
-
 .field_all {
     font-size: 18px;
     outline: none;
@@ -327,23 +413,19 @@ button, input {
     border-radius: 7px;
     margin-bottom: 20px;
 }
-
 .field_describe {
     max-width: 100%;
     min-width: 100%;
     max-height: 400px;
     min-height: 70px;
 }
-
 .contacts {
     color: #000;
     margin-bottom: 20px;
 }
-
 .field_name {
     text-transform: capitalize;
 }
-
 .btn_form {
     width: 300px;
     color: #fff;
@@ -356,40 +438,40 @@ button, input {
     margin: 20px 0;
     transition: 0.2s linear;
 }
-
 .btn_form:hover {
     background: rgb(10, 186, 181);
     transition: 0.2s linear;
 }
-
 .confirmation {
     padding: 10px;
 }
-
 .confirmation_flex {
     display: flex;
     align-items: center;
 }
-
 .checkbox_confirmation {
     width: 20px;
     height: 20px;
     border-radius: 10px;
     margin-right: 10px;
 }
+.trailer_owner {
+    display: flex;
+}
+.OSAGO, .CASCO, .accident {
+    display: none;
+}
 
     /* Оформление FAQ */
 .heading_faq {
     margin: 60px 0 10px 5px;
 }
-
 .questions {
     font-size: 16px;
     line-height: 1.5em;
     position: relative;
     transition: 0.2s linear;
 }
-
 .questions:hover {
     color: #494848;
     transition: 0.2s linear;
@@ -422,7 +504,6 @@ button, input {
     display: flex;
     flex-direction: column;
 }
-
 .user_wrapper {
     width: 400px;
     margin: 0 auto;
@@ -431,11 +512,9 @@ button, input {
     justify-content: center;
     align-items: center;
 }
-
 .user_heading {
     margin-bottom: 5px;
 }
-
 .user_field {
     width: 100%;
     color: #222;
@@ -446,7 +525,6 @@ button, input {
     border-radius: 10px;
     margin-bottom: 20px;
 }
-
 .user_btn {
     font-size: 18px;
     padding: 15px 20px;
@@ -455,10 +533,112 @@ button, input {
     border-radius: 10px;
     transition: 0.2s linear;
 }
-
 .user_btn:hover {
     background: rgb(10, 186, 181);
     transition: 0.2s linear;
+}
+
+    /* Личный кабинет */
+.personal {
+    padding-top: 40px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.personal_wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+    /*Данные*/
+.profile {
+    width: 100%;
+    margin-right: 10px;
+}
+.views {
+    width: 250px;
+    color: #787878;
+    background-position: 2px;
+    text-align: left;
+    padding-left: 25px;
+    margin-left: auto;
+    font-weight: 700;
+    align-items: center;
+    position: relative;
+}
+.views:before {
+    content: '';
+    display: block;
+    background: url('../img/eye.svg') no-repeat;
+    background-size: 20px;
+    width: 20px;
+    height: 20px;
+    left: 0;
+    top: -2px;
+    position: absolute;
+}
+
+.avatar_wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+    /*Фото*/
+.avatar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+.a_img {
+    width: 100%;
+    height: 200px;
+    background: url('../img/people.svg') no-repeat center;
+    background-size: 100%;
+    border-radius: 10px;
+    border: 1.4px #e4e4e4 solid;
+}
+.a_add {
+    text-align: left;
+    margin-top: 10px;
+    color: #222;
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(top, #FFFFFF, #bfbfbf);
+    background: -moz-linear-gradient(top, #FFFFFF, #bfbfbf);
+    background: linear-gradient(to bottom, #FFFFFF, #bfbfbf);
+    padding: 10px 20px 10px 31px;
+    border-radius: 5px;
+    border: 1.4px #e4e4e4 solid;
+    position: relative;
+    z-index: 1;
+    text-decoration: none;
+    align-items: center;
+    transition: all 0.2s linear;
+}
+.a_add:hover {
+    background: #FFFFFF;
+}
+.a_add:before {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left: 8px;
+    top: 15px;
+    margin-top: -7px;
+    background: url('../img/camera.svg') no-repeat;
+    background-size: 20px;
+    z-index: 10;
+}
+    /*Подтвержденные данные*/
+.confirmed {
+    height: 700px;
+    min-width: 300px;
+    max-width: 280px;
+    border: 1.4px #e4e4e4 solid;
+    border-radius: 10px;
+    align-items: center;
+    padding: 20px;
 }
 
 
@@ -478,28 +658,23 @@ button, input {
     display: flex;
     justify-content: space-between;
 }
-
 .c_deparment {
     display: flex;
     flex-direction: column;
 }
-
 .cd_margin {
     margin-bottom: 30px;
 }
-
 .f_links {
     color: #222;
     margin-bottom: 35px;
     text-decoration: none;
     transition: 0.2s linear;
 }
-
 .f_links:hover {
     color: rgb(10, 186, 181);
     transition: 0.2s linear;
 }
-
 .c_contacts {
     margin-top: 10px;
     width: 90%;
@@ -507,24 +682,20 @@ button, input {
     justify-content: space-between;
     align-items: center;
 }
-
 .c_regulations {
     font-size: 20px;
     font-weight: 700;
     font-family: 'Open Sans', sans-serif;
     color: #000;
 }
-
 .link_social {
     margin-left: 15px;
 }
-
 .img_social {
     height: 32px;
     filter: grayscale(100%);
     transition: 0.2s linear;
 }
-
 .img_social:hover {
     filter: grayscale(0%);
     transition: 0.2s linear;

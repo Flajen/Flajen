@@ -10,7 +10,29 @@
 </head>
 <body style="background: #222; margin: 0;">
 <header class="header">
-	<h1 style="color: #fff; font-size: 50px;">В разработке</h1>
+	<div class="main">
+		<h1 class="main-title">В разработке</h1>
+		<img src="img/development.gif" alt="development" class="main-gif">
+	</div>
+
+	<style>
+		.main{
+			display: flex;
+			align-items: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.main-title{
+			color: #fff;
+			font-size: 60px;
+			margin-right: 20px;
+		}
+		.main-gif{
+			height: 50px
+		}
+	</style>
 </header>
 	<!-- <script type="text/javascript" src="js/script.js"></script> -->
 </body>

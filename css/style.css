@@ -138,15 +138,7 @@ a{
 	min-height: 100%;
 	height: 700px;
 	background: transparent;
-	/*background: rgba(0,0,0,0.8);*/
 	cursor: pointer;
-}
-.header-btn img{
-}
-.header-btn:hover,
-.header-btn:focus,
-.header-btn:active{
-
 }
 .arrow-left{
 	width: 78px;
@@ -172,7 +164,6 @@ a{
 .header-btn:focus .arrow-right,
 .header-btn:hover .arrow-right{
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='78' height='98' viewBox='0 0 78 98' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg filter='url(%23filter0_d)'%3e%3cpath d='M72.5028 42.2673L35.6846 1.35818C34.8991 0.490908 33.8028 0 32.641 0H8.09551C6.48369 0 5.01915 0.949091 4.35642 2.42182C3.70187 3.90273 3.97187 5.62909 5.05187 6.82364L39.4073 45L5.05187 83.1682C3.97187 84.3709 3.69369 86.0973 4.35642 87.57C5.01915 89.0509 6.48369 90 8.09551 90H32.641C33.8028 90 34.8991 89.5009 35.6846 88.65L72.5028 47.7409C73.9019 46.1864 73.9019 43.8136 72.5028 42.2673Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cfilter id='filter0_d' x='0' y='0' width='77.5521' height='98' filterUnits='userSpaceOnUse' color-interpolation-filters='sRGB'%3e%3cfeFlood flood-opacity='0' result='BackgroundImageFix'/%3e%3cfeColorMatrix in='SourceAlpha' type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0'/%3e%3cfeOffset dy='4'/%3e%3cfeGaussianBlur stdDeviation='2'/%3e%3cfeColorMatrix type='matrix' values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0'/%3e%3cfeBlend mode='normal' in2='BackgroundImageFix' result='effect1_dropShadow'/%3e%3cfeBlend mode='normal' in='SourceGraphic' in2='effect1_dropShadow' result='shape'/%3e%3c/filter%3e%3c/defs%3e%3c/svg%3e");
-	transform: translate();
 }
 
 .project-wrapper{
@@ -185,7 +176,6 @@ a{
 	font-family: 'Lobster', cursive;
 }
 .project-img_wrapper{
-	/*max-width: 946px;*/
 	max-height: 645px;
 	margin: 0 auto 45px auto;
 }
@@ -215,7 +205,6 @@ a{
 .project-btn:hover,
 .project-btn:focus,
 .project-btn:active{
-	/*border-bottom: 2px solid rgba(0,0,0,60%);*/
 	background: #21b446;
 }
 

@@ -144,6 +144,7 @@ a{
 .arrow-left{
 	width: 78px;
 	height: 98px;
+	background: url("data:image/svg+xml,%3Csvg width='78' height='98' viewBox='0 0 78 98' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M5.05 47.733l36.818 40.909A4.094 4.094 0 0044.91 90h24.546c1.612 0 3.076-.95 3.739-2.422a4.095 4.095 0 00-.696-4.402L38.145 45 72.5 6.832a4.084 4.084 0 00.696-4.402A4.098 4.098 0 0069.456 0H44.912c-1.162 0-2.258.5-3.043 1.35L5.049 42.26a4.094 4.094 0 000 5.473z' fill='%23fff'/%3E%3C/svg%3E%0A");
 	cursor: pointer;
 	transition: all 0.2s linear;
 }

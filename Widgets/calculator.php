@@ -439,5 +439,4 @@
 </div>
 
 <script src="calculator.js"></script>
-<script src="js/jquery.min.js"></script>
-<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+<script src="jquery.min.js"></script>

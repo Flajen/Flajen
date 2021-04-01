@@ -79,6 +79,9 @@ ul, li{
 .nav-menu-one{
   display: flex;
 }
+.nav-menu-one a{
+  display: inline-block;
+}
 .nav-menu-tel_one{
   color: #fff;
   font-size: 20px;

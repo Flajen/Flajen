@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&family=Montserrat:wght@300;400;500;700&family=Open+Sans:wght@300&family=Roboto:wght@500&display=swap" rel="stylesheet">
@@ -11,8 +11,33 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="js/jquery.min.js"></script>
   <script src="js/script.js"></script>
+  <!-- Marquiz script start -->
+<script>
+(function(w, d, s, o){
+  var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
+    if (document.readyState !== 'loading') Marquiz.init(o);
+    else document.addEventListener("DOMContentLoaded", function() {
+      Marquiz.init(o);
+    });
+  };
+  d.head.insertBefore(j, d.head.firstElementChild);
+})(window, document, 'script', {
+    host: '//quiz.marquiz.ru',
+    region: 'eu',
+    id: '6065a9a635f25b004410822e',
+    autoOpen: false,
+    autoOpenFreq: 'once',
+    openOnExit: false,
+    disableOnMobile: false
+  }
+);
+</script>
+<!-- Marquiz script end -->
 </head>
 <body>
+  <a href="https://wa.me/79154535541?text=" target="_blank" class="whatsapp_bubl">
+    <img src="img/whatsapp_bubl.svg" alt="ватсап">
+  </a>
 
   <header class="header" id="header">
     <div class="header-background">
@@ -32,8 +57,8 @@
           <ul class="nav-menu">
             <li>
               <ul class="nav-menu-one">
-                <li><a href="" class="nav-menu-whatsapp"><img src="img/whatsapp.svg" alt="ватсап"></a></li>
-                <li><a href="" class="nav-menu-telegram"><img src="img/telegram.svg" alt="телеграм"></a></li>
+                <li><a href="https://wa.me/79154535541?text=" target="_blank" class="nav-menu-whatsapp"><img src="img/whatsapp.svg" alt="ватсап"></a></li>
+                <li><a href="https://tlgg.ru/qawwrt12" target="_blank" class="nav-menu-telegram"><img src="img/telegram.svg" alt="телеграм"></a></li>
                 <li><a href="tel:+74952357586" class="nav-menu-tel_one">+7 (495) 235-75-86</a></li>
               </ul>
             </li>
@@ -45,7 +70,7 @@
           <p class="header_desktop-subtitle">Системы автоматического полива</p>
           <h1 class="header_desktop-title">Территория комфорта</h1>
           <div class="header_desktop-btn_wrapper">
-            <a href="https://www.marquiz.ru/" target="_blank" class="header_desktop-btn">Рассчитать стоимость</a>
+            <a href="#popup:marquiz_6065a9a635f25b004410822e" class="header_desktop-btn">Рассчитать стоимость</a>
             <p class="header_desktop-btn_text">Ответье на 5 вопросов и получите датчик дождя в <span style="color: #FFDE81;">подарок</span></p>
           </div>
         </div>
@@ -56,6 +81,105 @@
       </div>
     </div>
   </header>
+
+  <section class="advatages" id="advatages">
+    <div class="container">
+      <div class="advatages_heading-wrapper">
+        <p class="advatages-subtitle">Хотите красивый и равномерно цветущий сад у себя во дворе?</p>
+        <h2 class="advatages-title">Исключите человеческий фактор!</h2>
+        <img src="img/advantages.jpg" alt="Исключите человеческий фактор" class="advatages-img">
+      </div>
+      <div class="advatages_text-wrapper">
+        <div>
+          <div class="advatages_text-heading">
+            <span class="advatages_text-circle"></span>
+            <h3 class="advatages_text-title">Автоматика не может проспать или устать</h3>
+          </div>
+          <p class="advatages_text-text">Полив будет происходить в оптимальное для растений время. Как правило это в районе 06:00, пока солнце еще не встало.</p>
+        </div>
+        <div>
+          <div class="advatages_text-heading">
+            <span class="advatages_text-circle"></span>
+            <h3 class="advatages_text-title">Автоматика не может полить не равномерно</h3>
+          </div>
+          <p class="advatages_text-text">До начала монтажа будет произведен проект, в котором будет учтен каждый уголок вашего участка. Это позволит производить точное и равномерное дозирование воды.</p>
+        </div>
+        <div>
+          <div class="advatages_text-heading">
+            <span class="advatages_text-circle"></span>
+            <h3 class="advatages_text-title">У автоматики нет выходных и отпусков</h3>
+          </div>
+          <p class="advatages_text-text">Полив происходит автоматический, по четко установленному графику. Вы в этот момент можете находится на другом конце Земли.</p>
+        </div>
+        <div>
+          <div class="advatages_text-heading">
+            <span class="advatages_text-circle"></span>
+            <h3 class="advatages_text-title">А еще, автоматика экономит время и деньги</h3>
+          </div>
+          <p class="advatages_text-text">На самостоятельный полив стандартного участка уходит ~2 часа и 3.5 тонн воды в день. С автополивом нужно 0 часов и 2 тонны воды в день.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bonus" id="bonus">
+    <div class="container">
+      <h2 class="bonus-title"><b style="color: #FFC478;">5 лет гарантии</b> на оборудование, <b style="color: #FFC478;">12 месяцев</b> на монтажные работы</h2>
+      <p class="bonus-subtitle">Гарантия включает в себя <b style="color: #fff;">2 обязательных профилактических выезда</b> на ваш участок в течение 1 года.<br>Первый профилактический выезд будет ровно через месяц после монтажа.</p>
+    </div>
+  </section>
+
+  <section class="project" id="project">
+    <div class="container">
+      <div class="project-heading">
+        <h2 class="project-title">Получите <span style="color: #FFC478;">бесплатный</span> проект</h2>
+        <p class="project-subtitle">автополива, на ваш участок</p>
+        <!-- <span class="project-img"></span> -->
+        <img src="img/a4.png" alt="автополива, на ваш участок" class="project-img">
+      </div>
+      <div class="project_text">
+        <h3 class="project_text-title">Зачем нужен проект?</h3>
+        <div class="advatages_text-heading project_text-heading">
+          <span class="advatages_text-circle project_text-circle"></span>
+          <p>Что бы избежать недолива или перелива растений из дальних углов</p>
+        </div>
+        <div class="advatages_text-heading project_text-heading">
+          <span class="advatages_text-circle project_text-circle"></span>
+          <p>Для точного расчета <span class="project_text-help">стоимости</span>, которая будет <span class="project_text-help">зафиксирована в договоре</span></p>
+        </div>
+      </div>
+      <form action="form.php" method="post" class="project_form">
+        <div class="project_form-input_wrapper">
+          <input type="tel" name="phone" placeholder="Номер телефона" class="project_form-input">
+        </div>
+        <button type="submit" name="button" class="project_form-btn">Получить проект</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <div class="container">
+      <div>
+        <h2 class="portfolio-title">Еще, автополив - это <span class="portfolio-title_help">безумно красиво!</span></h2>
+        <p class="portfolio-subtitle">Каждое утро вас будет встречать газон идеальной температуры</p>
+      </div>
+      <div class="portfolio-img">
+        <img src="img/portfolio/one.jpg" alt="" class="portfolio_one">
+        <img src="img/portfolio/two.jpg" alt="" class="portfolio_two">
+        <img src="img/portfolio/three.jpg" alt="" class="portfolio_three">
+        <img src="img/portfolio/four.jpg" alt="" class="portfolio_four">
+        <img src="img/portfolio/five.jpg" alt="" class="portfolio_five">
+        <img src="img/portfolio/six.jpg" alt="" class="portfolio_six">
+        <img src="img/portfolio/seven.jpg" alt="" class="portfolio_seven">
+        <img src="img/portfolio/eight.jpg" alt="" class="portfolio_eight">
+        <img src="img/portfolio/nine.jpg" alt="" class="portfolio_nine">
+      </div>
+    </div>
+  </section>
+
+  <section>
+
+  </section>
 
   <script src="http://localhost:35729/livereload.js"></script>
 </body>

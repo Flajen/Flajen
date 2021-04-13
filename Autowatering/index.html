@@ -12,7 +12,7 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/script.js"></script>
   <!-- Marquiz script start -->
-<script>
+<!-- <script>
 (function(w, d, s, o){
   var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
     if (document.readyState !== 'loading') Marquiz.init(o);
@@ -31,7 +31,7 @@
     disableOnMobile: false
   }
 );
-</script>
+</script> -->
 <!-- Marquiz script end -->
 </head>
 <body>
@@ -75,8 +75,10 @@
           </div>
         </div>
 
-        <div>
-          <span class="mouse"></span>
+        <div style="height: 150px;">
+          <span class="mouse">
+            <span class="mouse-scroll"></span>
+          </span>
         </div>
       </div>
     </div>
@@ -134,7 +136,6 @@
       <div class="project-heading">
         <h2 class="project-title">Получите <span style="color: #FFC478;">бесплатный</span> проект</h2>
         <p class="project-subtitle">автополива, на ваш участок</p>
-        <!-- <span class="project-img"></span> -->
         <img src="img/a4.png" alt="автополива, на ваш участок" class="project-img">
       </div>
       <div class="project_text">
@@ -148,11 +149,11 @@
           <p>Для точного расчета <span class="project_text-help">стоимости</span>, которая будет <span class="project_text-help">зафиксирована в договоре</span></p>
         </div>
       </div>
-      <form action="form.php" method="post" class="project_form">
+      <form action="check.php" method="post" class="project_form">
         <div class="project_form-input_wrapper">
           <input type="tel" name="phone" placeholder="Номер телефона" class="project_form-input">
         </div>
-        <button type="submit" name="button" class="project_form-btn">Получить проект</button>
+        <button type="button" name="button" class="project_form-btn">Получить проект</button>
       </form>
     </div>
   </section>
@@ -177,9 +178,79 @@
     </div>
   </section>
 
-  <section>
-
+  <section class="comparison" id="comparison">
+    <div class="container">
+      <div class="comparison-wrapper">
+        <img src="img/computer.png" alt="Cмета" class="comparison-img">
+        <div class="">
+          <h2 class="comparison-title">У вас уже есть смета? <span class="portfolio-title_help">Давайте сравним</span></h2>
+          <p class="comparison-subtitle">Прикрепите текущую смету на монтаж автополива. В 86% случаев наше предложение будет выгоднее!</p>
+          <form action="check.php" method="post" class="comparison_form">
+            <div class="comparison_form-wrapper">
+              <div class="comparison_form-input_tel-wrapper">
+                <input type="tel" name="phone" placeholder="Номер телефона" class="comparison_form-input_tel">
+              </div>
+              <div class="comparison_form-input_file-wrapper">
+                <input type="file" name="file" class="comparison_form-input_file">
+                <span class="comparison_form-input_file-btn">Прикрепить файл</span>
+              </div>
+            </div>
+            <button type="button" name="button" class="comparison_form-btn">Сравнить смету</button>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
+  <div class="comparison_popup-window">
+    <h3 class="comparison_popup-title">Ваша заявка отправлена</h3>
+    <p class="comparison_popup-subtitle">Мы перезвоним через 10 минут</p>
+    <button type="button" name="close" class="comparison_popup-close"></button>
+  </div>
+  <div class="popup-blackout"></div>
+
+  <section class="contacts" id="contacts">
+    <div class="contacts-wrapper">
+      <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acf8c2b0d985e60e53abfaca56dde54fc697527a0dc2fb6223d28f221f77fd1b0&amp;width=100%&amp;height=327&amp;lang=ru_RU&amp;scroll=true"></script>
+      <div class="contacts-info">
+        <div>
+          <h2 class="contacts-title">Контакты:</h2>
+          <p class="contacts-text"><span class="contacts-text_normal">Главный</span> <span class="contacts-text_medium">офис в г. Москва:</span> улица Ленина д.134</p>
+          <p class="contacts-text"><span class="contacts-text_medium">Офис в г. Наро-Фоминск:</span> улица Ленина д.134</p>
+          <p class="contacts-text"><span class="contacts-text_medium">Офис в г. Тамбов:</span> улица Ленина д.134</p>
+        </div>
+        <div>
+          <img src="img/contacts.jpg" alt="Контакты">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" id="footer">
+    <div class="container">
+      <nav class="footer-nav">
+        <ul class="footer-nav_wrapper">
+          <li>
+            <a href="" class="logo">
+              <img src="img/logo.svg" alt="Территория комфорта">
+            </a>
+          </li>
+          <li class="footer-contacts">
+            <ul class="footer-messengers">
+              <li><a href="https://wa.me/79154535541?text=" target="_blank" class="nav-menu-whatsapp"><img src="img/whatsapp.svg" alt="ватсап"></a></li>
+              <li><a href="https://tlgg.ru/qawwrt12" target="_blank" class="nav-menu-telegram"><img src="img/telegram.svg" alt="телеграм"></a></li>
+            </ul>
+            <a href="mailto:tkm.info77@yandex.ru" class="footer-email">tkm.info77@yandex.ru</a>
+          </li>
+          <li>
+            <ul class="footer-tel_wrapper">
+              <li><a href="tel:+74952357586" class="footer-tel_one">+7 (495) 235-75-86</a></li>
+              <li><a href="tel:+79268065985" class="footer-tel_two">+7 (926) 806-59-85</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
 
   <script src="http://localhost:35729/livereload.js"></script>
 </body>

@@ -875,3 +875,90 @@ h1, h2, h3{
   font-weight: 400;
 }
 /* footer конец */
+
+
+
+
+/* Мобильная версия */
+@media (max-width: 1109px) and (min-width: 576px) {
+
+/* header Начало */
+.header-nav{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 30px;
+}
+.logo{
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.header-desktop{
+  margin-top: 100px;
+}
+.header_desktop-subtitle{
+  font-size: 20px;
+}
+.header_desktop-title{
+  background-image: url('../img/mob-title.png');
+  font-size: 70px;
+  max-width: 520px;
+}
+/* header конец */
+
+
+/* advatages Начало */
+.advatages{
+  display: none;
+}
+/* advatages конец */
+
+
+/* bonus Начало */
+.bonus{
+  display: none;
+}
+/* bonus конец */
+
+
+/* project Начало */
+.project{
+  display: none;
+}
+/* project конец */
+
+
+/* portfolio Начало */
+.portfolio{
+  display: none;
+}
+/* portfolio конец */
+
+
+/* comparison Начало */
+.comparison{
+  display: none;
+}
+/* comparison конец */
+
+
+/* contacts Начало */
+.contacts{
+  display: none;
+}
+/* contacts конец */
+
+
+/* footer Начало */
+.footer{
+  display: none;
+}
+/* footer конец */
+
+}
+@media (max-width: 319px) and (min-width: 0) {
+  body{
+    display: none;
+  }
+}

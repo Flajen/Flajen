@@ -19,12 +19,22 @@ function hidePopup() {
 
 $(document).ready(function(){
   $('.comparison_form-btn').click(function(){
-    showPopup();
-    disabledScroll();
+		if ($('.comparison_form-input_tel').val() == '') {
+			$('.comparison_form-input_tel').css('border', '1.29811px solid rgb(248 35 35)');
+		} else if ($('.comparison_form-input_file').val() == '') {
+			$('.comparison_form-input_file-btn').css('border-bottom', '1px dashed rgb(248 35 35)');
+		} else {
+			showPopup();
+			disabledScroll();
+		}
   })
   $('.project_form-btn').click(function(){
-    showPopup();
-    disabledScroll();
+		if ($('.project_form-input').val() == '') {
+			$('.project_form-input').css('border', '1.29811px solid rgb(248 35 35)')
+		} else {
+			showPopup();
+			disabledScroll();
+		}
   })
   $('.popup-blackout').click(function(){
     hidePopup();

@@ -964,7 +964,8 @@ body{
   transition: all 0.2s;
 }
 .logo{
-  display: inline-block;
+  margin: 0 auto;
+  display: flex;
   margin-bottom: 40px;
   width: 80%;
 }

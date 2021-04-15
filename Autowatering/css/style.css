@@ -1029,13 +1029,14 @@ body{
 .advatages-img{
   object-fit: cover;
   max-width: 100%;
-  height: 50%;
+  /* height: 50%; */
+  padding: 0 15px;
 }
 .advatages_text-wrapper{
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 30px;
   grid-column-gap: 0;
-  padding: 0 5px;
+  padding: 0 15px;
 }
 .advatages_text-title{
   font-size: 17px;
@@ -1094,7 +1095,7 @@ body{
 }
 .project_text{
   margin-bottom: 35px;
-  padding: 0 5px;
+  padding: 0 15px;
 }
 .project_form{
   flex-direction: column;
@@ -1115,6 +1116,9 @@ body{
 /* portfolio Начало */
 .portfolio{
   /* display: none; */
+}
+.portfolio-img{
+  padding: 0 15px;
 }
 .portfolio-img img{
   /* object-fit: cover; */
@@ -1144,7 +1148,7 @@ body{
   height: 496px;
 }
 .comparison-text-wrapper{
-  padding: 0 5px;
+  padding: 0 15px;
 }
 .comparison-title{
   font-size: 20px;
@@ -1186,6 +1190,7 @@ body{
   flex-direction: column;
   bottom: -360px;
   width: 95%;
+  padding: 20px;
 }
 .contacts-img_wrapper{
   margin-top: 20px;

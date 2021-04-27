@@ -56,7 +56,7 @@ $(document).ready(function(){
 			$('.project_form-input').css('border', '1.29811px solid rgb(248 35 35)')
 		}
   })
-  $('.btn').click(function(){
+  $('.popup-btn').click(function(){
     showPopup();
     disabledScroll();
   })

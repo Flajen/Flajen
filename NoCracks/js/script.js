@@ -70,17 +70,11 @@ $(document).ready(function(){
     enableScroll();
   })
 	$('.burger').click(function(){
-		if ($('.header-nav').hasClass("header-nav_help")) {
-			$('.header-nav').removeClass('header-nav_help');
-			$('.whatsapp_bubl').css('right', '20px');
-			$('.whatsapp_bubl').css('bottom', '20px');
-			$('.mini_logo').css('top', '20px');
+		if ($('.nav').hasClass("nav_help")) {
+			$('.nav').removeClass('nav_help');
 			enableScroll();
 		} else {
-			$('.header-nav').addClass('header-nav_help');
-			$('.whatsapp_bubl').css('right', '-100%');
-			$('.whatsapp_bubl').css('bottom', '-100%');
-			$('.mini_logo').css('top', '-100%');
+			$('.nav').addClass('nav_help');
 			disabledScroll();
 		}
 	})

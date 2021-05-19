@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" href="img/favicon.png" type="image/png">
+  <title>СЕВЕР БАРБЕРШОП</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <button type="button" name="navBtn" class="burger-btn"></button>
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link logo"><img src="img/logo.png" alt="СЕВЕР БАРБЕРШОП"></a></li>
+        <li><a href="#price" class="nav-link nav-link_hover">Прайс</a></li>
+        <li><a href="#advantages" class="nav-link nav-link_hover">Преимущества</a></li>
+        <li><a href="#gallery" class="nav-link nav-link_hover">Галерея</a></li>
+        <li><a href="#contacts" class="nav-link nav-link_hover">Контакты</a></li>
+        <li><a href="tel:+79683337555" class="nav-link nav-link_phone">+7 (968) 333-75-55</a></li>
+      </ul>
+    </nav>
+    <div class="header-desktop">
+      <h1 class="header-title">
+        СЕВЕР
+        <span class="header-title-help">БАРБЕРШОП</span>
+      </h1>
+      <p class="header-subtitle"><span class="header-subtitle-strikethrough">1300₽</span>  <span class="header-subtitle-help">990₽</span> за стрижку при первом посещении, если запишетесь через сайт</p>
+      <button type="button" name="button" class="header-btn"><span class="header-btn-help">Записаться</span></button>
+      <p class="header-address">м. Преображенская площадь ул. Суворовская, 10</p>
+    </div>
+  </div>
+</header>
+
+<section class="advantages" id="advantages">
+  <div class="container">
+    <div class="advantages-body">
+      <div class="advantages_block">
+        <h3 class="advantages_block-title"><span class="advantages_block-title-help">Стерильность</span></h3>
+        <p class="advantages_block-subtitle">Перед каждой стрижкой мастер проводит полную стерилизацию всего оборудования и инструментов</p>
+      </div>
+      <div class="advantages_block">
+        <h3 class="advantages_block-title"><span class="advantages_block-title-help">Комфортная лаунж зона</span></h3>
+        <p class="advantages_block-subtitle">Удобные диваны и огромная картотека фильмов, которые можно смотреть прямо во время стрижки</p>
+      </div>
+      <div class="advantages_block">
+        <h3 class="advantages_block-title"><span class="advantages_block-title-help">Удобное расположение</span></h3>
+        <p class="advantages_block-subtitle">5 мин пешком от м. Преображенская площадь, парковка для автомобилей прямо перед барбершопом</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="price" id="price">
+  <div class="container">
+    <div class="price-heading">
+      <h2 class="price-title">ПРАЙС</h2>
+      <ul class="price-btn-wrapper">
+        <li><a href="#basic-services" class="price-btn price-btn-active" id="basic-services">Основные услуги</a></li>
+        <li><a href="#complexes" class="price-btn" id="complexes">Комплексы</a></li>
+        <li><a href="#additionally" class="price-btn" id="additionally">Дополнительно</a></li>
+      </ul>
+    </div>
+    <div class="price-service basic-services">
+      <div class="price-service-wrapper">
+        <table class="price-table">
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Первая стрижка</p></td>
+            <td class="price-table_td"><p class="table_td-price">990 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Стрижка</p></td>
+            <td class="price-table_td"><p class="table_td-price">1300 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Коррекция бороды</p></td>
+            <td class="price-table_td"><p class="table_td-price">600 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Стрижка (без ножниц)</p></td>
+            <td class="price-table_td"><p class="table_td-price">900 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Бритье головы опасной бритвой</p></td>
+            <td class="price-table_td"><p class="table_td-price">1300 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Стрижка одной насадкой</p></td>
+            <td class="price-table_td"><p class="table_td-price">700 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Детская стрижка (от 5 до 14 лет)</p></td>
+            <td class="price-table_td"><p class="table_td-price">900 ₽</p></td>
+          </tr>
+        </table>
+        <button type="button" name="button" class="header-btn price-service-btn"><span class="header-btn-help">Записаться</span></button>
+      </div>
+      <img src="img/photo1.jpg" alt="Основные услуги" class="price-img">
+    </div>
+    <div class="price-service complexes">
+      <div class="price-service-wrapper">
+        <table class="price-table">
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Стрижка бороды и усов</p></td>
+            <td class="price-table_td"><p class="table_td-price">1100 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Стрижка + стрижка бороды и усов</p></td>
+            <td class="price-table_td"><p class="table_td-price">2000 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Бритье головы + моделирование<br>бороды опасной бритвой</p></td>
+            <td class="price-table_td"><p class="table_td-price">2100 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Акция «отец + сын»</p></td>
+            <td class="price-table_td"><p class="table_td-price">1800 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Акция «отец + 2 сына»</p></td>
+            <td class="price-table_td"><p class="table_td-price">2500 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Акция «полное тонирование»</p></td>
+            <td class="price-table_td"><p class="table_td-price">1500 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Воск комплекс</p></td>
+            <td class="price-table_td"><p class="table_td-price">700 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">«Полное преображение» (стрижка + стрижка бороды и усов + черная маска + воск комплекс)</p></td>
+            <td class="price-table_td"><p class="table_td-price">3200 ₽</p></td>
+          </tr>
+        </table>
+        <button type="button" name="button" class="header-btn price-service-btn"><span class="header-btn-help">Записаться</span></button>
+      </div>
+      <img src="img/photo2.jpg" alt="Основные услуги" class="price-img">
+    </div>
+    <div class="price-service additionally">
+      <div class="price-service-wrapper">
+        <table class="price-table">
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Тонирование головы</p></td>
+            <td class="price-table_td"><p class="table_td-price">1100 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Тонирование бороды</p></td>
+            <td class="price-table_td"><p class="table_td-price">600 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Коррекция воском (одна зона)</p></td>
+            <td class="price-table_td"><p class="table_td-price">400 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Чёрная маска</p></td>
+            <td class="price-table_td"><p class="table_td-price">900 ₽</p></td>
+          </tr>
+          <tr class="price-table_tr">
+            <td class="price-table_td"><p class="table_td-text">Укладка</p></td>
+            <td class="price-table_td"><p class="table_td-price">600 ₽</p></td>
+          </tr>
+        </table>
+        <button type="button" name="button" class="header-btn price-service-btn"><span class="header-btn-help">Записаться</span></button>
+      </div>
+      <img src="img/photo3.jpg" alt="Основные услуги" class="price-img">
+    </div>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="container">
+    <h2 class="gallery-title">ГАЛЕРЕЯ</h2>
+    <div class="gallery_slider-wrapper">
+      <div class="gallery_slider">
+        <div class="gallery_slider-track">
+          <div class="gallery_slider-item gallery_slider-item-left">
+            <img src="img/left.jpg" alt="ГАЛЕРЕЯ" class="gallery_slider-item_img">
+            <span class="gallery_slider-blackout"></span>
+          </div>
+          <div class="gallery_slider-item gallery_slider-item-center">
+            <img src="img/center.jpg" alt="ГАЛЕРЕЯ" class="gallery_slider-item_img">
+            <span class="gallery_slider-blackout" style="background-color: rgba(35, 30, 27, 0);"></span>
+          </div>
+          <div class="gallery_slider-item gallery_slider-item-right">
+            <img src="img/right.jpg" alt="ГАЛЕРЕЯ" class="gallery_slider-item_img">
+            <span class="gallery_slider-blackout"></span>
+          </div>
+          <button type="button" name="prevBtn" class="prev-btn"></button>
+          <button type="button" name="nextBtn" class="next-btn"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="contacts-map">
+    <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A84d9d47a9d9970fd9c8631399368a045b92058ac3eb01c3ed1dc768fddda4ec4&amp;width=100%&amp;height=500&amp;lang=ru_RU&amp;scroll=true"></script>
+  </div>
+  <div class="contacts-info">
+    <h2 class="contacts-title">КОНТАКТЫ</h2>
+    <a href="tel:+79683337555" class="contacts-text">+7 (968) 333-75-55</a>
+    <p class="contacts-text">пн-пт 11-22<br>сб-вс 10-22</p>
+    <p class="contacts-text">м. Преображенская площадь<br>ул. Суворовская, 10</p>
+    <a href="#!" class="contacts-text contacts-instagram">@severbarbershop</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <nav class="nav nav-footer">
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link logo"><img src="img/logo.png" alt="СЕВЕР БАРБЕРШОП"></a></li>
+        <li><a href="#price" class="nav-link nav-link_hover">Прайс</a></li>
+        <li><a href="#advantages" class="nav-link nav-link_hover">Преимущества</a></li>
+        <li><a href="#gallery" class="nav-link nav-link_hover">Галерея</a></li>
+        <li><a href="#contacts" class="nav-link nav-link_hover">Контакты</a></li>
+      </ul>
+      <ul class="nav-copyright">
+        <li><p class="copyright">© Север Барбершоп, 2021</p></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<script src="http://localhost:35729/livereload.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

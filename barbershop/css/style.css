@@ -526,7 +526,7 @@ a{
     align-items: center;
     position: fixed;
     width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
     background: rgba(27, 27, 27, 0.85);
     z-index: 20;
     backdrop-filter: blur(12px);

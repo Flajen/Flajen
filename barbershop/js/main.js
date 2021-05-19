@@ -1,6 +1,5 @@
 if ($('.burger-btn')) {
   $('.burger-btn').click(function(){
-    // $('.nav').toggleClass('nav-help');
     if ($('.nav').hasClass('nav-help')) {
       $('body').css('overflow', 'scroll');
       $('.nav').removeClass('nav-help');

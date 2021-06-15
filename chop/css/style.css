@@ -578,6 +578,7 @@ button, input{
 }
 .question_list-block:hover .question_list-block-arrow{
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='27' height='14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.76 13.707l-12.468-12A.974.974 0 01.317.293a1.068 1.068 0 011.444 0l11.733 11.293L25.227.293a1.068 1.068 0 011.469 0 .974.974 0 010 1.414l-12.468 12c-.405.39-1.063.39-1.469 0z' fill='%23FFD13B'/%3e%3c/svg%3e");
+  -webkit-filter: drop-shadow(rgba(239, 189, 23, 0.47) 0px 0px 10px);
   filter: drop-shadow(rgba(239, 189, 23, 0.47) 0px 0px 10px);
 }
 .question_list-block-title{
@@ -602,7 +603,7 @@ button, input{
 
 
 .more_quetions{
-  width: 100;
+  width: 100%;
   background: #fff;
 }
 .more_quetions-wrapper{
@@ -717,6 +718,17 @@ button, input{
     width: auto;
     padding: 0 10px;
   }
+  .popup_form-wrapper{
+    padding: 35px;
+  }
+  .popup_form-btn{
+    font-size: 16px;
+    padding: 17px 56px 19px 56px;
+    white-space: nowrap;
+  }
+  .popup_form-thanks{
+    display: none;
+  }
 
   .burger{
     display: block;
@@ -767,24 +779,34 @@ button, input{
     justify-content: center;
     align-items: center;
     position: fixed;
-    top: 0;
-    left: -100%;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 8;
-    background: rgba(5,5,5,0.50);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    background: rgba(5,5,5,0);
+    backdrop-filter: blur(0);
+    -webkit-backdrop-filter: blur(0);
     padding: 40px 5px 10px 5px;
     transition: all 0.2s linear;
+    display: none;
   }
   .menu-block-show{
-    left: 0;
+    background: rgba(5,5,5,0.60);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
   }
   .menu{
     flex-direction: column;
     align-items: center;
     margin: 0;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 0.15s linear;
+  }
+  .menu-show{
+    transform: scale(1);
+    opacity: 1;
   }
   .menu-link{
     font-size: 16px;
@@ -814,6 +836,9 @@ button, input{
   .header_desktop-title{
     font-size: 29px;
     margin: 98px 0 33px 0;
+  }
+  .header_desktop-term{
+    max-width: 220px;
   }
   .header_desktop-block{
     display: flex;

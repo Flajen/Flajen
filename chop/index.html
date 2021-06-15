@@ -167,10 +167,10 @@
       </div>
     </div>
     <div class="build_gallery">
-      <img src="img/gallery1.jpg" class="g1">
-      <img src="img/gallery2.jpg" class="g2">
-      <img src="img/gallery3.jpg" class="g3">
-      <img src="img/gallery4.jpg" class="g4">
+      <img src="img/gallery1.jpg" alt="Построим КХО за 30 дней и сдадим сотруднику ОЛРР или вернем деньги" class="g1">
+      <img src="img/gallery2.jpg" alt="Построим КХО за 30 дней и сдадим сотруднику ОЛРР или вернем деньги" class="g2">
+      <img src="img/gallery3.jpg" alt="Построим КХО за 30 дней и сдадим сотруднику ОЛРР или вернем деньги" class="g3">
+      <img src="img/gallery4.jpg" alt="Построим КХО за 30 дней и сдадим сотруднику ОЛРР или вернем деньги" class="g4">
     </div>
   </div>
 </section>
@@ -323,15 +323,23 @@
 <form method="post" class="popup_form">
   <div class="popup_form-wrapper">
     <button type="button" name="button" class="popup_form-close"></button>
-    <input type="tel" name="phone" placeholder="Ваш телефон" class="popup_form-input">
+    <input type="tel" name="phone" placeholder="Ваш телефон" class="popup_form-input" required>
     <button type="submit" name="button" class="popup_form-btn">Оставить заявку</button>
   </div>
 </form>
+<div class="popup_form-thanks">
+  <div class="popup_form-wrapper">
+    <button type="button" name="button" class="popup_form-close"></button>
+    <h2>Спасибо!</h2>
+    <p>Мы свяжемся с Вами в течение дня</p>
+    <img src="img/checked.svg" alt="Спасибо!">
+  </div>
+</div>
 <div class="popup-blackout"></div>
 
-<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
-<script type="text/javascript" src="js/jquery.min.js"></script>
-<script type="text/javascript" src="js/main.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.maskedinput.min.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

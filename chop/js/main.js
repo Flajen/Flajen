@@ -48,6 +48,9 @@ $(document).ready(function(){
   $('.build_desktop-btn').click(function(){
     showPopUp();
   });
+  $('.more_quetions-btn').click(function(){
+    showPopUp();
+  });
   $('.popup_form-close').click(function(){
     hidePopUp();
   });

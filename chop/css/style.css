@@ -878,6 +878,7 @@ button, input{
   }
   .licenses-title{
     font-size: 29px;
+    margin: 0 0 57px 10px;
   }
   .licenses_block{
     flex-direction: column-reverse;

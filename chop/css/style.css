@@ -935,6 +935,7 @@ button, input{
 
   .build_desktop{
     flex-direction: column;
+    margin: 0 0 79px 0;
   }
   .build_desktop-title{
     font-size: 26px;
@@ -950,6 +951,7 @@ button, input{
     justify-content: center;
     grid-template-columns: 10px 120px 89px 87px;
     grid-template-rows: 75px 70px;
+    margin: 0 0 90px 0;
   }
   .build_gallery img{
     width: 95%;

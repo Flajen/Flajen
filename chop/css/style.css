@@ -899,6 +899,9 @@ button, input{
     height: 340px;
   }
   .licenses_block-one{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
     padding: 0 15px;
   }
   .licenses_signature{
@@ -913,6 +916,7 @@ button, input{
   .licenses-btn{
     font-size: 16px;
     padding: 17px 56px 19px 56px;
+    align-self: center;
   }
 
 
@@ -942,7 +946,13 @@ button, input{
     height: 330px;
   }
   .build_gallery{
-    display: none;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 10px 120px 89px 87px;
+    grid-template-rows: 75px 70px;
+  }
+  .build_gallery img{
+    width: 95%;
   }
   .build_desktop-btn{
     font-size: 16px;

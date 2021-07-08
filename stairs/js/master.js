@@ -56,6 +56,10 @@ $(document).ready(function(){
   $('.catalog_card-btn').click(function(){
     showForm();
   });
+  $('.popup-btn').click(function(){
+    showForm();
+    $('.popup-wrapper').hide();
+  });
   $('.catalog_card-btn-details').click(function(){
     showPopup();
     $("html, body").animate({scrollTop: "1350px"});

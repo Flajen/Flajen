@@ -953,7 +953,7 @@ a,button,input{
   }
   .header_desktop-btn-wrapper{
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 0 25px 0;
   }
   .logo-img{
@@ -977,6 +977,7 @@ a,button,input{
   }
   .header_desktop-size{
     font-size: 14px;
+    align-self: flex-start;
   }
   .header_desktop-subtitle{
     font-size: 20px;
@@ -1082,11 +1083,18 @@ a,button,input{
 
 
 
+  .footer{
+    height: 660px;
+  }
   .footer-map{
     position: relative;
   }
   .footer_block{
+    display: flex;
+    flex-direction: column;
     padding: 35px 16px 44px 17px;
+    width: 310px;
+    margin: 0 auto;
   }
   .footer-address,
   .footer-phone,

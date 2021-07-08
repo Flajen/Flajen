@@ -1043,6 +1043,7 @@ a,button,input{
     background: linear-gradient(180deg, #F8F4F1 0%, #F8F4F1 85.00%, #FFFFFF 100%);
     background: -webkit-linear-gradient(-90deg, #F8F4F1 0%, #F8F4F1 85.00%, #FFFFFF 100%);
     padding: 35px 10px 160px 10px;
+    margin: 0 0 200px 0;
   }
   .delivery-text-wrapper{
     flex-direction: column;

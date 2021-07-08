@@ -346,6 +346,32 @@ a,button,input{
   margin: 0 0 0 5px;
   cursor: pointer;
   border-radius: 5px;
+  position: relative;
+}
+.hidden{
+  display: inline-block;
+  position: absolute;
+  font-size: 14px;
+  font-weight: 300;
+  left: -30px;
+  bottom: 24px;
+  width: 295px;
+  border-radius: 2px;
+  background: #F8F4F1;
+  padding: 16px 19px;
+  line-height: 1.3em;
+  display: none;
+}
+.hidden::after{
+  content: '';
+  position:absolute;
+  left: 22px;
+  bottom: -30px;
+  border: 15px solid transparent; /* Прозрачные границы */
+  border-top: 20px solid #F8F4F1; /* Добавляем треугольник */
+}
+.catalog_card-professional-marker:hover .hidden{
+  display: block;
 }
 
 

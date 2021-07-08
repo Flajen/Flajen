@@ -6,7 +6,7 @@ $(document).ready(function(){
       return false;
     });
   });
-  // $('input[name="phone"]').mask("+7(999) 999-99-99",{autoclear: false});
+  $('input[name="phone"]').mask("+7(999) 999-99-99",{autoclear: false});
   function showForm(){
     $('.form-wrapper').show();
     $('.blackout').show();

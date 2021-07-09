@@ -263,6 +263,7 @@ a,button,input{
   min-height: 255px;
   height: 100%;
   max-height: 255px;
+  background: transparent;
   border-bottom: 1px solid #EBE5E1;
   overflow: hidden;
   display: flex;
@@ -597,6 +598,18 @@ a,button,input{
   background: rgba(167, 165, 163, 0.6);
   z-index: 9;
   display: none;
+}
+.video{
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+.video-wrapper{
+  width: 720px;
+  height: 405px;
 }
 .form-wrapper{
   position: fixed;
@@ -1134,6 +1147,12 @@ a,button,input{
   .form{
     width: 310px;
     padding: 45px 29px;
+  }
+
+
+  .video-wrapper{
+    width: 300px;
+    height: 205px;
   }
 
 

@@ -53,7 +53,15 @@ $(document).ready(function(){
     $('.popup-wrapper').hide();
     $('.blackout').hide();
   };
-  $('.catalog_card-btn').click(function(){
+  function showVideo(){
+    $('.video').show();
+    $('.blackout').show();
+  };
+  function hideVideo(){
+    $('.video').hide();
+    $('.blackout').hide();
+  };
+  $('button[name="form"]').click(function(){
     showForm();
   });
   $('.popup-btn').click(function(){
@@ -70,9 +78,13 @@ $(document).ready(function(){
   $('.popup-close').click(function(){
     hidePopup();
   });
+  $('.about_video').click(function(){
+    showVideo();
+  });
   $('.blackout').click(function(){
     hideForm();
     hidePopup();
+    hideVideo();
   });
   // var btnPrev = $('.popup_slider-btnPrev'),
   //     btnNext = $('.popup_slider-btnNext'),

@@ -68,7 +68,7 @@ $(document).ready(function(){
     showForm();
     $('.popup-wrapper').hide();
   });
-  $('.catalog_card-btn-details').click(function(){
+  $('button[name="stairs"]').click(function(){
     showPopup();
     $("html, body").animate({scrollTop: "1350px"});
     for(var item in stairs){

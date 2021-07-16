@@ -454,6 +454,9 @@ a,button,input{
 }
 .about_address-link{
   color: #0038FF;
+  font-size: 16px;
+  font-weight: 300;
+  background: transparent;
   text-decoration: underline;
 }
 .about_address-link:hover{
@@ -689,6 +692,20 @@ a,button,input{
 }
 
 
+.min_map{
+  position: fixed;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: none;
+}
+.min_map-wrapper{
+  width: 600px;
+  height: 466px;
+}
+
+
 .popup-wrapper{
   position: absolute;
   z-index: 10;
@@ -804,6 +821,7 @@ a,button,input{
   border-radius: 2px;
   overflow: hidden;
   object-fit: cover;
+  cursor: pointer;
 }
 .popup_slider_mini-img-wrapper img{
   height: 100%;
@@ -1171,6 +1189,11 @@ a,button,input{
   .video-wrapper{
     width: 300px;
     height: 205px;
+  }
+
+  .min_map-wrapper{
+    width: 300px;
+    height: 400px;
   }
 
 

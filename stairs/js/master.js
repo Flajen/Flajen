@@ -15,6 +15,8 @@ $(document).ready(function(){
     $('.form-wrapper').hide();
     $('.blackout').hide();
   };
+
+
   function showPopup(){
     $('.popup-wrapper').show();
     $('.blackout').show();
@@ -24,8 +26,30 @@ $(document).ready(function(){
         sliderItems = $('.popup_slider-img').length,
         sliderItemsWidth = $('.popup_slider-img').width(),
         sliderWidth = sliderItemsWidth * sliderItems - sliderItemsWidth,
+        sliderMiniItems = $('.popup_slider_mini-img-wrapper'),
         sliderMiniItemsValue = $('.popup_slider_mini-img-wrapper').length - 1,
         sliderValue = 0;
+        // index_0 = 0,
+        // index_1 = 1,
+        // index_2 = 2,
+        // index_3 = 3,
+        // index_4 = 4,
+        // index_5 = 5;
+    $('.popup_slider_mini-img-wrapper').click(function(){
+      var el = $(this);
+      $('.popup_slider_mini-img-wrapper').removeClass('popup_slider_mini-img-item');
+      el.addClass('popup_slider_mini-img-item');
+      for (var i = 0; i < $('.popup_slider_mini-img-wrapper').length; i++) {
+        if (el.hasClass(`index_${i}`)) {
+          sliderValue = sliderItemsWidth * i;
+          if (sliderValue > 0) {
+            sliderTrack.css('transform', `translate(-${sliderValue}px,0)`);
+          } else {
+            sliderTrack.css('transform', `translate(${sliderValue}px,0)`);
+          }
+        }
+      }
+    });
     btnPrev.click(function(){
       var sliderMiniItemsHide = $('.popup_slider_mini-img-item');
       if (sliderValue == 0) {
@@ -49,6 +73,8 @@ $(document).ready(function(){
       sliderMiniItemsHide.removeClass('popup_slider_mini-img-item').next().addClass('popup_slider_mini-img-item');
     });
   };
+
+
   function hidePopup(){
     $('.popup-wrapper').hide();
     $('.blackout').hide();
@@ -59,6 +85,14 @@ $(document).ready(function(){
   };
   function hideVideo(){
     $('.video').hide();
+    $('.blackout').hide();
+  };
+  function showMiniMap(){
+    $('.min_map').show();
+    $('.blackout').show();
+  };
+  function hideMiniMap(){
+    $('.min_map').hide();
     $('.blackout').hide();
   };
   $('button[name="form"]').click(function(){
@@ -96,10 +130,14 @@ $(document).ready(function(){
   $('.about_video').click(function(){
     showVideo();
   });
+  $('button[name="minMap"]').click(function(){
+    showMiniMap();
+  });
   $('.blackout').click(function(){
     hideForm();
     hidePopup();
     hideVideo();
+    hideMiniMap();
   });
 
   $('.form').submit(function(e) {

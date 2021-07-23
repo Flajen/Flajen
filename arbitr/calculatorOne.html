@@ -65,28 +65,28 @@
             </label>
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="statement" value="Individual" class="label_radio">
+                <input type="radio" name="statement" value="Individual" class="label_radio js-choice-input">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-choice-text">Заявление неимущественного характера</p>
             </label>
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="statement" value="Individual" class="label_radio">
+                <input type="radio" name="statement" value="Individual" class="label_radio js-choice-input">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-choice-text">Апелляционная и (или) кассационная жалоба</p>
             </label>
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="statement" value="Individual" class="label_radio">
+                <input type="radio" name="statement" value="Individual" class="label_radio js-choice-input">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-choice-text">Надзорная жалоба</p>
             </label>
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="statement" value="Individual" class="label_radio">
+                <input type="radio" name="statement" value="Individual" class="label_radio js-choice-input">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-choice-text">Прочие заявления</p>
@@ -106,17 +106,18 @@
             </div>
           </div>
         </div>
-        <div class="calcOne-write">
-          <!-- <h3 class="calcOne-heading">Сумма иска:</h3>
+        <div class="calcOne-write js-summa">
+          <h3 class="calcOne-heading">Сумма иска:</h3>
           <div class="calcOne-input-wrapper">
             <input type="text" class="calcOne-input" autocomplete="off" maxlength="10" value="0" data-name="sum" name="sum">
             <p class="calcOne-input-ed">рублей</p>
-          </div> -->
-
+          </div>
+        </div>
+        <div class="calcOne-write js-choice">
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" checked name="write" value="6000" class="label_radio label_radio-checked">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Корпоративные споры</p>
@@ -126,7 +127,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="6000" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Неисполнение обязательств по договору</p>
@@ -136,7 +137,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="300" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Оспаривание ненормативных правовых актов, решений и действий</p>
@@ -146,7 +147,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="3000" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Обеспечение иска</p>
@@ -156,7 +157,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="3000" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Установление юридически значимых фактов</p>
@@ -166,7 +167,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="3000" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Выдача исполнительных листов</p>
@@ -176,7 +177,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="3000" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Отмена решения третейского суда</p>
@@ -186,7 +187,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="300" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Заявление о признании должника несостоятельным (банкротом)</p>
@@ -196,7 +197,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="3000" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Заявление о признании и приведении в исполнение решения иностранного суда, иностранного арбитражного решения</p>
@@ -206,7 +207,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="300" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Заявление об оспаривании актов, содержащих разъяснения законодательства и обладающих нормативными свойствами</p>
@@ -216,7 +217,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="300" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Заявление об оспаривание актов в сфере патентных прав, содержащих разъяснения законодательства и обладающих нормативными свойствами</p>
@@ -226,7 +227,7 @@
           <div class="calcOne-write-card">
             <label class="label">
               <div class="label_radio-wrapper">
-                <input type="radio" name="write" value="Individual" class="label_radio">
+                <input type="radio" name="write" value="6000" class="label_radio">
                 <span class="label_radio-fake"></span>
               </div>
               <p class="calcOne-write-title">Иные заявления неимущественного характера, в том числе заявления о признании права, заявления о присуждении к исполнению обязанности в натуре</p>

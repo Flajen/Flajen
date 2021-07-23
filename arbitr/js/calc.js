@@ -15,6 +15,28 @@ $(document).ready(function(){
       }
     }
   })
+  $('.label_radio[name="statement"]').click(function(){
+    if ($(this).is(":checked") & $(this).hasClass('js-choice-input')) {
+      $('.calcOne-cost').html('0');
+      $('.js-choice').show();
+      $('.js-summa').hide();
+      $('.calcOne_js').find('.calcOne-cost-wrapper').show();
+      $('.calcOne_js').find('.calcOne-choice-wrapper').hide();
+      $('.calcOne-cost').html('6 000');
+      $('.label_radio-checked').prop('checked', true);
+      $('.label_radio[name="write"]').click(function(){
+        if ($(this).is(":checked")) {
+          $('.calcOne-cost').html(prettify($(this).val()));
+        }
+      });
+    }else {
+      $('.js-choice').hide();
+      $('.js-summa').show();
+      $('.calcOne_js').find('.calcOne-cost-wrapper').hide();
+      $('.calcOne_js').find('.calcOne-choice-wrapper').show();
+      $('.calcOne-cost').html('0');
+    }
+  });
   function prettify(num) {
     var n = num.toString();
     return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');

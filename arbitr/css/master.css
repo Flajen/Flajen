@@ -593,6 +593,9 @@ a:hover {
   overflow: auto;
   padding: 17px 20px;
 }
+.js-choice{
+	display: none;
+}
 .calcOne-write-card{
   margin: 0 0 22px 0;
 }

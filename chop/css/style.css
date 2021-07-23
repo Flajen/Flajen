@@ -8,31 +8,79 @@
 @font-face {
   font-family: 'NotoSans';
   src: local('NotoSans'), local('Noto-Sans'),
-      url('../fonts/NotoSans-Regular.ttf') format('truetype');
+      url('../fonts/NotoSans-Regular.ttf') format('truetype'),
+      url('../fonts/NotoSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-Regular.woff') format('woff');
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'NotoSans';
   src: local('NotoSans'), local('Noto-Sans'),
-      url('../fonts/NotoSans-Medium.ttf') format('truetype');
+      url('../fonts/NotoSans-Medium.ttf') format('truetype'),
+      url('../fonts/NotoSans-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
   font-family: 'NotoSans';
   src: local('NotoSans'), local('Noto-Sans'),
-      url('../fonts/NotoSans-SemiBold.ttf') format('truetype');
+      url('../fonts/NotoSans-SemiBold.ttf') format('truetype'),
+      url('../fonts/NotoSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-SemiBold.woff') format('woff');
   font-weight: 600;
   font-style: normal;
 }
 @font-face {
   font-family: 'NotoSans';
   src: local('NotoSans'), local('Noto-Sans'),
-      url('../fonts/NotoSans-Black.ttf') format('truetype');
+      url('../fonts/NotoSans-Black.ttf') format('truetype'),
+      url('../fonts/NotoSans-Black.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/NotoSans-Black.woff') format('woff');
   font-weight: 900;
   font-style: normal;
 }
+/* @font-face {
+	font-family: 'NotoSans';
+	src: url('../fonts/NotoSans-Bold.eot');
+	src: local('Noto Sans Bold'), local('NotoSans-Bold'),
+		url('../fonts/NotoSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/NotoSans-Bold.woff') format('woff'),
+		url('../fonts/NotoSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NotoSans';
+	src: url('../fonts/NotoSans-BoldItalic.eot');
+	src: local('Noto Sans Bold Italic'), local('NotoSans-BoldItalic'),
+		url('../fonts/NotoSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/NotoSans-BoldItalic.woff') format('woff'),
+		url('../fonts/NotoSans-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'NotoSans';
+	src: url('../fonts/NotoSans-Italic.eot');
+	src: local('Noto Sans Italic'), local('NotoSans-Italic'),
+		url('../fonts/NotoSans-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/NotoSans-Italic.woff') format('woff'),
+		url('../fonts/NotoSans-Italic.ttf') format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'NotoSans';
+	src: url('../fonts/NotoSans.eot');
+	src: local('Noto Sans'), local('NotoSans'),
+		url('../fonts/NotoSans.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/NotoSans.woff') format('woff'),
+		url('../fonts/NotoSans.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+} */
 html{
   height: 100%;
 }
@@ -174,17 +222,48 @@ button, input{
   transform: translate(-50%, -50%) scale(0);
   z-index: 11;
   background: #2C2C2C;
-  max-width: 385px;
   transition: all 0.2s linear;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   display: none;
+}
+.popup_form-thanks-title{
+  color: #FFFFFF;
+  font-size: 30px;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+.popup_form-thanks-subtitle{
+  margin: 0 0 34px 0;
+}
+.popup_form-thanks-icon{
+  width: 60px;
+  height: 45px;
+  margin: 0 auto;
+}
+.popup_form-close-thanks{
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0)'%3e%3cpath d='M11.105 10.001l8.666-8.666A.781.781 0 1018.666.23L10 8.896 1.334.23A.781.781 0 10.229 1.335L8.895 10 .23 18.667a.781.781 0 101.105 1.105L10 11.106l8.666 8.666a.779.779 0 001.105 0 .781.781 0 000-1.105l-8.666-8.666z' fill='%23EFBD17'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0'%3e%3cpath fill='%23fff' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  cursor: pointer;
 }
 .popup_form-wrapper{
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding: 50px;
+  padding: 42px 41px 52px 41px;
   position: relative;
 }
 .popup_form-close{
@@ -314,6 +393,7 @@ button, input{
   margin: 0 0 29px 0;
 }
 .header_desktop-time{
+  color: #FFF;
   max-width: 445px;
   margin: 0 0 65px 0;
   line-height: 1.4em;
@@ -324,7 +404,7 @@ button, input{
   background: #2C2C2C;
 }
 .header_desktop-block-text{
-  color: #DBDBDB;
+  color: #FFF;
   max-width: 538px;
   margin: 0 0 25px 0;
   line-height: 1.5em;

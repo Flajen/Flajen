@@ -2,28 +2,35 @@
 <html lang="ru" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/master.css">
   <link rel="shortcut icon" href="favicon.ico">
   <title>Расписание заседаний</title>
-  <script src="http://localhost:35729/livereload.js"></script>
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/master.js" defer></script>
+  <script src="js/calendar.js" defer></script>
 </head>
 <body class="calendar-body">
+  <div class="babl">
+    <div class="babl-body">
+      <img src="img/gerb.svg" alt="Мой Арбитр">
+    </div>
+  </div>
   <div class="container">
     <header class="calendar-header">
       <nav class="checkNav">
-        <a href="/check.html" class="checkNav-logo"></a>
+        <a href="calendar.html" class="checkNav-logo"></a>
         <div class="checkNav-links">
-          <a href="#!" class="checkNav-link">Картотека</a>
-          <a href="#!" class="checkNav-link">Страж</a>
-          <a href="#!" class="checkNav-link">Банк решений</a>
-          <a href="#!" class="checkNav-link checkNav-link-active">Календарь</a>
-          <a href="#!" class="checkNav-link">Перерывы</a>
-          <a href="/index.html" class="checkNav-link">Мой Арбитр</a>
-          <a href="/check.html" class="checkNav-link">Проверка ЭП</a>
+          <a href="cardFile.html" class="checkNav-link">Картотека</a>
+          <a href="reference.html" class="checkNav-link">Банкротство</a>
+          <a href="guard.html" class="checkNav-link">Страж</a>
+          <a href="bank.html" class="checkNav-link">Банк решений</a>
+          <a href="calendar.html" class="checkNav-link checkNav-link-active">Календарь</a>
+          <a href="breaks.html" class="checkNav-link">Перерывы</a>
+          <a href="index.html" class="checkNav-link">Мой Арбитр</a>
+          <a href="check.html" class="checkNav-link">Проверка ЭП</a>
         </div>
       </nav>
       <div class="calendar-wrapper">
@@ -31,6 +38,271 @@
           <div class="calendar-background-heading">
             <p class="calendar-background-heading-name">График рассмотрения дел</p>
           </div>
+          <div class="calendar-input-wrapper">
+            <div>
+              <h2 class="calendar-input-heading">
+                <i class="calendar-input-heading-icon participant-icon"></i>
+                Участник дела
+              </h2>
+            </div>
+            <div class="calendar_write-add-blocks">
+              <div class="calendar_write-wrapper">
+                <div class="calendar_write-input-wrapper">
+                  <input type="text" name="calendarName" placeholder="название, ИНН или ОГРН" class="calendar_write-input">
+                  <button type="button" name="button" class="calendar_write-btn_list"><span class="btn_list-icon"></span><span class="btn_list-show">Любой</span></button>
+                  <span class="calendar_write-btn_list-open"></span>
+                  <ul class="btn_list">
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio" checked  name="btn_listOne" value="Любой">
+                        <p>Любой</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio"  name="btn_listOne" value="Истец">
+                        <p>Истец</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio"  name="btn_listOne" value="Ответчик">
+                        <p>Ответчик</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio"  name="btn_listOne" value="Третье лицо">
+                        <p>Третье лицо</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio" name="btn_listOne" value="Иное лицо">
+                        <p>Иное лицо</p>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <button type="button" name="button" class="calendar_write-add"></button>
+              </div>
+            </div>
+          </div>
+          <div class="calendar-input-wrapper">
+            <div>
+              <h2 class="calendar-input-heading">
+                <i class="calendar-input-heading-icon calendar-icon-judge"></i>
+                Судья
+              </h2>
+            </div>
+            <div class="calendar_write-add-blocks">
+              <div class="calendar_write-wrapper">
+                <div class="calendar_write-input-wrapper">
+                  <input type="text" name="calendarName" placeholder="фамилия судьи" class="calendar_write-input">
+                  <button type="button" name="button" class="calendar_write-btn_list"><span class="btn_list-icon"></span><span class="btn_list-show">Любой</span></button>
+                  <span class="calendar_write-btn_list-open openTwo"></span>
+                  <ul class="btn_list">
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio" checked  name="btn_listTwo" value="Любой">
+                        <p>Любой</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio"  name="btn_listTwo" value="Докладчик">
+                        <p>Докладчик</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio"  name="btn_listTwo" value="Боковой">
+                        <p>Боковой</p>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <button type="button" name="button" class="calendar_write-add"></button>
+              </div>
+            </div>
+          </div>
+          <div class="calendar-input-wrapper">
+            <div>
+              <h2 class="calendar-input-heading">
+                <i class="calendar-input-heading-icon calendar-icon-court"></i>
+                Суд
+              </h2>
+            </div>
+            <div class="calendar-input-list-wrapper">
+              <input type="text" placeholder="название cуда" name="c-sport" class="calendar_write-input">
+              <div class="calendar-input-list">
+                <i class="arrow-down"></i>
+              </div>
+              <div class="bank-list">
+                <ul class="list-bank-link">
+                  <li>Верховный Суд РФ</li><li>Высший Арбитражный Суд РФ</li><li>АС Волго-Вятского округа</li><li>АС Восточно-Сибирского округа</li><li>АС Дальневосточного округа</li><li>АС Западно-Сибирского округа</li><li>АС Московского округа</li><li>АС Поволжского округа</li><li>АС Северо-Западного округа</li><li>АС Северо-Кавказского округа</li><li>АС Уральского округа</li><li>АС Центрального округа</li><li>1 арбитражный апелляционный суд</li><li>2 арбитражный апелляционный суд</li><li>3 арбитражный апелляционный суд</li><li>4 арбитражный апелляционный суд</li><li>5 арбитражный апелляционный суд</li><li>6 арбитражный апелляционный суд</li><li>7 арбитражный апелляционный суд</li><li>8 арбитражный апелляционный суд</li><li>9 арбитражный апелляционный суд</li><li>10 арбитражный апелляционный суд</li><li>11 арбитражный апелляционный суд</li><li>12 арбитражный апелляционный суд</li><li>13 арбитражный апелляционный суд</li><li>14 арбитражный апелляционный суд</li><li>15 арбитражный апелляционный суд</li><li>16 арбитражный апелляционный суд</li><li>17 арбитражный апелляционный суд</li><li>18 арбитражный апелляционный суд</li><li>19 арбитражный апелляционный суд</li><li>20 арбитражный апелляционный суд</li><li>21 арбитражный апелляционный суд</li><li>АС Алтайского края</li><li>АС Амурской области</li><li>АС Архангельской области</li><li>АС Астраханской области</li><li>АС Белгородской области</li><li>АС Брянской области</li><li>АС Владимирской области</li><li>АС Волгоградской области</li><li>АС Вологодской области</li><li>АС Воронежской области</li><li>АС города Москвы</li><li>АС города Санкт-Петербурга и Ленинградской области</li><li>АС города Севастополя</li><li>АС Еврейской автономной области</li><li>АС Забайкальского края</li><li>АС Ивановской области</li><li>АС Иркутской области</li><li>АС Кабардино-Балкарской Республики</li><li>АС Калининградской области</li><li>АС Калужской области</li><li>АС Камчатского края</li><li>АС Карачаево-Черкесской Республики</li><li>АС Кемеровской области</li><li>АС Кировской области</li><li>АС Коми-Пермяцкого АО</li><li>АС Костромской области</li><li>АС Краснодарского края</li><li>АС Красноярского края</li><li>АС Курганской области</li><li>АС Курской области</li><li>АС Липецкой области</li><li>АС Магаданской области</li><li>АС Московской области</li><li>АС Мурманской области</li><li>АС Нижегородской области</li><li>АС Новгородской области</li><li>АС Новосибирской области</li><li>АС Омской области</li><li>АС Оренбургской области</li><li>АС Орловской области</li><li>АС Пензенской области</li><li>АС Пермского края</li><li>АС Приморского края</li><li>АС Псковской области</li><li>АС Республики Адыгея</li><li>АС Республики Алтай</li><li>АС Республики Башкортостан</li><li>АС Республики Бурятия</li><li>АС Республики Дагестан</li><li>АС Республики Ингушетия</li><li>АС Республики Калмыкия</li><li>АС Республики Карелия</li><li>АС Республики Коми</li><li>АС Республики Крым</li><li>АС Республики Марий Эл</li><li>АС Республики Мордовия</li><li>АС Республики Саха</li><li>АС Республики Северная Осетия</li><li>АС Республики Татарстан</li><li>АС Республики Тыва</li><li>АС Республики Хакасия</li><li>АС Ростовской области</li><li>АС Рязанской области</li><li>АС Самарской области</li><li>АС Саратовской области</li><li>АС Сахалинской области</li><li>АС Свердловской области</li><li>АС Смоленской области</li><li>АС Ставропольского края</li><li>АС Тамбовской области</li><li>АС Тверской области</li><li>АС Томской области</li><li>АС Тульской области</li><li>АС Тюменской области</li><li>АС Удмуртской Республики</li><li>АС Ульяновской области</li><li>АС Хабаровского края</li><li>АС Ханты-Мансийского АО</li><li>АС Челябинской области</li><li>АС Чеченской Республики</li><li>АС Чувашской Республики</li><li>АС Чукотского АО</li><li>АС Ямало-Ненецкого АО</li><li>АС Ярославской области</li><li>ПСП Арбитражного суда Пермского края</li><li>ПСП Арбитражный суд Архангельской области</li><li>Суд по интеллектуальным правам</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="calendar-input-wrapper">
+            <div>
+              <h2 class="calendar-input-heading">
+                <i class="calendar-input-heading-icon calendar-icon-number"></i>
+                Номер дела
+              </h2>
+            </div>
+            <div class="calendar_write-add-blocks">
+              <div class="calendar_write-wrapper">
+                <div class="calendar_write-input-wrapper">
+                  <input type="text" name="calendarName" placeholder="например, А50-5568/08" class="calendar_write-input">
+                </div>
+                <button type="button" name="button" class="calendar_write-add"></button>
+              </div>
+            </div>
+          </div>
+          <div class="bank-btn-wrapper">
+            <button type="submit" name="button" class="bank-btn bank-btn-disabled">Найти</button>
+            <a href="calendar.html" class="reset-link" id="reset-link">Сбросить все</a>
+          </div>
+        </div>
+        <div class="calendar">
+          <div class="calendar-popup">
+            <button type="button" name="button" class="calendar-popup-close"></button>
+            <span class="calendar-popup-icon"></span>
+            <h3 class="calendar-popup-title">Много заседаний</h3>
+            <p class="calendar-popup-text">График заседаний может получиться слишком большим попробуйте уточнить параметры заседаний в левой колонке.</p>
+            <button type="submit" name="button" class="bank-btn calendar-popup-btn bank-btn-disabled">Ок</button>
+          </div>
+          <div class="calendar-heading-wrapper">
+            <div class="calendar-heading-title">Расписание заседаний на месяц</div>
+            <div class="calendar-heading-btn-wrapper">
+              <button type="button" name="button" class="calendar-heading-btn calendar-heading-prev"></button>
+              <div class="calendar-heading-month">
+                <p class="calendar-heading-month-text prev">Май</p>
+                <p class="calendar-heading-month-text prev">Июнь</p>
+                <p class="calendar-heading-month-active calendar-heading-month-text">Июль <span class="calendar-heading-year">2021</span></p>
+                <p class="calendar-heading-month-text next">Август</p>
+                <p class="calendar-heading-month-text next">Сентябрь</p>
+              </div>
+              <button type="button" name="button" class="calendar-heading-btn calendar-heading-next"></button>
+            </div>
+            <div class="calendar-heading-nav">
+              <button type="button" name="button">списком</button>
+              <p>за месяц</p>
+            </div>
+          </div>
+          <div class="calendar-card-heading-wrapper">
+            <p class="calendar-card-heading">Понедельник</p>
+            <p class="calendar-card-heading">Вторник</p>
+            <p class="calendar-card-heading">Среда</p>
+            <p class="calendar-card-heading">Четверг</p>
+            <p class="calendar-card-heading">Пятница</p>
+          </div>
+          <div class="calendar-card">
+            <div class="calendar-card-block calendar-card-block-inactive">
+              <span class="calendar-card-block-text">Информация о заседаниях<br>отсутствует</span>
+              <span class="calendar-card-block-number last-month">28</span>
+            </div>
+            <div class="calendar-card-block calendar-card-block-inactive">
+              <span class="calendar-card-block-text">Информация о заседаниях<br>отсутствует</span>
+              <span class="calendar-card-block-number last-month">29</span>
+            </div>
+            <div class="calendar-card-block calendar-card-block-inactive">
+              <span class="calendar-card-block-text">Информация о заседаниях<br>отсутствует</span>
+              <span class="calendar-card-block-number last-month">30</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">26 442</span> заседания</span>
+              <span class="calendar-card-block-number" id="1">1</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">7 175</span> заседания</span>
+              <span class="calendar-card-block-number" id="2">2</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">26 066</span> заседания</span>
+              <span class="calendar-card-block-number" id="5">5</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">28 962</span> заседания</span>
+              <span class="calendar-card-block-number" id="6">6</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">25 971</span> заседания</span>
+              <span class="calendar-card-block-number" id="7">7</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">25 162</span> заседания</span>
+              <span class="calendar-card-block-number" id="8">8</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">6 269</span> заседания</span>
+              <span class="calendar-card-block-number" id="9">9</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">26 059</span> заседания</span>
+              <span class="calendar-card-block-number" id="12">12</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">28 138</span> заседания</span>
+              <span class="calendar-card-block-number" id="13">13</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">25 223</span> заседания</span>
+              <span class="calendar-card-block-number" id="14">14</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">25 664</span> заседания</span>
+              <span class="calendar-card-block-number" id="15">15</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">6 467</span> заседания</span>
+              <span class="calendar-card-block-number" id="16">16</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">24 902</span> заседания</span>
+              <span class="calendar-card-block-number" id="19">19</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">26 846</span> заседания</span>
+              <span class="calendar-card-block-number" id="20">20</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">25 190</span> заседания</span>
+              <span class="calendar-card-block-number" id="21">21</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">25 282</span> заседания</span>
+              <span class="calendar-card-block-number" id="22">22</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">6 380</span> заседания</span>
+              <span class="calendar-card-block-number" id="23">23</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">25 197</span> заседания</span>
+              <span class="calendar-card-block-number" id="26">26</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">28 142</span> заседания</span>
+              <span class="calendar-card-block-number" id="27">27</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">24 759</span> заседания</span>
+              <span class="calendar-card-block-number" id="28">28</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">24 048</span> заседания</span>
+              <span class="calendar-card-block-number" id="29">29</span>
+            </div>
+            <div class="calendar-card-block">
+              <span class="calendar-card-block-info"><span class="calendar-info">5 996</span> заседания</span>
+              <span class="calendar-card-block-number" id="30">30</span>
+            </div>
+          </div>
+          <div class="calendar-card-bottom-line"></div>
         </div>
       </div>
       <div class="calendar-footer">
@@ -39,6 +311,7 @@
             <img src="img/pravo.svg" alt="Pravo Tech">
           </a>
         </div>
+        <a href="#!" class="calendar-footer-save">Сохранить в Outlook или Google Calendar</a>
       </div>
     </header>
   </div>

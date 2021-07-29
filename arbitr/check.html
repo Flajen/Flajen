@@ -2,7 +2,7 @@
 <html lang="ru" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/master.css">
   <link rel="shortcut icon" href="favicon.ico">
@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <title>Проверка подлинности электронной подписи в судебных актах</title>
-  <script src="http://localhost:35729/livereload.js"></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/master.js" defer></script>
@@ -19,15 +18,16 @@
 <body class="check-body">
   <header class="check-header">
     <nav class="checkNav">
-      <a href="/check.html" class="checkNav-logo"></a>
+      <a href="check.html" class="checkNav-logo"></a>
       <div class="checkNav-links">
-        <a href="#!" class="checkNav-link">Картотека</a>
+        <a href="cardFile.html" class="checkNav-link">Картотека</a>
+        <a href="reference.html" class="checkNav-link">Банкротство</a>
         <a href="#!" class="checkNav-link">Страж</a>
-        <a href="/bank.html" class="checkNav-link">Банк решений</a>
-        <a href="/calendar.html" class="checkNav-link">Календарь</a>
-        <a href="#!" class="checkNav-link">Перерывы</a>
-        <a href="/index.html" class="checkNav-link">Мой Арбитр</a>
-        <a href="/check.html" class="checkNav-link checkNav-link-active">Проверка ЭП</a>
+        <a href="bank.html" class="checkNav-link">Банк решений</a>
+        <a href="calendar.html" class="checkNav-link">Календарь</a>
+        <a href="breaks.html" class="checkNav-link">Перерывы</a>
+        <a href="index.html" class="checkNav-link">Мой Арбитр</a>
+        <a href="check.html" class="checkNav-link checkNav-link-active">Проверка ЭП</a>
       </div>
     </nav>
     <div class="check-container">
@@ -40,15 +40,48 @@
             <label for="caseNumber" class="check-input-label">Номер дела</label>
           </div>
           <div class="check-input-field check-input-field-with check-input-field-border">
-            <input type="text" id="caseNumberWith" name="caseNumber" autocomplete="off" class="check-input check-input-mask">
+            <input type="text" id="caseNumberWith" name="checkDateWith" autocomplete="off" class="check-input check-input-mask">
             <label for="caseNumberWith" class="check-input-label">С</label>
-            <div class="check-date">
-
+            <div class="check-date check-date_show">
+              <div class="check-date-one">
+                <button type="button" name="checkPrev" class="check-date-btn checkPrev"></button>
+                <p class="check-date-text"><span class="check-month"></span> <span class="check-year"></span></p>
+                <button type="button" name="checkNext" class="check-date-btn checkNext"></button>
+              </div>
+              <ul class="check-date-two">
+                <li>пн</li>
+                <li>вт</li>
+                <li>ср</li>
+                <li>чт</li>
+                <li>пт</li>
+                <li>сб</li>
+                <li>вс</li>
+              </ul>
+              <ul class="check-date-three">
+              </ul>
             </div>
           </div>
           <div class="check-input-field check-input-field-on">
-            <input type="text" id="caseNumberOn" name="caseNumber" autocomplete="off" class="check-input check-input-mask">
+            <input type="text" id="caseNumberOn" name="checkDateOn" autocomplete="off" class="check-input check-input-mask">
             <label for="caseNumberOn" class="check-input-label">По</label>
+            <div class="check-date check-date_show">
+              <div class="check-date-one">
+                <button type="button" name="checkPrev" class="check-date-btn checkPrev"></button>
+                <p class="check-date-text"><span class="check-month"></span> <span class="check-year"></span></p>
+                <button type="button" name="checkNext" class="check-date-btn checkNext"></button>
+              </div>
+              <ul class="check-date-two">
+                <li>пн</li>
+                <li>вт</li>
+                <li>ср</li>
+                <li>чт</li>
+                <li>пт</li>
+                <li>сб</li>
+                <li>вс</li>
+              </ul>
+              <ul class="check-date-three">
+              </ul>
+            </div>
           </div>
         </div>
         <button type="button" name="button" class="check-btn">Найти судебный акт</button>

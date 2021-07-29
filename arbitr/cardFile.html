@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/master.css">
   <link rel="shortcut icon" href="favicon.ico">
-  <title>Поиск по перерывам. Электронное правосудие</title>
+  <title>Картотека арбитражных дел.</title>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.maskedinput.min.js"></script>
   <script src="js/master.js" defer></script>
@@ -23,21 +23,94 @@
       <nav class="checkNav">
         <a href="calendar.html" class="checkNav-logo"></a>
         <div class="checkNav-links">
-          <a href="cardFile.html" class="checkNav-link">Картотека</a>
+          <a href="cardFile.html" class="checkNav-link checkNav-link-active">Картотека</a>
           <a href="reference.html" class="checkNav-link">Банкротство</a>
           <a href="guard.html" class="checkNav-link">Страж</a>
           <a href="bank.html" class="checkNav-link">Банк решений</a>
           <a href="calendar.html" class="checkNav-link">Календарь</a>
-          <a href="breaks.html" class="checkNav-link checkNav-link-active">Перерывы</a>
+          <a href="breaks.html" class="checkNav-link">Перерывы</a>
           <a href="index.html" class="checkNav-link">Мой Арбитр</a>
           <a href="check.html" class="checkNav-link">Проверка ЭП</a>
         </div>
       </nav>
-      <div class="calendar-background-heading">
-        <p class="bank-background-heading-name breaks-background-heading-mr">Поиск по перерывам</p>
+      <div class="cardFile-background-heading">
+        <div class="cardFile-background-heading-wrapper">
+          <p class="bank-background-heading-name">Фильтр дел</p>
+          <a href="https://kad.arbitr.ru/Help" target="_blank" class="cardFile-background-heading-name">Как это работает?</a>
+        </div>
+        <a href="#!" class="cardFile-background-heading-name nouderline_hover"><span class="reference-icon-heading ad"></span>Административные</a>
+        <a href="#!" class="cardFile-background-heading-name nouderline_hover"><span class="reference-icon-heading gr"></span>Гражданские</a>
+        <a href="#!" class="cardFile-background-heading-name nouderline_hover reference-heading-icon-mr"><span class="reference-icon-heading ba"></span>Банкротные</a>
+        <a href="#!" class="cardFile-background-heading-name nouderline_hover"><span class="reference-icon-heading su"></span>Судебнаые поручения</a>
       </div>
       <div class="calendar-wrapper">
-        <div class="calendar-write">
+        <div action="check.php" method="post" class="calendar-write">
+          <div class="calendar-input-wrapper">
+            <div>
+              <h2 class="calendar-input-heading">
+                <i class="calendar-input-heading-icon participant-icon"></i>
+                Участник дела
+              </h2>
+            </div>
+            <div class="calendar_write-add-blocks">
+              <div class="calendar_write-wrapper">
+                <div class="calendar_write-input-wrapper">
+                  <input type="text" name="calendarName" placeholder="название, ИНН или ОГРН" class="calendar_write-input">
+                  <button type="button" name="button" class="calendar_write-btn_list"><span class="btn_list-icon"></span><span class="btn_list-show">Любой</span></button>
+                  <span class="calendar_write-btn_list-open"></span>
+                  <ul class="btn_list">
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio" checked  name="btn_listOne" value="Любой">
+                        <p>Любой</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio"  name="btn_listOne" value="Истец">
+                        <p>Истец</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio"  name="btn_listOne" value="Ответчик">
+                        <p>Ответчик</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio"  name="btn_listOne" value="Третье лицо">
+                        <p>Третье лицо</p>
+                      </label>
+                    </li>
+                    <li class="btn_list-link">
+                      <label class="btn_list-wrapper">
+                        <input type="radio" name="btn_listOne" value="Иное лицо">
+                        <p>Иное лицо</p>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+                <button type="button" name="button" class="calendar_write-add"></button>
+              </div>
+            </div>
+          </div>
+          <div class="calendar-input-wrapper">
+            <div>
+              <h2 class="calendar-input-heading">
+                <i class="calendar-input-heading-icon calendar-icon-judge"></i>
+                Судья
+              </h2>
+            </div>
+            <div class="calendar_write-add-blocks">
+              <div class="calendar_write-wrapper">
+                <div class="calendar_write-input-wrapper">
+                  <input type="text" name="calendarName" placeholder="фамилия судьи" class="calendar_write-input">
+                </div>
+                <button type="button" name="button" class="calendar_write-add"></button>
+              </div>
+            </div>
+          </div>
 
           <div class="calendar-input-wrapper">
             <div>
@@ -47,7 +120,7 @@
               </h2>
             </div>
             <div class="calendar_write-add-blocks">
-              <div class="calendar_write-wrapper calendar_write-wrapper-normal">
+              <div class="calendar_write-wrapper">
                 <div class="calendar_write-input-wrapper">
                   <input type="text" name="calendarName" placeholder="название cуда" class="calendar_write-input">
                   <div class="calendar-input-list">
@@ -59,28 +132,97 @@
                     </ul>
                   </div>
                 </div>
+                <button type="button" name="button" class="calendar_write-add"></button>
+              </div>
+            </div>
+          </div>
+          <div class="calendar-input-wrapper">
+            <div>
+              <h2 class="calendar-input-heading">
+                <i class="calendar-input-heading-icon calendar-icon-number"></i>
+                Номер дела
+              </h2>
+            </div>
+            <div class="calendar_write-add-blocks">
+              <div class="calendar_write-wrapper">
+                <div class="calendar_write-input-wrapper">
+                  <input type="text" name="calendarName" placeholder="например, А50-5568/08" class="calendar_write-input">
+                </div>
+                <button type="button" name="button" class="calendar_write-add"></button>
+              </div>
+            </div>
+          </div>
+          <div class="calendar-input-wrapper">
+            <div>
+              <h2 class="calendar-input-heading">
+                <i class="calendar-input-heading-icon calendar-icon-find"></i>
+                Дата регистрации дела
+              </h2>
+            </div>
+            <div class="bank-find bank-find-calendar-wrapper">
+              <div class="bank-find bank-find-mr bank-find-calendar-wrapper">
+                <p class="bank-find-text">c</p>
+                <input type="text" placeholder="дд.мм.гггг" name="bankFrom" class="bank-find-input">
+              </div>
+              <div class="bank-find bank-find-calendar-wrapper">
+                <p class="bank-find-text">по</p>
+                <input type="text" placeholder="дд.мм.гггг" name="bankBefore" class="bank-find-input">
+              </div>
+              <div class="bank-find-calendar">
+                <div class="bank-find-calendar-one">
+                  <button type="button" name="calendarPrev" class="bank-find-calendar-btn calendarPrev"></button>
+                  <p class="bank-find-calendar-month"><span class="bank-month"></span> <span class="bank-year"></span></p>
+                  <button type="button" name="calendarNext" class="bank-find-calendar-btn calendarNext"></button>
+                </div>
+                ​
+                <ul class="bank-find-calendar-two">
+                  <li>пн</li>
+                  <li>вт</li>
+                  <li>ср</li>
+                  <li>чт</li>
+                  <li>пт</li>
+                  <li>сб</li>
+                  <li>вс</li>
+                </ul>
+                <ul class="bank-find-calendar-three">
+                </ul>
               </div>
             </div>
           </div>
 
           <div class="bank-btn-wrapper">
-            <button type="button" name="button" class="bank-btn breaks_btn">Найти</button>
-            <a href="breaks.html" class="reset-link" id="reset-link">Сбросить все</a>
+            <button type="submit" name="button" class="bank-btn bank-btn-disabled">Найти</button>
+            <a href="cardFile.html" class="reset-link" id="reset-link">Сбросить все</a>
+          </div>
+
+          <div class="total_cases">
+            <p class="total_cases-title">Дел в картотеке</p>
+            <div class="total_cases-one total_cases-flex total_cases-mr">
+              <p class="total_cases-block">0</p>
+              <p class="total_cases-block">3</p>
+              <p class="total_cases-block">0</p>
+            </div>
+            <div class="total_cases-two total_cases-flex total_cases-mr">
+              <p class="total_cases-block">8</p>
+              <p class="total_cases-block">9</p>
+              <p class="total_cases-block">0</p>
+            </div>
+            <div class="total_cases-three total_cases-flex">
+              <p class="total_cases-block">7</p>
+              <p class="total_cases-block">5</p>
+              <p class="total_cases-block">7</p>
+            </div>
           </div>
         </div>
         <div class="bank-list-documents">
           <div class="bank-list-documents-one">
-            <div class="bank-list-documents-one-heading-wrapper">
-              <i class="bank-list-documents-one-icon"></i>
-              <h2 class="bank-list-documents-one-heading">Заполните поля чтобы начать поиск.<br> Для поиска достаточно только одного заполненного поля.</h2>
+            <div class="cardFile-list-documents-one">
+              <h2 class="cardFile-list-documents-heading">Укажите атрибуты дела для поиска</h2>
             </div>
-            <div class="bank_nav">
-              <div class="bank_nav-cards">
+            <div class="cardFile-nav">
+              <div class="bank_nav-cards cardFile-cards">
                 <div class="nav_two-card">
                   <a href="guard.html" target="_blank" class="bank_nav-card-link"><i class="bank_nav-card-link-icon bank_nav-test-icon"></i>Электронный страж</a>
-                </div>
-                <div class="nav_two-card">
-                  <a href="cardFile.html" target="_blank" class="bank_nav-card-link"><i class="bank_nav-card-link-icon bank_nav-cardFile-icon"></i>Картотека<br>арбитражных судов</a>
                 </div>
                 <div class="nav_two-card">
                   <a href="bank.html" target="_blank" class="bank_nav-card-link"><i class="bank_nav-card-link-icon bank_nav-cardFile-icon"></i>Банк решений<br>арбитражных судов</a>
@@ -89,123 +231,14 @@
                   <a href="calendar.html" target="_blank" class="bank_nav-card-link"><i class="bank_nav-card-link-icon bank_nav-calendar-icon"></i>Календарь судебных<br>заседаний</a>
                 </div>
                 <div class="nav_two-card">
+                  <a href="breaks.html" target="_blank" class="bank_nav-card-link"><i class="bank_nav-card-link-icon bank_nav-breaks-icon"></i>Перерывы<br>в заседаниях</a>
+                </div>
+                <div class="nav_two-card">
                   <a href="index.html" target="_blank" class="bank_nav-card-link"><i class="bank_nav-card-link-icon bank_nav-arbitr-icon"></i>Мой арбитр.<br>Электронная подача<br>документов</a>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="bank-list-documents-two reference-list-documents-two">
-            <div class="breaks-one-block">
-              <div class="breaks-block time">
-                <p class="breaks-block-text_heading">Перерыв до</p>
-              </div>
-              <div class="breaks-block judge">
-                <p class="breaks-block-text_heading">Судья, инстанция</p>
-              </div>
-              <div class="breaks-block plain">
-                <p class="breaks-block-text_heading">Истец</p>
-              </div>
-              <div class="breaks-block resp">
-                <p class="breaks-block-text_heading">Ответчик</p>
-              </div>
-            </div>
-            <div class="breaks-between">
-              <h2 class="breaks-between-heading">Перерывы, объявленные 22 Июля</h2>
-            </div>
-            <div class="breaks-two-block">
-              <div class="breaks-block time breaks-block-padding">
-                <div style="display:flex;align-items:center;justify-content:space-between;">
-                  <span class="breaks-block-date breaks-block-lh">29.07</span>
-                  <span class="breaks-block-CCC breaks-block-lh">12:40</span>
+                <div class="nav_two-card">
+                  <a href="order.html" target="_blank" class="bank_nav-card-link"><i class="bank_nav-card-link-icon bank_nav-guide-icon"></i>Руководство<br>по использованию</a>
                 </div>
-                <a href="#!" class="breaks-block-lh">А04-8555/2020</a>
-              </div>
-              <div class="breaks-block judge breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-CCC">Михайлова А. И.</p>
-              </div>
-              <div class="breaks-block plain breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text">МКП г.Благовещенска "ГСТК"</p>
-              </div>
-              <div class="breaks-block resp breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text">Управление ЖКХ города Благовещенска</p>
-              </div>
-            </div>
-            <div class="breaks-between">
-              <h2 class="breaks-between-heading">Перерывы, объявленные 21 Июля</h2>
-            </div>
-            <div class="breaks-two-block">
-              <div class="breaks-block time breaks-block-padding">
-                <div style="display:flex;align-items:center;justify-content:space-between;">
-                  <span class="breaks-block-date breaks-block-lh">28.07</span>
-                  <span class="breaks-block-CCC breaks-block-lh">09:10</span>
-                </div>
-                <a href="#!" class="breaks-block-lh">А51-2948/2020</a>
-              </div>
-              <div class="breaks-block judge breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-CCC">Меркулова Н. В.</p>
-              </div>
-              <div class="breaks-block plain breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text">" СТРОИТЕЛЬ"</p>
-              </div>
-              <div class="breaks-block resp breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text">Межрайонная инспекция Федеральной налоговой службы № 12 по Приморскому краю</p>
-              </div>
-            </div>
-            <div class="breaks-two-block" style="background:#EFF1F6;">
-              <div class="breaks-block time breaks-block-padding">
-                <div style="display:flex;align-items:center;justify-content:space-between;">
-                  <span class="breaks-block-date breaks-block-lh">28.07</span>
-                  <span class="breaks-block-CCC breaks-block-lh">10:30</span>
-                </div>
-                <a href="#!" class="breaks-block-lh">А73-18134/2020</a>
-              </div>
-              <div class="breaks-block judge breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-CCC">Меркулова Н. В.</p>
-              </div>
-              <div class="breaks-block plain breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text">ОСП по г. Комсомольску-на-Амуре №1</p>
-              </div>
-              <div class="breaks-block resp breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text breaks-block-lh">"МТС Банк"<br>"МТС Банк"</p>
-              </div>
-            </div>
-            <div class="breaks-two-block">
-              <div class="breaks-block time breaks-block-padding">
-                <div style="display:flex;align-items:center;justify-content:space-between;">
-                  <span class="breaks-block-date breaks-block-lh">28.07</span>
-                  <span class="breaks-block-CCC breaks-block-lh">10:45</span>
-                </div>
-                <a href="#!" class="breaks-block-lh">А73-16412/2020</a>
-              </div>
-              <div class="breaks-block judge breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-CCC">Меркулова Н. В.</p>
-              </div>
-              <div class="breaks-block plain breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text breaks-block-lhtext">КОМИТЕТ ГОСУДАРСТВЕННОГО ФИНАНСОВОГО КОНТРОЛЯ ПРАВИТЕЛЬСТВА ХАБАРОВСКОГО КРАЯ</p>
-              </div>
-              <div class="breaks-block resp breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text breaks-block-lhtext">"УПРАВЛЕНИЕ ЖИЛИЩНО-КОММУНАЛЬНОГО ХОЗЯЙСТВА, ТОПЛИВА И ЭНЕРГЕТИКИ АДМИНИСТРАЦИИ ГОРОДА КОМСОМОЛЬСКА-НА-АМУРЕ ХАБАРОВСКОГО КРАЯ"</p>
-              </div>
-            </div>
-            <div class="breaks-between">
-              <h2 class="breaks-between-heading">Перерывы, объявленные 29 Мая</h2>
-            </div>
-            <div class="breaks-two-block last">
-              <div class="breaks-block time breaks-block-padding">
-                <div style="display:flex;align-items:center;justify-content:space-between;">
-                  <span class="breaks-block-date breaks-block-lh">05.06</span>
-                  <span class="breaks-block-CCC breaks-block-lh">09:10</span>
-                </div>
-                <a href="#!" class="breaks-block-lh">А73-11839/2017</a>
-              </div>
-              <div class="breaks-block judge breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-CCC">Мельникова Н. Ю.</p>
-              </div>
-              <div class="breaks-block plain breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text breaks-block-lhtext">КГКУ "Служба заказчика министерства строительства Хабаровского края"</p>
-              </div>
-              <div class="breaks-block resp breaks-block-padding">
-                <p class="breaks-block-text_heading breaks-block-text">"Дальгипроводхоз"</p>
               </div>
             </div>
           </div>

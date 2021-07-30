@@ -1514,9 +1514,10 @@ header{
 .calendar-card-block-text{
 	color: #b9b8b9;
 	font-size: 1.25em;
+	line-height: 160%;
 	position: absolute;
-  left: 50%;
-  top: 50%;
+  left: 46%;
+  top: 44%;
 	transform: translate(-50%, -50%);
 	white-space: nowrap;
 	text-align: center;

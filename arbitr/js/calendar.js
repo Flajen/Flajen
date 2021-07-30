@@ -21,4 +21,27 @@ $(document).ready(function(){
         `);
     }
   });
+  var month = {
+    "month0": "Январь",
+    "month1": "Февраль",
+    "month2": "Март",
+    "month3": "Апрель",
+    "month4": "Май",
+    "month5": "Июнь",
+    "month6": "Июль",
+    "month7": "Август",
+    "month8": "Сентябрь",
+    "month9": "Октябрь",
+    "month10": "Ноябрь",
+    "month11": "Декабрь",
+    };
+  var date = new Date(),
+      nowMonth = date.getMonth(),
+      prevMonth = nowMonth - 1,
+      nextMonth = nowMonth + 1;
+  $('.calendar-now-month').parent().prev().prev().text(`${month[`month${nowMonth-2}`]}`);
+  $('.calendar-now-month').parent().prev().text(`${month[`month${nowMonth-1}`]}`);
+  $('.calendar-now-month').text(`${month[`month${nowMonth}`]}`);
+  $('.calendar-now-month').parent().next().text(`${month[`month${nowMonth+1}`]}`);
+  $('.calendar-now-month').parent().next().next().text(`${month[`month${nowMonth+2}`]}`);
 });

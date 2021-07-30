@@ -165,6 +165,7 @@ textarea::placeholder{
 header{
 	width: 1920px;
 }
+
 .container{
   width: 1600px;
   margin: 0 auto;
@@ -214,6 +215,8 @@ header{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+	min-width: 1150px;
+	width: 100%;
 }
 
 .nav_one{
@@ -347,6 +350,7 @@ header{
 .footer{
   margin: auto 0 0 0;
   padding: 0 20px;
+	width: 100%;
 }
 .social{
   display: flex;
@@ -2343,3 +2347,7 @@ header{
 		width: 1890px;
 	}
 }
+/* @media screen and (max-width: 960px) {
+p, button, input, h1, h2, h3, a{
+	font-size: 11px;
+} */

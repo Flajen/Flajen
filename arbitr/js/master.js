@@ -2,6 +2,8 @@ $(document).ready(function(){
   if ($('input[name="referenceDate"]')) {
     $('input[name="referenceDate"]').mask("99.99.9999",{autoclear: false});
   }
+  $('input[name="referencePhone"]').mask("+7(999) 999-99-99",{autoclear: false});
+  $('input[name="referenceSeries"]').mask("9999 999999",{autoclear: false});
   $('a[href="#login"]').click(function(){
     $('.blackout').show();
     $('.login_popup').show();

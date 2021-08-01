@@ -163,11 +163,14 @@ textarea::placeholder{
   margin: 0;
 }
 header{
-	width: 1920px;
+	min-width: 1150px;
+	width: 100%;
 }
 
 .container{
-  width: 1600px;
+	min-width: 1300px;
+  max-width: 1600px;
+	width: 100%;
   margin: 0 auto;
 }
 
@@ -215,8 +218,6 @@ header{
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-	min-width: 1150px;
-	width: 100%;
 }
 
 .nav_one{

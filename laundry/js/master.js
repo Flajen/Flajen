@@ -48,7 +48,14 @@ $(document).ready(function(){
         partnersItemCenterFour = $('.centerFour'),
         partnersItemNext = $('.Pnext'),
         partnersItemNextNext = $('.Pnextnext');
-    partnersItemCenterOne.removeClass('centerOne').prev().prev().removeClass('Pprevprev').next().removeClass('Pprev').addClass('Pprevprev').next().addClass('Pprev').next().removeClass('centerOne centerTwo centerThree centerFour').addClass('centerOne').next().removeClass('centerOne centerTwo centerThree centerFour').addClass('centerTwo').next().removeClass('centerOne centerTwo centerThree centerFour').addClass('centerThree').next().removeClass('Pnext').addClass('centerFour').next().removeClass('Pnextnext').addClass('Pnext');
+    partnersItemPrevPrev.removeClass('Pprevprev').next().addClass('Pprevprev');
+    partnersItemPrev.removeClass('Pprev').next().addClass('Pprev');
+    partnersItemCenterOne.removeClass('centerOne').next().addClass('centerOne');
+    partnersItemCenterTwo.removeClass('centerTwo').next().addClass('centerTwo');
+    partnersItemCenterThree.removeClass('centerThree').next().addClass('centerThree');
+    partnersItemCenterFour.removeClass('centerFour').next().addClass('centerFour');
+    partnersItemNext.removeClass('Pnext').next().addClass('Pnext');
+    partnersItemNextNext.removeClass('Pnextnext').next().addClass('Pnextnext');
     $('.partners_slider-item:nth-child(1)').appendTo('.partners_slider-window');
   });
   partnersPrev.click(function(){

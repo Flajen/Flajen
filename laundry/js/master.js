@@ -11,6 +11,14 @@ $(document).ready(function(){
     e.preventDefault();
   });
   $('input[type="tel"]').mask("+7(999) 999-99-99",{autoclear: false});
+  $('.burger').click(function(){
+    $('.nav-fly').toggle();
+  })
+  if (sizeWindow <= parseInt('1200px')) {
+    $('a').click(function(){
+      $('.nav-fly').hide();
+    })
+  }
   if (sizeWindow >= parseInt('1600px')) {
     $(window).scroll(function() {
       var scrolled = $(window).scrollTop();

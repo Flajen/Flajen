@@ -177,6 +177,9 @@ header{
   justify-content: space-between;
   margin: 0 auto;
 }
+.burger{
+  display: none;
+}
 .nav-fly{
   background: #FFF;
   width: 100%;
@@ -255,7 +258,7 @@ header{
 }
 .header-video video{
   width: 100%;
-  /* height: 100%; */
+  height: 100%;
   object-fit: cover;
 }
 .header-title{
@@ -728,6 +731,9 @@ header{
   height: 110px;
   position: absolute;
   left: -100%;
+  -webkit-transition: all 0s;
+  -moz-transition: all 0s;
+  -o-transition: all 0s;
   transition: all 0s;
 }
 .Pprevprev{
@@ -1281,6 +1287,19 @@ input:hover,input:focus{
 }
 /* АДАПТАЦИЯ */
 @media screen and (max-width: 1600px) {
+  .contact-wrapper{
+    grid-template-columns: 965px 340px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .contact-wrapper{
+    grid-template-columns: 785px 330px;
+  }
+  .contact-block{
+    left: 225px;
+  }
+}
+@media screen and (max-width: 1200px) {
   body{
     font-size: 14px;
   }
@@ -1297,17 +1316,36 @@ input:hover,input:focus{
   .container{
     width: 320px;
   }
+  .burger{
+    display: inline-block;
+    width: 35px;
+    height: 18px;
+    position: fixed;
+    background: transparent;
+    z-index: 101;
+    top: 20px;
+    left: 20px;
+  }
+  .burger-line{
+    display: inline-block;
+    position: absolute;
+    background: #4ec4fa;
+    width: 100%;
+    height: 3px;
+    border-radius: 2px;
+    left: 0;
+  }
+  .burger-one{top: 0;}
+  .burger-two{top: 50%;}
+  .burger-three{top: 100%;}
   .nav-fly{
+    height: 100%;
     display: none;
   }
   header{
     padding: 0;
     min-height: 100vh;
     margin: 0 0 50px 0;
-  }
-  .header-video video{
-    width: auto;
-    height: 100%;
   }
   .header_btn-wrapper{
     flex-direction: column;
@@ -1318,6 +1356,7 @@ input:hover,input:focus{
   .header-title{
     max-width: 310px;
     margin: 0 0 15px 10px;
+    /* text-shadow: -1px -1px 0px rgb(53,53,53,0.45); */
   }
   .header-price{
     margin: 0 0 45px 10px;
@@ -1339,6 +1378,8 @@ input:hover,input:focus{
   }
   .about_img{
     width: 90%;
+    height: 318px;
+    object-fit: cover;
   }
   .about_img-wrapper .ellipse-border{
     width: 130px;
@@ -1382,6 +1423,8 @@ input:hover,input:focus{
   }
   .technology_img{
     width: 90%;
+    height: 350px;
+    object-fit: cover;
   }
   .technology_card-three{
     grid-area: three;
@@ -1456,16 +1499,12 @@ input:hover,input:focus{
   .delivery-wrapper .ellipse{
     right: 0;
   }
-
-
   .partners{
     margin: 0 0 120px 0;
   }
   .partners_slider .block{
     display: none;
   }
-
-
   .services{
     padding: 40px 0 50px 0;
   }
@@ -1513,6 +1552,12 @@ input:hover,input:focus{
     width: 100%;
     padding: 18px 15px;
   }
+  .connection-label a{
+    text-decoration: underline;
+  }
+  .connection-label a::after{
+    display: none;
+  }
   .connection-wrapper .ellipse-border{
     width: 100px;
     height: 100px;
@@ -1533,18 +1578,11 @@ input:hover,input:focus{
     font-size: 16px;
     padding: 18px 47px;
   }
-
-
-  .gallery-slider-item{
-    width: 185px;
-  }
   .gallery-slider-item img{
     object-fit: cover;
     width: 100%;
     height: 100%;
   }
-
-
   .contact{
     width: 310px;
     margin: 0 auto 50px auto;
@@ -1624,6 +1662,11 @@ input:hover,input:focus{
     background: linear-gradient(270deg, #FFFFFF 50%, rgba(255, 255, 255, 0) 100%);
   }
 }
+@media screen and (max-width: 500px) {
+  .gallery-slider-item{
+    width: 355px;
+  }
+}
 @media screen and (max-width: 400px) {
   .centerOne{
     left: 115px;
@@ -1631,9 +1674,18 @@ input:hover,input:focus{
   .partners_slider .block.right{
     right: -150px;
   }
+  .gallery-slider-item{
+    width: 235px;
+  }
+  .gallery-slider-item.centerL{
+    left: 80px;
+  }
 }
 @media screen and (max-width: 340px) {
   .centerOne{
     left: 80px;
+  }
+  .gallery-slider-item.centerL{
+    left: 60px;
   }
 }

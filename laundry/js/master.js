@@ -17,12 +17,10 @@ $(document).ready(function(){
       if (scrolled > 10) {
         $('.nav-fly').css({
           'padding':'10px 0 10px 0',
-          'background':'#FFF',
         });
       } else {
         $('.nav-fly').css({
           'padding':'35px 0 10px 0',
-          'background':'transparent',
         });
       }
       scrollPrev = scrolled;

@@ -559,8 +559,6 @@ a{
 .form-send:focus{
   background-color: #682F00;
 }
-
-
 .footer{
   background-color: #FBF3E6;
   width: 100%;
@@ -611,4 +609,45 @@ a{
 }
 .footer-copyright{
   color: #DAB694;
+}
+@media screen and (max-width: 1305px) {
+  body{
+    font-size: 13px;
+  }
+  .container{
+    padding: 0 10px;
+  }
+  .nav-logo_text{
+    font-size: 20px;
+  }
+  .popup-title{
+    font-size: 22px;
+  }
+  .header_block{
+    flex-direction: column-reverse;
+  }
+  .header_block-left-wrapper{
+    grid-template-columns: repeat(1,1fr);
+    grid-gap: 5px 0;
+    width: auto;
+  }
+  .header_block-input{
+    width: 100%;
+  }
+  .header_block-btn-wrapper{
+    flex-direction: column;
+  }
+  .form-clear{
+    margin: 0 0 15px 0;
+  }
+  .header_block-right{
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .header_block-input-wrapper{
+    margin: 0 0 15px 0;
+  }
+  .header_block-input-wrapper.left{
+    margin: 0 0 15px 0;
+  }
 }

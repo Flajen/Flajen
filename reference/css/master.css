@@ -207,6 +207,7 @@ select {
 }
 .popup-proceed:disabled{
   background-color: #CCC;
+  cursor: default;
 }
 .popup-proceed.disabled:hover,
 .popup-proceed.disabled:focus{

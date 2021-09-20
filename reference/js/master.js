@@ -16,6 +16,7 @@ $(document).ready(function(){
       $('.popup-proceed').attr('disabled',false).removeClass('disabled');
       $('.popup-proceed').click(function(){
         $('.header-popup').hide();
+        $('.header_body-blackout').hide();
       })
     }
   });

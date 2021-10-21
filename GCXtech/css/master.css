@@ -40,7 +40,7 @@ h3{
   font-size: 18px;
   font-weight: 600;
 }
-p{
+p,h1,h2,h3,span{
   font-feature-settings: 'pnum' on, 'lnum' on;
 }
 .container{
@@ -53,6 +53,11 @@ p{
 }
 
 
+.about{
+
+}
+
+
 .advantages{
   margin: 0 0 188px 0;
   padding: 70px 0;
@@ -60,13 +65,30 @@ p{
 }
 .advantages-blocks{
   display: grid;
+  align-items: center;
   grid-auto-flow: column;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 30px;
+  position: relative;
+}
+.advantages-img{
+  position: absolute;
+  right: -305px;
+  top: 50%;
+  -ms-transform: translate(0,-50%); /* IE 9 */
+  -moz-transform: translate(0,-50%); /* Firefox */
+  -o-transform: translate(0,-50%); /* Opera */
+  -webkit-transform: translate(0,-50%); /* Safari */
+  transform: translate(0,-50%);
+  z-index: 0;
+}
+.advantages-visibility{
+  position: relative;
+  z-index: 1;
 }
 .advantages-block{
-  width: 100px;
+  height: 100%;
   -moz-border-radius: 20px; /* Firefox */
   -webkit-border-radius: 20px; /* Safari, Chrome */
   -khtml-border-radius: 20px; /* KHTML */
@@ -75,7 +97,51 @@ p{
   -webkit-box-shadow: 0px 0px 40px rgba(194, 194, 194, 0.25);
   -moz-box-shadow: 0px 0px 40px rgba(194, 194, 194, 0.25);
   box-shadow: 1px 1px 15px #2222;
-  padding: 30px;
+  padding: 30px 30px 26px 30px;
+}
+.advantages-title-wrapper{
+  position: relative;
+}
+.advantages-title{
+  font-size: 34px;
+  margin: 0 0 34px 0;
+  line-height: 1.4em;
+  position: relative;
+  z-index: 1;
+}
+.advantages-line{
+  display: inline-block;
+  position: absolute;
+  border-radius: 100px;
+  top: 33px;
+  left: 0;
+  z-index: 0;
+  width: 267px;
+  height: 5px;
+  background: #2DC6FE;
+}
+.advantages-subtitle{
+  line-height: 1.4em;
+}
+.advantages-subtitle .help{
+  color: #292E30;
+  font-weight: 500;
+}
+.advantages-heading-wrapper{
+  display: flex;
+  align-items: center;
+  margin: 0 0 15px 0;
+}
+.advantages-heading-img{
+  margin: 0 20px 0 0;
+}
+.advantages-text{
+  line-height: 1.4em;
+  font-size: 16px;
+}
+.advantages-text .help{
+  color: #292E30;
+  font-weight: 500;
 }
 
 
@@ -206,6 +272,146 @@ p{
 .map-title{
   text-align: center;
 }
+.map-wrapper{
+  width: 100%;
+  height: 655px;
+  position: relative;
+}
+.map-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  -ms-transform: translate(-50%,0); /* IE 9 */
+  -moz-transform: translate(-50%,0); /* Firefox */
+  -o-transform: translate(-50%,0); /* Opera */
+  -webkit-transform: translate(-50%,0); /* Safari */
+  transform: translate(-50%,0);
+  object-fit: cover;
+}
+.map-year-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  -ms-transform: translate(-50%,0); /* IE 9 */
+  -moz-transform: translate(-50%,0); /* Firefox */
+  -o-transform: translate(-50%,0); /* Opera */
+  -webkit-transform: translate(-50%,0); /* Safari */
+  transform: translate(-50%,0);
+  height: 660px;
+}
+.map-year{
+  font-size: 50px;
+  font-weight: 900;
+}
+.year-one{
+  color: #F8F8F8;
+  margin: 0 0 0 990px;
+}
+.year-two{
+  color: #EDF5F9;
+  margin: 0 990px 0 0;
+}
+.map-blocks{
+  display: grid;
+  grid-template-columns: repeat(1,1fr);
+  grid-template-rows: repeat(6, 94px);
+  grid-gap: 13px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 13px 0;
+}
+.map-block{
+  margin: 0 auto;
+  position: relative;
+}
+.map-block p{
+  color: #97A3A7;
+}
+.map-fly{
+  display: grid;
+  grid-gap: 55px;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);
+}
+.map-fly-right{
+  grid-template-columns: 353px 70px;
+  justify-content: flex-end;
+}
+.map-fly-left{
+  grid-template-columns: 70px 353px;
+  justify-content: flex-start;
+}
+.map-heading{
+  font-size: 22px;
+  margin: 0 0 4px 0;
+}
+.map-text{
+  line-height: 1.4em;
+}
+.map-ellipse{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+  font-size: 50px;
+  font-weight: 900;
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+}
+.map-fly-one{
+  right: 131px;
+}
+.map-fly-one .map-ellipse{
+  background-color: #ABE8FF;
+}
+.map-fly-two{
+  left: 143px;
+}
+.map-fly-two .map-ellipse{
+  background-color: #8BE0FE;
+}
+.map-fly-three{
+  right: 138px;
+}
+.map-fly-three .map-ellipse{
+  background-color: #6CD7FE;
+}
+.map-fly-four{
+  left: 139px;
+}
+.map-fly-four .map-ellipse{
+  background-color: #4DCFFE;
+}
+.map-fly-five{
+  right: 141px;
+}
+.map-fly-five .map-ellipse{
+  background-color: #2DC6FE;
+}
+.map-fly-six{
+  left: 122px;
+}
+.map-fly-six .map-ellipse{
+  background: linear-gradient(270deg, #E8A93A 0%, #FBD46C 100%);
+}
+.map-fly-right h3,
+.map-fly-right p{
+  text-align: right;
+}
+.map-fly-left h3,
+.map-fly-left p{
+  text-align: left;
+}
 
 
 .command{
@@ -282,6 +488,7 @@ p{
   -o-transform: translate(0,100%); /* Opera */
   -webkit-transform: translate(0,100%); /* Safari */
   transform: translate(0,100%);
+  outline: 0;
 }
 .command-block-avatar-telegram::after{
   content: '';
@@ -373,8 +580,7 @@ p{
   background-color: transparent;
   background-position: center right;
   background-repeat: no-repeat;
-  padding: 5px 0;
-  margin: 0 0 15px 0;
+  padding: 3px 0;
 }
 .question-btn.close{
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M12.5 0C5.607 0 0 5.607 0 12.5S5.607 25 12.5 25 25 19.393 25 12.5 19.393 0 12.5 0Zm5.469 13.542h-4.427v4.427a1.042 1.042 0 0 1-2.084 0v-4.427H7.031a1.042 1.042 0 0 1 0-2.084h4.427V7.031a1.042 1.042 0 0 1 2.084 0v4.427h4.427a1.042 1.042 0 0 1 0 2.084Z' fill='%232DC6FE'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h25v25H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
@@ -399,24 +605,19 @@ p{
 .question-text{
   width: 100%;
   line-height: 1.4em;
-  /* display: none; */
   height: 0;
-  opacity: 0;
   overflow: hidden;
 }
 .question-text .help{
   color: #292E30;
   font-weight: 500;
 }
-.question-text .last{
-  margin: 15px 0 0 0;
-}
 .question-line{
   display: inline-block;
   width: 100%;
   height: 1px;
   background: #EDEDED;
-  margin: 0 0 15px 0;
+  margin: 20px 0;
 }
 .question-info{
   color: #97A3A7;

@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Project office</title>
   <link rel="stylesheet" href="css/master.css">
@@ -11,10 +11,15 @@
   <script src="js/master.js" defer></script>
 </head>
 <body class="home">
-  <header>
+  <header class="index">
     <div class="container">
       <nav>
-        <a href="/"><img src="img/logo.png" alt="Project office"></a>
+        <button type="button" name="burger" class="burger">
+          <span class="burger-line burger-line-one"></span>
+          <span class="burger-line burger-line-two"></span>
+          <span class="burger-line burger-line-three"></span>
+        </button>
+        <a href="/" class="header-footer"><img src="img/logo.png" alt="Project office" class="header-footer-img"></a>
         <ul class="nav-flex nav-links">
           <li><a href="#about" class="nav-link">О нас</a></li>
           <li><a href="#!" class="nav-link">Направления</a></li>
@@ -133,17 +138,66 @@
   </section>
 
   <section class="history" id="history">
-    <div class="container">
-      <h2 class="home-line-left index-title">История Project</h2>
+    <div class="container history-container">
+      <img src="img/history.png" alt="История Project" class="history-img">
+      <h2 class="home-line-left index-title history-title">История Project</h2>
+      <div class="history-blocks">
+        <span class="history-line"></span>
+        <div class="history-block">
+          <span class="history-block-ellipse"></span>
+          <span class="history-block-year">1996</span>
+          <p class="history-block-text">Начало частной практики будущих сотрудников и партнеров агентства</p>
+        </div>
+        <div class="history-block">
+          <span class="history-block-ellipse"></span>
+          <span class="history-block-year">2017</span>
+          <p class="history-block-text text-average">Формирование Project Office как единой команды специалистов</p>
+        </div>
+        <div class="history-block">
+          <span class="history-block-ellipse"></span>
+          <span class="history-block-year">2018</span>
+          <p class="history-block-text text-small">Первый международный проект</p>
+        </div>
+        <div class="history-block">
+          <span class="history-block-ellipse"></span>
+          <span class="history-block-year">2019</span>
+          <p class="history-block-text text-small">Работа с новыми отраслями и рынками</p>
+        </div>
+        <div class="history-block">
+          <span class="history-block-ellipse"></span>
+          <span class="history-block-year">2020</span>
+          <p class="history-block-text">Рекордное количество онлайн-проектов, расширение географии деятельности</p>
+        </div>
+        <div class="history-block">
+          <span class="history-block-ellipse"></span>
+          <span class="history-block-ellipse"></span>
+          <span class="history-block-year">2021</span>
+          <p class="history-block-text">Активная работа над региональными социальными проектами</p>
+        </div>
+      </div>
     </div>
   </section>
 
   <footer>
     <div class="container">
-      <div class="footer-wrapper">
-        <a href="#!">
+      <div class="footer-blocks">
+        <a href="#!" class="footer-logo">
           <img src="img/logo.png" alt="Project office">
         </a>
+        <ul class="footer-social-links">
+          <li><a href="#!" class="footer-social-link">ВКонтакте</a></li>
+          <li><a href="#!" class="footer-social-link">Instagram</a></li>
+          <li><a href="#!" class="footer-social-link">Facebook</a></li>
+        </ul>
+        <ul class="footer-qustions-links">
+          <li><p class="footer-qustions-heading">Задать вопрос:</p></li>
+          <li><a href="mailto:projectoffice@yd.ru" class="footer-qustions-link">projectoffice@yd.ru</a></li>
+          <li><a href="tel:+79877411958" class="footer-qustions-link">+7 (987) 741-19-58</a></li>
+        </ul>
+        <form class="footer-form" action="index.html" method="post">
+          <p class="footer-form-heading">Получить индивидуальное предложение</p>
+          <input type="email" name="footer_email" placeholder="Пожалуйста, введите Ваш e-mail" class="footer-form-input">
+        </form>
       </div>
     </div>
   </footer>

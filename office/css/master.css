@@ -223,18 +223,18 @@ nav{
 }
 
 .about{
-  margin: 0 0 145px 0;
+  margin-bottom: 145px;
 }
 .about-title{
-  margin: 0 0 65px 0;
+  margin-bottom: 65px
 }
 .about-wrapper{
   display: grid;
   grid-gap: 30px;
-  margin: 0 0 149px;
+  margin-bottom: 149px;
 }
 .about-subtitle{
-  margin: 0 0 20px;
+  margin-bottom: 20px;
   font-size: 35px;
 }
 .about-subtitle .help{
@@ -248,10 +248,10 @@ nav{
   text-align: justify
 }
 .about-wrapper .ml{
-  margin: 0 0 0 190px;
+  margin-left: 190px;
 }
 .about-services{
-  margin: 0 0 0 74px;
+  margin-left: 74px;
   position: relative;
 }
 .about-fly-text{
@@ -300,11 +300,11 @@ nav{
 .about-block-heading{
   font-size: 30px;
   font-weight: 500;
-  margin: 0 0 23px 0;
+  margin-bottom: 23px;
 }
 .about-block-text{
   font-size: 18px;
-  margin: 0 0 38px 0;
+  margin-bottom: 38px;
 }
 .about-block-more{
   position: relative;
@@ -330,15 +330,15 @@ nav{
 }
 
 .projects{
-  margin: 0 0 213px 0;
+  margin-bottom: 213px;
 }
 .projects-title{
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
 }
 .projects-subtitle{
   font-size: 30px;
   color: rgba(255, 255, 255, 0.7);
-  margin: 0 0 29px 0;
+  margin-bottom: 29px;
 }
 .projects-blocks{
   display: grid;
@@ -348,7 +348,7 @@ nav{
   grid-template-areas:
     "one two three three"
     "four five five six";
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
 }
 .projects-block-one { grid-area: one; }
 .projects-block-two { grid-area: two; }
@@ -396,7 +396,7 @@ nav{
   background: -webkit-linear-gradient(right, #FFFFFF 0%, #242424 100%);
   background: -o-linear-gradient(right, #FFFFFF 0%, #242424 100%);
   background: linear-gradient(to left, #FFFFFF 0%, #242424 100%);
-  margin: 0 0 3px 0;
+  margin-bottom: 3px;
 }
 .projects-more-wrapper{
   display: flex;
@@ -406,7 +406,7 @@ nav{
 .projects-more{
   display: block;
   text-align: right;
-  margin: 0 0 0 auto;
+  margin-left: auto;
   color: rgba(255, 255, 255, 0.7);
   font-size: 20px;
   position: relative;
@@ -571,8 +571,46 @@ footer{
   color: rgba(229, 229, 229, 0.7);
 }
 
+@media screen and (max-width: 1727px) {
+  .home-subtitle{
+    margin: 0px 0px 366px 0px;
+  }
+  .home-img {
+    right: 24px;
+    bottom: -35px;
+  }
+}
+@media screen and (max-width: 1420px) {
+  .home-line-left::after{
+    width: 80px;
+    left: -90px;
+  }
+  .history-img{
+    width: 1200px;
+  }
+}
+@media screen and (max-width: 1310px) {
+  .home-line-left::after{
+    width: 40px;
+    left: -50px;
+  }
+}
+@media screen and (max-width: 1230px) {
+  .index-title{
+    margin-left: 50px;
+  }
+  .home-title{
+    margin-left: 0;
+  }
+  .home-subtitle{
+    margin: 0 0 426px 50px;
+  }
+  .home-link{
+    white-space: nowrap;
+  }
+}
 
-@media screen and (max-width: 1333px) {
+@media screen and (max-width: 1165px) {
   body{
     font-size: 12px;
   }
@@ -657,7 +695,7 @@ footer{
   .home-title{
     font-size: 25px;
     max-width: 241px;
-    margin: 0 0 58px 0;
+    margin-bottom: 58px;
   }
   .home-subtitle{
     font-size: 14px;

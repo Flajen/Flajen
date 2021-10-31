@@ -110,6 +110,13 @@ nav{
   display: inline-block;
   padding: 3px 25px;
 }
+.header-info{
+  position: relative;
+  margin-bottom: 40px;
+}
+.tradingview-widget-copyright{
+  display: none;
+}
 .header-title{
   font-size: 43px;
   max-width: 606px;

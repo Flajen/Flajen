@@ -66,20 +66,4 @@ $(document).ready(function(){
     $('.about-slider-two').removeClass('about-one about-two about-three').addClass('about-three');
     $('.about-slider-three').removeClass('about-one about-two about-three').addClass('about-one');
   })
-
-
-  $.ajax({
-    method: 'GET',
-    url: "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
-    headers: {'X-CMC_PRO_API_KEY': '34231584-0ba1-49c8-89af-87aca2e199e0'},
-    dataType: 'json',
-    success: function(data){
-      currency.name = data.data[0].name;
-      currency.price = data.data[0].quote.USD.price;
-      console.log(currency);
-    },
-    error: function(jqXHR, textStatus, errorThrown){
-      alert("ERROR");
-    }
-});
 });

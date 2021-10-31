@@ -4,6 +4,11 @@ $(document).ready(function(){
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
     e.preventDefault();
   });
+  $('.sale-chart-text-hover').mouseover(function(){
+    $('.sale-chart-logo-detail').show();
+  }).mouseleave(function(){
+    $('.sale-chart-logo-detail').hide();
+  });
   // Шапка
   var scrollPrev = 0;
 	$(window).scroll(function() {

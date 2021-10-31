@@ -1,4 +1,21 @@
 $(document).ready(function(){
+  $("body").on('click', '[href*="#"]', function(e){
+    var fixed_offset = 120;
+    $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
+    e.preventDefault();
+  });
+  // Шапка
+  var scrollPrev = 0;
+	$(window).scroll(function() {
+		var scrolled = $(window).scrollTop();
+
+		if ( scrolled > 150) {
+      $('nav').css('padding','10px 0 10px 0');
+		}else {
+      $('nav').css('padding','57px 0 7px 0');
+		}
+		scrollPrev = scrolled;
+	});
   $('.question-btn').click(function(){
     var th = $(this);
     if ($('.question-btn').hasClass('other')) {
@@ -49,4 +66,20 @@ $(document).ready(function(){
     $('.about-slider-two').removeClass('about-one about-two about-three').addClass('about-three');
     $('.about-slider-three').removeClass('about-one about-two about-three').addClass('about-one');
   })
+
+
+  $.ajax({
+    method: 'GET',
+    url: "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest",
+    headers: {'X-CMC_PRO_API_KEY': '34231584-0ba1-49c8-89af-87aca2e199e0'},
+    dataType: 'json',
+    success: function(data){
+      currency.name = data.data[0].name;
+      currency.price = data.data[0].quote.USD.price;
+      console.log(currency);
+    },
+    error: function(jqXHR, textStatus, errorThrown){
+      alert("ERROR");
+    }
+});
 });

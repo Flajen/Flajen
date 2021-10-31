@@ -90,7 +90,7 @@ nav{
   justify-content: center;
   padding: 57px 0 10px 0;
   width: 100%;
-  background: #FFF;
+  background: transparent;
   position: fixed;
   z-index: 15;
   top: 0;
@@ -100,10 +100,10 @@ nav{
   -o-transform: translate(-50%,0); /* Opera */
   -webkit-transform: translate(-50%,0); /* Safari */
   transform: translate(-50%,0);
-  -webkit-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
 }
 .nav-blocks{
   width: 1110px;

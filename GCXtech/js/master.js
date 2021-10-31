@@ -14,10 +14,16 @@ $(document).ready(function(){
 	$(window).scroll(function() {
 		var scrolled = $(window).scrollTop();
 
-		if ( scrolled > 150) {
-      $('nav').css('padding','10px 0 10px 0');
+		if ( scrolled > 50) {
+      $('nav').css({
+        'padding':'10px 0 10px 0',
+        'background':'#FFF',
+      });
 		}else {
-      $('nav').css('padding','57px 0 7px 0');
+      $('nav').css({
+        'padding':'57px 0 10px 00',
+        'background':'transparent',
+      });
 		}
 		scrollPrev = scrolled;
 	});

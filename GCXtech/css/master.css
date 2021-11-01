@@ -1314,7 +1314,8 @@ footer{
   }
 
   header{
-    padding-top: 62px;
+    padding-top: 82px;
+    margin-bottom: 55px;
   }
   .header-btn-wrapper{
     justify-content: center;

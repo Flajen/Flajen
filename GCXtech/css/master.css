@@ -1258,35 +1258,39 @@ footer{
   }
   nav{
     justify-content: flex-start;
+    align-items: start;
     padding: 15px 20px;
     width: 100%;
-  }
-  .nav-blocks{
-    width: 100%;
-    justify-content: flex-start;
+
+    /* background: #FFF; */
   }
   .burger{
     display: block;
   }
-  .nav-links{
-    display: none;
-  }
   .nav-blocks{
+    width: 100%;
     display: grid;
+    justify-content: space-between;
     grid-template-areas:
     "one two burger"
     "three three three";
+    /* grid-row-gap: 30px; */
   }
   .nav-logo{
     grid-area: one;
-    margin-right: 50px;
+    margin-right: 40px;
   }
   .nav-lang{
     grid-area: two;
-    margin-right: 10px;
   }
   .nav-links{
     grid-area: three;
+    grid-auto-flow:row;
+    justify-content: center;
+    justify-items: center;
+    grid-gap: 24px;
+    display: none;
+    margin-top: 30px;
   }
   .burger{
     grid-area: burger;
@@ -1298,19 +1302,24 @@ footer{
   .burger-line{
     display: inline-block;
     position: absolute;
+    right: 0;
     width: 100%;
     height: 2px;
     background: linear-gradient(270deg, #E8A93A 0%, #FBD46C 100%);;
+    border-radius: 5px;
   }
   .burger-line-one{
     top: 0;
   }
   .burger-line-two{
     top: 50%;
+    '-webkit-transform': translate(0,-50%);
     transform: translate(0,-50%);
   }
   .burger-line-three{
     top: 100%;
+    transform: translate(0,-100%);
+    width: 80%;
   }
 
   header{
@@ -1513,6 +1522,9 @@ footer{
   .sale-verified .help{
     font-size: 15px;
   }
+  .sale-right{
+    width: 100%;
+  }
   .sale-block{
     width: 100%;
     padding: 16px 20px;
@@ -1554,6 +1566,7 @@ footer{
     justify-content: center;
   }
   .sale-chart-block{
+    width: 100%;
     grid-template-columns: auto;
     padding: 15px 20px;
     justify-items: start;
@@ -1581,7 +1594,12 @@ footer{
   }
   .sale-chart-logo-line-wrapper{
     top: -308px;
-    left: 13px;
+    left: 50%;
+    -ms-transform: translate(-50%, 0); /* IE 9 */
+    -moz-transform: translate(-50%, 0); /* Firefox */
+    -o-transform: translate(-50%, 0); /* Opera */
+    -webkit-transform: translate(-50%, 0); /* Safari */
+    transform: translate(-50%, 0);
     width: 280px;
     height: 280px;
   }

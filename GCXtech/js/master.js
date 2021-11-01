@@ -38,6 +38,47 @@ $(document).ready(function(){
     }
 		scrollPrev = scrolled;
 	});
+  var burger = true;
+  $('.burger').click(function(){
+    if (burger) {
+      $('body').css("overflow",'hidden');
+      $('nav').css({
+        'background':'rgba(255,255,255,1)',
+        'height':'100%',
+      });
+      $('.nav-links').css('display','grid');
+      $('.burger-line-one').css({
+        'top':'50%',
+        '-webkit-transform':'rotate(45deg) translate(0,-50%)',
+        'transform':'rotate(45deg) translate(0,-50%)',
+      })
+      $('.burger-line-two').css({
+        'top':'50%',
+        '-webkit-transform':'rotate(-45deg) translate(0,-50%)',
+        'transform':'rotate(-45deg) translate(0,-50%)',
+      })
+      $('.burger-line-three').hide();
+      burger = false;
+    } else {
+      $('body').css("overflow",'auto');
+      $('nav').css({
+        'height':'auto',
+      });
+      $('.nav-links').hide();
+      $('.burger-line-one').css({
+        'top':'0',
+        '-webkit-transform':'rotate(0) translate(0,0)',
+        'transform':'rotate(0) translate(0,0)',
+      })
+      $('.burger-line-two').css({
+        'top':'50%',
+        '-webkit-transform':'rotate(0) translate(0,-50%)',
+        'transform':'rotate(0) translate(0,-50%)',
+      })
+      $('.burger-line-three').show();
+      burger = true;
+    }
+  });
   $('.question-btn').click(function(){
     var th = $(this);
     if ($('.question-btn').hasClass('other')) {

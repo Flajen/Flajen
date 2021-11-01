@@ -16,13 +16,13 @@ $(document).ready(function(){
 
 		if ( scrolled > 50) {
       $('nav').css({
-        'padding':'10px 0 10px 0',
-        'background':'#FFF',
+        'padding':'10px 0px 10px 0px',
+        'background':'rgba(255,255,255,1)',
       });
 		}else {
       $('nav').css({
-        'padding':'57px 0 10px 00',
-        'background':'transparent',
+        'padding':'57px 0px 10px 0px',
+        'background':'rgba(255,255,255,0)',
       });
 		}
 		scrollPrev = scrolled;

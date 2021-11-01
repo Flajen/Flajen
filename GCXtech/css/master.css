@@ -104,6 +104,9 @@ nav{
   -o-transition: all 0.25s linear;
   transition: all 0.25s linear;
 }
+.burger{
+  display: none;
+}
 .nav-blocks{
   width: 1110px;
   display: grid;
@@ -1254,22 +1257,61 @@ footer{
     margin: 0 0 20px 0;
   }
   nav{
-    display: none;
+    position: absolute;
     justify-content: flex-start;
+    padding: 15px 20px;
+    width: 100%;
+  }
+  .nav-blocks{
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .burger{
+    display: block;
+  }
+  .nav-links{
+    display: none;
   }
   .nav-blocks{
     display: grid;
-    grid-template-areas: "one two"
-    "three";
+    grid-template-areas:
+    "one two burger"
+    "three three three";
   }
   .nav-logo{
     grid-area: one;
+    margin-right: 50px;
   }
   .nav-lang{
     grid-area: two;
+    margin-right: 10px;
   }
   .nav-links{
     grid-area: three;
+  }
+  .burger{
+    grid-area: burger;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    background-color: transparent;
+  }
+  .burger-line{
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, #E8A93A 0%, #FBD46C 100%);;
+  }
+  .burger-line-one{
+    top: 0;
+  }
+  .burger-line-two{
+    top: 50%;
+    transform: translate(0,-50%);
+  }
+  .burger-line-three{
+    top: 100%;
   }
 
   header{

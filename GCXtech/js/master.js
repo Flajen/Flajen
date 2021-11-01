@@ -9,12 +9,11 @@ $(document).ready(function(){
   }).mouseleave(function(){
     $('.sale-chart-logo-detail').hide();
   });
-  if ($(window).width() > '1315'){
-    // Шапка
-    var scrollPrev = 0;
-  	$(window).scroll(function() {
-  		var scrolled = $(window).scrollTop();
-
+  // Шапка
+  var scrollPrev = 0;
+	$(window).scroll(function() {
+		var scrolled = $(window).scrollTop();
+    if ($(window).width() > '1315'){
   		if ( scrolled > 50) {
         $('nav').css({
           'padding':'10px 0px 10px 0px',
@@ -26,9 +25,19 @@ $(document).ready(function(){
           'background':'rgba(255,255,255,0)',
         });
   		}
-  		scrollPrev = scrolled;
-  	});
-  }
+    } else {
+      if ( scrolled > 50) {
+        $('nav').css({
+          'background':'rgba(255,255,255,1)',
+        });
+  		}else {
+        $('nav').css({
+          'background':'rgba(255,255,255,0)',
+        });
+  		}
+    }
+		scrollPrev = scrolled;
+	});
   $('.question-btn').click(function(){
     var th = $(this);
     if ($('.question-btn').hasClass('other')) {

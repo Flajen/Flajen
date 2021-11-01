@@ -1257,7 +1257,6 @@ footer{
     margin: 0 0 20px 0;
   }
   nav{
-    position: absolute;
     justify-content: flex-start;
     padding: 15px 20px;
     width: 100%;

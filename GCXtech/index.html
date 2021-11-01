@@ -114,8 +114,10 @@
           <p class="about-subtitle last"><span class="help">Точный диагноз</span> — эффективное лечение, своевременное обследование состояния здоровья — путь к долголетию!</p>
         </div>
         <div class="about-slider-wrapper">
+          <button type="button" name="about-prev" class="about-btn about-prev"></button>
+          <button type="button" name="about-next" class="about-btn about-next"></button>
           <div class="about-slider-btn-wrapper">
-            <button type="button" name="button" class="about-slider-btn about-btn-one active">Наша миссия</button>
+            <button type="button" name="button" class="about-slider-btn about-btn-one active first">Наша миссия</button>
             <button type="button" name="button" class="about-slider-btn about-btn-two">Наше видение</button>
             <button type="button" name="button" class="about-slider-btn about-btn-three last">Гарантии</button>
           </div>
@@ -253,7 +255,13 @@
         </div>
         <div class="sale-chart-logo">
           <img src="img/detail/back.png" alt="logo" class="sale-chart-logo-back">
-          <img src="img/detail/detail.png" alt="logo" class="sale-chart-logo-detail">
+          <img src="img/detail/3.png" alt="logo" class="sale-chart-logo-detail one">
+          <img src="img/detail/3two.png" alt="logo" class="sale-chart-logo-detail two">
+          <img src="img/detail/5.png" alt="logo" class="sale-chart-logo-detail three">
+          <img src="img/detail/8.png" alt="logo" class="sale-chart-logo-detail four">
+          <img src="img/detail/8two.png" alt="logo" class="sale-chart-logo-detail five">
+          <img src="img/detail/13.png" alt="logo" class="sale-chart-logo-detail six">
+          <img src="img/detail/60.png" alt="logo" class="sale-chart-logo-detail seven">
           <img src="img/detail/front.png" alt="logo" class="sale-chart-logo-front">
         </div>
         <div class="sale-chart-block">
@@ -351,54 +359,69 @@
     <div class="container">
       <h2 class="command-title main-title">Команда</h2>
       <div class="command-blocks">
-        <button type="button" name="button" class="command-block">
+        <button type="button" name="button" data-command="1" class="command-block">
           <div class="command-block-avatar-wrapper">
             <img src="img/team1.png" alt="Наталья Вайнер" class="command-block-avatar">
             <a href="https://www.google.ru/" class="command-block-avatar-telegram">Telegram</a>
           </div>
           <div class="command-block-name-wrapper">
             <span class="command-one command-icon"></span>
-            <h3 class="command-block-name">Наталья Вайнер</h3>
+            <p class="command-block-name">Наталья Вайнер</p>
             <p class="command-block-name-post">Исполнительный директор</p>
           </div>
         </button>
-        <button type="button" name="button" class="command-block">
+        <button type="button" name="button" data-command="2" class="command-block">
           <div class="command-block-avatar-wrapper">
             <img src="img/team2.png" alt="София Берг" class="command-block-avatar">
             <a href="https://www.google.ru/" class="command-block-avatar-telegram">Telegram</a>
           </div>
           <div class="command-block-name-wrapper">
             <span class="command-two command-icon"></span>
-            <h3 class="command-block-name">София Берг</h3>
+            <p class="command-block-name">София Берг</p>
             <p class="command-block-name-post">Медицинский техник</p>
           </div>
         </button>
-        <button type="button" name="button" class="command-block">
+        <button type="button" name="button" data-command="3" class="command-block">
           <div class="command-block-avatar-wrapper">
             <img src="img/team3.png" alt="Каролина Хартманн" class="command-block-avatar">
             <a href="https://www.google.ru/" class="command-block-avatar-telegram">Telegram</a>
           </div>
           <div class="command-block-name-wrapper">
             <span class="command-three command-icon"></span>
-            <h3 class="command-block-name">Каролина Хартманн</h3>
+            <p class="command-block-name">Каролина Хартманн</p>
             <p class="command-block-name-post">Менеджер по маркетингу и продукту</p>
           </div>
         </button>
-        <button type="button" name="button" class="command-block">
+        <button type="button" name="button" data-command="4" class="command-block">
           <div class="command-block-avatar-wrapper">
             <img src="img/team4.png" alt="Никас Фридман" class="command-block-avatar">
             <a href="https://www.google.ru/" class="command-block-avatar-telegram">Telegram</a>
           </div>
           <div class="command-block-name-wrapper">
             <span class="command-four command-icon"></span>
-            <h3 class="command-block-name">Никас Фридман</h3>
+            <p class="command-block-name">Никас Фридман</p>
             <p class="command-block-name-post">Веб-разработчик</p>
           </div>
         </button>
       </div>
     </div>
     <div class="command-popup">
-      <!-- BUG:  -->
+      <div class="close-popup-wrapper">
+        <button type="button" name="close-popup" class="close-popup"></button>
+      </div>
+      <div class="command-popup-blocks">
+        <div class="command-popup-avatar-wrapper">
+          <img src="" alt="" class="command-popup-avatar">
+        </div>
+        <div>
+          <div class="command-popup-heading-wrapper">
+            <a href="https://www.google.ru/" class="popup-telegram"></a>
+            <p class="command-popup-name"></p>
+          </div>
+          <p class="command-popup-position"></p>
+          <p class="command-popup-text"></p>
+        </div>
+      </div>
     </div>
   </section>
   <div class="blackout">

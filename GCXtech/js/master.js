@@ -13,7 +13,7 @@ $(document).ready(function(){
   var scrollPrev = 0;
 	$(window).scroll(function() {
 		var scrolled = $(window).scrollTop();
-    if ($(window).width() > '1315'){
+    if ($(window).width() > '1110'){
   		if ( scrolled > 50) {
         $('nav').css({
           'padding':'10px 0px 10px 0px',

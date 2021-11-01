@@ -161,11 +161,16 @@ nav{
   -o-filter: drop-shadow(0px 0px 100px rgba(142, 225, 255, 0.45));
   filter: drop-shadow(0px 0px 100px rgba(142, 225, 255, 0.45));
 }
-.header-fly-line{
+.header-fly-line-wrapper{
+  overflow: hidden;
   position: absolute;
   left: -43px;
   top: -39px;
   z-index: 2;
+  width: 408px;
+  height: 400px;
+}
+.header-fly-line{
   animation: circle 2s infinite linear;
 }
 .header-fly-plus{
@@ -657,11 +662,14 @@ nav{
   -o-filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.25));
   filter: drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.25));
 }
-.sale-chart-logo-line{
+.sale-chart-logo-line-wrapper{
   position: absolute;
   z-index: -1;
   top: -130px;
   left: 4px;
+  overflow: hidden;
+}
+.sale-chart-logo-line{
   animation: circle 2s infinite linear;
 }
 .sale-chart-block{
@@ -763,8 +771,12 @@ nav{
   margin: 0 auto;
   position: relative;
 }
-.map-block p{
+.map-month{
   color: #97A3A7;
+}
+.map-text{
+  color: #5E6669;
+  line-height: 1.4em;
 }
 .map-fly{
   display: grid;
@@ -787,9 +799,6 @@ nav{
 .map-heading{
   font-size: 22px;
   margin: 0 0 4px 0;
-}
-.map-text{
-  line-height: 1.4em;
 }
 .map-ellipse{
   display: flex;
@@ -1210,7 +1219,7 @@ footer{
     width: 770px;
   }
 }
-@media screen and (max-width: 1550px) {
+/* @media screen and (max-width: 1550px) {
   header{
     margin-bottom: 130px;
   }
@@ -1231,7 +1240,7 @@ footer{
   .question-img{
     width: 615px;
   }
-}
+} */
 @media screen and (max-width: 1540px) {
   body{
     font-size: 15px;
@@ -1264,7 +1273,7 @@ footer{
   }
 
   header{
-    padding-top: 82px;
+    padding-top: 62px;
   }
   .header-btn-wrapper{
     justify-content: center;
@@ -1327,11 +1336,15 @@ footer{
     width: 50px;
     height: 50px;
   }
-  .header-fly-line{
+  .header-fly-line-wrapper{
     width: 280px;
     height: 280px;
     top: -18px;
     left: -12px;
+  }
+  .header-fly-line{
+    width: 280px;
+    height: 280px;
   }
   .header-fly-pluses.mob{
     display: block;
@@ -1495,6 +1508,9 @@ footer{
     font-size: 14px;
     white-space: nowrap;
   }
+  .sale-chart{
+    justify-content: center;
+  }
   .sale-chart-block{
     grid-template-columns: auto;
     padding: 15px 20px;
@@ -1521,9 +1537,13 @@ footer{
     width: 196px;
     height: 196px;
   }
-  .sale-chart-logo-line{
+  .sale-chart-logo-line-wrapper{
     top: -308px;
-    left: 20px;
+    left: 13px;
+    width: 280px;
+    height: 280px;
+  }
+  .sale-chart-logo-line{
     width: 280px;
     height: 280px;
   }
@@ -1536,17 +1556,89 @@ footer{
 
 
   .map{
-
+    margin-bottom: 80px;
+  }
+  .map-title{
+    margin-bottom: 88px;
+    padding: 0 20px;
+  }
+  .map-blocks{
+    padding-left: 20px;
+  }
+  .map-block{
+    margin: 0;
   }
   .map-img-desktop{
     display: none;
   }
-  .map-fly{
-    display: flex;
-  }
   .map-img-mob{
+    width: auto;
+    height: auto;
+    object-fit: none;
     display: block;
-    left: 0;
+    left: 34px;
+    top: -70px;
+    -ms-transform: translate(0,0); /* IE 9 */
+    -moz-transform: translate(0,0); /* Firefox */
+    -o-transform: translate(0,0); /* Opera */
+    -webkit-transform: translate(0,0); /* Safari */
+    transform: translate(0,0);
+  }
+  .map-year-wrapper{
+    top: -90px;
+    height: 728px;
+    left: auto;
+    -ms-transform: translate(0,0); /* IE 9 */
+    -moz-transform: translate(0,0); /* Firefox */
+    -o-transform: translate(0,0); /* Opera */
+    -webkit-transform: translate(0,0); /* Safari */
+    transform: translate(0,0);
+    right: 20px;
+  }
+  .map-year{
+    font-size: 24px;
+    /* display: none; */
+  }
+  .map-fly{
+    position: relative;
+    grid-template-areas: 'one two';
+    grid-template-columns: auto;
+    justify-content: flex-start;
+    grid-gap: 10px;
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 45px;
+    transform: translate(0,0);
+  }
+  .map-fly-right h3, .map-fly-right p{
+    text-align: left;
+  }
+  .map-heading{
+    font-size: 15px;
+  }
+  .map-block p{
+    font-size: 14px;
+  }
+  .map-ellipse{
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+  }
+  .map-heading-wrapper{
+    grid-area: two;
+  }
+  .map-ellipse{
+    grid-area: one;
+  }
+  .year-one{
+    margin: 0;
+  }
+  .year-two{
+    margin: 0;
+  }
+  .map-month{
+    display: none;
   }
 
 

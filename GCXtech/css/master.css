@@ -1410,7 +1410,8 @@ footer{
     grid-template-areas:
     "one two burger"
     "three three three";
-    /* grid-row-gap: 30px; */
+    margin: 0 auto;
+    max-width: 600px;
   }
   .nav-logo{
     grid-area: one;
@@ -1775,10 +1776,40 @@ footer{
     width: 280px;
     height: 280px;
   }
-  .sale-chart-logo-detail{
-    width: 231px;
-    left: 3px;
-    top: -20px;
+  .sale-chart-logo-detail.one{
+    top: 96px;
+    right: -19px;
+    width: 140px;
+  }
+  .sale-chart-logo-detail.two{
+    left: 119px;
+    top: 70px;
+    width: 143px;
+  }
+  .sale-chart-logo-detail.three{
+    left: 124px;
+    top: 33px;
+    width: 130px;
+  }
+  .sale-chart-logo-detail.four{
+    left: 123px;
+    top: -9px;
+    width: 109px;
+  }
+  .sale-chart-logo-detail.five{
+    left: 105px;
+    top: -18px;
+    width: 70px;
+  }
+  .sale-chart-logo-detail.six{
+    width: 278px;
+    left: -17px;
+    top: -18px;
+  }
+  .sale-chart-logo-detail.seven{
+    width: 281px;
+    bottom: -13px;
+    left: -17px;
   }
 
 

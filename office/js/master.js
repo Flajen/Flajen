@@ -8,17 +8,17 @@ $(document).ready(function(){
   $('.burger').click(function(){
     if (off) {
       $('body').css('overflow','hidden');
+      $('nav').addClass('nav-background');
       $('nav').css({
         "position": "fixed",
-        "background-color": "#242424",
-      })
+      });
       $('.nav-flex').show();
       off = false;
     } else {
       $('body').css('overflow','auto');
+      $('nav').removeClass('nav-background');
       $('nav').css({
         "position": "absolute",
-        "background-color": "transparent",
       })
       $('.nav-flex').hide();
       off = true;

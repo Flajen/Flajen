@@ -1,1 +1,54 @@
-<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, user-scalable=no"><title>Портфолио - ТАТЕМ</title><meta name="robots" content="index, follow"><meta name="description" content="Создание и разработка сайтов под любые устройства! Поможем в любой ситуации, даже если..."/><link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"> <link rel="preconnect" href="https://fonts.gstatic.com"><link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;600;700&family=Lobster&family=Roboto:wght@700&display=swap" rel="stylesheet"> <link rel="stylesheet" href="css/style.css"></head><body><div class="preloader"><div class="preloader-box1"></div><div class="preloader-box2"></div><div class="preloader-dot"></div></div><div class="cap"><div class="logo-wrapper"><img src="img/Logo.svg" alt="Логотип" class="logo"></div><nav class="nav"><ul class="nav-links"><li><a href="https://vk.com/tatem.site" class="nav-link" target="_blank"><img src="img/vk.svg" alt="vk"></a></li><li><a href="https://www.behance.net/tatem-site" class="nav-link" target="_blank"><img src="img/behance.svg" alt="behance"></a></li></ul></nav></div><header class="header"> <div class="container"><div class="header-wrapper"><div class="header-btn"><button class="arrow-left"></button></div><div class="slider"><span class="slider-background"></span><div class="slider_track"><div class="slider_item"><div class="project-wrapper"><h1 class="project-title">IT-Studio</h1><div class="project-img_wrapper"><img src="img/projects/it-studio.png" alt="Ит-студия"></div><a href="https://flajen.github.io/ItStudio/" class="project-btn" target="_blank">Смотреть</a></div></div><div class="slider_item"><div class="project-wrapper"><h1 class="project-title">Территория комфорта</h1><div class="project-img_wrapper"><img src="img/projects/autowatering.png" alt="Территория комфорта"></div><a href="https://flajen.github.io/Autowatering/" class="project-btn" target="_blank">Смотреть</a></div></div></div></div><div class="header-btn"><button class="arrow-right"></button></div></div></div></header><script src="js/jquery.min.js"></script><script src="js/script.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no">
+	<title>ТАТЕМ</title>
+	<meta name="robots" content="index, follow">
+	<meta name="description" content="Создание и разработка сайтов под любые устройства! Поможем в любой ситуации, даже если..." />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> <!-- Иконка сайта -->
+</head>
+<body>
+
+<style media="screen">
+	body{
+		margin: 0;
+		padding: 0;
+		background: #FFFFFF;
+		background: -webkit-linear-gradient(top left, #FFFFFF, #D2D4E2);
+		background: -moz-linear-gradient(top left, #FFFFFF, #D2D4E2);
+		background: linear-gradient(to bottom right, #FFFFFF, #D2D4E2);
+		height: 100%;
+	}
+	*,
+	*::after,
+	*::before{
+		-ms-user-select: none;
+		-moz-user-select: none;
+		-khtml-user-select: none;
+		-webkit-user-select: none;
+		pointer-events: none;
+	}
+	.development-wrapper{
+		width: 100%;
+		min-height: 100vh;
+		position: relative;
+	}
+	.development{
+		position: absolute;
+		width: 100px;
+		height: 100px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+</style>
+
+<div class="development-wrapper">
+	<img src="img/development.gif" alt="ТАТЕМ" class="development">
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

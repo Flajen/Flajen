@@ -27,6 +27,11 @@
 		-moz-user-select: none;
 		-khtml-user-select: none;
 		-webkit-user-select: none;
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
+	img{
 		pointer-events: none;
 	}
 	.development-wrapper{
@@ -40,15 +45,45 @@
 		height: 100px;
 		top: 50%;
 		left: 50%;
+		-ms-transform: translate(-50%,-50%); /* IE 9 */
+    -moz-transform: translate(-50%,-50%); /* Firefox */
+    -o-transform: translate(-50%,-50%); /* Opera */
+    -webkit-transform: translate(-50%,-50%); /* Safari */
 		transform: translate(-50%,-50%);
+	}
+	.vk{
+		color: #222;
+		position: absolute;
+		width: 50px;
+		height: 35px;
+		background-color: transparent;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='45' height='29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M43.94 2.324c.334-1.087 0-1.877-1.476-1.877h-4.91c-1.238 0-1.81.692-2.144 1.432 0 0-2.525 6.32-6.052 10.416-1.144 1.185-1.668 1.58-2.288 1.58-.333 0-.763-.395-.763-1.48V2.272c0-1.283-.38-1.876-1.43-1.876h-7.72c-.764 0-1.24.593-1.24 1.185 0 1.234 1.763 1.53 1.954 4.986v7.508c0 1.63-.282 1.927-.906 1.927-1.668 0-5.719-6.369-8.149-13.625C8.344.94 7.864.398 6.624.398H1.668C.238.397 0 1.087 0 1.827c0 1.334 1.668 8.047 7.768 16.933 4.051 6.069 9.818 9.33 15.012 9.33 3.147 0 3.527-.74 3.527-1.974v-4.591c0-1.48.286-1.727 1.287-1.727.715 0 2.002.394 4.91 3.307 3.335 3.455 3.907 5.035 5.766 5.035h4.908c1.43 0 2.098-.74 1.716-2.172-.428-1.432-2.05-3.505-4.146-5.973-1.144-1.381-2.86-2.912-3.384-3.653-.714-.987-.524-1.382 0-2.27-.048 0 5.958-8.788 6.577-11.753' fill='%23222222' fill-opacity='.8'/%3e%3c/svg%3e");
+		background-position: center;
+		background-repeat: no-repeat;
+		text-decoration: none;
+		right: 15px;
+		bottom: 15px;
+		cursor: pointer;
+		-webkit-transition: all 0.15s linear;
+		-moz-transition: all 0.15s linear;
+		-o-transition: all 0.15s linear;
+		transition: all 0.15s linear;
+	}
+	.vk:hover,
+	.vk:focus{
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='45' height='29' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M43.94 2.324c.334-1.087 0-1.877-1.476-1.877h-4.91c-1.238 0-1.81.692-2.144 1.432 0 0-2.525 6.32-6.052 10.416-1.144 1.185-1.668 1.58-2.288 1.58-.333 0-.763-.395-.763-1.48V2.272c0-1.283-.38-1.876-1.43-1.876h-7.72c-.764 0-1.24.593-1.24 1.185 0 1.234 1.763 1.53 1.954 4.986v7.508c0 1.63-.282 1.927-.906 1.927-1.668 0-5.719-6.369-8.149-13.625C8.344.94 7.864.398 6.624.398H1.668C.238.397 0 1.087 0 1.827c0 1.334 1.668 8.047 7.768 16.933 4.051 6.069 9.818 9.33 15.012 9.33 3.147 0 3.527-.74 3.527-1.974v-4.591c0-1.48.286-1.727 1.287-1.727.715 0 2.002.394 4.91 3.307 3.335 3.455 3.907 5.035 5.766 5.035h4.908c1.43 0 2.098-.74 1.716-2.172-.428-1.432-2.05-3.505-4.146-5.973-1.144-1.381-2.86-2.912-3.384-3.653-.714-.987-.524-1.382 0-2.27-.048 0 5.958-8.788 6.577-11.753' fill='%23FFFFFF' fill-opacity='1'/%3e%3c/svg%3e");
+		-webkit-filter: drop-shadow(0 0 17px rgba(80,80,80,0.54));
+    -moz-filter: drop-shadow(0 0 17px rgba(80,80,80,0.54));
+    -ms-filter: drop-shadow(0 0 17px rgba(80,80,80,0.54));
+    -o-filter: drop-shadow(0 0 17px rgba(80,80,80,0.54));
+		filter: drop-shadow(0 0 17px rgba(80,80,80,0.54));
 	}
 </style>
 
 <div class="development-wrapper">
 	<img src="img/development.gif" alt="ТАТЕМ" class="development">
+	<a href="https://vk.com/tatem.site" class="vk" target="_blank"></a>
 </div>
 
-<script src="js/jquery.min.js"></script>
-<script src="js/script.js"></script>
 </body>
 </html>

@@ -169,7 +169,9 @@ h1,h2,h3{
   grid-gap: 2px;
   padding: 10px 15px 33px 27px;
 }
-.project-heading-wrapper p{
+.project-name,
+.project-post,
+.project-heading{
   color: #FFF;
 }
 .project-name{
@@ -182,6 +184,43 @@ h1,h2,h3{
 }
 .project-heading{
   font-size: 16px;
+}
+.project-role-wrapper{
+  display: grid;
+  grid-gap: 2px;
+  padding: 10px 15px 25px 27px;
+  display: none;
+}
+.project-role-heading{
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+}
+.project-role-text-wrapper{
+  display: grid;
+  grid-gap: 2px;
+}
+.project-role-text{
+  color: rgba(255, 255, 255, 0.8);
+  position: relative;
+  line-height: 1.4em;
+  letter-spacing: 0.03em;
+}
+.project-role-text::after{
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.8);
+}
+.project-block.cursor:hover .project-heading-wrapper{
+  display: none;
+}
+.project-block.cursor:hover .project-role-wrapper{
+  display: grid;
 }
 @media screen and (max-width: 1470px) {
   .project-title::after{

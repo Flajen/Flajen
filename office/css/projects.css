@@ -25,13 +25,13 @@
 .projects-blocks{
   display: grid;
   width: 1130px;
-  grid-template-columns: 291px 341px 147px 296px;
+  grid-template-columns: 291px 225px 164px 147px 296px;
   grid-template-rows: 265px 290px 291px;
   grid-gap: 19px;
   grid-template-areas:
-  "one two three three"
-  "four five five six"
-  "seven seven eight nine";
+  "one two two three three"
+  "four five five five six"
+  "seven seven eight eight nine";
   margin: 0 auto;
   justify-content: center;
 }

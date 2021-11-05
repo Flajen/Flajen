@@ -233,6 +233,7 @@ h1,h2,h3{
 }
 @media screen and (max-width: 1165px) {
   .about-desktop{
+    margin-top: 145px;
     grid-auto-flow: row;
   }
   .about{

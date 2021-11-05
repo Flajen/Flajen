@@ -1,8 +1,20 @@
 $(document).ready(function(){
+  function close_nav() {
+    $('body').css('overflow','auto');
+    $('nav').removeClass('nav-background');
+    $('nav').css({
+      "position": "absolute",
+    })
+    $('.nav-flex').hide();
+    off = true;
+  }
   $("body").on('click', '[href*="#"]', function(e){
     var fixed_offset = 70;
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
     e.preventDefault();
+    if ($(window).width() < '1110'){
+      close_nav();
+    }
   });
   var off = true;
   $('.burger').click(function(){
@@ -15,13 +27,7 @@ $(document).ready(function(){
       $('.nav-flex').show();
       off = false;
     } else {
-      $('body').css('overflow','auto');
-      $('nav').removeClass('nav-background');
-      $('nav').css({
-        "position": "absolute",
-      })
-      $('.nav-flex').hide();
-      off = true;
+      close_nav();
     }
   })
 });

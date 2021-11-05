@@ -24,10 +24,4 @@ $(document).ready(function(){
       off = true;
     }
   })
-  // $('.project-block.cursor').mouseover(function(){
-  //   console.log("564363");
-  //   $(this).remove();
-  // }).mouseleave(function(){
-  //   $('.sale-chart-logo-detail').hide();
-  // });
 });

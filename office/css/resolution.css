@@ -78,7 +78,7 @@
     display: grid;
     grid-gap: 10px;
     position: absolute;
-    top: 68px;
+    top: 37px;
     right: 15px;
     width: 50px;
     height: 24px;
@@ -101,7 +101,7 @@
     left: 0;
     background-color: transparent;
     overflow: auto;
-    padding: 55px 15px 20px 23px;
+    padding: 25px 15px 20px 23px;
     margin: 0;
   }
   .nav-flex{

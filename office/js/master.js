@@ -7,6 +7,11 @@ $(document).ready(function(){
     })
     $('.nav-flex').hide();
     off = true;
+    string()
+  }
+  if (window.location.hash == '#directions') {
+    $('html, body').animate({ scrollTop: $('#directions').offset().top - 100 }, 600);
+    window.location.hash = '';
   }
   $("body").on('click', '[href*="#"]', function(e){
     var fixed_offset = 70;

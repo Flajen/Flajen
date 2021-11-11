@@ -1,0 +1,18 @@
+.management{
+  position: relative;
+}
+.management-blocks{
+  display: grid;
+  grid-template-columns: repeat(4,321px);
+  grid-gap: 30px;
+}
+.management-block{
+  background: #313B49;
+  border-radius: 10px;
+  height: 600px;
+  width: 100%;
+  cursor: pointer;
+}
+.management-block-img-wrapper{
+  border-radius: 10px;
+}

@@ -91,6 +91,23 @@
     height: 1px;
     background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 0%, #2F2D2D 98%);
   }
+  .burger-line-one{top: 0;}
+  .burger-line-two{
+    top: 50%;
+    -ms-transform: translate(0,-50%); /* IE 9 */
+    -moz-transform: translate(0,-50%); /* Firefox */
+    -o-transform: translate(0,-50%); /* Opera */
+    -webkit-transform: translate(0,-50%); /* Safari */
+    transform: translate(0,-50%);
+  }
+  .burger-line-three{
+    top: 100%;
+    -ms-transform: translate(0,-100%); /* IE 9 */
+    -moz-transform: translate(0,-100%); /* Firefox */
+    -o-transform: translate(0,-100%); /* Opera */
+    -webkit-transform: translate(0,-100%); /* Safari */
+    transform: translate(0,-100%);
+  }
   nav{
     flex-direction: column;
     width: 100%;

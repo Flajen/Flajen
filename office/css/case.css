@@ -261,7 +261,7 @@ h1,h2,p,li{
 .case-concept-text::before{right: -222px;}
 .case-concept-heading{
   font-size: 22px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1455px) {

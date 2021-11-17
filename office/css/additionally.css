@@ -34,6 +34,7 @@ p{
   height: 52px;
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   background-image: url('../img/additionally/youtube_icon.png');
   position: absolute;
   top: 50%;
@@ -43,4 +44,31 @@ p{
   -o-transform: translate(-50%,-50%); /* Opera */
   -webkit-transform: translate(-50%,-50%); /* Safari */
   transform: translate(-50%,-50%);
+}
+@media screen and (max-width: 1175px) {
+  .additionally-container{
+    padding: 0;
+  }
+  .additionally-desktop{
+    margin-bottom: 50px;
+  }
+  .additionally-text{
+    font-size: 12px;
+    margin-bottom: 25px;
+    padding: 0 29px;
+  }
+  .additionally-blocks{
+    grid-template-areas: 'a_one'
+    'a_two'
+    'a_three';
+    grid-gap: 25px;
+    justify-items: center;
+  }
+  .video::after{
+    width: 56px;
+    height: 40px;
+  }
+  .additionally-blocks img{
+    width: 100%;
+  }
 }

@@ -4,6 +4,7 @@ $(document).ready(function(){
     $('nav').removeClass('nav-background');
     $('nav').css({
       "position": "absolute",
+      "height": "auto",
     })
     $('.nav-flex').hide();
     off = true;
@@ -28,6 +29,7 @@ $(document).ready(function(){
       $('nav').addClass('nav-background');
       $('nav').css({
         "position": "fixed",
+        "height": "100%",
       });
       $('.nav-flex').show();
       off = false;

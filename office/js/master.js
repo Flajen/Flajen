@@ -53,4 +53,11 @@ $(document).ready(function(){
       close_nav();
     }
   });
+  $('.open_img').click(function(){
+    $('.open-img-wrapper').find('img').attr('src',$(this).attr('src'));
+    $('.open-img-wrapper').show();
+  })
+  $('.open-img-close').click(function(){
+    $('.open-img-wrapper').hide();
+  })
 });

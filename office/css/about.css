@@ -3,7 +3,11 @@ h1,h2,h3{
   font-size: 50px;
 }
 .about{
-  margin-bottom: 142px;
+  margin-bottom: 79px;
+}
+.about-desktop-wrapper{
+  display: grid;
+  grid-gap: 150px;
 }
 .about-desktop{
   display: grid;
@@ -32,7 +36,6 @@ h1,h2,h3{
 .about-img{
   width: 100%;
   height: 439px;
-  margin-bottom: 79px;
 }
 .about-img img{
   width: 100%;
@@ -95,19 +98,24 @@ h1,h2,h3{
 }
 .project-blocks{
   display: grid;
+  grid-template-areas: 'p_one p_two p_three'
+  'p_four p_five p_six';
   grid-template-columns: repeat(3,1fr);
   grid-gap: 10px;
   padding: 0 35px;
 }
+.project-block-one{grid-area: p_one;}
+.project-block-two{grid-area: p_two;}
+.project-block-three{grid-area: p_three;}
+.project-block-four{grid-area: p_four;}
+.project-block-five{grid-area: p_five;}
+.project-block-six{grid-area: p_six;}
 .project-block{
   display: grid;
   align-items: flex-end;
   width: 100%;
   height: 465px;
   position: relative;
-}
-.project-block.cursor{
-  cursor: pointer;
 }
 .project-block.empty{
   background: #242424
@@ -170,8 +178,7 @@ h1,h2,h3{
   padding: 10px 15px 33px 27px;
 }
 .project-name,
-.project-post,
-.project-heading{
+.project-post{
   color: #FFF;
 }
 .project-name{
@@ -183,6 +190,7 @@ h1,h2,h3{
   margin-bottom: 6px;
 }
 .project-heading{
+  color: rgba(255,255,255,0.8);
   font-size: 16px;
 }
 .project-role-wrapper{
@@ -232,65 +240,137 @@ h1,h2,h3{
   .project-title{margin-left: 100px;}
 }
 @media screen and (max-width: 1165px) {
+  h1,h2,h3{
+    font-weight: 600;
+  }
+  .about-desktop-wrapper{
+    grid-gap: 30px;
+    grid-template-areas: 'a_one'
+    'a_two';
+  }
+  .about-desktop-one{grid-area: a_two;}
+  .about-desktop-two{grid-area: a_one;}
   .about-desktop{
-    margin-top: 145px;
+    margin-top: 0;
+    grid-gap: 16px;
     grid-auto-flow: row;
   }
   .about{
-    margin-bottom: 80px;
+    margin-top: 155px;
+    margin-bottom: 24px;
   }
   .about-title{
-    font-size: 25px;
-  }
-  .about-text{
     font-size: 16px;
   }
+  .about-text{
+    text-align: left;
+    font-size: 12px;
+  }
   .about-img{
-    margin-bottom: 55px;
     height: 228px;
   }
+  .experience{
+    margin-bottom: 35px;
+  }
   .experience-title{
-    font-size: 20px;
-    margin-bottom: 30px;
+    font-size: 16px;
+    margin-bottom: 20px;
   }
   .experience-wrapper{
     grid-gap: 14px;
   }
   .experience-text{
-    font-size: 15px;
+    font-size: 12px;
+  }
+  .project-container.container{
+    padding: 0;
+  }
+  .project{
+    margin-bottom: 0;
   }
   .project-blocks{
     grid-template-columns: auto;
+    grid-gap: 33px 0;
+    justify-content: center;
+    justify-items: center;
+    grid-template-areas:
+    'p_one p_one'
+    'p_two p_two'
+    'p_five p_five'
+    'p_six p_six'
+    'p_four p_three';
     padding: 0;
   }
+  .project-block{
+    overflow: hidden;
+  }
+  .project-block.cursor{
+    width: 90%;
+  }
+  .project-block.empty{
+    height: auto;
+  }
+  .project-empty-heading{
+    grid-template-areas: 'one'
+    'two';
+    grid-gap: 6px;
+    padding: 27px 13px 34px 13px;
+  }
+  .project-empty-one{grid-area: one;}
+  .project-empty-two{grid-area: one;text-align: right;}
+  .project-empty-three{grid-area: two;}
+  .project-empty-four{grid-area: two;}
   .project-title{
-    margin: 0 0 40px 40px;
-    font-size: 35px;
+    margin: 0 0 30px 50px;
+    font-size: 16px;
   }
   .project-title::after{
     left: -50px;
     width: 40px;
   }
   .project-empty-number{
-    font-size: 35px;
+    font-size: 20px;
   }
   .project-empty-text{
     font-size: 16px;
+    max-width: 150px;
   }
   .project-empty-number::after{
-    width: 200px;
+    width: 123px;
   }
   .project-empty-number.left::after{
-    left: -210px;
+    left: -30px;
   }
   .project-empty-number.right::after{
-    right: -210px;
+    right: -26px;
   }
   .project-name,
   .project-post{
-    font-size: 18px;
+    font-size: 16px;
   }
   .project-heading{
-    font-size: 14px;
+    font-size: 12px;
+  }
+  footer{
+    background: #FFF;
+  }
+  .footer-qustions-heading{
+    color: rgba(36, 36, 36, 1);
+  }
+  .footer-social-link, .footer-qustions-link{
+    color: rgba(36, 36, 36, 1);
+  }
+  .footer-social-link:hover, .footer-qustions-link:hover{
+    color: rgba(36, 36, 36, 0.7);
+  }
+  .footer-form-heading {
+    color: #242424;
+  }
+  .footer-form-input{
+    color: #242424;
+    border: 1px solid #242424;
+  }
+  .footer-form-input::placeholder{
+    color: #242424;
   }
 }

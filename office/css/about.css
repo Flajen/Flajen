@@ -1,3 +1,6 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+}
 h1,h2,h3{
   font-weight: 500;
   font-size: 50px;
@@ -63,6 +66,10 @@ h1,h2,h3{
   font-size: 20px;
   line-height: 1.4em;
   letter-spacing: 0.03em;
+  font-weight: 400;
+}
+.experience-text .help{
+  font-weight: 300;
 }
 .experience-text.li{
   position: relative;

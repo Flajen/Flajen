@@ -32,6 +32,10 @@ h1,h2,h3{
 }
 .about-text .help{
   font-weight: 400;
+  font-style: normal;
+}
+.about-text .block{
+  display: block;
 }
 .about-img{
   width: 100%;
@@ -266,6 +270,9 @@ h1,h2,h3{
     text-align: left;
     font-size: 12px;
   }
+  .about-text .block{
+    display: inline;
+  }
   .about-img{
     height: 228px;
   }
@@ -334,6 +341,9 @@ h1,h2,h3{
   .project-empty-text{
     font-size: 16px;
     max-width: 150px;
+  }
+  .project-empty-text .block{
+    display: block;
   }
   .project-empty-number::after{
     width: 123px;

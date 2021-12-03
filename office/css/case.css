@@ -73,6 +73,7 @@ h1,h2,p,li{
   line-height: 1.4em;
 }
 .case-about-subtitle{
+  font-weight: 400;
   font-size: 20px;
   line-height: 1.4em;
 }

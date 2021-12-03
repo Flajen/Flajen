@@ -60,4 +60,8 @@ $(document).ready(function(){
   $('.open-img-close').click(function(){
     $('.open-img-wrapper').hide();
   })
+  $('.pagination-btn').click(function(){
+    $('.pagination-btn').removeClass('active');
+    $(this).addClass('active');
+  })
 });

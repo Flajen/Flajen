@@ -5,6 +5,20 @@ h1,h2,p,li{
   font-family: 'Open Sans', sans-serif;
   letter-spacing: 0.03em;
 }
+li.circle{
+  padding-left: 20px;
+  position: relative;
+}
+li.circle::after{
+  content: '';
+  position: absolute;
+  top: 14px;
+  left: 5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #FFF;
+}
 .case-desktop{
   display: grid;
   align-items: end;
@@ -59,6 +73,7 @@ h1,h2,p,li{
 .case-description{
   display: grid;
   grid-auto-flow: column;
+  grid-template-columns: auto 601px;
   align-items: center;
   grid-gap: 120px;
   margin-bottom: 120px;
@@ -76,6 +91,7 @@ h1,h2,p,li{
   font-weight: 400;
   font-size: 20px;
   line-height: 1.4em;
+  text-align: justify;
 }
 .case-question{
    display: grid;
@@ -90,11 +106,21 @@ h1,h2,p,li{
   font-size: 26px;
   font-weight: 400;
 }
+.salamat-quote-text{
+  position: absolute;
+  top: 28px;
+  right: 7%;
+  max-width: 324px;
+}
+.salamat-quote-text .help{
+  font-weight: 400;
+}
 .question-question-title{
   font-size: 18px;
   font-weight: 300;
   margin-bottom: 60px;
   max-width: 528px;
+  text-align: justify;
 }
 .question-list{
   counter-reset: myCounter;
@@ -115,19 +141,45 @@ h1,h2,p,li{
   width: 20px;
   height: 20px;
 }
+.case-quote-wrapper{
+  color: #FFFFFF;
+  position: relative;
+  z-index: 2;
+}
 .case-quote{
   display: grid;
   justify-content: center;
-  align-items: end;
   width: 100%;
   height: 500px;
   position: relative;
   margin-bottom: 100px;
   overflow: hidden;
 }
+.alice-quote{align-items: end;}
+.center-quote-wrapper{
+  display: grid;
+  grid-gap: 25px;
+  justify-content: center;
+  font-size: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.center-quote{align-items: center;}
+.center-text{
+  color: #FFF;
+  line-height: 1.6em;
+}
+.center-text .help{
+  font-weight: 400;
+}
+.case-background-black{
+  background: #242424;
+  width: 100%;
+  height: 100%;
+}
 .case-quote-img{
   display: grid;
-  align-content: center;
+  align-items: center;
   grid-auto-flow: column;
   width: 100%;
   height: 100%;
@@ -145,6 +197,28 @@ h1,h2,p,li{
   height: 500px;
   object-fit: cover;
 }
+.case-tagline-blocks.festival-tagline-blocks{
+  grid-template-areas: 't_one t_one'
+  't_two t_three'
+  't_four t_four';
+}
+.case-tagline-img-three{
+  grid-area: t_four;
+}
+.case-tagline-img.festival-tagline-img{
+  width: 100%;
+}
+.festival-quote-text{
+  position: absolute;
+  left: 15%;
+  color: #000;
+  opacity: 0.8;
+  max-width: 324px;
+  bottom: 164px;
+}
+.festival-quote-text .help{
+  font-weight: 400;
+}
 .case-quote-img-blackout{
   position: absolute;
   z-index: 1;
@@ -155,22 +229,140 @@ h1,h2,p,li{
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.35) 97.92%);
   pointer-events: none;
 }
-.case-quote-text{
-  max-width: 619px;
+.case-quote.dengin-quote{
+  align-items: end;
+}
+.dengin-quote-wrapper{
   position: relative;
+}
+.dengin-quote-text{
+  position: absolute;
   z-index: 2;
-  color: #FFFFFF;
+  left: 65%;
+  bottom: 46px;
+  color: #000000;
+  opacity: 0.8;
+  font-weight: 400;
+  max-width: 447px;
+}
+.dengin-quote-text .help{
+  font-weight: 600;
+}
+.right-quote-wrapper{
+  position: relative;
+  pointer-events: none;
+}
+.right-quote-text{
+  color: #000000;
+  opacity: 0.8;
+  max-width: 360px;
+  position: absolute;
+  z-index: 2;
+  left: 30%;
+  bottom: 34px;
+}
+.right-quote-text .help{
+  font-weight: 400;
+}
+.alice-quote-text{
+  max-width: 619px;
   opacity: 0.8;
   margin-left: auto;
   margin-bottom: 24px;
 }
+.city-quote-text{
+  position: absolute;
+  right: 5%;
+  bottom: 97px;
+  max-width: 317px;
+  text-align: justify;
+}
+.city-quote-text .help{
+  font-weight: 400;
+}
+.case-concept.city-concept,
+.case-concept-img.city-concept-img{
+  height: 685px;
+}
+.case-tagline-blocks.city-tagline-blocks{
+  grid-template-areas: 't_one';
+}
+.center-quote-text{
+  max-width: 904px;
+}
+.case-quote.rookie-quote{
+  height: 912px;
+}
+.case-quote-img.rookie-quote-img{
+  justify-content: end;
+}
+.rookie-quote-img img{
+  width: auto;
+  height: 100%;
+}
+.rookie-quote-text{
+  position: absolute;
+  z-index: 2;
+  max-width: 500px;
+  font-size: 36px;
+  color: #000;
+  opacity: 0.9;
+  left: 20%;
+  top: 50%;
+  transform: translate(0,-50%);
+  letter-spacing: 0.4em;
+  text-align: right;
+}
+.case-quote-text.kest-quote-text{
+  position: absolute;
+  z-index: 2;
+  left: 5%;
+  bottom: 30px;
+  max-width: 600px;
+  color: #000;
+  opacity: 0.8;
+}
+.kest-quote-text .help{
+  font-weight: 400;
+}
+.case-desktop.center-desktop{
+  height: 295px;
+}
+.right-concept-title{
+  max-width: 430px;
+  font-size: 36px;
+  position: absolute;
+  bottom: 37px;
+  left: 5%;
+  text-align: right;
+  letter-spacing: 0.4em;
+}
+.lady-quote-text{
+  position: absolute;
+  z-index: 2;
+  left: 30%;
+  bottom: 26px;
+  max-width: 543px;
+}
+.case-tagline-img.lady-tagline-img{
+  width: auto;
+}
+.case-tagline-blocks.lady-tagline-blocks{
+  grid-template-areas: 't_one'
+'t_two';
+}
+.lady-quote-text .help{font-weight: 400;}
 .case-tagline-blocks{
   display: grid;
-  justify-content: center;
+  justify-content: space-around;
   grid-gap: 110px 75px;
   grid-template-areas: 't_one t_one'
   't_two t_three';
   margin-bottom: 140px;
+}
+.case-tagline-blocks.right-tagline-blocks{
+  grid-gap: 60px 8px;
+  justify-content: center;
 }
 .case-tagline{
   max-width: 904px;
@@ -210,6 +402,15 @@ h1,h2,p,li{
   height: 544px;
   object-fit: cover;
 }
+.center-concept-wrapper{
+  position: absolute;
+  left: 20%;
+  bottom: 30px;
+  color: #FFF;
+}
+.center-concept-title{
+  font-weight: 400;
+}
 .case-concept-img1{
   position: absolute;
   z-index: -1;
@@ -221,7 +422,7 @@ h1,h2,p,li{
   -webkit-transform: translate(-50%,0); /* Safari */
   transform: translate(-50%,0);
 }
-.case-concept-title{
+.alice-concept-title{
   color: #FFF;
   max-width: 407px;
   font-size: 36px;
@@ -231,7 +432,10 @@ h1,h2,p,li{
   top: 91px;
   right: 88px;
 }
-.case-concept-subtitle{
+.dengin-concept-title{
+  color: #000000;
+}
+.alice-concept-subtitle{
   color: #FFF;
   max-width: 462px;
   line-height: 1.5em;
@@ -304,6 +508,9 @@ h1,h2,p,li{
   outline: 0;
   cursor: pointer;
   background: transparent;
+}
+.nastella-tagline-blocks{
+  grid-template-areas: 't_one';
 }
 .open-img-line{
   display: inline-block;
@@ -378,11 +585,29 @@ h1,h2,p,li{
     color: #242424;
     font-size: 16px;
   }
+  .center-text{
+    font-size: 12px;
+  }
+  .case-quote.center-quote{
+    height: 290px;
+  }
+  .center-concept-wrapper{
+    left: 10px;
+    bottom: 0px;
+    color: #242424;
+  }
+  .center-quote-img-blackout{
+    display: none;
+  }
+  .case-quote-text.center-quote-text{
+    color: #FFF;
+  }
   .case-description{
     justify-content: center;
     position: relative;
     padding: 15px 0;
     margin-bottom: 25px;
+    grid-template-columns: auto;
   }
   .case-description::after,
   .case-description::before{
@@ -426,7 +651,7 @@ h1,h2,p,li{
     height: 220px;
     margin-bottom: 25px;
   }
-  .case-quote-img{width: 100%;align-content: normal}
+  .case-quote-img{width: 100%;align-items: normal}
   .case-quote-img-blackout{height: 129px;}
   .case-quote-img img{width: 100%;height: 129px;}
   .case-quote-text{
@@ -447,29 +672,81 @@ h1,h2,p,li{
   .case-tagline{
     font-size: 12px;
   }
-  .case-tagline-img{
-    /* padding: 0 5px; */
+  .right-quote-text{
+    left: 2%;
+  }
+  .salamat-quote-text{
+    top: auto;
+    bottom: 10px;
+    right: 50%;
+    transform: translate(50%,0);
+    width: 100%;
+    max-width: 330px;
+  }
+  .case-quote.rookie-quote{
+    height: 150px;
+  }
+  .city-quote-text{
+    bottom: 15px;
+    right: 50%;
+    width: 300px;
+    transform: translate(50%,0);
+  }
+  .case-concept.city-concept{
+    align-content: center;
+  }
+  .case-concept.city-concept,
+  .case-concept-img.city-concept-img{
+    height: 155px;
+  }
+  .rookie-quote-text{
+    left: 2%;
   }
   .question-question-heading{
     font-size: 12px;
     margin-bottom: 5px;
   }
+  .dengin-quote-text{
+    left: 2%;
+    bottom: 4%;
+  }
   .question-question-title{
     font-size: 12px;
     margin-bottom: 30px;
   }
+  .case-desktop.kest-desktop{
+    height: 300px;
+  }
+  .kest-container{
+    max-width: 335px;
+  }
   .case-concept{
     height: auto;
     padding-top: 90px;
-    padding-bottom: 65px;
+    padding-bottom: 80px;
     margin-bottom: 50px;
+  }
+  .case-concept.dengin-concept{
+    padding-bottom: 0;
+  }
+  .case-quote-text.kest-quote-text{
+    left: 2%;
+  }
+  .case-concept.center-concept{
+    padding-bottom: 90px;
   }
   .case-concept-wrapper{
     margin-bottom: 50px;
   }
+  .case-desktop.right-desktop{
+    height: 260px;
+  }
   .case-question-img{
     width: 100%;
     padding: 0 40px;
+  }
+  .innovations-desktop{
+    height: 300px;
   }
   .case-concept-heading{
     font-size: 9px;
@@ -477,6 +754,15 @@ h1,h2,p,li{
   .case-concept-text{
     font-size: 9px;
     margin: 0 28px;
+  }
+  .case-quote-text.lady-quote-text{
+    left: 2%;
+  }
+  .case-concept.lady-concept{
+    padding-bottom: 0;
+  }
+  .case-quote.lady-quote{
+    height: 260px;
   }
   .case-concept-text::after, .case-concept-text::before{
     width: 25px;
@@ -487,6 +773,12 @@ h1,h2,p,li{
     width: 100%;
     height: 100%;
   }
+  .nastella-concept{
+    padding: 0;
+  }
+  .nastella-quote{
+    height: 130px;
+  }
   .case-concept-title{
     color: #242424;
     max-width: 335px;
@@ -496,6 +788,12 @@ h1,h2,p,li{
     right: auto;
     left: 50%;
     transform: translate(-50%,0);
+  }
+  .festival-quote-text{
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%,0);
+    width: 270px;
   }
   .case-concept-img{
     height: 214px;
@@ -508,7 +806,17 @@ h1,h2,p,li{
     bottom: 0;
     padding: 0 16px;
   }
+  .case-concept.right-concept{
+    padding-bottom: 0;
+  }
   .footer-blocks{
     padding: 0 10px;
+  }
+  .open-img{
+    height: 30%;
+  }
+  .open-img-close{
+    top: 25px;
+    right: 20px;
   }
 }

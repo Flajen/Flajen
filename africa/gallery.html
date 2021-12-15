@@ -8,11 +8,23 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/master.css">
-  <title>Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ</title>
+  <link rel="stylesheet" href="css/gallery.css">
+  <title>Фотографии с места событий</title>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/slider.js" defer></script>
+  <script src="js/master.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
 </head>
 <body>
+
+  <button type="button" name="burger" class="burger">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
   <header>
-    <nav>
+    <div class="nav">
       <div class="nav-body">
         <a href="index.html" class="logo">
           <img src="img/logo.png" alt="Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ">
@@ -31,21 +43,109 @@
             <li><a href="contacts.html" class="nav-link">Контакты</a></li>
           </ul>
           <button type="button" name="button" class="nav-btn">Связаться с нами</button>
+          <div class="nav-relations-wrapper">
+            <p class="nav-relations-text">Выберите удобный способ связи:</p>
+            <div class="nav-relations">
+              <a href="#!" class="nav-relations-btn whatsapp"></a>
+              <a href="#!" class="nav-relations-btn telegram"></a>
+            </div>
+          </div>
         </div>
         <div class="nav-contacts">
+          <div class="nav-contacts-lang">
+            <button type="button" name="lang" class="lang-btn ru"></button>
+            <button type="button" name="lang" class="lang-btn us"></button>
+            <button type="button" name="lang" class="lang-btn fr"></button>
+            <button type="button" name="lang" class="lang-btn ua"></button>
+          </div>
           <a href="tel:+74990000000" class="nav-contacts-tel">+7 (499) 000-00-00</a>
           <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
-          <p class="nav-contacts-address nav-contacts-text">г.Москва ул.Новокосинская д.43</p>
+          <p class="nav-contacts-address nav-contacts-text">г. Москва, проспект 60-летия Октября, д. 9</p>
         </div>
-      </div>
-    </nav>
-    <div class="header gallery">
-      <p class="tree">Фотогалерея</p>
-      <h2><span class="help">Фотографии</span> с места событий</h2>
-      <div class="">
-
       </div>
     </div>
   </header>
+
+  <div class="gallery-popup">
+    <div class="popup">
+      <button type="button" name="closePopup" class="popup-close"></button>
+      <div class="popup-slider">
+        <button type="button" name="popupSliderFull" class="popup-btn popup-full"></button>
+        <button type="button" name="popupSliderPrev" class="popup-btn popup-prev"></button>
+        <button type="button" name="popupSliderNext" class="popup-btn popup-next"></button>
+        <div class="popup-slider-window">
+          <div class="popup-slider-slide">
+            <img src="img/gallery/1.png" alt="" class="popup-slider-img">
+          </div>
+          <div class="popup-slider-slide">
+            <img src="img/gallery/2.png" alt="" class="popup-slider-img">
+          </div>
+        </div>
+      </div>
+      <div class="popup-body">
+        <span class="popup-date">12.07.2021</span>
+        <p class="popup-title">Встреча с зарубежными партнёрами</p>
+        <p class="popup-text">Встреча с представителями 12 июля 2021 года в Москве. Гарантируем это в соответствии с Протоколом от 18 мая 1988 года к Соглашению 1976 года, правовое положение МНИИПУ, осуществляющего свою деятельность в качестве международной межправительственной организации, наделенной международной правосубъектностью, регулируется действующим межправительственным соглашением и Будапештской Конвенцией 1980 года о правовом статусе, привилегиях и иммунитетах межгосударственных экономических организаций, действующих в определенных областях сотрудничества</p>
+      </div>
+    </div>
+  </div>
+
+  <main class="gallery">
+    <ul class="tree-links">
+      <li class="tree-li"><a href="#!" class="tree-link">Фотогалерея</a></li>
+    </ul>
+    <h2><span class="help">Фотографии</span> с места событий</h2>
+    <div class="gallery-slider">
+      <div class="gallery-window">
+        <button type="button" name="slidNext" class="slider_wrapper-next"></button>
+        <span class="gallery-window-shad"></span>
+        <div id="slider" class="slider slider_wrapper">
+          <div class="slide">
+            <img src="img/gallery/1.png" alt="" class="slide-img">
+            <span class="slide-shad"></span>
+            <div class="slide-body">
+              <span class="slide-date">12.07.2021</span>
+              <p class="slide-heading">Встреча с зарубежными партнёрами</p>
+            </div>
+            <button type="button" name="button" class="slide-btn"></button>
+          </div>
+          <div class="slide">
+            <img src="img/gallery/2.png" alt="" class="slide-img">
+            <span class="slide-shad"></span>
+            <div class="slide-body">
+              <span class="slide-date">27.09.2021</span>
+              <p class="slide-heading">Встреча с зарубежными партнёрами</p>
+            </div>
+            <button type="button" name="button" class="slide-btn"></button>
+          </div>
+          <div class="slide">
+            <img src="img/gallery/3.png" alt="" class="slide-img">
+            <span class="slide-shad"></span>
+            <div class="slide-body">
+              <span class="slide-date">20.06.2021</span>
+              <p class="slide-heading">Встреча с зарубежными партнёрами</p>
+            </div>
+            <button type="button" name="button" class="slide-btn"></button>
+          </div>
+        </div>
+      </div>
+      <div class="gallery-line"><input type="range" id="range" class="range" min="1" value="1" step="1" /></div>
+    </div>
+  </main>
+
+  <footer> <!-- Этот скрыт, поскольку он только на мобильном. На десктопе "nav-contacts-header" Потому что при уменьшение высоты экрана начнутся ПРОБЛЕМЫ!!! -->
+    <div class="nav-contacts">
+      <div class="nav-contacts-lang">
+        <button type="button" name="lang" class="lang-btn ru"></button>
+        <button type="button" name="lang" class="lang-btn us"></button>
+        <button type="button" name="lang" class="lang-btn fr"></button>
+        <button type="button" name="lang" class="lang-btn ua"></button>
+      </div>
+      <a href="tel:+74990000000" class="nav-contacts-tel">+7 (499) 000-00-00</a>
+      <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
+      <p class="nav-contacts-address nav-contacts-text">г. Москва, проспект 60-летия Октября, д. 9</p>
+    </div>
+  </footer>
+
 </body>
 </html>

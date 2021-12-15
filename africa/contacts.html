@@ -9,13 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="css/contacts.css">
-  <title>Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ</title>
+  <title>Контактная информация</title>
   <script src="js/jquery.min.js"></script>
   <script src="js/master.js" defer></script>
 </head>
 <body>
+
+  <button type="button" name="burger" class="burger">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
   <header>
-    <nav>
+    <div class="nav">
       <div class="nav-body">
         <a href="index.html" class="logo">
           <img src="img/logo.png" alt="Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ">
@@ -34,37 +40,68 @@
             <li><a href="contacts.html" class="nav-link">Контакты</a></li>
           </ul>
           <button type="button" name="button" class="nav-btn">Связаться с нами</button>
+          <div class="nav-relations-wrapper">
+            <p class="nav-relations-text">Выберите удобный способ связи:</p>
+            <div class="nav-relations">
+              <a href="#!" class="nav-relations-btn whatsapp"></a>
+              <a href="#!" class="nav-relations-btn telegram"></a>
+            </div>
+          </div>
         </div>
-        <div class="nav-contacts">
+        <div class="nav-contacts ">
+          <div class="nav-contacts-lang">
+            <button type="button" name="lang" class="lang-btn ru"></button>
+            <button type="button" name="lang" class="lang-btn us"></button>
+            <button type="button" name="lang" class="lang-btn fr"></button>
+            <button type="button" name="lang" class="lang-btn ua"></button>
+          </div>
           <a href="tel:+74990000000" class="nav-contacts-tel">+7 (499) 000-00-00</a>
           <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
-          <p class="nav-contacts-address nav-contacts-text">г.Москва ул.Новокосинская д.43</p>
-        </div>
-      </div>
-    </nav>
-    <div class="header contacts">
-      <p class="tree">Контакты</p>
-      <h2>Контактная <span class="help">информация</span></h2>
-      <div class="contacts-wrapper">
-        <div class="contacts-info">
-          <div>
-            <p class="contacts-info-heading">Электронная почта</p>
-            <a href="mailto:dcame@mniipu.org" class="contacts-info-link email">dcame@mniipu.org</a>
-          </div>
-          <div>
-            <p class="contacts-info-heading">Телефон</p>
-            <a href="tel:+74993501534" class="contacts-info-link tel">+7 499 350-15-34</a>
-          </div>
-          <div>
-            <p class="contacts-info-heading">Адрес</p>
-            <p class="contacts-info-link address">117312 Россия, Москва, проспект 60-летия Октября, д. 9</p>
-          </div>
-        </div>
-        <div class="contacts-map-wrapper">
-          <img src="map.png" alt="">
+          <p class="nav-contacts-address nav-contacts-text">г. Москва, проспект 60-летия Октября, д. 9</p>
         </div>
       </div>
     </div>
   </header>
+
+  <main class="contacts">
+    <ul class="tree-links">
+      <li class="tree-li"><a href="#!" class="tree-link">Контакты</a></li>
+    </ul>
+    <h2>Контактная <span class="help">информация</span></h2>
+    <div class="contacts-wrapper">
+      <div class="contacts-info">
+        <div>
+          <p class="contacts-info-heading">Электронная почта</p>
+          <a href="mailto:dcame@mniipu.org" class="contacts-info-link email">dcame@mniipu.org</a>
+        </div>
+        <div>
+          <p class="contacts-info-heading">Телефон</p>
+          <a href="tel:+74993501534" class="contacts-info-link tel">+7 499 350-15-34</a>
+        </div>
+        <div>
+          <p class="contacts-info-heading">Адрес</p>
+          <p class="contacts-info-link address">117312 Россия, Москва, проспект 60-летия Октября, д. 9</p>
+        </div>
+      </div>
+      <div class="contacts-map-wrapper">
+        <img src="map.png" alt="">
+      </div>
+    </div>
+  </main>
+
+  <footer> <!-- Этот скрыт, поскольку он только на мобильном. На десктопе "nav-contacts-header", потому что при уменьшение высоты экрана начнутся ПРОБЛЕМЫ!!! -->
+    <div class="nav-contacts">
+      <div class="nav-contacts-lang">
+        <button type="button" name="lang" class="lang-btn ru"></button>
+        <button type="button" name="lang" class="lang-btn us"></button>
+        <button type="button" name="lang" class="lang-btn fr"></button>
+        <button type="button" name="lang" class="lang-btn ua"></button>
+      </div>
+      <a href="tel:+74990000000" class="nav-contacts-tel">+7 (499) 000-00-00</a>
+      <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
+      <p class="nav-contacts-address nav-contacts-text">г. Москва, проспект 60-летия Октября, д. 9</p>
+    </div>
+  </footer>
+
 </body>
 </html>

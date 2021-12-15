@@ -9,13 +9,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="css/management.css">
-  <title>Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ</title>
+  <title>Руководство управления</title>
   <script src="js/jquery.min.js"></script>
   <script src="js/master.js" defer></script>
 </head>
 <body>
+
+  <button type="button" name="burger" class="burger">
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+    <span class="burger-line"></span>
+  </button>
   <header>
-    <nav>
+    <div class="nav">
       <div class="nav-body">
         <a href="index.html" class="logo">
           <img src="img/logo.png" alt="Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ">
@@ -34,64 +40,99 @@
             <li><a href="contacts.html" class="nav-link">Контакты</a></li>
           </ul>
           <button type="button" name="button" class="nav-btn">Связаться с нами</button>
+          <div class="nav-relations-wrapper">
+            <p class="nav-relations-text">Выберите удобный способ связи:</p>
+            <div class="nav-relations">
+              <a href="#!" class="nav-relations-btn whatsapp"></a>
+              <a href="#!" class="nav-relations-btn telegram"></a>
+            </div>
+          </div>
         </div>
-        <div class="nav-contacts">
+        <div class="nav-contacts nav-contacts-header">
+          <div class="nav-contacts-lang">
+            <button type="button" name="lang" class="lang-btn ru"></button>
+            <button type="button" name="lang" class="lang-btn us"></button>
+            <button type="button" name="lang" class="lang-btn fr"></button>
+            <button type="button" name="lang" class="lang-btn ua"></button>
+          </div>
           <a href="tel:+74990000000" class="nav-contacts-tel">+7 (499) 000-00-00</a>
           <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
-          <p class="nav-contacts-address nav-contacts-text">г.Москва ул.Новокосинская д.43</p>
+          <p class="nav-contacts-address nav-contacts-text">г. Москва, проспект 60-летия Октября, д. 9</p>
         </div>
-      </div>
-    </nav>
-    <div class="header management">
-      <p class="tree">Руководство</p>
-      <h2>Руководство <span class="help">управления</span></h2>
-      <div class="management-blocks">
-        <button type="button" name="button" class="management-block">
-          <div>
-            <div class="management-block-img-wrapper">
-              <img src="img/team/tone.png" alt="Агеев Александр Иванович">
-            </div>
-            <p class="management-block-name bold">Агеев</p>
-            <p class="management-block-name last">Александр Иванович</p>
-            <p class="management-block-role">Генеральный директор МНИИПУ</p>
-          </div>
-          <p class="management-more_details">Подробнее</p>
-        </button>
-        <button type="button" name="button" class="management-block">
-          <div>
-            <div class="management-block-img-wrapper">
-              <img src="img/team/ttwo.png" alt="Беляев Сергей Георгиевич">
-            </div>
-            <p class="management-block-name bold">Беляев</p>
-            <p class="management-block-name last">Сергей Георгиевич</p>
-            <p class="management-block-role">Заместитель генерального директора МНИИПУ</p>
-          </div>
-          <p class="management-more_details">Подробнее</p>
-        </button>
-        <button type="button" name="button" class="management-block">
-          <div>
-            <div class="management-block-img-wrapper">
-              <img src="img/team/tthree.png" alt="Подопригора Владимир Николаевич">
-            </div>
-            <p class="management-block-name bold">Подопригора</p>
-            <p class="management-block-name last">Владимир Николаевич</p>
-            <p class="management-block-role">Директор МНИЦРК МНИИПУ</p>
-          </div>
-          <p class="management-more_details">Подробнее</p>
-        </button>
-        <button type="button" name="button" class="management-block">
-          <div>
-            <div class="management-block-img-wrapper">
-              <img src="img/team/tfour.png" alt="Смирнов Дмитрий Анатольевич">
-            </div>
-            <p class="management-block-name bold">Смирнов</p>
-            <p class="management-block-name last">Дмитрий Анатольевич</p>
-            <p class="management-block-role">Начальник Управления</p>
-          </div>
-          <p class="management-more_details">Подробнее</p>
-        </button>
       </div>
     </div>
   </header>
+
+  <main class="management">
+    <ul class="tree-links">
+      <li class="tree-li"><a href="#!" class="tree-link">Руководство</a></li>
+    </ul>
+    <h2>Руководство <span class="help">управления</span></h2>
+    <div class="management-blocks">
+      <div class="management-block">
+        <div class="management-block-body">
+          <div class="management-block-img-wrapper">
+            <img src="img/team/one.png" alt="Агеев Александр Иванович">
+          </div>
+          <p class="management-block-name bold">Агеев</p>
+          <p class="management-block-name last">Александр Иванович</p>
+          <p class="management-block-role">Генеральный директор МНИИПУ</p>
+        </div>
+        <p class="management-more_details">Подробнее</p>
+        <a href="open/management_open.html" class="management-block-link"></a>
+      </div>
+      <div class="management-block">
+        <div class="management-block-body">
+          <div class="management-block-img-wrapper">
+            <img src="img/team/two.png" alt="Беляев Сергей Георгиевич">
+          </div>
+          <p class="management-block-name bold">Беляев</p>
+          <p class="management-block-name last">Сергей Георгиевич</p>
+          <p class="management-block-role">Заместитель генерального директора МНИИПУ</p>
+        </div>
+        <p class="management-more_details">Подробнее</p>
+        <a href="open/management_open.html" class="management-block-link"></a>
+      </div>
+      <div class="management-block">
+        <div class="management-block-body">
+          <div class="management-block-img-wrapper">
+            <img src="img/team/three.png" alt="Подопригора Владимир Николаевич">
+          </div>
+          <p class="management-block-name bold">Подопригора</p>
+          <p class="management-block-name last">Владимир Николаевич</p>
+          <p class="management-block-role">Директор МНИЦРК МНИИПУ</p>
+        </div>
+        <p class="management-more_details">Подробнее</p>
+        <a href="open/management_open.html" class="management-block-link"></a>
+      </div>
+      <div class="management-block">
+        <div class="management-block-body">
+          <div class="management-block-img-wrapper">
+            <img src="img/team/four.png" alt="Смирнов Дмитрий Анатольевич">
+          </div>
+          <p class="management-block-name bold">Смирнов</p>
+          <p class="management-block-name last">Дмитрий Анатольевич</p>
+          <p class="management-block-role">Начальник Управления</p>
+        </div>
+        <p class="management-more_details">Подробнее</p>
+        <a href="open/management_open.html" class="management-block-link"></a>
+      </div>
+    </div>
+  </main>
+
+  <footer> <!-- Этот скрыт, поскольку он только на мобильном. На десктопе "nav-contacts-header" Потому что при уменьшение высоты экрана начнутся ПРОБЛЕМЫ!!! -->
+    <div class="nav-contacts">
+      <div class="nav-contacts-lang">
+        <button type="button" name="lang" class="lang-btn ru"></button>
+        <button type="button" name="lang" class="lang-btn us"></button>
+        <button type="button" name="lang" class="lang-btn fr"></button>
+        <button type="button" name="lang" class="lang-btn ua"></button>
+      </div>
+      <a href="tel:+74990000000" class="nav-contacts-tel">+7 (499) 000-00-00</a>
+      <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
+      <p class="nav-contacts-address nav-contacts-text">г. Москва, проспект 60-летия Октября, д. 9</p>
+    </div>
+  </footer>
+
 </body>
 </html>

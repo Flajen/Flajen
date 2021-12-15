@@ -1,3 +1,6 @@
+main{
+  padding-right: 30px;
+}
 .contacts{
   background-image: url('../img/contacts.png');
   background-position: center;
@@ -6,6 +9,8 @@
 }
 .contacts-wrapper{
   display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 430px auto;
   grid-auto-flow: column;
 }
 .contacts-info{
@@ -33,6 +38,33 @@
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M10 0a7.767 7.767 0 0 0-7.767 7.767C2.233 12.057 7.526 20 10 20s7.767-7.944 7.767-12.233A7.767 7.767 0 0 0 10 0Zm0 11.327a4.088 4.088 0 1 1 0-8.177 4.088 4.088 0 0 1 0 8.177Z' fill='url(%23a)'/%3e%3cdefs%3e%3clinearGradient id='a' x1='17.767' y1='10.145' x2='2.233' y2='10.145' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23EDBA63'/%3e%3cstop offset='1' stop-color='%23E7B157'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 }
 .contacts-map-wrapper{
+  width: 100%;
   max-width: 906px;
   max-height: 600px;
+}
+.contacts-map-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width:1400px) {
+  .contacts-wrapper{
+    grid-template-columns: auto;
+    grid-auto-flow: row;
+  }
+  .contacts-info{
+    grid-gap: 30px;
+  }
+  .contacts-info-heading{
+    margin-bottom: 10px;
+  }
+  .contacts-info-link{
+    font-size: 18px;
+    padding-left: 25px;
+  }
+}
+@media screen and (max-width:1100px) {
+main{
+  padding-right: 15px;
+}
 }

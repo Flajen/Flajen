@@ -6,6 +6,7 @@
 }
 .about-title{
   padding-left: 117px;
+  min-height: 70px;
   background-position: center left;
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='100' height='100' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M99.5 66.667c0 16.088-13.042 29.13-29.13 29.13s-29.13-13.042-29.13-29.13 13.042-29.13 29.13-29.13S99.5 50.58 99.5 66.667Z' stroke='%23EABB14'/%3e%3cpath d='M58.76 66.667c0 16.088-13.042 29.13-29.13 29.13S.5 82.754.5 66.666s13.042-29.13 29.13-29.13 29.13 13.042 29.13 29.13Z' stroke='%23E21D1D'/%3e%3ccircle cx='50' cy='33.333' r='29.13' stroke='%23fff'/%3e%3c/svg%3e");
@@ -51,4 +52,35 @@
 .about-three-wrapper .one{grid-area: a_one;}
 .about-three-wrapper .two{grid-area: a_two;}
 .about-three-wrapper .three{grid-area: a_three;}
-/* <span class="help"> </span> */
+@media screen and (max-width:1100px) {
+  .about-text{
+    font-size: 14px;
+  }
+  .about-two-wrapper p{
+    font-size: 16px;
+  }
+  .about-title{
+    max-width: 545px;
+    background-size: 70px;
+    padding-left: 85px;
+    margin-bottom: 30px;
+  }
+  .about-wrapper{
+    grid-gap: 20px;
+  }
+  .about-two-wrapper{
+    padding: 20px 30px;
+  }
+  .about-three-wrapper{
+    grid-template-areas: 'a_one'
+    'a_two'
+    'a_three';
+    grid-gap: 15px;
+  }
+}
+@media screen and (max-width:430px) {
+  .about-title{
+    background-size: 50px;
+    padding-left: 55px;
+  }
+}

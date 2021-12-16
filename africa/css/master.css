@@ -207,17 +207,27 @@ h2 .help{
   width: 100%;
   padding: 20px 40px;
   text-transform: uppercase;
-  background: linear-gradient(270deg, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF);
+  background: #FFFFFF;
+	background-image: -webkit-linear-gradient(right, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF);
+	background-image: -o-linear-gradient(right, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF);
+	background-image: linear-gradient(to left, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF);
   -webkit-background-clip: text;
+	background-clip: text;
   -webkit-text-fill-color: transparent;
+	text-fill-color: transparent;
   color: #FFFFFF;
   display: table;
 }
 .nav-link:hover{
-  background: linear-gradient(270deg, #EDBA63 0%, #E7B157 100%, #E7B157);
-  -webkit-background-clip: text;
+	background: #EDBA63;
+  background-image: -webkit-linear-gradient(right, #EDBA63 0%, #E7B157 100%, #E7B157);
+  background-image: -o-linear-gradient(right, #EDBA63 0%, #E7B157 100%, #E7B157);
+  background-image: linear-gradient(to left, #EDBA63 0%, #E7B157 100%, #E7B157);
+	-webkit-background-clip: text;
+	background-clip: text;
   -webkit-text-fill-color: transparent;
-  color: #FFFFFF;
+	text-fill-color: transparent;
+  color: #EDBA63;
   display: table;
 }
 .nav-btn{
@@ -387,11 +397,26 @@ button, input, a{
 	padding: 8px 7px;
 }
 .burger-line{
+	position: absolute;
+	left: 7px;
 	display: inline-block;
 	border-radius: 5px;
-	width: 100%;
-	height: 3px;
+	width: 31px;
+	height: 2px;
 	background: #FFFFFF;
+}
+.burger-line:nth-child(1){
+	top: 8px;
+}
+.burger-line:nth-child(2){
+	top: 50%;
+	/* -webkit-transform: translate(0,-50%);
+	-ms-transform: translate(0,-50%);
+	transform: translate(0,-50%); */
+	margin-top: -1px;
+}
+.burger-line:nth-child(3){
+	bottom: 8px;
 }
 .tree-link{
 	font-size: 13px;

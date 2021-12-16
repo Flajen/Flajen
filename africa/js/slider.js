@@ -22,17 +22,13 @@ $(document).ready(function(){
   easing: 'easeOutSine',
   adaptiveHeight:true,
   variableWidth: true,
-  // infinite:false,
   pauseOnFocus: true,
   pauseOnHover: true,
   touchThreshold: 15,
-  // centerMode: true,
-  // centerPadding: '60px',
   responsive: [{
     breakpoint: 1100,
     settings: {
       slidesToShow: 2,
-      // centerMode: true,
       variableWidth: false,
     }
   },{

@@ -1,5 +1,9 @@
 main{
   padding-right: 30px;
+  background-image: url('../img/news.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .news_open-wrapper{
   display: grid;

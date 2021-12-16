@@ -181,7 +181,10 @@ footer{
 }
 @media screen and (max-width: 1165px) {
   .directions{
-    margin-bottom: 75px;
+    margin-bottom: 55px;
+  }
+  .directions-title{
+    font-size: 33px;
   }
   .directions-desktop{
     margin-top: 145px;
@@ -190,8 +193,8 @@ footer{
     grid-template-columns: auto;
   }
   .description-title{
-    font-size: 20px;
-    margin-bottom: 40px;
+    font-size: 18px;
+    margin-bottom: 25px;
   }
   .description-subtitle{
     font-size: 16px;
@@ -238,5 +241,10 @@ footer{
   }
   .form-textarea{
     min-height: 120px;
+  }
+}
+@media screen and (max-width:375px) {
+  .directions-title{
+    font-size: 28px;
   }
 }

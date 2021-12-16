@@ -400,6 +400,9 @@ input[type=range]:focus::-ms-fill-upper {
   }
 }
 @media screen and (max-width:1250px) {
+  main{
+    overflow: hidden;
+  }
   .popup{
     grid-template-columns: minmax(290px, 700px);
     grid-auto-flow: row;

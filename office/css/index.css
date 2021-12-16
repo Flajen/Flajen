@@ -404,6 +404,12 @@
 
 
 @media screen and (max-width: 1165px) {
+  .index{
+    margin-bottom: 40px;
+  }
+  .home-desktop{
+    margin-bottom: 40px;
+  }
   .nav-background{
     background-color: #242424;
   }

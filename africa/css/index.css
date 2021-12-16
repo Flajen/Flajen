@@ -84,11 +84,14 @@
   border-radius: 0;
 }
 .index{
-  min-height: 100%;
+  min-height: 535px;
 }
 .index-body{
-  height: 100%;
   align-items: center;
+}
+.index-video-wrapper{
+  min-height: auto;
+  height: 100%;
 }
 .index-title{
   font-size: 26px;

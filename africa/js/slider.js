@@ -54,10 +54,13 @@ $(document).ready(function(){
   function closePopup(){
     $('.gallery-popup').hide();
   }
+  function changePopup(){
+    $('.open-img').hide();
+    $('.popup').css('display','grid');
+  }
   $('.slide-btn').click(function(){
     openPopup();
   })
-
   $('.popup-prev').click(function(){
     if ($(this).parent().find('.popup-slider-window').find('.activeSlide').prev().hasClass('popup-slider-slide')) {
       $(this).parent().find('.popup-slider-window').find('.activeSlide').removeClass('activeSlide').prev().addClass('activeSlide');
@@ -74,15 +77,25 @@ $(document).ready(function(){
       $(this).parent().find('.popup-slider-window').find('.popup-slider-slide:first-child').addClass('activeSlide');
     }
   })
-
-  $('.popup-close').click(function(){
+  $('.popup-full').click(function(){
+    $('.popup').hide();
+    $('.open-img').css('display','grid');
+  })
+  $('.img-close').click(function(){
+    changePopup();
+  });
+  $('.gallery-close').click(function(){
     closePopup();
   });
-  $('.gallery-popup').mouseup(function (e){ // событие клика по веб-документу
-      var div = $('.popup'); // тут указываем класс элемента
-      if (!div.is(e.target) // если клик был не по нашему блоку
-          && div.has(e.target).length === 0) { // и не по его дочерним элементам
+  $('body').mouseup(function (e){ // событие клика по веб-документу
+      var popup = $('.popup'); // тут указываем класс элемента
+      var openImg = $('.open-img'); // тут указываем класс элемента
+      if (!popup.is(e.target) // если клик был не по нашему блоку
+          && popup.has(e.target).length === 0
+          && !openImg.is(e.target)
+          && openImg.has(e.target).length === 0) { // и не по его дочерним элементам
           closePopup(); // скрываем его
+          changePopup() // изменяем обратно
       }
   });
 });

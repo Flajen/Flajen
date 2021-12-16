@@ -253,8 +253,6 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .popup-close{
   position: absolute;
-  top: 30px;
-  right: 30px;
   width: 25px;
   height: 25px;
   background-color: transparent;
@@ -266,6 +264,10 @@ input[type=range]:focus::-ms-fill-upper {
 }
 .popup-close:hover{
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='25' height='25' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M13.88 12.5 24.71 1.67A.98.98 0 1 0 23.33.29L12.5 11.12 1.67.29A.98.98 0 1 0 .29 1.67L11.12 12.5.29 23.33a.98.98 0 1 0 1.38 1.38L12.5 13.88l10.83 10.83a.97.97 0 0 0 1.38 0c.39-.38.39-1 0-1.38L13.88 12.5Z' fill='%23CA9B4A'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h25v25H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+.gallery-close{
+  top: 30px;
+  right: 30px;
 }
 .popup-body{
   padding: 40px 40px 40px 0;
@@ -353,6 +355,28 @@ input[type=range]:focus::-ms-fill-upper {
   font-weight: 300;
   font-size: 20px;
   line-height: 1.4em;
+}
+.open-img{
+  position: relative;
+  grid-template-columns: minmax(290px, 720px);
+  grid-template-rows: minmax(290px, 700px);
+  display: none;
+}
+.img-close{
+  top: 0;
+  right: -65px;
+}
+.open-img-window{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.open-img-prev{
+  left: -80px;
+}
+.open-img-next{
+  right: -80px;
 }
 @media screen and (max-width:1100px) {
   .gallery-window{

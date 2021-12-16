@@ -202,7 +202,7 @@ h2 .help{
   display: grid;
 }
 .nav-link{
-  font-family: 'Proxima-Nova', serif;
+  /* font-family: 'Proxima-Nova', serif;
   width: 100%;
   padding: 20px 40px;
   text-transform: uppercase;
@@ -215,7 +215,10 @@ h2 .help{
 	text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
   color: #FFFFFF;
-  display: table;
+  display: table; */
+}
+.nav-link{
+	color: #FFFFFF;
 }
 .nav-link:hover{
 	background-color: #EDBA63;

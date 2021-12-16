@@ -14,7 +14,7 @@ $(document).ready(function(){
       $('.nav-relations-wrapper').hide();
     }, 2500);
   })
-  $('.burger').click(function(){
+  $('.burger-btn').click(function(){
     if ($('header').hasClass('show')) {
       $('header').hide().removeClass('show');
       enableScroll();

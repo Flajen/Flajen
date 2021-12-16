@@ -203,30 +203,29 @@ h2 .help{
 }
 .nav-link{
   font-family: 'Proxima-Nova', serif;
-  display: inline-block;
   width: 100%;
   padding: 20px 40px;
   text-transform: uppercase;
-  background: #FFFFFF;
+  background-color: #FFFFFF;
 	background-image: -webkit-linear-gradient(right, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF);
 	background-image: -o-linear-gradient(right, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF);
 	background-image: linear-gradient(to left, #FFFFFF 100%, #FFFFFF 100%, #FFFFFF);
-  -webkit-background-clip: text;
 	background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 	text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   color: #FFFFFF;
   display: table;
 }
 .nav-link:hover{
-	background: #EDBA63;
+	background-color: #EDBA63;
   background-image: -webkit-linear-gradient(right, #EDBA63 0%, #E7B157 100%, #E7B157);
   background-image: -o-linear-gradient(right, #EDBA63 0%, #E7B157 100%, #E7B157);
   background-image: linear-gradient(to left, #EDBA63 0%, #E7B157 100%, #E7B157);
-	-webkit-background-clip: text;
 	background-clip: text;
-  -webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
 	text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   color: #EDBA63;
   display: table;
 }
@@ -393,7 +392,9 @@ button, input, a{
 	width: 45px;
 	height: 35px;
 	border-radius: 4px;
-	background: linear-gradient(270deg, #EDBA63 0%, #E7B157 100%);
+	background: -webkit-linear-gradient(right, #EDBA63 0%, #E7B157 100%);
+	background: -o-linear-gradient(right, #EDBA63 0%, #E7B157 100%);
+	background: linear-gradient(to left, #EDBA63 0%, #E7B157 100%);
 	padding: 8px 7px;
 }
 .burger-line{
@@ -410,9 +411,6 @@ button, input, a{
 }
 .burger-line:nth-child(2){
 	top: 50%;
-	/* -webkit-transform: translate(0,-50%);
-	-ms-transform: translate(0,-50%);
-	transform: translate(0,-50%); */
 	margin-top: -1px;
 }
 .burger-line:nth-child(3){

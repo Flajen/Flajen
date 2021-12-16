@@ -171,7 +171,7 @@ h2 .help{
   padding: 40px;
 }
 .logo-wrapper{
-	width: 270px;
+	max-width: 271px;
 }
 .logo-heading{
   font-family: 'Cormorant', serif;
@@ -415,9 +415,6 @@ header{
 .logo{
 	padding: 70px 15px 15px 15px;
 	justify-content: center;
-}
-.logo-wrapper{
-	width: auto;
 }
 .nav-menu{
 	max-width: 100%;

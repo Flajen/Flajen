@@ -25,15 +25,18 @@ main{
   line-height: 1.4em;
 }
 .about-text a{
+  color: #EDBA63;
   font-size: 20px;
+  font-weight: 600;
 }
 .about-text .help{
   color: #E9E9E9;
   font-weight: 300;
 }
 .about-text .help a{
-  color: #E9E9E9;
-  font-weight: 300;
+  color: #EDBA63;
+  font-size: 20px;
+  font-weight: 600;
 }
 .about-two-wrapper{
   background: rgba(233, 233, 233, 0.25);

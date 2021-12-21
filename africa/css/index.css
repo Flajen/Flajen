@@ -42,10 +42,6 @@ main{
   margin-bottom: 8%;
 }
 .index-block{
-  /* width: 100%; */
-  /* max-width: 1093px; */
-  /* background: linear-gradient(99.36deg, rgba(28, 37, 51, 0.9) 0%, rgba(28, 37, 51, 0.65) 100%);
-  backdrop-filter: blur(5px); */
   background: linear-gradient(99.36deg, rgba(28, 37, 51, 0.675) 0%, rgba(28, 37, 51, 0.4875) 100%);
   backdrop-filter: blur(5px);
   border-radius: 0px 10px 10px 0px;
@@ -84,6 +80,11 @@ main{
 }
 
 
+@media screen and (max-width:1500px) {
+  .index-block-wrapper{
+  	max-width: 989px;
+  }
+}
 @media screen and (max-width:1100px) {
 main{
   overflow: hidden;
@@ -103,7 +104,6 @@ main{
 }
 .index-video-wrapper{
   min-height: auto;
-  height: 100%;
 }
 .index-title{
   font-size: 26px;

@@ -80,9 +80,17 @@ main{
 }
 
 
-@media screen and (max-width:1500px) {
+@media screen and (max-width:1600px) {
   .index-block-wrapper{
-  	max-width: 989px;
+  	max-width: 90%;
+  }
+  .index-block{
+  	padding: 30px 40px;
+  }
+}
+@media screen and (max-width:1300px) {
+  .index-block{
+  	padding: 25px 30px;
   }
 }
 @media screen and (max-width:1100px) {
@@ -93,6 +101,7 @@ main{
 .index-block-wrapper{
   display: grid;
   justify-content: center;
+  max-width: 100%;
 }
 .index-block{
   padding: 70px 20px 20px 20px;

@@ -366,7 +366,27 @@ h1,h2{
   font-size: 20px;
   margin-bottom: 8px;
 }
-@media screen and (max-width:1500px) {
+@media screen and (max-width:1800px) {
+body{
+	grid-template-columns: 390px auto;
+}
+.logo{
+	padding: 30px;
+}
+.nav-menu{
+	padding: 25px 0 50px 0;
+}
+.nav-link{
+	font-size: 17px;
+}
+.nav-menu{
+	margin-bottom: 25px;
+}
+.nav-contacts-lang{
+	margin-bottom: 25px;
+}
+}
+@media screen and (max-width:1600px) {
 body{
 	grid-template-columns: 315px auto;
 }
@@ -403,7 +423,7 @@ body{
 	padding: 0 30px 30px 30px;
 }
 }
-@media screen and (max-width:1250px) {
+@media screen and (max-width:1300px) {
 body{
 	grid-template-columns: 290px auto;
 }

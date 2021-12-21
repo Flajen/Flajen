@@ -107,9 +107,6 @@ h1,h2{
 .section-title{
 	max-width: 1023px;
 }
-h2 .help{
-  font-weight: 400;
-}
 /* Скролл начало */
 ::-webkit-scrollbar-button {
   background-image:url('');

@@ -36,14 +36,20 @@ main{
   display: grid;
   align-items: end;
 }
-.index-block{
+.index-block-wrapper{
   width: 100%;
   max-width: 1093px;
   margin-bottom: 8%;
-  background: linear-gradient(99.36deg, rgba(28, 37, 51, 0.9) 0%, rgba(28, 37, 51, 0.65) 100%);
+}
+.index-block{
+  /* width: 100%; */
+  /* max-width: 1093px; */
+  /* background: linear-gradient(99.36deg, rgba(28, 37, 51, 0.9) 0%, rgba(28, 37, 51, 0.65) 100%);
+  backdrop-filter: blur(5px); */
+  background: linear-gradient(99.36deg, rgba(28, 37, 51, 0.675) 0%, rgba(28, 37, 51, 0.4875) 100%);
   backdrop-filter: blur(5px);
   border-radius: 0px 10px 10px 0px;
-  padding: 45px 60px 50px 70px;
+  padding: 45px 60px 45px 70px;
 }
 .index-theme{
   color: #E9E9E9;
@@ -55,7 +61,7 @@ main{
 .index-title{
   font-size: 40px;
   font-weight: 400;
-  margin-bottom: 35px;
+  margin: 0;
 }
 .index-title .help{
   font-weight: 700;
@@ -70,6 +76,7 @@ main{
   border-radius: 100px;
   cursor: pointer;
   padding: 21px 59px 22px 59px;
+  margin: 20px 0 0 70px;
 }
 .index-btn:hover{
   background: #CA9B4A;
@@ -81,6 +88,10 @@ main{
 main{
   overflow: hidden;
   min-height: 535px;
+}
+.index-block-wrapper{
+  display: grid;
+  justify-content: center;
 }
 .index-block{
   padding: 70px 20px 20px 20px;
@@ -102,6 +113,7 @@ main{
 }
 .index-btn{
   font-size: 14px;
+  margin: 20px auto auto auto;
 }
 .index-btn{
   text-align: center;

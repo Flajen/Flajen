@@ -63,8 +63,8 @@ main{
   }
   .contacts-wrapper{
     display: grid;
-    grid-gap: 30px;
-    grid-template-columns: 430px auto;
+    grid-gap: 20px;
+    grid-template-columns: 400px auto;
     grid-template-rows: minmax(200px,500px);
     grid-auto-flow: column;
   }

@@ -38,7 +38,7 @@ main{
 }
 .index-block-wrapper{
   width: 100%;
-  max-width: 1093px;
+  max-width: 75%;
   margin-bottom: 8%;
 }
 .index-block{
@@ -81,11 +81,18 @@ main{
 
 
 @media screen and (max-width:1600px) {
-  .index-block-wrapper{
-  	max-width: 90%;
-  }
   .index-block{
   	padding: 30px 40px;
+  }
+  .index-theme{
+    font-size: 16px;
+  }
+  .index-title{
+    font-size: 33px;
+  }
+  .index-btn{
+    font-size: 15px;
+    padding: 17px 50px 18px 50px;
   }
 }
 @media screen and (max-width:1300px) {

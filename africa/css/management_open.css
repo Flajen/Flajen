@@ -112,7 +112,22 @@ main{
 }
 @media screen and (max-width:1600px) {
   .management_open-block{
-    grid-template-columns: 355px auto
+    grid-template-columns: 355px auto;
+    height: 550px;
+  }
+  .management_open-name{
+    font-size: 40px;
+  }
+  .management_open-role{
+    font-size: 18px;
+    margin-bottom: 25px;
+  }
+  .management_open-date{
+    margin-bottom: 15px;
+  }
+  .management_open-list-wrapper{
+    grid-gap: 10px;
+    margin-bottom: 15px;
   }
 }
 @media screen and (max-width:1250px) {

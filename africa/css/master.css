@@ -144,6 +144,7 @@ h1,h2{
 	background-color: #1C2533;
 	z-index: 10;
   width: 100%;
+	height: 100%;
   overflow: auto;
 }
 .nav-body{
@@ -387,8 +388,28 @@ body{
 }
 }
 @media screen and (max-width:1600px) {
+main{
+	padding: 88px 0 50px 50px;
+}
 body{
+	font-size: 16px;
 	grid-template-columns: 315px auto;
+}
+.tree-link{
+	font-size: 16px;
+}
+.section-title{
+	max-width: 843px;
+}
+h1, h2{
+	font-size: 40px;
+	margin-bottom: 47px;
+}
+button, input, a{
+	font-size: 16px;
+}
+.logo-wrapper{
+	max-width: 222px;
 }
 .logo{
 	padding: 15px;
@@ -400,21 +421,24 @@ body{
 	font-size: 12px;
 }
 .nav-link{
-	font-size: 16px;
+	font-size: 14px;
 	padding: 15px 30px;
 }
 .nav-btn{
-	font-size: 18px;
+	font-size: 16px;
 	padding: 15px 57px 16px 57px;
+}
+.nav-relations-wrapper{
+	bottom: -110px;
 }
 .nav-menu{
 	padding: 15px 0 35px 0;
 }
 .nav-contacts-tel{
-	font-size: 18px;
+	font-size: 16px;
 }
 .nav-contacts-text{
-	font-size: 16px;
+	font-size: 14px;
 }
 .nav-contacts-mode{
 	margin-bottom: 20px;

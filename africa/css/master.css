@@ -136,9 +136,9 @@ h1,h2{
   width: 9px;
 }
 /* Скролл конец */
-.container{
+/* .container{
 	max-width: 1140px;
-}
+} */
 .nav{
 	position: relative;
 	background-color: #1C2533;

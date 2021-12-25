@@ -15,6 +15,7 @@ main{
 .about-wrapper{
   display: grid;
   grid-gap: 35px;
+  max-width: 1140px;
 }
 .about-one-wrapper{
   display: grid;
@@ -84,6 +85,24 @@ main{
     border-radius: 100%;
     background: linear-gradient(
 270deg, #EDBA63 0%, #E7B157 100%);
+}
+@media screen and (max-width:1700px) {
+  .about-wrapper{
+    max-width: 900px;
+    grid-gap: 25px;
+  }
+  .about-text,
+  .about-text a,
+  .about-text .help a,
+  .about-list li{
+    font-size: 16px;
+  }
+  .about-two-wrapper p{
+    font-size: 18px;
+  }
+  .about-two-wrapper{
+    padding: 25px;
+  }
 }
 @media screen and (max-width:1100px) {
   .about-text{

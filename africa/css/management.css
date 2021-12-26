@@ -1,6 +1,6 @@
 main{
   position: relative;
-  padding-right: 30px;
+  padding-right: 60px;
 }
 .management-blocks{
   display: grid;
@@ -96,6 +96,9 @@ main{
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='17' height='13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m16.084 5.999-4.958-4.958a.708.708 0 0 0-1.002 1.001l3.75 3.75H1.416a.708.708 0 1 0 0 1.416h12.456l-3.749 3.75a.708.708 0 1 0 1.002 1l4.958-4.957a.708.708 0 0 0 0-1.002Z' fill='url(%23a)'/%3e%3cdefs%3e%3clinearGradient id='a' x1='16.291' y1='6.591' x2='.708' y2='6.591' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23EDBA63'/%3e%3cstop offset='1' stop-color='%23E7B157'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 }
 @media screen and (max-width:1600px) {
+  main{
+    padding-right: 40px;
+  }
   .management-block-name{
     font-size: 24px;
   }

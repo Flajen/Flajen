@@ -389,7 +389,7 @@ body{
 }
 @media screen and (max-width:1600px) {
 main{
-	padding: 88px 0 50px 50px;
+	padding: 88px 0 30px 30px;
 }
 body{
 	font-size: 16px;

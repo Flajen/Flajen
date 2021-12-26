@@ -43,9 +43,17 @@ main{
 }
 .index-block{
   background: linear-gradient(99.36deg, rgba(28, 37, 51, 0.675) 0%, rgba(28, 37, 51, 0.4875) 100%);
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(3px);
   border-radius: 0px 10px 10px 0px;
   padding: 45px 60px 45px 70px;
+  position: relative;
+}
+.index-img{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 .index-theme{
   color: #E9E9E9;

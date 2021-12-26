@@ -69,6 +69,7 @@ main{
 	overflow: auto;
 }
 footer{
+	background: #1C2533;
 	grid-area: footer;
 	display: none;
 }

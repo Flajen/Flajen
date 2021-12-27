@@ -43,7 +43,7 @@ main{
 }
 .index-block{
   background: linear-gradient(99.36deg, rgba(28, 37, 51, 0.675) 0%, rgba(28, 37, 51, 0.4875) 100%);
-  /* backdrop-filter: blur(3px); */
+  backdrop-filter: blur(1px);
   border-radius: 0px 10px 10px 0px;
   padding: 45px 60px 45px 70px;
   position: relative;

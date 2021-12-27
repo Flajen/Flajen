@@ -137,9 +137,6 @@ h1,h2{
   width: 9px;
 }
 /* Скролл конец */
-/* .container{
-	max-width: 1140px;
-} */
 .nav{
 	position: relative;
 	background-color: #1C2533;
@@ -385,10 +382,9 @@ body{
 	margin-bottom: 25px;
 }
 .nav-contacts-lang{
-	margin-bottom: 25px;
+	margin-bottom: 15px;
 }
-}
-@media screen and (max-width:1600px) {
+/* @media screen and (max-width:1600px) */
 main{
 	padding: 88px 0 30px 30px;
 }
@@ -423,11 +419,12 @@ button, input, a{
 }
 .nav-link{
 	font-size: 14px;
-	padding: 15px 30px;
+	padding: 15px 20px;
 }
 .nav-btn{
 	font-size: 16px;
-	padding: 15px 57px 16px 57px;
+	padding: 15px 67px 16px 67px;
+	margin: 20px auto 0 auto;
 }
 .nav-relations-wrapper{
 	bottom: -110px;
@@ -445,7 +442,7 @@ button, input, a{
 	margin-bottom: 20px;
 }
 .nav-contacts{
-	padding: 0 30px 30px 30px;
+	padding: 0 20px 20px 20px;
 }
 }
 @media screen and (max-width:1300px) {

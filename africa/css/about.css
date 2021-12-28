@@ -106,6 +106,11 @@
     padding: 25px;
   }
 }
+@media screen and (max-width:1366px) {
+  .about-wrapper{
+    max-width: 770px;
+  }
+}
 @media screen and (max-width:1100px) {
   .about-text{
     font-size: 14px;

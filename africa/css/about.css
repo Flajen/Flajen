@@ -56,6 +56,9 @@
   font-weight: 600;
   line-height: 1.5em;
 }
+.about-two-wrapper p .br{
+  display: block;
+}
 .about-three-wrapper{
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
@@ -109,6 +112,21 @@
 @media screen and (max-width:1366px) {
   .about-wrapper{
     max-width: 770px;
+  }
+  .about-title{
+    padding-left: 85px;
+    min-height: 55px;
+    background-size: 75px;
+    margin-bottom: 40px;
+  }
+  .about-text, .about-text a, .about-text .help a, .about-list li {
+    font-size: 14px;
+  }
+  .about-two-wrapper p {
+    font-size: 15px;
+  }
+  .about-two-wrapper p .br{
+    display: inline;
   }
 }
 @media screen and (max-width:1100px) {

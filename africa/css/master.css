@@ -449,13 +449,13 @@ button, input, a{
 h1,h2{
 	font-size: 35px;
 }
+.section-title{
+	max-width: 800px;
+}
 }
 @media screen and (max-width:1300px) {
 body{
 	grid-template-columns: 290px auto;
-}
-h1,h2{
-	font-size: 35px;
 }
 ::-webkit-resizer{
   background-image:url('');

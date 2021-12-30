@@ -104,6 +104,9 @@ main{
   }
 }
 @media screen and (max-width:1400px) {
+  .index-block-wrapper{
+    margin-bottom: 14%;
+  }
   .index-theme {
     font-size: 14px;
   }

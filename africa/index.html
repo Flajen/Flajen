@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ</title>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/master.js" defer></script>
+</head>
+<body>
+
+  <div class="phone-nav">
+    <a href="index.html" class="logo">
+      <span class="logo-wrapper">
+        <span class="logo-heading">Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ</span>
+        <span class="logo-line"></span>
+        <span class="logo-english">Russia Africa Middle East cooperation</span>
+      </span>
+    </a>
+    <div class="burger">
+      <input type="checkbox" name="burgerBtn" value="1" class="burger-btn">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="nav">
+      <div class="nav-body">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" class="logo-img" alt="Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ">
+          <span class="logo-svg"></span>
+          <span class="logo-wrapper">
+            <span class="logo-heading">Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ</span>
+            <span class="logo-line"></span>
+            <span class="logo-english">Russia Africa Middle East cooperation</span>
+          </span>
+        </a>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="about.html" class="nav-link">Подробно о деятельности</a></li>
+            <li><a href="news.html" class="nav-link">Новости Экономики</a></li>
+            <li><a href="gallery.html" class="nav-link">События</a></li>
+            <li><a href="management.html" class="nav-link">Руководство</a></li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+          </ul>
+          <button type="button" name="button" class="nav-btn">Связаться с нами</button>
+          <div class="nav-relations-wrapper">
+            <p class="nav-relations-text">Выберите удобный способ связи:</p>
+            <div class="nav-relations">
+              <a href="#!" class="nav-relations-btn whatsapp"></a>
+              <a href="#!" class="nav-relations-btn telegram"></a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-contacts nav-contacts-header">
+          <div class="nav-contacts-lang">
+            <button type="button" name="lang" class="lang-btn ru"></button>
+            <button type="button" name="lang" class="lang-btn us"></button>
+            <button type="button" name="lang" class="lang-btn fr"></button>
+            <button type="button" name="lang" class="lang-btn ua"></button>
+          </div>
+          <a href="tel:+74993501534" class="nav-contacts-tel">+7 (499) 350-15-34</a>
+          <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
+          <p class="nav-contacts-address nav-contacts-text">г. Москва, пр-кт 60-летия Октября, д. 9</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="index-video-wrapper">
+      <span class="index-video-gradient"></span>
+      <span class="index-video-shad"></span>
+      <video class="index-video" width="100%" height="100%" loop autoplay muted preload="video/video.png">
+        <!-- <source src="video/index.mp4" type="video/mp4"></source> -->
+        <source src="video/index.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+        <source src="video/index.ogv" type='video/ogg; codecs="theora, vorbis"'>
+        <source src="video/index.webm" type='video/webm; codecs="vp8, vorbis"'>
+      </video>
+    </div>
+    <div class="index-body">
+      <div class="index-block-wrapper">
+        <div class="index-block">
+          <img src="img/grain.png" class="index-img" alt="Реализуем международные научные и экономические проекты на базе фундаментальных исследований в области организации управления развитием конкуренции на территории стран Африки и Ближнего Востока">
+          <p class="index-theme">Являемся структурным подразделением международной организации МНИИПУ</p>
+          <h1 class="index-title">Реализуем международные научные и экономические проекты на базе фундаментальных исследований в области организации управления развитием конкуренции на территории стран <span class="help">Африки и Ближнего Востока</span></h1>
+        </div>
+        <a href="about.html" class="index-btn">Подробнее о нашей деятельности</a>
+      </div>
+    </div>
+  </main>
+
+  <footer> <!-- Этот скрыт, поскольку он только на мобильном. На десктопе "nav-contacts-header" Потому что при уменьшение высоты экрана начнутся ПРОБЛЕМЫ!!! -->
+    <div class="nav-contacts">
+      <div class="nav-contacts-lang">
+        <button type="button" name="lang" class="lang-btn ru"></button>
+        <button type="button" name="lang" class="lang-btn us"></button>
+        <button type="button" name="lang" class="lang-btn fr"></button>
+        <button type="button" name="lang" class="lang-btn ua"></button>
+      </div>
+      <a href="tel:+74993501534" class="nav-contacts-tel">+7 (499) 350-15-34</a>
+      <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
+      <p class="nav-contacts-address nav-contacts-text">г. Москва, пр-кт 60-летия Октября, д. 9</p>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&family=Montserrat:wght@300;400;500;700&family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/contacts.css">
+  <title>Контактная информация</title>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/master.js" defer></script>
+</head>
+<body>
+
+  <div class="phone-nav">
+    <a href="index.html" class="logo">
+      <span class="logo-wrapper">
+        <span class="logo-heading">Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ</span>
+        <span class="logo-line"></span>
+        <span class="logo-english">Russia Africa Middle East cooperation</span>
+      </span>
+    </a>
+    <div class="burger">
+      <input type="checkbox" name="burgerBtn" value="1" class="burger-btn">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </div>
+  </div>
+
+  <header>
+    <div class="nav">
+      <div class="nav-body">
+        <a href="index.html" class="logo">
+          <img src="img/logo.png" class="logo-img" alt="Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ">
+          <span class="logo-svg"></span>
+          <span class="logo-wrapper">
+            <span class="logo-heading">Управление сотрудничества со странами Африки и Ближнего Востока МНИИПУ</span>
+            <span class="logo-line"></span>
+            <span class="logo-english">Russia Africa Middle East cooperation</span>
+          </span>
+        </a>
+        <div class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="about.html" class="nav-link">Подробно о деятельности</a></li>
+            <li><a href="news.html" class="nav-link">Новости Экономики</a></li>
+            <li><a href="gallery.html" class="nav-link">События</a></li>
+            <li><a href="management.html" class="nav-link">Руководство</a></li>
+            <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+          </ul>
+          <button type="button" name="button" class="nav-btn">Связаться с нами</button>
+          <div class="nav-relations-wrapper">
+            <p class="nav-relations-text">Выберите удобный способ связи:</p>
+            <div class="nav-relations">
+              <a href="#!" class="nav-relations-btn whatsapp"></a>
+              <a href="#!" class="nav-relations-btn telegram"></a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-contacts nav-contacts-header">
+          <div class="nav-contacts-lang">
+            <button type="button" name="lang" class="lang-btn ru"></button>
+            <button type="button" name="lang" class="lang-btn us"></button>
+            <button type="button" name="lang" class="lang-btn fr"></button>
+            <button type="button" name="lang" class="lang-btn ua"></button>
+          </div>
+          <a href="tel:+74993501534" class="nav-contacts-tel">+7 (499) 350-15-34</a>
+          <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
+          <p class="nav-contacts-address nav-contacts-text">г. Москва, пр-кт 60-летия Октября, д. 9</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <ul class="tree-links">
+      <li class="tree-li"><a href="#!" class="tree-link">Контакты</a></li>
+    </ul>
+    <h2>Контактная информация</h2>
+    <div class="contacts-wrapper">
+      <div class="contacts-info">
+        <div>
+          <p class="contacts-info-heading">Электронная почта</p>
+          <a href="mailto:dcame@mniipu.org" class="contacts-info-link email">dcame@mniipu.org</a>
+        </div>
+        <div>
+          <p class="contacts-info-heading">Телефон</p>
+          <a href="tel:+74993501534" class="contacts-info-link tel">+7 499 350-15-34</a>
+        </div>
+        <div>
+          <p class="contacts-info-heading">Адрес</p>
+          <p class="contacts-info-link address">117312 Россия, Москва, проспект 60-летия Октября, д. 9</p>
+        </div>
+        <div>
+          <p class="contacts-info-heading">Сайты МНИИПУ</p>
+          <ul class="contacts-info-site-wrapper">
+            <li><a href="http://www.irias.group/" class="contacts-info-link site">http://www.irias.group/</a></li>
+            <li><a href="http://www.mniipu.org/" class="contacts-info-link site">http://www.mniipu.org/</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="contacts-map-wrapper">
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6621ab1ceddef3735f83c57c085f3744f7d5f31b6000ee30e8aebd2e39ccd5e8&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+    </div>
+  </main>
+
+  <footer> <!-- Этот скрыт, поскольку он только на мобильном. На десктопе "nav-contacts-header", потому что при уменьшение высоты экрана начнутся ПРОБЛЕМЫ!!! -->
+    <div class="nav-contacts">
+      <div class="nav-contacts-lang">
+        <button type="button" name="lang" class="lang-btn ru"></button>
+        <button type="button" name="lang" class="lang-btn us"></button>
+        <button type="button" name="lang" class="lang-btn fr"></button>
+        <button type="button" name="lang" class="lang-btn ua"></button>
+      </div>
+      <a href="tel:+74993501534" class="nav-contacts-tel">+7 (499) 350-15-34</a>
+      <p class="nav-contacts-mode nav-contacts-text">Пн - Вс:  09:00 — 21:00</p>
+      <p class="nav-contacts-address nav-contacts-text">г. Москва, пр-кт 60-летия Октября, д. 9</p>
+    </div>
+  </footer>
+
+</body>
+</html>

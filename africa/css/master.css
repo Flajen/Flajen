@@ -56,6 +56,9 @@ body{
   margin: 0;
 	height: 100%;
 }
+.phone-nav{
+	display: none;
+}
 .burger{
 	display: none;
 }
@@ -510,13 +513,14 @@ body{
 	"footer";
 	font-size: 14px;
 	height: auto;
+	padding-top: 106px;
 }
 h1,h2{
 	font-size: 26px;
 	margin-bottom: 35px;
 }
 main{
-	padding: 80px 15px 30px 15px;
+	padding: 30px 15px 30px 15px;
 }
 button, input, a{
 	font-size: 14px;
@@ -530,18 +534,28 @@ button, input, a{
 ::-webkit-scrollbar{
   width: 4px;
 }
+.phone-nav{
+	display: grid;
+	grid-auto-flow: column;
+	align-items: center;
+	justify-content: space-between;
+	grid-gap: 15px;
+	width: 100%;
+	height: 106px;
+	background: #1C2533;
+	position: absolute;
+	z-index: 16;
+	top: 0;
+	left: 0;
+	padding: 20px 15px 25px 15px;
+}
 .burger{
 	display: grid;
 	align-content: space-between;
-	position: fixed;
-	z-index: 16;
-	top: 20px;
-	left: 20px;
-	width: 40px;
-	height: 40px;
-	border-radius: 4px;
+	position: relative;
+	width: 23px;
+	height: 10px;
 	background: transparent;
-	padding: 8px 7px;
 }
 .burger input{
 	opacity: 0;
@@ -555,7 +569,7 @@ button, input, a{
 }
 .burger span{
 	width: 100%;
-	height: 4px;
+	height: 1px;
 	background: #FFF;
 	position: absolute;
 	z-index: 2;
@@ -569,26 +583,26 @@ button, input, a{
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	margin-top: -2px;
+	margin-top: -1px;
 }
 .burger span:nth-child(2){
-	top: 25%;
+	top: 0;
 }
 .burger span:nth-child(3){
 	top: 50%;
 }
 .burger span:nth-child(4){
-	top: 75%;
+	top: 100%;
 }
 .burger input:checked ~ span:nth-child(2){
-	transform: rotate(45deg) translate(4px, -6px);
+	transform: rotate(45deg) translate(2px, -2px);
 }
 .burger input:checked ~ span:nth-child(3){
 	opacity: 0;
 	transform: scale(0.2,0.2);
 }
 .burger input:checked ~ span:nth-child(4){
-	transform: rotate(-45deg) translate(2px, 4px);
+	transform: rotate(-45deg) translate(1px, 2px);
 }
 
 .tree-link{
@@ -603,10 +617,26 @@ header{
 	height: 100%;
 	background: #1c2533;
 	display: none;
+	padding-top: 106px;
+}
+header .logo{
+	display: none;
 }
 .logo{
-	padding: 70px 15px 15px 15px;
+	padding: 0;
 	justify-content: center;
+}
+.logo-wrapper{
+	max-width: 221px;
+}
+.logo-heading{
+	font-size: 13px;
+}
+.logo-line{
+	margin: 4px 0;
+}
+.logo-english{
+	font-size: 12px;
 }
 .nav-menu{
 	max-width: 100%;
@@ -628,7 +658,7 @@ header{
 	padding: 35px 15px;
 }
 .nav-relations-wrapper{
-	bottom: 140px;
+	bottom: 110px;
 }
 footer{
 	display: block;

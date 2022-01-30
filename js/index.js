@@ -31,7 +31,7 @@ $(document).ready(function(){
   });
   setInterval(function(){
     $('.index-slider').slick('slickNext');
-  }, 2500);
+  }, 5000);
   $('.form-attach').on('change', function() {
     $('.form-attach-fake').css('color','green');
   });

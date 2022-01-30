@@ -137,9 +137,9 @@
           animation: fillRight 5s steps(1, end) infinite;
   opacity: 0;
 }
-.circle-between{
+.circle-between,
+.circle-mask{
   display: inline-block;
-  z-index: 7;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -149,27 +149,19 @@
   height: 28px;
   background-position: center;
   background-repeat: no-repeat;
+  opacity: 0;
+}
+.circle-between{
+  z-index: 7;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='28' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 0a14 14 0 0 1 0 28v-3.36a10.64 10.64 0 1 0 0-21.28V0Z' fill='%23fff'/%3e%3c/svg%3e");
   -webkit-animation: between 5s steps(1, end) infinite;
           animation: between 5s steps(1, end) infinite;
-  opacity: 0;
 }
 .circle-mask{
-  display: inline-block;
   z-index: 9;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  margin-left: -14px;
-  margin-top: -14px;
-  width: 28px;
-  height: 28px;
-  background-position: center;
-  background-repeat: no-repeat;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='28' height='28' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M14 28a14 14 0 1 1 0-28v3.36a10.64 10.64 0 0 0 0 21.28V28Z' fill='%23fff'/%3e%3c/svg%3e");
   -webkit-animation: mask 5s steps(1, end) infinite;
           animation: mask 5s steps(1, end) infinite;
-  opacity: 0;
 }
 @-webkit-keyframes rotate {
   0%{-webkit-transform: rotate(0deg);transform: rotate(0deg);}
@@ -203,7 +195,6 @@
   0%        {opacity: 1;}
   50%, 100% {opacity: 0;}
 }
-
 .index-btn-slider:hover{
   background: -o-linear-gradient(left, #FF7F09 0%, #FF9D09 100%);
   background: -webkit-gradient(linear, left top, right top, from(#FF7F09), to(#FF9D09));
@@ -311,8 +302,6 @@
 	    -ms-flex-align: center;
 	        align-items: center;
 }
-
-
 .products{
   margin-bottom: 200px;
 }
@@ -365,9 +354,6 @@
       -ms-transform: scale(1.04);
           transform: scale(1.04);
 }
-
-
-
 .quick-order-block{
   background: #FFFFFF;
   -webkit-box-shadow: 0px 0px 30px rgba(153, 155, 163, 0.15);
@@ -481,8 +467,6 @@
   background: -webkit-gradient(linear, left top, right top, from(#FF7F09), to(#FF9D09));
   background: linear-gradient(90deg, #FF7F09 0%, #FF9D09 100%);
 }
-
-
 @media screen and (max-width:1140px) {
   .index{margin-bottom: 80px;}
   .index-slider{
@@ -544,10 +528,6 @@
     width: 5px;
     height: 5px;
   }
-
-
-
-
   .products{margin-bottom: 80px;}
   .products-blocks{
     -ms-grid-columns: 135px 10px 135px;
@@ -567,10 +547,6 @@
     text-align: center;
     font-weight: 500;
   }
-
-
-
-
   .advantages{
     -ms-grid-columns:auto;
     grid-template-columns:auto;

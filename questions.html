@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;800&family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/questions.css">
+  <title>Спектр Принт</title>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/gsap.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/master.js" defer></script>
+  <script src="js/questions.js" defer></script>
+</head>
+<body>
+  <div class="cap-mobile">
+    <a href="/" class="logo-wrapper"><img src="img/logo.png" alt="Спектр-Принт" class="logo"></a>
+    <button type="button" name="burger" class="burger"></button>
+  </div>
+  <header>
+    <div class="nav-info-wrapper">
+      <div class="nav-info container">
+        <a href="/" class="logo-wrapper logo-wrapper-pc"><img src="img/logo.png" alt="Спектр-Принт" class="logo"></a>
+        <button type="button" name="button" class="btn-main btn-nav">
+          <span class="btn-gradient">
+            <span class="btn-background btn-nav-background"></span>
+            <span class="btn-border"></span>
+          </span>
+          <span class="btn-text btn-nav-text">Получить консультацию</span>
+        </button>
+        <div class="nav-info-block">
+          <p class="nav-info-icon address">Кроштандский бульвар, 7</p>
+          <p class="nav-info-mode">Пн-Пт 09:00 — 19:00<br>Сб, Вс — по предварительной договоренности</p>
+        </div>
+        <div class="nav-info-block">
+          <a href="tel:+79096492795" class="nav-info-icon nav-info-link phone">+7-909-649-27-95</a>
+          <a href="mailto:24@спектр-принт.рф" class="nav-info-icon nav-info-link email">24@спектр-принт.рф</a>
+        </div>
+      </div>
+    </div>
+    <nav class="nav-lists container">
+      <ul class="nav-links">
+        <li class="nav-add-menu">
+          <div class="nav-add-btn">
+            <input type="button" name="navAdd" class="nav-link arrow" value="Услуги (цены)">
+            <span class="nav-arrow"></span>
+          </div>
+          <ul class="nav-add-block">
+            <li><a href="pages/one.html" class="nav-add-link">Визитки</a></li>
+            <li><a href="pages/two.html" class="nav-add-link">Листовая продукция</a></li>
+            <li><a href="pages/three.html" class="nav-add-link">Буклеты</a></li>
+            <li><a href="pages/four.html" class="nav-add-link">Папки</a></li>
+            <li><a href="pages/five.html" class="nav-add-link">Блокноты, презентации</a></li>
+            <li><a href="pages/six.html" class="nav-add-link">Брошюры, каталоги</a></li>
+            <li><a href="pages/seven.html" class="nav-add-link">Наклейки</a></li>
+            <li><a href="pages/eight.html" class="nav-add-link">Календари</a></li>
+            <li><a href="pages/nine.html" class="nav-add-link">Конверты</a></li>
+            <li><a href="pages/ten.html" class="nav-add-link">Чертежи</a></li>
+            <li><a href="pages/eleven.html" class="nav-add-link">Плакаты</a></li>
+            <li><a href="pages/twelve.html" class="nav-add-link">Баннеры</a></li>
+          </ul>
+        </li>
+        <li><a href="delivery.html" class="nav-link">Доставка и оплата</a></li>
+        <li><a href="questions.html" class="nav-link">Вопрос-ответ</a></li>
+        <li><a href="contacts.html" class="nav-link">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="questions">
+    <div class="container questions-container">
+      <h2 class="section-title">Вопрос-ответ</h2>
+      <div class="questions-blocks">
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">В каком формате нужно предоставлять файлы?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Мы печатаем с файлов в формате TIF, JPG, PSD, AI, CDR, PDF, либо дорабатываем макеты, присланные в других форматах. Если макет присылается в растровом формате (TIF, JPG, PSD), разрешение для цифровой и офсетной печати должно быть 300 dpi (точек на дюйм).</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Что такое вылеты и для чего они нужны?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Если изображение печатается вплотную к краю изделия, его нужно продолжить за край изделия, чтобы избежать брака при резке. Выход изображения за край изделия называется вылет. На практике вылеты делают от 2 до 5 мм.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Что такое отступ значимых элементов от края и зачем он нужен?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Значимыми элементами называют текст, логотипы, изображения и другие элементы макета, которые должны полностью уместиться на изделии. Минимальное расстояние от края изделия до таких элементов должно быть не менее 3 мм.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Можно ли предоставлять файлы в цветовой палитре RGB?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Печатная машина не печатает в цветовой палитре RGB. Эта палитра только для мониторов. Для печати используется палитра CMYK. В принципе, файл в RGB можно запустить на печать, при этом компьютер сам пересчитает его в CMYK, но цвета при этом меняются, иногда существенно.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Почему цвет на моем мониторе отличается от цвета в тираже?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Во-первых, на экране вы видите не цвет, а свет, состоящий из трех лучей: зеленого, синего и рубинового, а на бумаге вы видите именно цвет, состоящий из четырех красок CMYK: голубой ©, малиновой (M), желтой (Y) и черной (K).<br><br>Во-вторых, монитор должен быть откалиброван с помощью специального прибора. Причем делать такую калибровку нужно регулярно.<br><br>Чтобы гарантировано получить требуемый цвет, нужно делать макет в палитре CMYK.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Почему пропадает светлый фон в тираже?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Существуют ограничения по минимальной плотности цвета, воспроизводимой на печати. Поэтому плотность цвета (CMY) в макете должна быть более 5%. Для черного цвета (К) плотность должна быть еще выше — 12%.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Почему черно-белый макет на печати имеет голубоватый оттенок?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Для устранения этого эффекта черно-белый макет должен быть переведен в режим Grayscale.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Почему при печати может пропасть часть изображения?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Изображение не пропадает, оно оказывается скрытым за другим слоем из-за неправильно подготовленного макета. Чтобы напечатанное изображение полностью совпадало с макетом, слои в файле должны быть слиты перед печатью.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Как избежать «полосатости» серого фона?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">При подготовке макета нужно составить серый цвет из всех четырех цветов. Это называется «Композитный серый»</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Почему для печати темных макетов нужно больше времени?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">После печати на офсетной машине краске надо дать время высохнуть, и только потом напечатать другую сторону. И снова дать высохнуть перед резкой. Если этого не сделать, то не до конца высохшая краска будет отпечатываться на оборотной стороне листа. Это называется «отмар». Если макет очень темный, то для предотвращения «отмара» нужно дополнительно наносить слой лака на каждую из сторон.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Для чего нужно делать биговку перед фальцовкой?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Фальцовкой называют сложение листа бумаги по линии сгиба. В месте сгиба бумага деформируется, и сгиб выглядит неаккуратно. Чем толще бумага, тем заметнее этот дефект. Поэтому на листе предварительно выдавливают канавку (углубление радиусом 1-1,5мм). Это и называется биговкой.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Как сделать ровную рамку на листовке?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Чтобы рамка была ровной, необходимо закладывать в макет расстояние до края листа не менее 5 мм.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Почему в брошюре на скрепку число полос должно быть кратно 4-м?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Количество страниц в брошюре должно быть кратно 4-м , так как брошюра скрепляется разворотами, а не отдельными листами. Если это не так, добавляются пустые страницы на внутреннюю сторону обложки или в конец документа.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Как избежать дефектов при ламинации?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Тиражу надо дать время высохнуть первый раз после печати, затем второй раз после ламинации, и только потом отправлять на резку.</p>
+          </div>
+        </div>
+        <div class="questions-block">
+          <button type="button" name="button" class="questions-btn">Почему 100 визиток стоят 400 рублей, а 1000 — всего 1200 рулей?<span class="questions-btn-icon"></span></button>
+          <div class="questions-text-wrapper">
+            <p class="questions-text">Цена изделия определяется не только количеством затраченных материалов, но и количеством затраченного времени. Допечатная подготовка и послепечатная обработка одинаковая вне зависимости от тиража визиток. Поэтому чем больше тираж, тем дешевле единица продукции.</p>
+          </div>
+        </div>
+      </div>
+      <img src="img/questions/pic.png" alt="Вопрос-ответ" class="questions-img questions-img-pc">
+      <img src="img/questions/pic-mobile.png" alt="Вопрос-ответ" class="questions-img questions-img-mob">
+    </div>
+  </section>
+
+  <section class="requirements">
+    <div class="container questions-slider-container">
+      <h2 class="section-title questions-slider-title">Требования к файлам</h2>
+      <div class="questions-text-block-wrapper block-blue">
+        <div class="questions-text-block requirements-slider">
+          <ul class="questions-text-block-list requirements-block">
+            <li class="marker">Все используемые материалы соответствуют стандартам, действующим на территории РФ</li>
+            <li class="marker">Колориметрические показатели отличия на цветопробе и тиражном листе а также разнооттеночность внутри тиража должны соответствовать: ∆E ≤ 7</li>
+            <li class="marker">Общее количество экземпляров продукции, не соответствующих требованиям заказчика, а также действующим стандартам не должно превышать 2% тиража</li>
+            <li class="marker">Не допускается отмар, непропечатка, загрязнение, а также механическое повреждение и замины тиражной продукции</li>
+            <li class="marker">Несовмещение при печати тиража не должно превышать 1мм</li>
+          </ul>
+          <ul class="questions-text-block-list requirements-block">
+            <li class="marker">Точность соблюдения формата при резке ±1 мм. Допустимая косина резки: ±0,5 мм</li>
+            <li class="marker">Допустимая погрешность резки не должна превышать 1 мм для бумаги и картона и 1,5 мм для самоклеющихся материалов</li>
+            <li class="marker">Точность фальцовки, биговки и перфорации ±1 мм</li>
+            <li class="marker">Допустимая косина фальцовки, биговки и перфорации: ± 0,5мм</li>
+            <li class="marker">Последовательность страниц в блоке многостраничного документа должна соответствовать утвержденному макету</li>
+            <li class="marker">Допуск на совмещение разворотных иллюстраций в многостраничном документе: ±1 мм. Для сложных иллюстраций — до 3мм</li>
+          </ul>
+        </div>
+        <span class="questions-text-block-icon requirements-icon"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="conditions">
+    <div class="container questions-slider-container">
+      <h2 class="section-title questions-slider-title">Технические условия</h2>
+      <div class="questions-text-block-wrapper block-blue">
+        <div class="questions-text-block conditions-slider">
+          <ul class="questions-text-block-list conditions-block">
+            <li class="marker">Все используемые материалы соответствуют стандартам, действующим на территории РФ</li>
+            <li class="marker">Колориметрические показатели отличия на цветопробе и тиражном листе а также разнооттеночность внутри тиража должны соответствовать: ∆E ≤ 7</li>
+            <li class="marker">Общее количество экземпляров продукции, не соответствующих требованиям заказчика, а также действующим стандартам не должно превышать 2% тиража</li>
+            <li class="marker">Не допускается отмар, непропечатка, загрязнение, а также механическое повреждение и замины тиражной продукции</li>
+            <li class="marker">Несовмещение при печати тиража не должно превышать 1мм</li>
+          </ul>
+          <ul class="questions-text-block-list conditions-block">
+            <li class="marker">Точность соблюдения формата при резке ±1 мм. Допустимая косина резки: ±0,5 мм</li>
+            <li class="marker">Допустимая погрешность резки не должна превышать 1 мм для бумаги и картона и 1,5 мм для самоклеющихся материалов</li>
+            <li class="marker">Точность фальцовки, биговки и перфорации ±1 мм</li>
+            <li class="marker">Допустимая косина фальцовки, биговки и перфорации: ± 0,5мм</li>
+            <li class="marker">Последовательность страниц в блоке многостраничного документа должна соответствовать утвержденному макету</li>
+            <li class="marker">Допуск на совмещение разворотных иллюстраций в многостраничном документе: ±1 мм. Для сложных иллюстраций — до 3мм</li>
+          </ul>
+        </div>
+        <span class="questions-text-block-icon conditions-icon"></span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-wrapper">
+        <div class="footer-menu">
+          <ul class="footer-links">
+            <li><a href="delivery.html" class="footer-link">Доставка и оплата</a></li>
+            <li><a href="questions.html" class="footer-link">Вопрос-ответ</a></li>
+            <li><a href="contacts.html" class="footer-link">Контакты</a></li>
+          </ul>
+          <p class="footer-copyright">© СпектрПринт, 2022</p>
+        </div>
+        <div class="nav-info-block">
+          <p class="nav-info-icon address">Кроштандский бульвар, 7</p>
+          <p class="nav-info-mode">Пн-Пт 09:00 — 19:00<br>Сб, Вс — по предварительной договоренности</p>
+        </div>
+        <div class="nav-info-block">
+          <a href="tel:+79096492795" class="nav-info-icon nav-info-link phone">+7-909-649-27-95</a>
+          <a href="mailto:24@спектр-принт.рф" class="nav-info-icon nav-info-link email">24@спектр-принт.рф</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

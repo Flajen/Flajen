@@ -32,7 +32,7 @@
             <span class="btn-background btn-nav-background"></span>
             <span class="btn-border"></span>
           </span>
-          <span class="btn-text btn-nav-text">Получить консультацию</span>
+          <span class="btn-text btn-nav-text fast-form-btn">Получить консультацию</span>
         </button>
         <div class="nav-info-block">
           <p class="nav-info-icon address">Кроштандский бульвар, 7</p>
@@ -72,6 +72,46 @@
       </ul>
     </nav>
   </header>
+<div class="fast-form-blackout">
+  <form class="fast-form" action="index.html" method="post">
+    <button type="button" name="fastFormClose" class="fast-form-close"></button>
+    <p class="fast-form-heading">Для быстрого и лёгкого заказа настенного календаря просто <span class="medium">оставьте заявку:</span></p>
+    <ul class="fast-form-lists">
+      <li><input type="text" placeholder="Имя" class="fast-form-input"></li>
+      <li><input type="text" placeholder="Телефон, почта" class="fast-form-input"></li>
+    </ul>
+    <div class="form-attach-wrapper">
+      <input type="file" name="file" class="form-attach" multiple accept="image/*,image/jpeg,image/png">
+      <span class="form-attach-fake">Прикрепить файл</span>
+    </div>
+    <button type="button" name="button" class="btn-main btn-form">
+      <span class="btn-gradient">
+        <span class="btn-background btn-form-background"></span>
+      </span>
+      <span class="btn-text btn-form-text">Отправить</span>
+    </button>
+  </form>
+</div>
+  <div class="fast-form-blackout">
+    <form class="fast-form" action="index.html" method="post">
+      <button type="button" name="fastFormClose" class="fast-form-close"></button>
+      <p class="fast-form-heading">Для быстрого и лёгкого заказа настенного календаря просто <span class="medium">оставьте заявку:</span></p>
+      <ul class="fast-form-lists">
+        <li><input type="text" placeholder="Имя" class="fast-form-input"></li>
+        <li><input type="text" placeholder="Телефон, почта" class="fast-form-input"></li>
+      </ul>
+      <div class="form-attach-wrapper">
+        <input type="file" name="file" class="form-attach" multiple accept="image/*,image/jpeg,image/png">
+        <span class="form-attach-fake">Прикрепить файл</span>
+      </div>
+      <button type="button" name="button" class="btn-main btn-form">
+        <span class="btn-gradient">
+          <span class="btn-background btn-form-background"></span>
+        </span>
+        <span class="btn-text btn-form-text">Отправить</span>
+      </button>
+    </form>
+  </div>
 
   <section class="index">
     <div class="container">
@@ -86,7 +126,7 @@
                   <span class="btn-gradient">
                     <span class="btn-background btn-index-background"></span>
                   </span>
-                  <span class="btn-text btn-index-text">Быстрый заказ</span>
+                  <span class="btn-text btn-index-text fast-form-btn">Быстрый заказ</span>
                 </button>
               </div>
               <img src="img/index/mockup.png" alt="" class="index-img">
@@ -100,7 +140,7 @@
                   <span class="btn-gradient">
                     <span class="btn-background btn-index-background"></span>
                   </span>
-                  <span class="btn-text btn-index-text">Быстрый заказ</span>
+                  <span class="btn-text btn-index-text fast-form-btn">Быстрый заказ</span>
                 </button>
               </div>
               <img src="img/index/calend.png" alt="" class="index-img">
@@ -114,7 +154,7 @@
                   <span class="btn-gradient">
                     <span class="btn-background btn-index-background"></span>
                   </span>
-                  <span class="btn-text btn-index-text">Быстрый заказ</span>
+                  <span class="btn-text btn-index-text fast-form-btn">Быстрый заказ</span>
                 </button>
               </div>
               <img src="img/index/papki.png" alt="" class="index-img">
@@ -128,7 +168,7 @@
                   <span class="btn-gradient">
                     <span class="btn-background btn-index-background"></span>
                   </span>
-                  <span class="btn-text btn-index-text">Быстрый заказ</span>
+                  <span class="btn-text btn-index-text fast-form-btn">Быстрый заказ</span>
                 </button>
               </div>
               <img src="img/index/seal.png" alt="" class="index-img">
@@ -142,7 +182,7 @@
                   <span class="btn-gradient">
                     <span class="btn-background btn-index-background"></span>
                   </span>
-                  <span class="btn-text btn-index-text">Быстрый заказ</span>
+                  <span class="btn-text btn-index-text fast-form-btn">Быстрый заказ</span>
                 </button>
               </div>
               <img src="img/index/baes.png" alt="" class="index-img">
@@ -156,7 +196,7 @@
                   <span class="btn-gradient">
                     <span class="btn-background btn-index-background"></span>
                   </span>
-                  <span class="btn-text btn-index-text">Быстрый заказ</span>
+                  <span class="btn-text btn-index-text fast-form-btn">Быстрый заказ</span>
                 </button>
               </div>
               <img src="img/index/box.png" alt="" class="index-img box">
@@ -164,7 +204,14 @@
             </div>
           </div>
           <button type="button" name="button" class="index-prev index-btn-slider"><span class="prev"></span></button>
-          <button type="button" name="button" class="index-next index-btn-slider"><span class="next"></span></button>
+          <button type="button" name="button" class="index-next index-btn-slider">
+            <span class="next"></span>
+            <span class="circle">
+              <span class="circle-left half"></span>
+              <span class="circle-right half"></span>
+              <span class="circle-spin"></span>
+            </span>
+          </button>
         </div>
         <div class="index-block main-block main-info block-blue itwo">
           <span class="main-info-icon shield">

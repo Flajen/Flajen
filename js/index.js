@@ -9,12 +9,13 @@ $(document).ready(function(){
     speed: 800,
     easing: 'easeOutSine',
     adaptiveHeight:true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 2500,
     centerMode: true,
-    pauseOnFocus: true,
-    pauseOnHover: true,
-    pauseOnDotsHover: true,
+    pauseOnFocus: false,
+    pauseOnHover: false,
+    pauseOnDotsHover: false,
+    waitForAnimate: false,
     touchThreshold: 15,
     prevArrow: $('.index-prev'),
     nextArrow: $('.index-next'),
@@ -28,7 +29,9 @@ $(document).ready(function(){
       }
     }]
   });
-
+  setInterval(function(){
+    $('.index-slider').slick('slickNext');
+  }, 2500);
   $('.form-attach').on('change', function() {
     $('.form-attach-fake').css('color','green');
   });

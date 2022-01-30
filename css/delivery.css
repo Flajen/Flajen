@@ -13,12 +13,15 @@
   grid-auto-rows: 375px;
 }
 .delivery-block{
+  display: -ms-grid;
   display: grid;
-  align-content: space-between;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
   width: 100%;
   height: 100%;
   background: #FFFFFF;
-  box-shadow: 0px 0px 30px rgba(153, 155, 163, 0.15);
+  -webkit-box-shadow: 0px 0px 30px rgba(153, 155, 163, 0.15);
+          box-shadow: 0px 0px 30px rgba(153, 155, 163, 0.15);
   border-radius: 20px;
 }
 .delivery-info{
@@ -31,16 +34,16 @@
   margin-bottom: 15px;
 }
 .delivery-lists{
+  display: -ms-grid;
   display: grid;
   grid-gap: 10px;
 }
 .delivery-img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-
-
 @media screen and (max-width:1140px) {
   .delivery-blocks{
     grid-template-columns: repeat(auto-fit,minmax(250px,555px));
@@ -48,5 +51,9 @@
   }
   .delivery-info{
     padding: 20px;
+  }
+  .delivery-img{
+    width: 280px;
+    height: 108px;
   }
 }

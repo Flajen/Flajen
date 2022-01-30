@@ -32,7 +32,7 @@ $(document).ready(function(){
   pauseOnFocus: true,
   pauseOnHover: true,
   touchThreshold: 15,
-  centerMode: true,
+  centerMode: false,
   prevArrow: $('.products-prev'),
   nextArrow: $('.products-next'),
   responsive: [{
@@ -40,6 +40,7 @@ $(document).ready(function(){
     settings: {
       slidesToShow: 1,
       arrows: false,
+      centerMode: true,
     }
   }]
   });

@@ -1,8 +1,10 @@
 $(document).ready(function(){
   let now = new Date();
   var month = now.getMonth() + 1;
+  var day = now.getDate();
   if (month < 10) {month = `0${now.getMonth() + 1}`;}
-  $('.products-date').html(`${now.getDate()}.${month}.${now.getFullYear()}`);
+  if (day < 10) {day = `0${now.getMonth()}`;}
+  $('.products-date').html(`${day}.${month}.${now.getFullYear()}`);
 
   $('.products-slider').on('init reInit',function(event,slick){
     var amount = slick.slideCount;

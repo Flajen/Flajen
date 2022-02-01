@@ -30,6 +30,7 @@ $(document).ready(function(){
       speed: 800,
       easing: 'easeOutSine',
       adaptiveHeight: false,
+      waitForAnimate: false, // Быстрый переход(откл анимации)
       autoplay: false,
       centerMode: false,
       pauseOnFocus: true,
@@ -43,7 +44,7 @@ $(document).ready(function(){
       responsive: [{
         breakpoint: 1140,
         settings: {
-          arrows: false
+          arrows: false,
         }
       }]
     });

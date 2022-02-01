@@ -485,6 +485,24 @@ header{
   color: #606267;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M18.13 2.4a6.4 6.4 0 0 0-9.04 0l-7.75 7.76a4.57 4.57 0 0 0 6.45 6.45l7.1-7.1a2.74 2.74 0 0 0-3.87-3.88l-4.64 4.65a.91.91 0 0 0 1.29 1.3l4.64-4.65a.91.91 0 0 1 1.3 1.29l-7.1 7.1a2.74 2.74 0 0 1-3.88-3.87l7.75-7.75a4.57 4.57 0 0 1 6.46 6.46L9.09 17.9a.91.91 0 0 0 1.29 1.29l7.75-7.75a6.35 6.35 0 0 0 0-9.05Z' fill='url(%23b)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='b' x1='0' y1='10' x2='20' y2='10' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FF7F09'/%3e%3cstop offset='1' stop-color='%23FF9D09'/%3e%3c/linearGradient%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
+.btn-form{
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+}
+.btn-form-text{
+  color: #FFF;
+}
+.btn-form-background{
+  background: -o-linear-gradient(left, #FF6309 0%, #FF814A 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#FF6309), to(#FF814A));
+  background: linear-gradient(90deg, #FF6309 0%, #FF814A 100%);
+}
+.btn-form:hover .btn-form-background{
+  background: -o-linear-gradient(left, #FF7F09 0%, #FF9D09 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#FF7F09), to(#FF9D09));
+  background: linear-gradient(90deg, #FF7F09 0%, #FF9D09 100%);
+}
 
 
 .advantages{

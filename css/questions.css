@@ -219,7 +219,7 @@
     grid-gap: 0;
   }
   /* Слайдер */
-  .slick-slider{}
+  .slick-slider{margin: 0 auto;}
   /* Слайдер запущен */
   .slick-slider.slick-initialized{}
   /* Слайдер с точками */

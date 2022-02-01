@@ -449,24 +449,6 @@
 .form-input-text::placeholder{
   color: #969AA3;
 }
-.btn-form{
-  display: -ms-grid;
-  display: grid;
-  width: 100%;
-}
-.btn-form-text{
-  color: #FFF;
-}
-.btn-form-background{
-  background: -o-linear-gradient(left, #FF6309 0%, #FF814A 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#FF6309), to(#FF814A));
-  background: linear-gradient(90deg, #FF6309 0%, #FF814A 100%);
-}
-.btn-form:hover .btn-form-background{
-  background: -o-linear-gradient(left, #FF7F09 0%, #FF9D09 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#FF7F09), to(#FF9D09));
-  background: linear-gradient(90deg, #FF7F09 0%, #FF9D09 100%);
-}
 @media screen and (max-width:1140px) {
   .index{margin-bottom: 80px;}
   .index-slider{

@@ -14,8 +14,10 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="js/parallax.min.js"></script>
+  <script src="js/slick.min.js"></script>
   <script src="js/master.js" defer></script>
   <script src="js/scripts.js" defer></script>
+  <script src="js/slider.js" defer></script>
 </head>
 <body>
 
@@ -69,18 +71,18 @@
       </div>
     </div>
     <div class="home-img-wrapper">
-      <span></span>
+      <span class="home-img-fake"></span>
       <div class="home-slider">
-        <span class="home-fogging"><img src="" alt=""></span>
+        <span class="home-fogging"></span>
         <div class="home-slider-track">
-          <img src="img/home/pic.png" alt="" class="home-img active">
+          <img src="img/home/pic.png" alt="" class="home-img">
           <img src="img/home/pic.png" alt="" class="home-img">
           <img src="img/home/pic.png" alt="" class="home-img">
           <img src="img/home/pic.png" alt="" class="home-img">
         </div>
         <div class="home-slider-btn-wrapper">
-          <button type="button" name="homeSliderPrev" class="home-slider-btn Prev" onclick="minusSlide()"><span class="arrow"></span></button>
-          <button type="button" name="homeSliderNext" class="home-slider-btn Next" onclick="plusSlide()"><span class="arrow"></span></button>
+          <button type="button" name="homeSliderPrev" class="home-slider-btn Prev homePrev"><span class="arrow"></span></button>
+          <button type="button" name="homeSliderNext" class="home-slider-btn Next homeNext"><span class="arrow"></span></button>
         </div>
       </div>
     </div>
@@ -91,7 +93,7 @@
       <div class="about-body">
         <div class="about-img-wrapper">
           <!-- <img src="img/home/about/1.png" alt="" class="about-img"> -->
-          <div class="about-img" data-parallax="scroll" data-image-src="img/home/about/1.jpg"></div>
+					<div class="about-img" data-parallax="scroll" data-image-src="img/home/about/1.jpg"></div>
           <img src="img/home/about/2.png" data-aos="zoom-in" data-aos-once="true" alt="" class="about-img-fly">
         </div>
         <div class="about-info">
@@ -330,13 +332,41 @@
     </div>
   </section>
 
+	<div class="gallery-popup">
+		<div class="gallery-popup-body">
+			<button type="button" name="galleryPopupClose" class="gallery-popup-close"></button>
+			<div class="gallery-popup-info">
+				<p class="gallery-popup-heading">Охта Парк</p>
+				<ul class="gallery-popup-lists">
+					<li class="gallery-popup-text">Курорт международного уровня. Обеспечивает 15 направлений в сфере гостиничных услуг, общественного питания, красоты и здоровья, спорта и активного отдыха, организации мероприятий.</li>
+					<li class="gallery-popup-text">Адрес курорта: ул. Людмилы Кедриной, 1А, д. Мистолово</li>
+					<li class="gallery-popup-text selection">Три общественных бассейна размером: 12*6 м, 10*7 м, 8*4 м</li>
+				</ul>
+				<span class="gallery-counter"><span class="gallery-counter-active">1</span>/<span class="gallery-counter-all">10</span></span>
+			</div>
+			<div class="gallery-popup-slider-wrapper">
+				<div class="gallery-popup-slider">
+					<img src="img/home/gallery/open/photo.png" alt="" class="gallery-popup-item">
+					<img src="img/home/gallery/open/photo.png" alt="" class="gallery-popup-item">
+					<img src="img/home/gallery/open/photo.png" alt="" class="gallery-popup-item">
+					<img src="img/home/gallery/open/photo.png" alt="" class="gallery-popup-item">
+					<img src="img/home/gallery/open/photo.png" alt="" class="gallery-popup-item">
+				</div>
+				<div class="home-slider-btn-wrapper">
+          <button type="button" name="gallerySliderPrev" class="gallery-slider-btn Prev prevGallery"><span class="arrow"></span></button>
+          <button type="button" name="gallerySliderNext" class="gallery-slider-btn Next nextGallery"><span class="arrow"></span></button>
+        </div>
+			</div>
+		</div>
+	</div>
+
   <section class="contacts" id="contacts">
     <div class="container-big">
       <div class="contacts-body">
-        <div class="contacts-img-wrapper">
-          <!-- <img src="img/home/contacts/img.png" alt=""> -->
-          <div class="contacts-img" data-parallax="scroll" data-image-src="img/home/contacts/img.jpg"></div>
-        </div>
+        <!-- <div class="contacts-img-wrapper">
+          <img src="img/home/contacts/img.png" alt="">
+        </div> -->
+				<div class="contacts-img" data-parallax="scroll" data-image-src="img/home/contacts/img.jpg"></div>
         <div class="contacts-info">
           <h2 data-aos="fade-left" data-aos-once="true" class="contacts-title">Лучший способ оценить технологии Desjoyaux — <span class="blue weight">посмотреть вживую</span></h2>
           <p class="contacts-subtitle element-animation">Приезжайте к нам в <span class="tregular">шоурум</span>, где вы сможете убедиться<span class="br"></span> в качестве производимой продукции, а также получить исчерпывающую консультацию от наших специалистов</p>

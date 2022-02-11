@@ -436,6 +436,7 @@
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='45' height='45' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)' fill='%23167FAE'%3e%3cpath d='M40.62 18.12C40.62 8.13 32.5 0 22.5 0 12.5 0 4.37 8.13 4.37 18.12c0 10 8.13 18.13 18.13 18.13 10 0 18.12-8.13 18.12-18.13Zm-21.35 7.73-6.19-6.18 1.88-1.88 4.3 4.31 10.78-10.77 1.88 1.88-12.65 12.64ZM5.75 30.4l-5.49 8 8.12-1.51L9.88 45l5.15-7.5a20.88 20.88 0 0 1-9.28-7.1ZM39.25 30.4a20.88 20.88 0 0 1-9.28 7.1l5.14 7.5 1.51-8.11 8.11 1.51-5.48-8Z'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h45v45H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
+.peculiaritiesSlider{display: none;}
 
 
 .question{
@@ -1131,6 +1132,7 @@
   .peculiarities-sticky-link.active .peculiarities-sticky-arrow.left{
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m5.49 4.51.89.9L2.4 9.37H20v1.26H2.41l3.97 3.96-.9.9L0 10l5.49-5.49Z' fill='%23167FAE'/%3e%3c/svg%3e");
   }
+  .peculiaritiesSlider{display: block;}
 
   .question{
     margin-bottom: 100px;

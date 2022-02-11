@@ -1,4 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const swiperMain = new Swiper('.home-slider', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 5,
+    speed: 1500,
+    loop: true,
+    navigation: {
+      nextEl: '.swiperMain-next',
+      prevEl: '.swiperMain-prev',
+    },
+    autoplay: {
+      delay: 1600,
+      disableOnInteraction: false
+    }
+  });
   const swiper1 = new Swiper('.swiper1', {
     slidesPerView: 1,
     centeredSlides: true,

@@ -12,10 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			imageSrc: 'img/home/about/1.jpg',
 			speed: '0.75'
 	});
-	$('.contacts-img').parallax({
-		imageSrc: 'img/home/contacts/img.png',
-		speed: '0.8'
-	});
 	var number = 0;
   $(".gallery-popup-item").each(function(index) {
     number += 1;
@@ -24,15 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const peculiaritiesSliderOne = new Swiper('.peculiaritiesSliderOne', {
     slidesPerView: 1,
     centeredSlides: true,
-    spaceBetween: 5,
-    speed: 1500,
+    spaceBetween: 0,
+    speed: 1100,
     loop: true,
   });
   const peculiaritiesSliderTwo = new Swiper('.peculiaritiesSliderTwo', {
     slidesPerView: 1,
     centeredSlides: true,
-    spaceBetween: 5,
-    speed: 1500,
+    spaceBetween: 0,
+    speed: 1100,
     loop: true,
   });
   peculiaritiesSliderOne.controller.control = peculiaritiesSliderTwo;

@@ -3,14 +3,14 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 5,
-    speed: 1500,
+    speed: 1400,
     loop: true,
     navigation: {
       nextEl: '.swiperMain-next',
       prevEl: '.swiperMain-prev',
     },
     autoplay: {
-      delay: 1600,
+      delay: 2500,
       disableOnInteraction: false
     }
   });
@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 5,
-    speed: 1500,
+    speed: 1400,
     loop: true,
     pagination: {
       el: '.swiper1-pagination',
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 5,
-    speed: 1500,
+    speed: 1400,
     loop: true,
     pagination: {
       el: '.swiper2-pagination',

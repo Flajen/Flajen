@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   	$('body').css('padding-right', paddingOffset);
   }
   function enableScroll() {
-  	$('body').css('overflow', 'auto')
-  	$('body').css('padding-right', 0)
+  	$('body').css('overflow', 'auto');
+  	$('body').css('padding-right', 0);
   }
 	$('.peculiarities-sticky-link').click(function(){
 			$('.peculiarities-sticky-link').removeClass('active');
@@ -14,26 +14,27 @@ document.addEventListener("DOMContentLoaded", () => {
 			$(this).addClass('active');
 			$(`.${$(this).attr('data-link')}`).addClass('active');
 	})
-	$('.parallax-window').parallax({imageSrc: 'img/home/pic.png'});
 	$('.about-img').parallax({
 			imageSrc: 'img/home/about/1.jpg',
 			speed: '0.75'
 	});
-	$('.gallery-counter-all').html($('.gallery-popup-item').length);
-	// $('.gallery-counter-active').html($('.gallery-popup-item.slick-active').length);
+	$('.contacts-img').parallax({
+		imageSrc: 'img/home/contacts/img.png',
+		speed: '0.8'
+});
 	var number = 0;
   $(".gallery-popup-item").each(function(index) {
     number += 1;
     $(this).attr('data-number',`${number}`);
   });
-	$('.gallery-slider-btn').click(function(){
-		$(".gallery-popup-item").each(function(index) {
-			if(Number($(this).attr('data-number')) == Number($('.gallery-popup-item.slick-active').attr('data-number'))) {
-				$('.gallery-counter-active').html($(this).attr('data-number'));
-			}
-		});
-		// $('.gallery-counter-active').html(Number($('.gallery-popup-item.slick-active').attr('data-number')));
-	})
+	// $('.gallery-slider-btn').click(function(){
+	// 	$(".gallery-popup-item").each(function(index) {
+	// 		if(Number($(this).attr('data-number')) == Number($('.gallery-popup-item.slick-active').attr('data-number'))) {
+	// 			$('.gallery-counter-active').html($(this).attr('data-number'));
+	// 		}
+	// 	});
+	// 	// $('.gallery-counter-active').html(Number($('.gallery-popup-item.slick-active').attr('data-number')));
+	// })
 
 	$('.gone').click(function(){
 		$('.gallery-popup-one').addClass('show'); //

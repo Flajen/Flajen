@@ -131,7 +131,7 @@ header{
   justify-content: center;
   transition: all 0.4s;
 }
-.header-mobile{display: none;}
+.mobile-menu{display: none;}
 header.fly{
   top: 0;
   background: rgb(255, 255, 255);
@@ -307,12 +307,12 @@ footer{
     top: 0;
     align-items: stretch;
     justify-content: space-between;
+    background-color: #FFFFFF;
     padding: 10px 20px;
   }
   .header-mobile{display: block;}
   .header-pc{display: none;}
   header.fly{
-    background-color: transparent;
     border: 0;
   }
   .burger_line,
@@ -320,13 +320,51 @@ footer{
     background-color: #FFDF00;
   }
   .header-menu-links{
-    right: 0;
+    display: grid;
+    position: relative;
+    right: auto;
+    top: auto;
+    left: auto;
+    padding: 0;
+    margin-bottom: 25px;
+  }
+  .header-menu-link{
+    text-align: left;
+    padding: 15px 0;
+  }
+  .mobile-menu{
+    display: none;
+    align-content: center;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFF;
+    padding: 100px 20px 40px 20px;
+  }
+  .mobile-menu.open{
+    display: grid;
+  }
+  .btn_mobile{
+    width: 100%;
+  }
+  .main-contact{
+    display: grid;
+    grid-gap: 15px;
+    grid-auto-flow: row;
+    margin-bottom: 25px;
+  }
+  .main-contact-block{
+    display: grid;
+    grid-gap: 5px;
   }
   .header-body{
     grid-template-columns: auto;
   }
-  .btn_mobile{display: none;}
-  .logo-text{display: none;}
+  .mobile_hide{display: none;}
+  .mobile_hide.open{display: none;}
   .logo-wrapper img{
     width: 110px;
     height: 55px;

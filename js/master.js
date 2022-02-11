@@ -12,11 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   var burger = document.querySelector(".burger");
   var menu = document.querySelector(".header-menu-links");
+  var mobileMenu = document.querySelector(".mobile-menu");
   function openMenu() {
     burger.classList.toggle('open');
     menu.classList.toggle('open');
     document.querySelector(".burger_line-one").classList.toggle('burger_line-close-one');
     document.querySelector(".burger_line-two").classList.toggle('burger_line-close-two');
+    if(mobileMenu){
+      mobileMenu.classList.toggle('open');
+    }
   };
   function closeMenu() {
     burger.classList.remove('open');
@@ -37,14 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
       currentScroll = window.pageYOffset // узнаем на сколько прокрутили страницу
       if (currentScroll > 0){
         header.classList.add('fly');
-        // const headerHidden = () => header.classList.contains('hide') // узнаем скрыт header или нет
-        // if (currentScroll > prevScroll && !headerHidden()){ // если прокручиваем страницу вниз и header не скрыт
-        //   header.classList.add('hide') // то скрываем header
-        //   closeMenu();
-        // }
-        // if (currentScroll < prevScroll && headerHidden()){ // если прокручиваем страницу вверх и header скрыт
-        //   header.classList.remove('hide') // то отображаем header
-        // }
       } else{
         header.classList.remove('fly');
       }
@@ -52,21 +48,20 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   }
   onScrollHeader() // вызываем основную функцию onScrollHeader
-  // document.querySelectorAll('a[href^="#"').forEach(link => {
   document.querySelectorAll('.menuHREF').forEach(link => {
     link.addEventListener('click', function(e) {
-        e.preventDefault();
-        closeMenu();
-        let href = this.getAttribute('href').substring(1);
-        const scrollTarget = document.getElementById(href);
-        const topOffset = document.querySelector('header').offsetHeight;
-        // const topOffset = 0; // если не нужен отступ сверху 
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - (topOffset+10);
-        window.scrollBy({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
+      e.preventDefault();
+      closeMenu();
+      let href = this.getAttribute('href').substring(1);
+      const scrollTarget = document.getElementById(href);
+      const topOffset = document.querySelector('header').offsetHeight;
+      // const topOffset = 0; // если не нужен отступ сверху 
+      const elementPosition = scrollTarget.getBoundingClientRect().top;
+      const offsetPosition = elementPosition - (topOffset+10);
+      window.scrollBy({
+          top: offsetPosition,
+          behavior: 'smooth'
+      });
     });
   });
 

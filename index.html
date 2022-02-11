@@ -9,10 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/master.css">
   <link rel="stylesheet" href="css/home.css">
+  <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
   <title>ООО «Дежуайо-Нева»</title>
   <script src="js/jquery.min.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/parallax.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/master.js" defer></script>
@@ -26,23 +31,23 @@
       <div class="header-body">
         <div class="header-block">
           <a href="/" class="logo-wrapper header-logo"><img src="img/logo.png" alt=""></a>
-          <div class="logo-text">
+          <div class="logo-text mobile_hide">
             <p class="logo-heading">ООО «Дежуайо-Нева»</p>
             <p class="logo-about">Один из 3 <span class="help">сертифицированных</span> представителей «Desjoyaux» в России</p>
           </div>
         </div>
         <div class="header-block">
-          <button type="button" name="call" class="btn_main btn_main-call btn_mobile">Обратный звонок</button>
+          <button type="button" name="call" class="btn_main btn_main-call mobile_hide">Обратный звонок</button>
           <div class="header-menu">
             <button type="button" name="burger" class="burger">
               <span class="burger_line burger_line-one"></span>
               <span class="burger_line burger_line-two"></span>
             </button>
-            <ul class="header-menu-links">
+            <ul class="header-menu-links mobile_hide">
               <li><a href="#home" class="header-menu-link menuHREF">Главная</a></li>
               <li><a href="#about" class="header-menu-link menuHREF">О компании</a></li>
               <li><a href="#peculiarities" class="header-menu-link menuHREF">Сравнение</a></li>
-              <li><a href="#gallery" class="header-menu-link menuHREF">Технологии</a></li>
+              <li><a href="#gallery" class="header-menu-link menuHREF">Проекты</a></li>
               <li><a href="#contacts" class="header-menu-link menuHREF">Контакты</a></li>
             </ul>
           </div>
@@ -50,6 +55,23 @@
       </div>
     </div>
   </header>
+  <div class="mobile-menu">
+    <ul class="header-menu-links">
+      <li><a href="#home" class="header-menu-link menuHREF">Главная</a></li>
+      <li><a href="#about" class="header-menu-link menuHREF">О компании</a></li>
+      <li><a href="#peculiarities" class="header-menu-link menuHREF">Сравнение</a></li>
+      <li><a href="#gallery" class="header-menu-link menuHREF">Проекты</a></li>
+      <li><a href="#contacts" class="header-menu-link menuHREF">Контакты</a></li>
+    </ul>
+    <div class="main-contact">
+      <p class="home-contact-address home-contact-icon">Санкт-Петербург, Лахтинский проспект, дом 70</p>
+      <div class="main-contact-block">
+        <a href="tel:88125745594" class="home-contact-phone home-contact-icon">8 (812) 574-55-94</a>
+        <p class="home-contact-time">09:00-18:00</p>
+      </div>
+    </div>
+    <button type="button" name="call" class="btn_main btn_main-call btn_mobile">Обратный звонок</button>
+  </div>
 
   <section class="home" id="home">
     <div class="home-body">
@@ -60,7 +82,7 @@
             <li class="marker" class="home-text"><span class="tregular">6 из 10</span> бассейнов в Европе спроектированы<span class="br"></span> и построены по технологиям Desjoyaux</li>
             <li class="marker">Все комплектующие производятся на заводе во Франции</li>
           </ul>
-          <div class="home-contact" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-once="true">
+          <div class="home-contact mobile_hide" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" data-aos-once="true">
             <p class="home-contact-address home-contact-icon">Санкт-Петербург, Лахтинский проспект, дом 70</p>
             <div class="home-contact-block">
               <a href="tel:88125745594" class="home-contact-phone home-contact-icon">8 (812) 574-55-94</a>
@@ -72,16 +94,18 @@
     </div>
     <div class="home-img-wrapper">
       <span class="home-img-fake"></span>
-      <div class="home-slider">
+      <!-- Swiper -->
+      <div class="swiper home-slider">
         <span class="home-fogging"></span>
-        <div class="home-slider-track">
-          <img src="img/home/pic.png" alt="" class="home-img">
-          <img src="img/home/pic1.png" alt="" class="home-img">
-          <img src="img/home/pic2.png" alt="" class="home-img">
+        <div class="swiper-wrapper home-slider-track">
+          <div class="swiper-slide"><img src="img/home/pic.png" alt="" class="home-img"></div>
+          <div class="swiper-slide"><img src="img/home/pic1.png" alt="" class="home-img"></div>
+          <div class="swiper-slide"><img src="img/home/pic2.png" alt="" class="home-img"></div>
         </div>
+        <!-- Add Arrows -->
         <div class="home-slider-btn-wrapper">
-          <button type="button" name="homeSliderPrev" class="home-slider-btn Prev homePrev"><span class="arrow"></span></button>
-          <button type="button" name="homeSliderNext" class="home-slider-btn Next homeNext"><span class="arrow"></span></button>
+          <button type="button" name="gallerySliderPrev" class="home-slider-btn Prev swiperMain-prev"><span class="arrow"></span></button>
+          <button type="button" name="gallerySliderNext" class="home-slider-btn Next swiperMain-next"><span class="arrow"></span></button>
         </div>
       </div>
     </div>
@@ -340,17 +364,24 @@
 					<li class="gallery-popup-text">Адрес курорта: ул. Людмилы Кедриной, 1А, д. Мистолово</li>
 					<li class="gallery-popup-text selection">Три общественных бассейна размером: 12*6 м, 10*7 м, 8*4 м</li>
 				</ul>
-				<span class="gallery-counter"><span class="gallery-counter-active">1</span>/<span class="gallery-counter-all">10</span></span>
+        <!-- Add Pagination -->
+				<div class="gallery-counter">
+          <div class="swiper-pagination swiper1-pagination"></div>
+        </div>
 			</div>
 			<div class="gallery-popup-slider-wrapper">
-				<div class="gallery-popup-slider">
-					<img src="img/home/gallery/open/photo.png" alt="" class="gallery-popup-item">
-					<img src="img/home/gallery/open/photo1.png" alt="" class="gallery-popup-item">
-					<img src="img/home/gallery/open/photo2.png" alt="" class="gallery-popup-item">
-				</div>
-				<div class="home-slider-btn-wrapper">
-          <button type="button" name="gallerySliderPrev" class="gallery-slider-btn Prev prevGallery"><span class="arrow"></span></button>
-          <button type="button" name="gallerySliderNext" class="gallery-slider-btn Next nextGallery"><span class="arrow"></span></button>
+        <!-- Swiper -->
+        <div class="swiper swiper1">
+          <div class="swiper-wrapper gallery-popup-slider">
+            <div class="swiper-slide"><img src="img/home/gallery/open/photo.png" alt="" class="gallery-popup-item"></div>
+            <div class="swiper-slide"><img src="img/home/gallery/open/photo1.png" alt="" class="gallery-popup-item"></div>
+            <div class="swiper-slide"><img src="img/home/gallery/open/photo2.png" alt="" class="gallery-popup-item"></div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="home-slider-btn-wrapper">
+            <button type="button" name="gallerySliderPrev" class="gallery-slider-btn Prev swiper1-prev"><span class="arrow"></span></button>
+            <button type="button" name="gallerySliderNext" class="gallery-slider-btn Next swiper1-next"><span class="arrow"></span></button>
+          </div>
         </div>
 			</div>
 		</div>
@@ -359,23 +390,30 @@
 		<div class="gallery-popup-body">
 			<button type="button" name="galleryPopupClose" class="gallery-popup-close"></button>
 			<div class="gallery-popup-info">
-				<p class="gallery-popup-heading">Озорные белки</p>
+				<p class="gallery-popup-heading">Касабланка</p>
 				<ul class="gallery-popup-lists">
-					<li class="gallery-popup-text">Уникальный семейный парк аттракционов на деревьях. 7 гектаров ландшафтного лиственного парка и мини-ферма в экологически чистом месте. Парк приключений для всей семьи.</li>
-					<li class="gallery-popup-text">Адрес курорта: ул. Новопетровская, 60, д. Симагино</li>
+					<li class="gallery-popup-text">Семейный отель с сезонным бассейном под открытым небом. В нём вы сможете забыть о суете большого города и насладиться лучшими традициями восточного сервиса и западного гостеприимства.</li>
+          <li class="gallery-popup-text">Адрес курорта: Приморское шоссе, 471, д. Репино</li>
 					<li class="gallery-popup-text selection">Три общественных бассейна размером: 12*6 м, 10*7 м, 8*4 м</li>
 				</ul>
-				<span class="gallery-counter"><span class="gallery-counter-active">1</span>/<span class="gallery-counter-all">10</span></span>
+				<!-- Add Pagination -->
+				<div class="gallery-counter">
+          <div class="swiper-pagination swiper2-pagination"></div>
+        </div>
 			</div>
 			<div class="gallery-popup-slider-wrapper">
-				<div class="gallery-popup-slider">
-					<img src="img/home/gallery/open/photo3.png" alt="" class="gallery-popup-item">
-					<img src="img/home/gallery/open/photo4.png" alt="" class="gallery-popup-item">
-					<img src="img/home/gallery/open/photo5.png" alt="" class="gallery-popup-item">
-				</div>
-				<div class="home-slider-btn-wrapper">
-          <button type="button" name="gallerySliderPrev" class="gallery-slider-btn Prev prevGallery"><span class="arrow"></span></button>
-          <button type="button" name="gallerySliderNext" class="gallery-slider-btn Next nextGallery"><span class="arrow"></span></button>
+        <!-- Swiper -->
+        <div class="swiper swiper2">
+          <div class="swiper-wrapper gallery-popup-slider">
+            <div class="swiper-slide"><img src="img/home/gallery/open/photo3.png" alt="" class="gallery-popup-item"></div>
+            <div class="swiper-slide"><img src="img/home/gallery/open/photo4.png" alt="" class="gallery-popup-item"></div>
+            <div class="swiper-slide"><img src="img/home/gallery/open/photo5.png" alt="" class="gallery-popup-item"></div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="home-slider-btn-wrapper">
+            <button type="button" name="gallerySliderPrev" class="gallery-slider-btn Prev swiper2-prev"><span class="arrow"></span></button>
+            <button type="button" name="gallerySliderNext" class="gallery-slider-btn Next swiper2-next"><span class="arrow"></span></button>
+          </div>
         </div>
 			</div>
 		</div>
@@ -384,23 +422,30 @@
 		<div class="gallery-popup-body">
 			<button type="button" name="galleryPopupClose" class="gallery-popup-close"></button>
 			<div class="gallery-popup-info">
-				<p class="gallery-popup-heading">Касабланка</p>
+				<p class="gallery-popup-heading">Озорные белки</p>
 				<ul class="gallery-popup-lists">
-					<li class="gallery-popup-text">Семейный отель с сезонным бассейном под открытым небом. В нём вы сможете забыть о суете большого города и насладиться лучшими традициями восточного сервиса и западного гостеприимства.</li>
-					<li class="gallery-popup-text">Адрес курорта: Приморское шоссе, 471, д. Репино</li>
+          <li class="gallery-popup-text">Уникальный семейный парк аттракционов на деревьях. 7 гектаров ландшафтного лиственного парка и мини-ферма в экологически чистом месте. Парк приключений для всей семьи.</li>
+					<li class="gallery-popup-text">Адрес курорта: ул. Новопетровская, 60, д. Симагино</li>
 					<li class="gallery-popup-text selection">Три общественных бассейна размером: 12*6 м, 10*7 м, 8*4 м</li>
 				</ul>
-				<span class="gallery-counter"><span class="gallery-counter-active">1</span>/<span class="gallery-counter-all">10</span></span>
+        <!-- Add Pagination -->
+				<div class="gallery-counter">
+          <div class="swiper-pagination swiper3-pagination"></div>
+        </div>
 			</div>
 			<div class="gallery-popup-slider-wrapper">
-				<div class="gallery-popup-slider">
-					<img src="img/home/gallery/open/photo6.png" alt="" class="gallery-popup-item">
-					<img src="img/home/gallery/open/photo7.png" alt="" class="gallery-popup-item">
-					<img src="img/home/gallery/open/photo8.png" alt="" class="gallery-popup-item">
-				</div>
-				<div class="home-slider-btn-wrapper">
-          <button type="button" name="gallerySliderPrev" class="gallery-slider-btn Prev prevGallery"><span class="arrow"></span></button>
-          <button type="button" name="gallerySliderNext" class="gallery-slider-btn Next nextGallery"><span class="arrow"></span></button>
+        <!-- Swiper -->
+        <div class="swiper swiper3">
+          <div class="swiper-wrapper gallery-popup-slider">
+            <div class="swiper-slide"><img src="img/home/gallery/open/photo6.png" alt="" class="gallery-popup-item"></div>
+            <div class="swiper-slide"><img src="img/home/gallery/open/photo7.png" alt="" class="gallery-popup-item"></div>
+            <div class="swiper-slide"><img src="img/home/gallery/open/photo8.png" alt="" class="gallery-popup-item"></div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="home-slider-btn-wrapper">
+            <button type="button" name="gallerySliderPrev" class="gallery-slider-btn Prev swiper3-prev"><span class="arrow"></span></button>
+            <button type="button" name="gallerySliderNext" class="gallery-slider-btn Next swiper3-next"><span class="arrow"></span></button>
+          </div>
         </div>
 			</div>
 		</div>
@@ -409,24 +454,25 @@
   <section class="contacts" id="contacts">
     <div class="container-big">
       <div class="contacts-body">
-        <div class="contacts-img-wrapper">
-          <img src="img/home/contacts/img.png" alt="" class="contacts-img">
-        </div>
         <div class="contacts-info">
           <h2 data-aos="fade-left" data-aos-once="true" class="contacts-title">Лучший способ оценить технологии Desjoyaux — <span class="blue weight">посмотреть вживую</span></h2>
           <p class="contacts-subtitle element-animation">Приезжайте к нам в <span class="tregular">шоурум</span>, где вы сможете убедиться<span class="br"></span> в качестве производимой продукции, а также получить исчерпывающую консультацию от наших специалистов</p>
-          <ul class="contacts-lists">
-            <li><p class="contacts-address contacts-icon">Санкт-Петербург, Лахтинский проспект, д. 70</p></li>
-            <li><p class="contacts-time contacts-icon">10:00-17:00, Пн-Вс</p></li>
-            <li class="contacts-phone-wrapper">
-              <a href="tel:88125745594" class="contacts-phone contacts-icon">8 (812) 574-55-94</a>
-              <a href="tel:89110200020" class="contacts-icon">8 (911) 020-00-20</a>
-            </li>
-            <li><a href="mailto:jdneva@basseinoff.net" class="contacts-email contacts-icon">jdneva@basseinoff.net</a></li>
-            <li><a href="https://www.instagram.com/desjoyaux_neva/" class="contacts-link contacts-instagram contacts-icon">@desjoyaux_neva</a></li>
-            <li><a href="https://ru-ru.facebook.com/desjoyaux.ru/" class="contacts-link contacts-facebook contacts-icon">/desjoyaux.ru</a></li>
-          </ul>
         </div>
+        <div class="contacts-img-wrapper">
+          <!-- <img src="img/home/contacts/img.png" alt="" class="contacts-img"> -->
+          <div class="contacts-img" data-parallax="scroll" data-image-src="img/home/contacts/img.png"></div>
+        </div>
+        <ul class="contacts-lists">
+          <li><p class="contacts-address contacts-icon">Санкт-Петербург, Лахтинский проспект, д. 70</p></li>
+          <li><p class="contacts-time contacts-icon">10:00-17:00, Пн-Вс</p></li>
+          <li class="contacts-phone-wrapper">
+            <a href="tel:88125745594" class="contacts-phone contacts-icon">8 (812) 574-55-94</a>
+            <a href="tel:89110200020" class="contacts-icon">8 (911) 020-00-20</a>
+          </li>
+          <li><a href="mailto:jdneva@basseinoff.net" class="contacts-email contacts-icon">jdneva@basseinoff.net</a></li>
+          <li><a href="https://www.instagram.com/desjoyaux_neva/" class="contacts-link contacts-instagram contacts-icon">@desjoyaux_neva</a></li>
+          <li><a href="https://ru-ru.facebook.com/desjoyaux.ru/" class="contacts-link contacts-facebook contacts-icon">/desjoyaux.ru</a></li>
+        </ul>
       </div>
     </div>
   </section>

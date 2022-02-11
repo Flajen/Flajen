@@ -1,56 +1,66 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Слайдер
-  $('.home-slider-track').slick({
-  dots: false,
-  arrows: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  speed: 1200,
-  easing: 'easeOutSine',
-  adaptiveHeight:true,
-  variableWidth: true,
-  pauseOnFocus: true,
-  pauseOnHover: true,
-  touchThreshold: 15,
-  waitForAnimate: false,
-  centerMode: false,
-  prevArrow: $('.homePrev'),
-  nextArrow: $('.homeNext'),
-  responsive: [{
-    breakpoint: 1140,
-    settings: {
-    slidesToShow: 1,
-    arrows: false,
-    centerMode: true,
-    centerPadding: '0',
+  const swiperMain = new Swiper('.home-slider', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 5,
+    speed: 1500,
+    loop: true,
+    navigation: {
+      nextEl: '.swiperMain-next',
+      prevEl: '.swiperMain-prev',
+    },
+    autoplay: {
+      delay: 1600,
+      disableOnInteraction: false
     }
-  }]
   });
 
-  $('.gallery-popup-slider').slick({
-    dots: false,
-    arrows: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    speed: 1200,
-    easing: 'easeOutSine',
-    adaptiveHeight:true,
-    variableWidth: true,
-    pauseOnFocus: true,
-    pauseOnHover: true,
-    touchThreshold: 15,
-    waitForAnimate: false,
-    centerMode: false,
-    prevArrow: $('.prevGallery'),
-    nextArrow: $('.nextGallery'),
-    responsive: [{
-      breakpoint: 1140,
-      settings: {
-      slidesToShow: 1,
-      arrows: false,
-      centerMode: false,
-      centerPadding: '0',
-      }
-    }]
-    });
+  const swiper1 = new Swiper('.swiper1', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 5,
+    speed: 1500,
+    loop: true,
+    pagination: {
+      el: '.swiper1-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper1-next',
+      prevEl: '.swiper1-prev',
+    },
+    observer: true,
+    observeParents: true,
+    observeChildren: true,
+  });
+  const swiper2 = new Swiper('.swiper2', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 5,
+    speed: 1500,
+    loop: true,
+    pagination: {
+      el: '.swiper2-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper2-next',
+      prevEl: '.swiper2-prev',
+    },
+  });
+  const swiper3 = new Swiper('.swiper3', {
+    slidesPerView: 1,
+    centeredSlides: true,
+    spaceBetween: 5,
+    speed: 1500,
+    loop: true,
+    pagination: {
+      el: '.swiper3-pagination',
+      type: 'fraction',
+    },
+    navigation: {
+      nextEl: '.swiper3-next',
+      prevEl: '.swiper3-prev',
+    },
+  });
 })

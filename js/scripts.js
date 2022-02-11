@@ -19,14 +19,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			imageSrc: 'img/home/about/1.jpg',
 			speed: '0.75'
 	});
-	$('.question-img').parallax({
-			imageSrc: 'img/home/question/ph.png',
-			speed: '0.75'
-	});
-	$('.contacts-img').parallax({
-			imageSrc: 'img/home/contacts/img.jpg',
-			speed: '0.75'
-	});
 	$('.gallery-counter-all').html($('.gallery-popup-item').length);
 	// $('.gallery-counter-active').html($('.gallery-popup-item.slick-active').length);
 	var number = 0;
@@ -44,7 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
 	})
 
 	$('.gone').click(function(){
-		$('.gallery-popup').addClass('show'); //
+		$('.gallery-popup-one').addClass('show'); //
+		disabledScroll();
+	})
+	$('.gtwo').click(function(){
+		$('.gallery-popup-two').addClass('show'); //
+		disabledScroll();
+	})
+	$('.gthree').click(function(){
+		$('.gallery-popup-three').addClass('show'); //
 		disabledScroll();
 	})
 

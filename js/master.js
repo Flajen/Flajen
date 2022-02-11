@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     disable: 'mobile'
   });
-  
   AOS.init({
     disable: function () {
       var maxWidth = 768;
@@ -27,6 +26,9 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.classList.remove('open');
     document.querySelector(".burger_line-one").classList.remove('burger_line-close-one');
     document.querySelector(".burger_line-two").classList.remove('burger_line-close-two');
+    if(mobileMenu){
+      mobileMenu.classList.remove('open');
+    }
   };
   burger.onclick = function(){
     openMenu();
@@ -64,7 +66,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   });
-
   function onEntry(entry) {
     entry.forEach(change => {
       if (change.isIntersecting) {

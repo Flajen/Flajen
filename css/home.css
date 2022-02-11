@@ -2,7 +2,6 @@
   max-width: 1920px;
   width: 100%;
   position: relative;
-  /* padding-top: 320px; */
   margin: 0 auto;
   margin-bottom: 245px;
   display: -ms-grid;
@@ -966,7 +965,6 @@
   .home{
     padding-top: 100px;
     margin-bottom: 100px;
-    /* display: none; */
     -ms-grid-rows: auto;
     grid-template-rows: auto;
   }

@@ -752,10 +752,6 @@
   display: grid;
   grid-gap: 15px;
 }
-.gallery-popup-text.selection{
-  color: #282A2D;
-  font-weight: 400;
-}
 .gallery-popup-slider{
   width: 100%;
   height: 100%;

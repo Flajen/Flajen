@@ -8,15 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
   	$('body').css('overflow', 'auto');
   	$('body').css('padding-right', 0);
   }
-	$('.about-img').parallax({
-			imageSrc: 'img/home/about/1.jpg',
-			speed: '0.75'
-	});
-	var number = 0;
-  $(".gallery-popup-item").each(function(index) {
-    number += 1;
-    $(this).attr('data-number',`${number}`);
-  });
+	// $('.about-img').parallax({
+	// 		imageSrc: 'img/home/about/1.jpg',
+	// 		speed: '0.75'
+	// });
   const peculiaritiesSliderOne = new Swiper('.peculiaritiesSliderOne', {
     slidesPerView: 1,
     centeredSlides: true,
@@ -44,15 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
 		$("html, body").animate({scrollTop: target-150}, 800);
   });
 	$('.gone').click(function(){
-		$('.gallery-popup-one').addClass('show'); //
+		$('.gallery-popup-one').addClass('show');
 		disabledScroll();
 	})
 	$('.gtwo').click(function(){
-		$('.gallery-popup-two').addClass('show'); //
+		$('.gallery-popup-two').addClass('show');
 		disabledScroll();
 	})
 	$('.gthree').click(function(){
-		$('.gallery-popup-three').addClass('show'); //
+		$('.gallery-popup-three').addClass('show');
 		disabledScroll();
 	})
 

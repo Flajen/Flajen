@@ -1,5 +1,3 @@
-/* font-family: 'Jost', sans-serif; */
-/* font-family: 'Proxima Nova', sans-serif; */
 @font-face {
   font-family: 'Proxima Nova';
   src: url('../fonts/ProximaNova-Light.eot');
@@ -62,8 +60,7 @@
     -webkit-transition: all 0.18s;
     -o-transition: all 0.18s;
     transition: all 0.18s;
-  }
-  
+  }  
   /* Скролл начало */
   ::-webkit-scrollbar-button {
     width:15px;
@@ -83,7 +80,6 @@
     width: 10px;
   }
   /* Скролл конец */
-  
   .container-big{
     max-width: 1310px;
     width: 100%;
@@ -121,7 +117,6 @@
   .btn_main-call{padding: 16px 22px 15px 22px;}
   .block_blue{background: #167FAE;}
   .tregular{color: #282A2D;font-weight: 400;}
-  
   header{
     width: 100%;
     position: fixed;
@@ -279,8 +274,6 @@
   .header-menu-link:hover{
     color: #5C6167;
   }
-  
-  
   footer{
     width: 100%;
     background: #167FAE;
@@ -326,7 +319,6 @@
     font-weight: 300;
     text-align: center;
   }
-  
   @media screen and (max-width: 1310px) {
     body{
       font-size: 15px;

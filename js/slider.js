@@ -8,10 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   	$('body').css('overflow', 'auto');
   	$('body').css('padding-right', 0);
   }
-  // $('.about-img').parallax({
-	// 		imageSrc: 'img/home/about/1.jpg',
-	// 		speed: '0.75'
-	// });
   const swiperMain = new Swiper('.home-slider', {
     slidesPerView: 1,
     centeredSlides: true,
@@ -119,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		$('.gallery-popup-three').addClass('show');
 		disabledScroll();
 	})
-
 	function closeGalleryPopup() {
 		$('.gallery-popup').removeClass('show'); // скрываем его
 		enableScroll();

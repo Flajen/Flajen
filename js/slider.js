@@ -22,6 +22,14 @@ document.addEventListener("DOMContentLoaded", () => {
       delay: 3300,
       disableOnInteraction: false
     },
+    breakpoints: {
+      320: {
+        spaceBetween: 0,
+      },
+      480: {
+        spaceBetween: 5,
+      }
+    },
     observer: true,
     observeParents: true,
     observeSlideChildren: true,

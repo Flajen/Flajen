@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 1,
     centeredSlides: true,
     spaceBetween: 5,
-    speed: 1400,
+    speed: 1600,
     loop: true,
     navigation: {
       nextEl: '.swiperMain-next',
       prevEl: '.swiperMain-prev',
     },
     autoplay: {
-      delay: 2500,
+      delay: 3300,
       disableOnInteraction: false
     }
   });

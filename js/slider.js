@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 5,
     speed: 1600,
     loop: true,
-    lazy: true,
     navigation: {
       nextEl: '.swiperMain-next',
       prevEl: '.swiperMain-prev',

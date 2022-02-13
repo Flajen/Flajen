@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 5,
     speed: 1600,
     loop: true,
+    lazy: true,
     navigation: {
       nextEl: '.swiperMain-next',
       prevEl: '.swiperMain-prev',
@@ -21,7 +22,10 @@ document.addEventListener("DOMContentLoaded", () => {
     autoplay: {
       delay: 3300,
       disableOnInteraction: false
-    }
+    },
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
   });
   const peculiaritiesSliderOne = new Swiper('.peculiaritiesSliderOne', {
     slidesPerView: 1,
@@ -29,6 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 0,
     speed: 1100,
     loop: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
   });
   const peculiaritiesSliderTwo = new Swiper('.peculiaritiesSliderTwo', {
     slidesPerView: 1,
@@ -36,6 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 0,
     speed: 1100,
     loop: true,
+    observer: true,
+    observeParents: true,
+    observeSlideChildren: true,
   });
   peculiaritiesSliderOne.controller.control = peculiaritiesSliderTwo;
   peculiaritiesSliderTwo.controller.control = peculiaritiesSliderOne;

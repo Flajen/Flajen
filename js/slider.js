@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", () => {
     observeParents: true,
     observeSlideChildren: true,
   });
-  peculiaritiesSliderOne.controller.control = peculiaritiesSliderTwo;
-  peculiaritiesSliderTwo.controller.control = peculiaritiesSliderOne;
+  // peculiaritiesSliderOne.controller.control = peculiaritiesSliderTwo;
+  // peculiaritiesSliderTwo.controller.control = peculiaritiesSliderOne;
   $('.peculiarities-sticky-link').click(function(e){
 		e.preventDefault();
     $('.peculiarities-sticky-link').removeClass('active');

@@ -322,7 +322,6 @@
 @media screen and (max-width: 1310px) {
   body{
     font-size: 15px;
-    overflow-x: hidden;
   }
   h1, h2, h3{font-size: 25px;}
   .btn_main{font-size: 15px;}

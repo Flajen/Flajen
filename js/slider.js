@@ -132,7 +132,27 @@ document.addEventListener("DOMContentLoaded", () => {
 		$('.gallery-popup-three').addClass('show');
 		disabledScroll();
 	})
-	function closeGalleryPopup() {
+  $('.peculiarities-video-one').click(function(){
+    $('.peculiarities-popup-one').addClass('show');
+    disabledScroll();
+  })
+  $('.peculiarities-video-two').click(function(){
+    $('.peculiarities-popup-two').addClass('show');
+    disabledScroll();
+  })
+	function closePeculiaritiesPopup() {
+		$('.peculiarities-popup').removeClass('show'); // скрываем его
+		enableScroll();
+	}
+  $('.peculiarities-popup-close').click(function(){closePeculiaritiesPopup()})
+	$('.peculiarities-popup').mouseup(function (e){ // событие клика по веб-документу
+		var div = $('.peculiarities-popup-video'); // тут указываем класс элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+			&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+        closePeculiaritiesPopup();
+		}
+	});
+  function closeGalleryPopup() {
 		$('.gallery-popup').removeClass('show'); // скрываем его
 		enableScroll();
 	}

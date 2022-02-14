@@ -319,11 +319,25 @@
     font-weight: 300;
     text-align: center;
   }
-@media screen and (max-width: 1310px) {
-  body{
-    font-size: 15px;
+@media screen and (max-width: 1280px) {
+  body{font-size: 17px;}
+  header{top: 30px;}
+}
+@media screen and (max-width: 1115px) {.container{padding: 0 20px;}}
+@media screen and (max-width: 1024px) {
+  body{font-size: 16px;}
+  h1, h2, h3{
+    font-size: 35px;
   }
+  .header-menu-links{
+    right: 0;
+  }
+}
+@media screen and (max-width: 992px) {}
+@media screen and (max-width: 768px) {
+  body{font-size: 15px;}
   h1, h2, h3{font-size: 25px;}
+  .container{padding: 0;}
   .btn_main{font-size: 15px;}
   .btn_main-call{padding: 12px 0;}
   header{

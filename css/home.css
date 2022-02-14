@@ -966,8 +966,7 @@
     left: 40px;
   }
 }
-@media screen and (max-width: 992px) {}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   html,
   body{
     overflow-x: hidden;

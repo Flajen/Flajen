@@ -333,8 +333,7 @@
     right: 0;
   }
 }
-@media screen and (max-width: 992px) {}
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 950px) {
   body{font-size: 15px;}
   h1, h2, h3{font-size: 25px;}
   .container{padding: 0;}

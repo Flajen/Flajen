@@ -40,6 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 0,
     speed: 1100,
     loop: true,
+    navigation: {
+      nextEl: '.peculiaritiesSliderOne-next',
+      prevEl: '.peculiaritiesSliderOne-prev',
+    },
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
@@ -50,12 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
     spaceBetween: 0,
     speed: 1100,
     loop: true,
+    navigation: {
+      nextEl: '.peculiaritiesSliderTwo-next',
+      prevEl: '.peculiaritiesSliderTwo-prev',
+    },
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
   });
-  // peculiaritiesSliderOne.controller.control = peculiaritiesSliderTwo;
-  // peculiaritiesSliderTwo.controller.control = peculiaritiesSliderOne;
+  peculiaritiesSliderOne.controller.control = peculiaritiesSliderTwo;
+  peculiaritiesSliderTwo.controller.control = peculiaritiesSliderOne;
   $('.peculiarities-sticky-link').click(function(e){
 		e.preventDefault();
     $('.peculiarities-sticky-link').removeClass('active');
@@ -143,6 +151,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	function closePeculiaritiesPopup() {
 		$('.peculiarities-popup').removeClass('show'); // скрываем его
 		enableScroll();
+    $("iframe").each(function() {
+      $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
+    });
 	}
   $('.peculiarities-popup-close').click(function(){closePeculiaritiesPopup()})
 	$('.peculiarities-popup').mouseup(function (e){ // событие клика по веб-документу

@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
     centeredSlides: true,
     spaceBetween: 0,
     speed: 1100,
-    loop: true,
+    // loop: true,
     navigation: {
       nextEl: '.peculiaritiesSliderOne-next',
       prevEl: '.peculiaritiesSliderOne-prev',
@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     centeredSlides: true,
     spaceBetween: 0,
     speed: 1100,
-    loop: true,
+    // loop: true,
     navigation: {
       nextEl: '.peculiaritiesSliderTwo-next',
       prevEl: '.peculiaritiesSliderTwo-prev',
@@ -64,6 +64,10 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   peculiaritiesSliderOne.controller.control = peculiaritiesSliderTwo;
   peculiaritiesSliderTwo.controller.control = peculiaritiesSliderOne;
+  function linkTop() {
+    var target = $("#linktop").offset().top;
+		$("html, body").animate({scrollTop: target-150}, 800);
+  }
   $('.peculiarities-sticky-link').click(function(e){
 		e.preventDefault();
     $('.peculiarities-sticky-link').removeClass('active');
@@ -71,9 +75,19 @@ document.addEventListener("DOMContentLoaded", () => {
     var dataLink = $(this).attr('data-link');
     $(`.peculiarities-sticky-link[data-link="${dataLink}"]`).addClass('active');
     $(`.${$(this).attr('data-link')}`).addClass('active');
-		var target = $("#linktop").offset().top;
-		$("html, body").animate({scrollTop: target-150}, 800);
+    linkTop();
   });
+  peculiaritiesSliderOne.on('slideChange', function(){
+    var peculiaritiesActive = $('.swiper-slide-active').find('.peculiarities-sticky-link').attr('data-link');
+    if (peculiaritiesActive == 'filtration'){
+      $('.filtration').removeClass('active');
+      $('.bowl').addClass('active');
+    }else{
+      $('.filtration').addClass('active');
+      $('.bowl').removeClass('active');
+    }
+    linkTop();
+  })
   const swiper1 = new Swiper('.swiper1', {
     slidesPerView: 1,
     centeredSlides: true,

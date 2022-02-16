@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +11,13 @@
   <link rel="stylesheet" href="css/home.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
   <title>ООО «Дежуайо Нева»</title>
-  <!-- <script src="js/parallax.min.js"></script> -->
+  <script src="js/jquery.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+  <script src="js/master.js" defer></script>
+  <script src="js/slider.js" defer></script>
+  <script src="js/form.js" defer></script>
 </head>
 <body>
 <header>
@@ -26,7 +31,7 @@
         </div>
       </div>
       <div class="header-block">
-        <button type="button" name="call" class="btn_main btn_main-call mobile_hide">Обратный звонок</button>
+        <button type="button" name="call" class="btn_main btn_form btn_main-call mobile_hide">Обратный звонок</button>
         <div class="header-menu">
           <button type="button" name="burger" class="burger">
             <span class="burger_line burger_line-one"></span>
@@ -59,7 +64,7 @@
       <p class="home-contact-time">09:00-18:00</p>
     </div>
   </div>
-  <button type="button" name="call" class="btn_main btn_main-call btn_mobile">Обратный звонок</button>
+  <button type="button" name="call" class="btn_main btn_form btn_main-call btn_mobile">Обратный звонок</button>
 </div>
 <section class="home" id="home">
   <div class="home-body">
@@ -96,12 +101,29 @@
     </div>
   </div>
 </section>
+<div class="popup-wrapper popup-wrapper-form">
+  <form class="popup-form popup-check" onsubmit="send(event, 'form/formCall.php')" enctype="multipart/form-data" method="post">
+    <button type="button" name="close" class="popup-close"></button>
+    <p class="popup-heading">Заявка на обратный звонок</p>
+    <div class="popup-form-input-wrapper">
+      <input type="text" name="name" placeholder="Имя" class="popup-form-input">
+      <input type="text" name="phone" placeholder="Телефон" class="popup-form-input">
+    </div>
+    <button type="submit" name="button" class="btn_main popup-form-btn">Отправить заявку</button>
+  </form>
+</div>
+<div class="popup-wrapper popup-wrapper-success">
+  <div class="popup-success popup-check">
+    <button type="button" name="close" class="popup-close"></button>
+    <p class="popup-heading">Ваша заявка отправлена</p>
+    <p class="popup-text">Мы свяжемся с Вами в течение дня</p>
+  </div>
+</div>
 <section class="about" id="about">
   <div class="container-big">
     <div class="about-body">
       <div class="about-img-wrapper">
         <img src="img/home/about/1.png" alt="" class="about-img">
-        <!-- <div class="about-img" data-parallax="scroll" data-image-src="img/home/about/1.jpg"></div> -->
         <img src="img/home/about/2.png" data-aos="zoom-in" data-aos-once="true" alt="" class="about-img-fly">
       </div>
       <div class="about-info">
@@ -293,10 +315,10 @@
       <div class="question-info block_blue">
         <h2 class="question-title">Хотите узнать стоимость бассейна <span class="yellow weight">по Вашим критериям?</span></h2>
         <div class="question-text-wrapper">
-          <p class="question-text">У нас есть <span class="yellow">фиксированный прайс</span> на комплекты оборудования для строительства стандартных бассейнов наиболее популярных размеров, по которому Вы сами сможете определить приблизительную стоимость</p>
+          <p class="question-text">У нас есть <a href="document/file" class="yellow">фиксированный прайс</a> на комплекты оборудования для строительства стандартных бассейнов наиболее популярных размеров, по которому Вы сами сможете определить приблизительную стоимость</p>
           <p class="question-text">Но намного быстрее и точнее будет <span class="help">оставить заявку или позвонить нам</span>. Инженер предложит оптимальные для Вас варианты в разных ценовых сегментах и ответит на все интересующие Вас вопросы.</p>
         </div>
-        <button type="button" class="btn_main question-btn">Оставить заявку</button>
+        <button type="button" class="btn_main btn_form question-btn">Оставить заявку</button>
       </div>
       <img src="img/home/question/ph.png" alt="" class="question-img">
     </div>
@@ -498,16 +520,16 @@
         <li><a href="#!" class="footer-link">Проекты</a></li>
         <li><a href="#!" class="footer-link">Шоурум СПБ</a></li>
       </ul> -->
-      <button type="button" name="call" class="btn_main btn_main-call">Обратный звонок</button>
+      <button type="button" name="call" class="btn_main btn_form btn_main-call">Обратный звонок</button>
     </div>
     <p class="footer-coopright">© <span class="year">Год</span> ООО «Дежуайо Нева»</p>
   </div>
 </footer>
-  <script src="js/jquery.min.js"></script>
+  <!-- <script src="js/jquery.min.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
   <script src="js/master.js"></script>
-  <script src="js/slider.js"></script>
+  <script src="js/slider.js"></script> -->
 </body>
 </html>

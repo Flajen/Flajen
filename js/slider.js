@@ -39,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
     centeredSlides: true,
     spaceBetween: 0,
     speed: 1100,
-    // loop: true,
     navigation: {
       nextEl: '.peculiaritiesSliderOne-next',
       prevEl: '.peculiaritiesSliderOne-prev',
@@ -53,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     centeredSlides: true,
     spaceBetween: 0,
     speed: 1100,
-    // loop: true,
     navigation: {
       nextEl: '.peculiaritiesSliderTwo-next',
       prevEl: '.peculiaritiesSliderTwo-prev',

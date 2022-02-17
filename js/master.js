@@ -4,9 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   AOS.init({
     disable: function () {
       var maxWidth = 768;
-      return window.innerWidth < maxWidth;
-    }
-  });
+      return window.innerWidth < maxWidth;}});
   var burger = document.querySelector(".burger");
   var menu = document.querySelector(".header-menu-links");
   var mobileMenu = document.querySelector(".mobile-menu");

@@ -562,6 +562,35 @@
     width: 110px;
     height: 55px;
   }
+  .popup-wrapper{
+    grid-template-columns: minmax(auto, 350px);
+  }
+  .popup-close{
+    width: 15px;
+    height: 15px;
+    right: 10px;
+    top: 10px;
+  }
+  .popup-heading{
+    font-size: 18px;
+  }
+  .popup-form{
+    padding: 30px 20px 22px 20px;
+    grid-gap: 20px;
+  }
+  .popup-success{
+    padding: 30px 20px;
+  }
+  .popup-text{
+    font-size: 14px;
+  }
+  .popup-form-input{
+    font-size: 15px;
+    padding: 12px 15px 13px 15px;
+  }
+  .popup-form-btn{
+    padding: 12px 15px 13px 15px;
+  }
   footer{
     padding: 20px 20px 25px 20px;
     margin-top: 100px;

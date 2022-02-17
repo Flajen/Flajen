@@ -140,51 +140,88 @@ document.addEventListener("DOMContentLoaded", () => {
     observeParents: true,
     observeSlideChildren: true,
   });
+  function closePopup() {
+    $('.popup-wrapper').removeClass('show');
+    enableScroll();};
+  $('.btn_form').click(function(){
+    $('.popup-wrapper-form').addClass('show');
+    disabledScroll();});
+  $('.popup-close').click(function(){closePopup();});
+  $('.popup-wrapper-success').mouseup(function (e){
+    var div = $('.popup-check');
+    if (!div.is(e.target)
+      && div.has(e.target).length === 0) {
+        closePopup();}});
+  function checkInput(form,name) {
+    var input = $(`.${form}`).find($(`input[name="${name}"]`));
+    if (input.val() == '') {
+      input.addClass('necessary');
+      input.addClass('shake');
+      setTimeout(() => {
+        input.removeClass('shake');
+      }, 150);
+      input.bind('input', function(){
+        if (input.val() != '') {
+          input.removeClass('necessary');
+        } else {
+          input.addClass('necessary');
+          input.addClass('shake');
+          setTimeout(() => {
+            input.removeClass('shake');
+          }, 150);}});}}
+  $('.popup-form').submit(function(e) {
+    e.preventDefault();
+    let th = $(this);
+    var inputName = th.find('input[name="name"]');
+    var inputPhone = th.find('input[name="phone"]');
+    if (inputName.val() == '' && inputPhone.val() == ''){
+      if (inputName.val() == ''){checkInput('popup-form', inputName.attr('name'))}
+      if (inputPhone.val() == ''){checkInput('popup-form', inputPhone.attr('name'))}
+    } else{
+      $.ajax({
+        type: "POST",
+        url: 'form/formCall.php',
+        data: th.serialize(),
+        success: function(){
+         $('.popup-wrapper-form').removeClass('show');
+         $('.popup-wrapper-success').addClass('show');
+         th.trigger('reset');
+       }, error: function(){}
+     });}});
   $('.gone').click(function(){
 		$('.gallery-popup-one').addClass('show');
-		disabledScroll();
-	})
+		disabledScroll();})
 	$('.gtwo').click(function(){
 		$('.gallery-popup-two').addClass('show');
-		disabledScroll();
-	})
+		disabledScroll();})
 	$('.gthree').click(function(){
 		$('.gallery-popup-three').addClass('show');
-		disabledScroll();
-	})
+		disabledScroll();})
   $('.peculiarities-video-one').click(function(){
     $('.peculiarities-popup-one').addClass('show');
-    disabledScroll();
-  })
+    disabledScroll();})
   $('.peculiarities-video-two').click(function(){
     $('.peculiarities-popup-two').addClass('show');
-    disabledScroll();
-  })
+    disabledScroll();})
 	function closePeculiaritiesPopup() {
 		$('.peculiarities-popup').removeClass('show'); // скрываем его
 		enableScroll();
     $("iframe").each(function() {
       $(this)[0].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*')
-    });
-	}
+    });}
   $('.peculiarities-popup-close').click(function(){closePeculiaritiesPopup()})
-	$('.peculiarities-popup').mouseup(function (e){ // событие клика по веб-документу
-		var div = $('.peculiarities-popup-video'); // тут указываем класс элемента
-		if (!div.is(e.target) // если клик был не по нашему блоку
-			&& div.has(e.target).length === 0) { // и не по его дочерним элементам
-        closePeculiaritiesPopup();
-		}
-	});
+	$('.peculiarities-popup').mouseup(function (e){
+		var div = $('.peculiarities-popup-video');
+		if (!div.is(e.target)
+			&& div.has(e.target).length === 0) {
+        closePeculiaritiesPopup();}});
   function closeGalleryPopup() {
-		$('.gallery-popup').removeClass('show'); // скрываем его
-		enableScroll();
-	}
+		$('.gallery-popup').removeClass('show');
+		enableScroll();}
 	$('.gallery-popup-close').click(function(){closeGalleryPopup()})
-	$('.gallery-popup').mouseup(function (e){ // событие клика по веб-документу
-		var div = $('.gallery-popup-body'); // тут указываем класс элемента
-		if (!div.is(e.target) // если клик был не по нашему блоку
-			&& div.has(e.target).length === 0) { // и не по его дочерним элементам
-			closeGalleryPopup();
-		}
-	});
+	$('.gallery-popup').mouseup(function (e){
+		var div = $('.gallery-popup-body');
+		if (!div.is(e.target)
+			&& div.has(e.target).length === 0) {
+			closeGalleryPopup();}});
 })

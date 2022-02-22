@@ -72,15 +72,17 @@ $(document).ready(function(){
   const jobsSwiper = new Swiper('.jobs_swiper', {
     slidesPerView: 3,
     centeredSlides: false,
-    navigation: {
-      nextEl: '.jobs_swiper-next',
-      prevEl: '.jobs_swiper-prev',
-    },
     breakpoints: {
       320:{
-        slidesPerView: 'auto',
+        slidesPerView: 1,
         spaceBetween: 10,
         speed: 400,
+        navigation: false,
+        pagination: {
+          el: ".swiperbullet-pagination",
+          type: 'bullets',
+          dynamicBullets: true,
+        },
       },
       576:{
         slidesPerView: 2,
@@ -91,6 +93,11 @@ $(document).ready(function(){
         slidesPerView: 3,
         spaceBetween: 30,
         speed: 700,
+        navigation: {
+          nextEl: '.jobs_swiper-next',
+          prevEl: '.jobs_swiper-prev',
+        },
+        pagination: false,
       },
     }
   });
@@ -99,14 +106,6 @@ $(document).ready(function(){
     centeredSlides: false,
     spaceBetween: 20,
     speed: 700,
-    // pagination: {
-    //   el: '.jobs_swiper-pagination',
-    //   type: 'fraction',
-    // },
-    // navigation: {
-    //   nextEl: '.jobs_popup_swiper-next',
-    //   prevEl: '.jobs_popup_swiper-prev',
-    // },
     breakpoints: {
       320:{
         spaceBetween: 10,
@@ -183,8 +182,20 @@ $(document).ready(function(){
       },
     }
   });
+  $('.video-one').click(function(){
+    $('.video_popup-one').addClass('open')
+  })
+  $('.video-two').click(function(){
+    $('.video_popup-two').addClass('open')
+  })
   function closePopup() {
     $('.popup').removeClass('open');
+    // $('video').pause();
+    $('video').each(function(){
+      $(this).get(0).pause();
+      $(this).get(0).currentTime = 0;
+      console.log($(this));
+    })
     enableScroll();
   }
   $('.popup-close').click(function(){closePopup()});

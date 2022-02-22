@@ -35,6 +35,7 @@
           </div>
           <nav class="header_nav">
             <ul class="header_nav-links">
+              <li><a href="#home" class="header_nav-link hide">Главная</a></li>
               <li><a href="#kinds" class="header_nav-link">Услуги</a></li>
               <li><a href="#price" class="header_nav-link">Прайс</a></li>
               <li><a href="#payment" class="header_nav-link">Способы оплаты</a></li>
@@ -60,7 +61,7 @@
           <h1 class="home-title">Услуги нанесения дорожной разметки в Ростове-на-Дону и области</h1>
           <ul class="home-lists">
             <li class="marker">Работаем с готовыми проектами или создаём собственный</li>
-            <li class="marker">Гарантия на выполненную работу от 3 до 12 месяцев <span class="br"></span>(в зависимости от способа нанесения и вида работы)</li>
+            <li class="marker">Гарантия на выполненную работу от  <span class="help">3 до 12 месяцев</span> <span class="br"></span>(в зависимости от способа нанесения и вида работы)</li>
           </ul>
           <div class="home_block">
             <div class="home_block-heading">
@@ -330,15 +331,16 @@
               <button type="button" name="slide" class="swiper-slide jobs_swiper-slide"><img src="img/jobs/12.jpg" alt=""></button>
             </div>
           </div>
+          <div class="swiper-pagination swiperbullet-pagination"></div>
           <button class="jobs_swiper-btn next jobs_swiper-next"></button>
           <button class="jobs_swiper-btn prev jobs_swiper-prev"></button>
         </div>
         <div class="jobs_video">
-          <button type="button" name="videoOne" class="jobs_video-btn icon">
+          <button type="button" name="videoOne" class="jobs_video-btn video-one icon">
             <img src="img/jobs/video/1.png" alt="" class="jobs_video-img">
             <span class="jobs_video-fogging"></span>
           </button>
-          <button type="button" name="videoTwo" class="jobs_video-btn icon">
+          <button type="button" name="videoTwo" class="jobs_video-btn video-two icon">
             <img src="img/jobs/video/2.png" alt="" class="jobs_video-img">
             <span class="jobs_video-fogging"></span>
           </button>
@@ -370,10 +372,21 @@
       <div class="swiper-pagination jobs_popup_swiper-pagination"></div>
     </div>
   </div>
-  <div class="jobs-video_popup popup">
-    <div class="jobs_popup-body popup-check">
-      <button type="button" name="close" class="popup-close jobs_popup-close"></button>
-      <div></div>
+
+  <div class="jobs-video_popup video_popup-one popup">
+    <div class="jobs-video-body one popup-check">
+      <button type="button" name="close" class="popup-close jobs-video-close"></button>
+      <div class="jobs-video">
+        <video src="video/1.MP4" controls></video> 
+      </div>
+    </div>
+  </div>
+  <div class="jobs-video_popup video_popup-two popup">
+    <div class="jobs-video-body two popup-check">
+      <button type="button" name="close" class="popup-close jobs-video-close"></button>
+      <div class="jobs-video">
+        <video src="video/2.MP4" controls></video> 
+      </div>
     </div>
   </div>
 
@@ -414,7 +427,7 @@
           <p class="footer-text">ул. Дорожной разметки, д. 4, 765</p>
         </div>
         <div class="footer_block footer_block-mail">
-          <a href="mailto:razmetka@mail.ru" class="footer-link footer-heading mail">razmetka@mail.ru</a>
+          <a href="mailto:road_markings161@mail.ru" class="footer-link footer-heading mail">road_markings161@mail.ru</a>
           <div class="footer_icon-wrapper">
             <a href="#!" class="insta footer_icon"></a>
             <a href="#!" class="whats footer_icon"></a>

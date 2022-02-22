@@ -12,6 +12,16 @@
   <title>Дорожная разметка</title>
 </head>
 <body>
+  <div class="header_mobile-cap">
+    <div class="header_logo-wrapper header_mobile-show">
+      <img src="img/logo.png" alt="ЗНАК" class="header_logo-img">
+      <div class="header_logo-info">
+        <p class="header_logo-title">ЗНАК</p>
+        <p class="header_logo-subtitle">Наносим дорожную разметку с 2007 г.</p>
+      </div>
+    </div>
+    <button type="button" name="burger" class="header_mobile-btn"></button>
+  </div>
   <header class="header" id="header">
     <div class="header-body">
       <div class="container">
@@ -25,7 +35,7 @@
           </div>
           <nav class="header_nav">
             <ul class="header_nav-links">
-              <li><a href="#home" class="header_nav-link">Услуги</a></li>
+              <li><a href="#kinds" class="header_nav-link">Услуги</a></li>
               <li><a href="#price" class="header_nav-link">Прайс</a></li>
               <li><a href="#payment" class="header_nav-link">Способы оплаты</a></li>
               <li><a href="#footer" class="header_nav-link">Контакты</a></li>
@@ -33,7 +43,7 @@
           </nav>
           <div class="header_contacts">
             <a href="tel:+78634537596" class="header_contacts-link header_contacts-phone">+7 (863) 453-75-96</a>
-            <a href="mailto:razmetka@mail.ru" class="header_contacts-link header_contacts-mail">road_markings161@mail.ru</a>
+            <a href="mailto:road_markings161@mail.ru" class="header_contacts-link header_contacts-mail">road_markings161@mail.ru</a>
           </div>
         </div>
       </div>
@@ -189,26 +199,70 @@
             <p class="price_table-line price_table-text"></p>
           </div>
         </div>
-        <div class="price_info" id="payment">
-          <img src="img/price/bg.png" alt="" class="price_info-bg">
-          <img src="img/price/lines.png" alt="" class="price_info-line-img">
-          <div class="price_info-body">
-            <div class="price_info-help">
-              <div class="price_info-heading">
-                <h3 class="price_info-title">Не знаете какой материал для нанесения выбрать?</h3>
-                <p class="price_info-subtitle">Оставьте заявку на консультацию и мы расскажем на чём <span class="help">можно сэкономить</span> конкретно в вашем случае, а на чём не стоит</p>
-              </div>
-              <form action="check.php" class="price_info-form">
-                <input type="tel" name="phone" class="input price_info-input phone" placeholder="Телефон">
-                <button type="submit" class="btn price_info-btn">Оставить заявку</button>
-              </form>
+
+        <div class="price_table-container">
+          <div class="price_table-body">
+            <div class="price_table_swiper-block price_table_swiper-block-heading">
+              <p class="price_table_swiper-block-text">Материал</p>
+              <p class="price_table_swiper-block-text">Цена</p>
+              <p class="price_table_swiper-block-text">Гарантия</p>
+              <p class="price_table_swiper-block-text">Подробнее</p>
             </div>
-            <div class="price_info_payment">
-              <p class="price_info-title">Способы оплаты</p>
-              <ul class="price_info_payment-lists">
-                <li class="marker">Наличные</li>
-                <li class="marker">Безналичный расчёт для юридических лиц (договор)</li>
-              </ul>
+            <div class="swiper price_table_swiper">
+              <div class="swiper-wrapper price_table_swiper-wrapper">
+                <div class="swiper-slide price_table_swiper-block">
+                  <p class="price_table_swiper-block-text price_table_swiper-block-name">Краска</p>
+                  <p class="price_table_swiper-block-text">300–700 ₽ за м²</p>
+                  <p class="price_table_swiper-block-text">3–6 месяцев</p>
+                  <button type="button" name="paint" class="price_table_swiper-block-text price_table-btn">О материале</button>
+                </div>
+                <div class="swiper-slide price_table_swiper-block">
+                  <p class="price_table_swiper-block-text price_table_swiper-block-name">Термопластик</p>
+                  <p class="price_table_swiper-block-text">1000–1400 ₽ за м²</p>
+                  <p class="price_table_swiper-block-text">6–12 месяцев</p>
+                  <button type="button" name="thermoplastic" class="price_table_swiper-block-text price_table-btn">О материале</button>
+                </div>
+                <div class="swiper-slide price_table_swiper-block">
+                  <p class="price_table_swiper-block-text price_table_swiper-block-name">Холодный пластик</p>
+                  <p class="price_table_swiper-block-text">1200–2000 ₽ за м²</p>
+                  <p class="price_table_swiper-block-text">6–12 месяцев</p>
+                  <button type="button" name="plastic" class="price_table_swiper-block-text price_table-btn">О материале</button>
+                </div>
+                <div class="swiper-slide price_table_swiper-block">
+                  <p class="price_table_swiper-block-text price_table_swiper-block-name">Демаркировка</p>
+                  <p class="price_table_swiper-block-text">800–10 000 ₽ за м²</p>
+                  <p class="price_table_swiper-block-text">—</p>
+                  <p class="price_table_swiper-block-text"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="price_info-wrapper">
+          <div class="price_info" id="payment">
+            <img src="img/price/bg.png" alt="" class="price_info-bg">
+            <img src="img/price/lines-horizontal.png" alt="" class="price_info-line-img horizontal">
+            <img src="img/price/lines-vertical.png" alt="" class="price_info-line-img vertical">
+            <div class="price_info-body">
+              <div class="price_info-help">
+                <div class="price_info-heading">
+                  <h3 class="price_info-title">Не знаете какой материал для нанесения выбрать?</h3>
+                  <p class="price_info-subtitle">Оставьте заявку на консультацию и мы расскажем на чём <span class="help">можно сэкономить</span> конкретно в вашем случае, а на чём не стоит</p>
+                </div>
+                <form action="check.php" class="price_info-form">
+                  <input type="tel" name="phone" class="input price_info-input phone" placeholder="Телефон">
+                  <button type="submit" class="btn price_info-btn">Оставить заявку</button>
+                </form>
+              </div>
+              <div class="price_info_payment">
+                <p class="price_info-title">Способы оплаты</p>
+                <ul class="price_info_payment-lists">
+                  <li class="marker">Наличные</li>
+                  <li class="marker">Безналичный расчёт для юридических лиц (договор)</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -316,18 +370,36 @@
       <div class="swiper-pagination jobs_popup_swiper-pagination"></div>
     </div>
   </div>
+  <div class="jobs-video_popup popup">
+    <div class="jobs_popup-body popup-check">
+      <button type="button" name="close" class="popup-close jobs_popup-close"></button>
+      <div></div>
+    </div>
+  </div>
 
   <section class="cooperation" id="cooperation">
     <div class="container">
       <h2 class="section-title">Сотрудничаем с крупными компаниями</h2>
-      <div class="cooperation-body">
-        <div class="cooperation-block"><img src="img/cooperation/megaf.png" alt=""></div>
-        <div class="cooperation-block"><img src="img/cooperation/gaz.png" alt=""></div>
-        <div class="cooperation-block"><img src="img/cooperation/globus.png" alt=""></div>
-        <div class="cooperation-block"><img src="img/cooperation/sber.png" alt=""></div>
-        <div class="cooperation-block"><img src="img/cooperation/pik.png" alt=""></div>
-      </div>
     </div>
+      <div class="swiper cooperation_swiper">
+        <div class="swiper-wrapper cooperation-wrapper">
+          <div class="swiper-slide cooperation-block">
+            <div class="cooperation-img-wrapper"><img src="img/cooperation/megaf.png" alt=""></div>
+          </div>
+          <div class="swiper-slide cooperation-block">
+            <div class="cooperation-img-wrapper"><img src="img/cooperation/gaz.png" alt=""></div>
+          </div>
+          <div class="swiper-slide cooperation-block">
+            <div class="cooperation-img-wrapper"><img src="img/cooperation/globus.png" alt=""></div>
+          </div>
+          <div class="swiper-slide cooperation-block">
+            <div class="cooperation-img-wrapper"><img src="img/cooperation/sber.png" alt=""></div>
+          </div>
+          <div class="swiper-slide cooperation-block">
+            <div class="cooperation-img-wrapper"><img src="img/cooperation/pik.png" alt=""></div>
+          </div>
+        </div>
+      </div>
   </section>
 
   <footer class="footer" id="footer">

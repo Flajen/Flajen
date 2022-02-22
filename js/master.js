@@ -116,6 +116,10 @@ $(document).ready(function(){
       576:{
         spaceBetween: 20,
         speed: 500,
+        navigation: {
+          nextEl: '.jobs_popup_swiper-next',
+          prevEl: '.jobs_popup_swiper-prev',
+        },
       },
       768:{
         spaceBetween: 30,
@@ -123,10 +127,6 @@ $(document).ready(function(){
         pagination: {
           el: '.jobs_swiper-pagination',
           type: 'fraction',
-        },
-        navigation: {
-          nextEl: '.jobs_popup_swiper-next',
-          prevEl: '.jobs_popup_swiper-prev',
         },
       },
     }

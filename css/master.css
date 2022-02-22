@@ -1525,6 +1525,7 @@ footer{
   .home_block{
     grid-template-columns: minmax(250px,335px);
     position: absolute;
+    z-index: 2;
     left: 50%;
     top: 110%;
     transform: translate(-50%,0);

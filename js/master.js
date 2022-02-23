@@ -118,15 +118,15 @@ $(document).ready(function(){
       nextEl: '.jobs_popup_swiper-next',
       prevEl: '.jobs_popup_swiper-prev',
     },
+    pagination: {
+      el: '.jobs_popup_swiper-pagination',
+      type: 'fraction',
+    },
     breakpoints: {
       320:{
         spaceBetween: 10,
         speed: 400,
         navigation: false,
-        pagination: {
-          el: '.jobs_popup_swiper-pagination',
-          type: 'fraction',
-        },
       },
       576:{
         spaceBetween: 20,
@@ -178,10 +178,12 @@ $(document).ready(function(){
   $('.video-one').click(function(){
     $('.video_popup-one').addClass('open')
     $('.video_popup-one').find('.jobs-video-body').find('.jobs-video').find('video').get(0).play();
+    disabledScroll();
   })
   $('.video-two').click(function(){
     $('.video_popup-two').addClass('open')
     $('.video_popup-two').find('.jobs-video-body').find('.jobs-video').find('video').get(0).play();
+    disabledScroll();
   })
   function closePopup() {
     $('.popup').removeClass('open');

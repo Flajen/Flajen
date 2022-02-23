@@ -118,15 +118,15 @@ $(document).ready(function(){
       nextEl: '.jobs_popup_swiper-next',
       prevEl: '.jobs_popup_swiper-prev',
     },
-    pagination: {
-      el: '.jobs_popup_swiper-pagination',
-      type: 'fraction',
-    },
     breakpoints: {
       320:{
         spaceBetween: 10,
         speed: 400,
         navigation: false,
+        pagination: {
+          el: '.jobs_popup_swiper-pagination',
+          type: 'fraction',
+        },
       },
       576:{
         spaceBetween: 20,

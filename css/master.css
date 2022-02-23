@@ -1679,6 +1679,11 @@ footer{
     width: 40px;
     height: 40px;
   }
+  .jobs_popup_swiper-wrapper,
+  .jobs_popup_swiper{
+    width: 300px;
+    height: 300px;
+  }
   .jobs_popup_swiper-pagination{
     font-size: 14px;
     bottom: -25px;

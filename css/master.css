@@ -743,7 +743,7 @@ header{
 .jobs_swiper-slide{
   border-radius: 5px;
 }
-.jobs_popup_swiper-slide,
+.jobs_popup_swiper-slide img,
 .jobs_swiper-slide img{
   display: block;
   width: 100%;
@@ -1663,6 +1663,10 @@ footer{
   }
   .jobs_swiper-slide{
     width: 280px;
+  }
+  .jobs_popup_swiper-slide img{
+    width: 300px;
+    height: 300px;
   }
   .jobs_video{
     grid-template-columns: 1fr;

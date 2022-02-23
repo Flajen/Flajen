@@ -1132,6 +1132,9 @@ footer{
     max-height: 0;
     overflow: hidden;
   }
+  header.open{
+    overflow: auto;
+  }
   .header-body{
     height: 100vh;
     overflow: auto;

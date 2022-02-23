@@ -11,7 +11,7 @@ $(document).ready(function(){
     disableScroll = false;
   };
   function closeMenu() {
-    $('header_mobile-btn').removeClass('open');
+    $('.header_mobile-btn').removeClass('open');
     $('header').animate({height: 0}, 500).animate({opacity: 0,maxHeight: 0},0);
     $('header').removeClass('open');
   }

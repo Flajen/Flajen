@@ -148,7 +148,7 @@ $(document).ready(function(){
       $('.jobs_popup-wrapper').addClass('open');
       // disabledScroll();
       var elem = parseInt($(this).attr('name'))-1;
-      jobsPopupSwiper.slideTo(elem, 1, false);
+      // jobsPopupSwiper.slideTo(elem, 1, false);
     }
   })
   new Swiper('.price_table_swiper', {

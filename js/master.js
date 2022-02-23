@@ -3,13 +3,19 @@ $(document).ready(function(){
       scrollPos = 0;
   function disabledScroll() {
     $('body').addClass('no-scroll');
-    // disableScroll = true;
-    // scrollPos = $(window).scrollTop();
+    disableScroll = true;
+    scrollPos = $(window).scrollTop();
   }
   function enableScroll() {
     $('body').removeClass('no-scroll');
-    // disableScroll = false;
+    disableScroll = false;
   };
+  function closeMenu() {
+    $('header_mobile-btn').removeClass('open');
+    $('header').animate({height: 0}, 500).animate({opacity: 0,maxHeight: 0},0);
+    $('header').removeClass('open');
+    enableScroll()
+  }
   $(function(){
     $(window).bind('scroll', function(){if(disableScroll) $(window).scrollTop(scrollPos);});
     $(window).bind('touchmove', function(){$(window).trigger('scroll');});
@@ -22,41 +28,40 @@ $(document).ready(function(){
     var fixed_offset = 100;
     $('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 1000);
     e.preventDefault();
+    if ($('.header_nav-link').is(e.target)) {
+      closeMenu()
+    }
   });
-
-  // Мобилка
   $('.header_mobile-btn').click(function(){
-    var mobileBtn = $(this);
     if ($('header').hasClass('open')) {
-      mobileBtn.removeClass('open');
-      $('header').animate({height: 0}, 500).animate({opacity: 0,maxHeight: 0},0);
-      $('header').removeClass('open');
-      enableScroll()
+      closeMenu()
     } else{
-      mobileBtn.addClass('open');
+      $('.header_mobile-btn').addClass('open');
       $('header').animate({opacity: 1, height: '100%',maxHeight: '100%'}, 500);
       $('header').addClass('open');
       disabledScroll()
     }
   })
-
   var blockOptionBtn = $('.home_block-option-btn'),
       blockOption = $('.home_block-option');
   blockOptionBtn.click(function(){
     var thParent = $(this).parent();
     thParent.toggleClass('open');
-    thParent.find('.home_block-select-lists').addClass('open');
+    thParent.find('.home_block-select-lists').toggleClass('open');
     blockOption.click(function(){
       var th = $(this);
       th.parent().parent().find(blockOptionBtn).html(th.html())
       thParent.removeClass('open');
     })
-    $('body').mouseup(function (e){
-      var div = $('.home_block-select-lists');
-      if (!div.is(e.target)
-        && div.has(e.target).length === 0) {
-        thParent.removeClass('open');}});
   })
+  // $('body').mouseup(function (e){
+  //   var div = $('.home_block-option-btn');
+  //   // if (!div.is(e.target) && div.has(e.target).length === 0 && blockOptionBtn.is(e.target)) {
+  //   if (div.is(e.target) || div.has(e.target).length === 0 || blockOptionBtn.is(e.target)) {
+  //     blockOptionBtn.parent().removeClass('open');
+  //   } else{
+  //   }
+  // });
   $('.phone').inputmask({"mask": "+ 7 (999) 999-99-99"});
   var form = $('form');
   form.submit(function(e){
@@ -70,7 +75,6 @@ $(document).ready(function(){
     disabledScroll();
   });
   const jobsSwiper = new Swiper('.jobs_swiper', {
-    slidesPerView: 3,
     centeredSlides: false,
     breakpoints: {
       320:{
@@ -104,8 +108,6 @@ $(document).ready(function(){
   const jobsPopupSwiper = new Swiper('.jobs_popup_swiper', {
     slidesPerView: 1,
     centeredSlides: false,
-    spaceBetween: 20,
-    speed: 700,
     breakpoints: {
       320:{
         spaceBetween: 10,
@@ -141,27 +143,13 @@ $(document).ready(function(){
       $('.jobs_popup-wrapper').addClass('open');
       disabledScroll();
       var elem = parseInt($(this).attr('name'))-1;
-      jobsPopupSwiper.slideTo(elem, 0, false);
+      jobsPopupSwiper.slideTo(elem, 1, false);
     }
   })
   new Swiper('.price_table_swiper', {
     slidesPerView: 'auto',
     freeMode: false,
     centeredSlides: false,
-    // breakpoints: {
-    //   320:{
-    //     spaceBetween: 10,
-    //     speed: 400,
-    //   },
-    //   576:{
-    //     spaceBetween: 10,
-    //     speed: 500,
-    //   },
-    //   768:{
-    //     spaceBetween: 25,
-    //     speed: 700,
-    //   },
-    // }
   });
   new Swiper('.cooperation_swiper', {
     slidesPerView: 'auto',
@@ -184,17 +172,17 @@ $(document).ready(function(){
   });
   $('.video-one').click(function(){
     $('.video_popup-one').addClass('open')
+    $('.video_popup-one').find('.jobs-video-body').find('.jobs-video').find('video').get(0).play();
   })
   $('.video-two').click(function(){
     $('.video_popup-two').addClass('open')
+    $('.video_popup-two').find('.jobs-video-body').find('.jobs-video').find('video').get(0).play();
   })
   function closePopup() {
     $('.popup').removeClass('open');
-    // $('video').pause();
     $('video').each(function(){
       $(this).get(0).pause();
       $(this).get(0).currentTime = 0;
-      console.log($(this));
     })
     enableScroll();
   }

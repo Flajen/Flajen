@@ -734,6 +734,7 @@ header{
   margin: 0 auto 30px auto;
 }
 .jobs_popup_swiper{
+  width: 100%;
   height: 100%;
 }
 .swiper-slide {
@@ -1478,6 +1479,14 @@ footer{
     height: 15px;
   }
 
+  .header-body{
+    height: 100vh;
+    overflow: auto;
+    padding: 65px 0 20px 0;
+  }
+  .header-body.fly{
+    padding: 65px 0 20px 0;
+  }
   .header_logo-wrapper{
     grid-gap: 10px;
   }
@@ -1501,10 +1510,7 @@ footer{
     align-items: start;
     padding-top: 65px;
     margin-bottom: 520px;
-    max-height: 500px;
-  }
-  .home-wrapper{
-    max-height: 500px;
+    min-height: 503px;
   }
   .home_img-wrapper{
     overflow: hidden;
@@ -1512,8 +1518,9 @@ footer{
   .home_img{
     width: auto;
     height: 100%;
-    left: -20%;
-    transform: translate(-50%,0);
+    right: 385px;
+    /* left: -20%; */
+    /* transform: translate(-50%,0); */
   }
   .home-body{
     padding: 0;
@@ -1645,7 +1652,7 @@ footer{
     padding: 0;
   } */
   .jobs-body{
-    max-width: 350px;
+    width: 280px;
     margin: 0 auto;
   }
   .jobs_swiper{
@@ -1668,6 +1675,10 @@ footer{
   .jobs_popup-close{
     right: 0;
     top: -30px;
+  }
+  .jobs_video-btn::after{
+    width: 40px;
+    height: 40px;
   }
   .swiperbullet-pagination{
     display: block;

@@ -14,7 +14,6 @@ $(document).ready(function(){
     $('header_mobile-btn').removeClass('open');
     $('header').animate({height: 0}, 500).animate({opacity: 0,maxHeight: 0},0);
     $('header').removeClass('open');
-    enableScroll()
   }
   $(function(){
     $(window).bind('scroll', function(){if(disableScroll) $(window).scrollTop(scrollPos);});
@@ -39,7 +38,6 @@ $(document).ready(function(){
       $('.header_mobile-btn').addClass('open');
       $('header').animate({opacity: 1, height: '100%',maxHeight: '100%'}, 500);
       $('header').addClass('open');
-      disabledScroll()
     }
   })
   var blockOptionBtn = $('.home_block-option-btn'),
@@ -50,6 +48,7 @@ $(document).ready(function(){
       thParent.removeClass('open');
       thParent.find('.home_block-select-lists').removeClass('open');
     } else{
+      console.log("Нет");
       blockOptionBtn.parent().removeClass('open');
       blockOptionBtn.parent().find('.home_block-select-lists').removeClass('open');
       thParent.addClass('open');

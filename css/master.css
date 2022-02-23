@@ -442,20 +442,6 @@ header{
 .home-link:hover::after{
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M3.8.2a.71.71 0 0 0-.03 1l5.96 6.3-5.96 6.3a.71.71 0 1 0 1.03.98l6.43-6.79a.71.71 0 0 0 0-.98L4.8.22a.71.71 0 0 0-1-.02Z' fill='url(%23b)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='b' x1='7.52' y1='15' x2='7.52' y2='0' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%23FFCE39'/%3e%3cstop offset='1' stop-color='%23FFD041'/%3e%3c/linearGradient%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' transform='rotate(-90 7.5 7.5)' d='M0 0h15v15H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
-.home-link-gradient{
-  font-size: 18px;
-  font-weight: 600;
-  background: linear-gradient(90deg, #FFBE18 0%, #FFC618 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: #0B2349;
-  display: table;
-  /* color: transparent;    
-	-webkit-background-clip: text;
-	background-clip: text;
-	background-image: linear-gradient(90deg, #FFBE18 0%, #FFC618 100%); */
-}
-
 
 .kinds-body{
   display: grid;
@@ -1676,7 +1662,6 @@ footer{
   .jobs_video{
     grid-template-columns: 1fr;
     grid-gap: 10px;
-    /* padding: 0 20px; */
     grid-auto-rows: 190px;
   }
   .jobs_popup-body{

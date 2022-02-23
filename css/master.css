@@ -858,6 +858,17 @@ header{
 .jobs_popup_swiper-prev{
   left: -70px;
 }
+.jobs_popup_swiper-pagination{
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+  top: auto;
+  bottom: -45px;
+  letter-spacing: -0.1em;
+}
+.jobs_popup_swiper-pagination .swiper-pagination-current{
+  color: #FFBE18;
+}
 .jobs_popup_swiper{
   border-radius: 5px;
 }
@@ -1679,6 +1690,10 @@ footer{
   .jobs_video-btn::after{
     width: 40px;
     height: 40px;
+  }
+  .jobs_popup_swiper-pagination{
+    font-size: 14px;
+    bottom: -25px;
   }
   .swiperbullet-pagination{
     display: block;

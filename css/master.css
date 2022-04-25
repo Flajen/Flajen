@@ -1054,6 +1054,10 @@ footer {
 }
 .footer-block {
   display: grid;
+  align-items: center;
+  justify-content: start;
+  justify-items: start;
+  align-content: center;
   grid-gap: 30px;
   border-left: 1px solid #e8edf0;
   height: 100%;
@@ -1063,6 +1067,10 @@ footer {
 .footer-data {
   display: grid;
   grid-gap: 15px;
+  align-items: start;
+  justify-content: start;
+  justify-items: start;
+  align-content: center;
 }
 .footer-heading {
   color: #3f474a;
@@ -1398,6 +1406,7 @@ footer {
   .footer-body {
     flex-direction: column;
     align-items: flex-start;
+    justify-content: flex-start;
   }
   .footer-logo {
     display: none;

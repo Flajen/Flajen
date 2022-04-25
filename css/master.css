@@ -1414,17 +1414,18 @@ footer {
   }
   .footer-logo-phone {
     display: block;
+    margin-bottom: 25px;
   }
   .footer-block {
     width: 100%;
     margin-left: 0;
     padding-left: 0;
     border: 0;
+    height: auto;
   }
   .footer-block.one {
     margin-bottom: 30px;
     border-top: 1px solid #e8edf0;
-    margin-top: 25px;
     padding-top: 25px;
   }
   /* Подвал 2 */

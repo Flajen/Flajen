@@ -1332,6 +1332,7 @@ footer {
   }
   .main-btn {
     display: flex;
+    align-content: center;
   }
   .main-departure-wrapper {
     justify-content: flex-start;
@@ -1571,7 +1572,7 @@ footer {
   }
   .main-btn {
     width: 100%;
-    height: 45px;
+    min-height: 45px;
   }
   .main-title {
     font-size: 25px;

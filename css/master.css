@@ -1060,11 +1060,14 @@ footer {
   padding-left: 68px;
   margin-left: 68px;
 }
+.footer-data {
+  display: grid;
+  grid-gap: 15px;
+}
 .footer-heading {
   color: #3f474a;
   display: block;
   padding-left: 30px;
-  margin-bottom: 15px;
   cursor: default;
   position: relative;
   white-space: nowrap;
@@ -1110,7 +1113,7 @@ footer {
   /* Главная 2 */
 
   /* Попапы 1 */
-  .popup{
+  .popup {
     padding: 5px 15px 5px 20px;
   }
   .popup-close {
@@ -1559,6 +1562,7 @@ footer {
   }
   .main-btn {
     width: 100%;
+    height: 45px;
   }
   .main-title {
     font-size: 25px;
@@ -1645,10 +1649,10 @@ footer {
   /* Клиенты 2 */
 
   /* Лицензии 1 */
-  .licenses-title{
+  .licenses-title {
     margin-bottom: 15px;
   }
-  .licenses-info{
+  .licenses-info {
     margin-bottom: 30px;
   }
   .swiper_licenses {

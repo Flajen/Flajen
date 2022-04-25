@@ -60,8 +60,6 @@ var swiperLicenses = new Swiper(".swiper_licenses", {
     prevEl: ".licenses-button-prev",
   },
   loop: true,
-  // simulateTouch: false, // Отключить перетаскивание на пк
-  // initialSlide: 1,
   breakpoints: {
     1: {
       coverflowEffect: {
@@ -71,7 +69,7 @@ var swiperLicenses = new Swiper(".swiper_licenses", {
         modifier: 4.12,
         slideShadows: true,
       },
-      allowTouchMove: true, // Отключить перетаскивание
+      allowTouchMove: true,
       slideToClickedSlide: false,
     },
     576: {
@@ -82,7 +80,7 @@ var swiperLicenses = new Swiper(".swiper_licenses", {
         modifier: 3,
         slideShadows: true,
       },
-      allowTouchMove: false, // Отключить перетаскивание
+      allowTouchMove: false,
       slideToClickedSlide: true,
     },
     768: {
@@ -131,13 +129,13 @@ var swiperReviews = new Swiper(".swiper_reviews", {
   observeSlideChildren: true,
   observer: true,
 });
-
 let body = document.body;
 let headerFly = document.querySelector(".header_fly");
 let btn = document.querySelectorAll(".btn-order");
 let popup = document.querySelectorAll(".popup");
 let popupFeedback = document.querySelector(".popup-feedback");
 let popupBody = document.querySelector(".popup-body");
+let popupClose = document.querySelectorAll(".popup-close");
 let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", function () {
@@ -147,14 +145,22 @@ for (let i = 0; i < btn.length; i++) {
     body.style.paddingRight = scrollbarWidth + "px";
   });
 }
-for (let i = 0; i < popup.length; i++) {
-  popup[i].addEventListener("click", (e) => {
+for (let i = 0; i < popupClose.length; i++) {
+  popupClose[i].addEventListener("click", (e) => {
     popupBody.classList.remove("open");
     popup[i].classList.remove("open");
     body.classList.remove("open");
     body.style.paddingRight = 0;
   });
 }
+// for (let i = 0; i < popup.length; i++) {
+//   popup[i].addEventListener("click", (e) => {
+//     popupBody.classList.remove("open");
+//     popup[i].classList.remove("open");
+//     body.classList.remove("open");
+//     body.style.paddingRight = 0;
+//   });
+// }
 let scrollReload = window.scrollY;
 if (scrollReload > 0) {
   headerFly.classList.add("open");
@@ -170,9 +176,6 @@ document.onscroll = function () {
     navModal[i].classList.remove("open");
   }
 };
-// let slideActive = document.querySelector(
-//   ".swiper_licenses .swiper-slide-active"
-// );
 let slideActive = document.querySelectorAll(".swiper_licenses .swiper-slide");
 for (let i = 0; i < slideActive.length; i++) {
   slideActive[i].addEventListener("click", function () {
@@ -191,12 +194,7 @@ var swiperLicensesPopup = new Swiper(".swiper_licenses_popup", {
     nextEl: ".licenses_popup-button-next",
     prevEl: ".licenses_popup-button-prev",
   },
-  // loop: true,
   observeParents: true,
   observeSlideChildren: true,
   observer: true,
 });
-// swiperLicensesPopup.on('slideChange', function (e) {
-//   console.log('*** mySwiper.activeIndex', swiperLicensesPopup.activeIndex);
-// });
-// swiperLicensesPopup.slideNext(0, 1);

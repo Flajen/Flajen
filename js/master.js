@@ -38,10 +38,17 @@ for (let i = 0; i < navModalLink.length; i++) {
 }
 var swiperClients = new Swiper(".swiper_clients", {
   slidesPerView: "auto",
-  spaceBetween: 30,
   scrollbar: {
     el: ".swiper-scrollbar",
     draggable: false,
+  },
+  breakpoints: {
+    1: {
+      spaceBetween: 15,
+    },
+    577: {
+      spaceBetween: 30,
+    },
   },
   observeParents: true,
   observeSlideChildren: true,

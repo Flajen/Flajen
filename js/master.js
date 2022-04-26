@@ -33,6 +33,9 @@ for (let i = 0; i < navModalLink.length; i++) {
   navModalLink[i].addEventListener("click", function () {
     for (let i = 0; i < navModal.length; i++) {
       navModal[i].classList.remove("open");
+      for (let i = 0; i < navBtn.length; i++) {
+        navBtn[i].classList.remove("open");
+      }
     }
   });
 }
@@ -181,7 +184,9 @@ document.onscroll = function () {
   }
   for (let i = 0; i < navModal.length; i++) {
     navModal[i].classList.remove("open");
-    navBtn[i].classList.remove("open");
+    for (let i = 0; i < navBtn.length; i++) {
+      navBtn[i].classList.remove("open");
+    }
   }
 };
 let slideActive = document.querySelectorAll(".swiper_licenses .swiper-slide");

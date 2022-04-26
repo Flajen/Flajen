@@ -644,6 +644,10 @@ li.header_advantage-link {
   -ms-flex-pack: justify;
   justify-content: space-between;
 }
+.header_fly-img {
+  width: 179px;
+  height: 61px;
+}
 .header_fly-body .nav-links {
   display: -ms-grid;
   display: grid;
@@ -1742,6 +1746,8 @@ footer {
     height: 45px;
     display: block;
     margin-bottom: 25px;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
   .footer-block {
     width: 100%;

@@ -1738,6 +1738,8 @@ footer {
     display: none;
   }
   .footer-logo-phone {
+    width: 280px;
+    height: 45px;
     display: block;
     margin-bottom: 25px;
   }

@@ -68,3 +68,6 @@ iframe {
   left: 0;
   top: 1px;
 }
+
+@media screen and (max-width: 576px) {
+}

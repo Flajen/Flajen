@@ -197,6 +197,7 @@
 }
 .services_card-link {
   font-weight: 600;
+  background: -o-linear-gradient(left, #01a665 0%, #3dc571 100%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -204,7 +205,6 @@
     from(#01a665),
     to(#3dc571)
   );
-  background: -o-linear-gradient(left, #01a665 0%, #3dc571 100%);
   background: linear-gradient(90deg, #01a665 0%, #3dc571 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -224,6 +224,7 @@
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='12' height='12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M9.334 5.532 3.994.192A.652.652 0 0 0 3.528 0a.652.652 0 0 0-.464.192l-.393.393a.657.657 0 0 0 0 .928l4.484 4.485-4.49 4.489a.652.652 0 0 0-.191.464c0 .176.068.34.192.464l.393.393a.652.652 0 0 0 .464.192c.176 0 .34-.068.464-.192l5.346-5.345a.653.653 0 0 0 .19-.465.652.652 0 0 0-.19-.466Z' fill='url(%23b)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='b' x1='2.475' y1='6' x2='9.525' y2='6' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h12v12H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 .services_card-link:hover {
+  background: -o-linear-gradient(left, #008b3d 0%, #00a23e 100%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -231,7 +232,6 @@
     from(#008b3d),
     to(#00a23e)
   );
-  background: -o-linear-gradient(left, #008b3d 0%, #00a23e 100%);
   background: linear-gradient(90deg, #008b3d 0%, #00a23e 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -504,6 +504,7 @@
   padding: 0 50px;
 }
 .swiper_reviews .swiper-scrollbar-drag:hover {
+  background: -o-linear-gradient(left, #00ab4b 0%, #13c959 100%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -511,7 +512,6 @@
     from(#00ab4b),
     to(#13c959)
   );
-  background: -o-linear-gradient(left, #00ab4b 0%, #13c959 100%);
   background: linear-gradient(90deg, #00ab4b 0%, #13c959 100%);
 }
 .swiper_reviews .swiper-pagination {

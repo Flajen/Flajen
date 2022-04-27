@@ -110,6 +110,7 @@ input {
   justify-content: center;
   color: #fff;
   font-weight: 600;
+  background: -o-linear-gradient(left, #01a665 0%, #3dc571 100%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -117,7 +118,6 @@ input {
     from(#01a665),
     to(#3dc571)
   );
-  background: -o-linear-gradient(left, #01a665 0%, #3dc571 100%);
   background: linear-gradient(90deg, #01a665 0%, #3dc571 100%);
   border: 0;
   outline: 0;
@@ -125,6 +125,7 @@ input {
   padding: 12px 5px 11px 5px;
 }
 .btn:hover {
+  background: -o-linear-gradient(left, #00ab4b 0%, #13c959 100%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -132,7 +133,6 @@ input {
     from(#00ab4b),
     to(#13c959)
   );
-  background: -o-linear-gradient(left, #00ab4b 0%, #13c959 100%);
   background: linear-gradient(90deg, #00ab4b 0%, #13c959 100%);
 }
 .btn-order {
@@ -610,6 +610,7 @@ li.header_advantage-link {
 
 /* Слайдеры 1 */
 .slider-button-next:hover {
+  background: -o-linear-gradient(right, #00ab4b 0%, #13c959 100%);
   background: -webkit-gradient(
     linear,
     right top,
@@ -617,7 +618,6 @@ li.header_advantage-link {
     from(#00ab4b),
     to(#13c959)
   );
-  background: -o-linear-gradient(right, #00ab4b 0%, #13c959 100%);
   background: linear-gradient(-90deg, #00ab4b 0%, #13c959 100%);
 }
 .slider-button-next.swiper-button-disabled:hover {
@@ -630,6 +630,7 @@ li.header_advantage-link {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='m12.556 10.78-8.9 8.9c-.206.207-.481.32-.774.32-.293 0-.568-.113-.774-.32l-.655-.655a1.096 1.096 0 0 1 0-1.547l7.474-7.474-7.482-7.482a1.087 1.087 0 0 1-.32-.773c0-.294.114-.568.32-.774L2.1.32c.206-.207.48-.32.774-.32.293 0 .568.113.773.32l8.909 8.908c.206.206.32.482.319.776 0 .294-.113.57-.32.776Z' fill='url(%23b)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='b' x1='1.125' y1='10' x2='12.875' y2='10' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' transform='matrix(1 0 0 -1 0 20)' d='M0 0h14v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
 }
 .slider-button-prev:hover {
+  background: -o-linear-gradient(left, #00ab4b 0%, #13c959 100%);
   background: -webkit-gradient(
     linear,
     left top,
@@ -637,7 +638,6 @@ li.header_advantage-link {
     from(#00ab4b),
     to(#13c959)
   );
-  background: -o-linear-gradient(left, #00ab4b 0%, #13c959 100%);
   background: linear-gradient(90deg, #00ab4b 0%, #13c959 100%);
 }
 .slider-button-prev.swiper-button-disabled:hover {
@@ -1021,6 +1021,42 @@ footer {
     padding: 35px 65px;
   }
   /* Заявка 2 */
+
+  /* Подвал 1 */
+  .footer-body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+  .footer-logo {
+    display: none;
+  }
+  .footer-logo-phone {
+    display: block;
+    width: 280px;
+    height: 45px;
+    margin-bottom: 25px;
+  }
+  .footer-block {
+    width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+    border: 0;
+    height: auto;
+  }
+  .footer-block.one {
+    margin-bottom: 30px;
+    border-top: 1px solid #e8edf0;
+    padding-top: 25px;
+  }
+  /* Подвал 2 */
 }
 @media screen and (max-width: 768px) {
   body {

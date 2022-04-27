@@ -918,4 +918,8 @@
   .popup-zoom.open {
     overflow: auto;
   }
+  .swiper_licenses_popup {
+    padding: 60px 0;
+    height: 523px;
+  }
 }

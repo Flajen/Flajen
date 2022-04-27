@@ -39,106 +39,6 @@ for (let i = 0; i < navModalLink.length; i++) {
     }
   });
 }
-var swiperClients = new Swiper(".swiper_clients", {
-  slidesPerView: "auto",
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: false,
-  },
-  breakpoints: {
-    1: {
-      spaceBetween: 15,
-    },
-    577: {
-      spaceBetween: 30,
-    },
-  },
-  observeParents: true,
-  observeSlideChildren: true,
-  observer: true,
-});
-var swiperLicenses = new Swiper(".swiper_licenses", {
-  effect: "coverflow",
-  centeredSlides: true,
-  slidesPerView: "auto",
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: ".licenses-button-next",
-    prevEl: ".licenses-button-prev",
-  },
-  loop: true,
-  breakpoints: {
-    1: {
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 50,
-        depth: 60,
-        modifier: 4.12,
-        slideShadows: true,
-      },
-      allowTouchMove: true,
-      slideToClickedSlide: false,
-    },
-    576: {
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 50,
-        depth: 60,
-        modifier: 3,
-        slideShadows: true,
-      },
-      allowTouchMove: false,
-      slideToClickedSlide: true,
-    },
-    768: {
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 50,
-        depth: 50,
-        modifier: 4.88,
-        slideShadows: true,
-      },
-      allowTouchMove: false, // Отключить перетаскивание
-      slideToClickedSlide: true,
-    },
-  },
-  observeParents: true,
-  observeSlideChildren: true,
-  observer: true,
-});
-var swiperReviews = new Swiper(".swiper_reviews", {
-  navigation: {
-    nextEl: ".reviews-button-next",
-    prevEl: ".reviews-button-prev",
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
-  scrollbar: {
-    el: ".swiper-scrollbar",
-    draggable: true,
-  },
-  breakpoints: {
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
-    640: {
-      slidesPerView: 2,
-    },
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 30,
-    },
-  },
-  observeParents: true,
-  observeSlideChildren: true,
-  observer: true,
-});
 let body = document.body;
 let headerFly = document.querySelector(".header_fly");
 let btn = document.querySelectorAll(".btn-order");
@@ -147,12 +47,27 @@ let popupFeedback = document.querySelector(".popup-feedback");
 let popupBody = document.querySelector(".popup-body");
 let popupClose = document.querySelectorAll(".popup-close");
 let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+let disableScroll = function () {
+  let pagePosition = window.scrollY;
+  document.body.classList.add("disable-scroll");
+  document.body.dataset.position = pagePosition;
+  document.body.style.top = -pagePosition + "px";
+};
+
+let enableScroll = function () {
+  let pagePosition = parseInt(document.body.dataset.position, 10);
+  document.body.style.top = "auto";
+  document.body.classList.remove("disable-scroll");
+  window.scroll({ top: pagePosition, left: 0 });
+  document.body.removeAttribute("data-position");
+};
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", function () {
     popupBody.classList.add("open");
     popupFeedback.classList.add("open");
     body.classList.add("open");
     body.style.paddingRight = scrollbarWidth + "px";
+    disableScroll();
   });
 }
 for (let i = 0; i < popupClose.length; i++) {
@@ -161,16 +76,20 @@ for (let i = 0; i < popupClose.length; i++) {
     popup[i].classList.remove("open");
     body.classList.remove("open");
     body.style.paddingRight = 0;
+    enableScroll();
   });
 }
-// for (let i = 0; i < popup.length; i++) {
-//   popup[i].addEventListener("click", (e) => {
-//     popupBody.classList.remove("open");
-//     popup[i].classList.remove("open");
-//     body.classList.remove("open");
-//     body.style.paddingRight = 0;
-//   });
-// }
+for (let i = 0; i < popup.length; i++) {
+  popup[i].addEventListener("click", function (e) {
+    if (e.target.classList.contains("popup")) {
+      popupBody.classList.remove("open");
+      popup[i].classList.remove("open");
+      body.classList.remove("open");
+      body.style.paddingRight = 0;
+      enableScroll();
+    }
+  });
+}
 let scrollReload = window.scrollY;
 if (scrollReload > 0) {
   headerFly.classList.add("open");
@@ -189,25 +108,3 @@ document.onscroll = function () {
     }
   }
 };
-let slideActive = document.querySelectorAll(".swiper_licenses .swiper-slide");
-for (let i = 0; i < slideActive.length; i++) {
-  slideActive[i].addEventListener("click", function () {
-    document.querySelector(".popup-zoom").classList.add("open");
-    body.classList.add("open");
-    body.style.paddingRight = scrollbarWidth + "px";
-  });
-}
-var swiperLicensesPopup = new Swiper(".swiper_licenses_popup", {
-  slidesPerView: 1,
-  pagination: {
-    el: ".swiper-pagination",
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: ".licenses_popup-button-next",
-    prevEl: ".licenses_popup-button-prev",
-  },
-  observeParents: true,
-  observeSlideChildren: true,
-  observer: true,
-});

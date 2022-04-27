@@ -9,6 +9,7 @@ body {
   overflow: initial;
 }
 body.open {
+  width: 100%;
   overflow: hidden;
   -webkit-overflow-scrolling: touch;
   -ms-touch-action: none;

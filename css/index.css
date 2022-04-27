@@ -607,7 +607,8 @@
   }
   .swiper_licenses_popup {
     width: 280px;
-    height: 403px;
+    /* height: 403px; */
+    height: 523px;
     padding: 60px 0;
   }
   .swiper_licenses_popup img {

@@ -607,7 +607,6 @@
   }
   .swiper_licenses_popup {
     width: 280px;
-    /* height: 403px; */
     height: 523px;
     padding: 60px 0;
   }
@@ -902,7 +901,21 @@
 }
 
 @media screen and (max-height: 535px) {
+  .popup-zoom.open {
+    overflow: hidden;
+  }
   .swiper_licenses_popup {
-    height: 410px;
+    padding: 60px 0 0 0;
+    height: 463px;
+  }
+  .licenses_popup-button-next,
+  .licenses_popup-button-prev,
+  .swiper_licenses_popup .swiper-pagination {
+    display: none;
+  }
+}
+@media screen and (max-height: 420px) {
+  .popup-zoom.open {
+    overflow: auto;
   }
 }

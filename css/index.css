@@ -900,3 +900,9 @@
   }
   /* Отзывы 2 */
 }
+
+@media screen and (max-height: 535px) {
+  .swiper_licenses_popup {
+    height: 410px;
+  }
+}

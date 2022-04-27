@@ -49,17 +49,17 @@ let popupClose = document.querySelectorAll(".popup-close");
 let scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 let disableScroll = function () {
   let pagePosition = window.scrollY;
-  document.body.classList.add("disable-scroll");
-  document.body.dataset.position = pagePosition;
-  document.body.style.top = -pagePosition + "px";
+  body.classList.add("disable-scroll");
+  body.dataset.position = pagePosition;
+  body.style.top = -pagePosition + "px";
 };
 
 let enableScroll = function () {
-  let pagePosition = parseInt(document.body.dataset.position, 10);
-  document.body.style.top = "auto";
-  document.body.classList.remove("disable-scroll");
+  let pagePosition = parseInt(body.dataset.position, 10);
+  body.style.top = "auto";
+  body.classList.remove("disable-scroll");
   window.scroll({ top: pagePosition, left: 0 });
-  document.body.removeAttribute("data-position");
+  body.removeAttribute("data-position");
 };
 for (let i = 0; i < btn.length; i++) {
   btn[i].addEventListener("click", function () {

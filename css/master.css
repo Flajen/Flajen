@@ -6,7 +6,7 @@ body {
   font-weight: 300;
   margin: 0;
   padding: 0;
-  overflow: initial;
+  overflow: overlay;
 }
 body.open {
   width: 100%;
@@ -14,6 +14,14 @@ body.open {
   -webkit-overflow-scrolling: touch;
   -ms-touch-action: none;
   touch-action: none;
+}
+.disable-scroll {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 *::after,
 *::before,
@@ -25,7 +33,6 @@ body.open {
 }
 main {
   width: 100%;
-  height: 100%;
   overflow-y: hidden;
 }
 /* Скролл 1 */

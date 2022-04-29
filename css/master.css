@@ -33,7 +33,7 @@ body.open {
 }
 main {
   width: 100%;
-  overflow-y: hidden;
+  overflow-x: hidden;
 }
 /* Скролл 1 */
 ::-webkit-scrollbar-button {
@@ -380,6 +380,13 @@ li.header_advantage-link {
   color: #282e31;
   font-weight: 600;
   white-space: nowrap;
+}
+.nav-link:hover {
+  background: linear-gradient(90deg, #00ab4b 0%, #13c959 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }
 .nav-btn {
   position: relative;
@@ -1078,6 +1085,9 @@ footer {
     font-size: 35px;
     margin-bottom: 35px;
   }
+  .dot::after{
+   top: 8px; 
+  }
   /* Шапка 1 */
   .header-advantages {
     display: -ms-grid;
@@ -1136,6 +1146,9 @@ footer {
     font-size: 25px;
     margin-bottom: 30px;
   }
+  .dot::after{
+    top: 7px; 
+   }
   section {
     margin-bottom: 80px;
   }

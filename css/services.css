@@ -1,0 +1,668 @@
+/* Главная 1 */
+.main-block {
+  height: 400px;
+  display: flex;
+  position: relative;
+}
+.main-info {
+  display: grid;
+  grid-gap: 20px;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  z-index: 3;
+  padding: 70px;
+}
+.main-title {
+  color: #282e31;
+  font-size: 43px;
+  font-weight: 700;
+}
+.main-text {
+  max-width: 420px;
+  font-size: 22px;
+}
+.main-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 15px;
+}
+.main-background-phone {
+  display: none;
+}
+.main-human {
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+}
+.main-human.disinfection {
+  right: 313px;
+}
+.main-human.deratization {
+  right: 180px;
+}
+.main-human.disinsection {
+  right: 216px;
+}
+.main-human.jur_persons {
+  right: 275px;
+}
+/* Главная 2 */
+
+/* Обработка 1 */
+.treatment-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.treatment-body.deratization {
+  flex-direction: row-reverse;
+}
+.treatment-title {
+  margin-bottom: 40px;
+}
+.treatment-list_text {
+  display: grid;
+  grid-gap: 15px;
+}
+.treatment-list_text-disinfection {
+  max-width: 624px;
+}
+.treatment-list_text-jut_persons{
+  max-width: 594px;
+  margin-bottom: 30px;
+}
+.treatment-list{
+  display: grid;
+  grid-gap: 15px;
+}
+.treatment-list li{
+  color: #282E31;
+  font-weight: 400;
+}
+.treatment-text .help {
+  color: #282e31;
+  font-weight: 400;
+}
+.treatment-block-img {
+  position: relative;
+}
+.treatment-background {
+  position: relative;
+  z-index: 1;
+  border-radius: 15px;
+  object-fit: cover;
+}
+.treatment-background-phone {
+  position: relative;
+  display: none;
+}
+.treatment-human {
+  position: absolute;
+  z-index: 2;
+  bottom: 0;
+  object-fit: cover;
+}
+.treatment-human-disinfection {
+  right: 85px;
+}
+.treatment-human-disinsection {
+  right: 93px;
+}
+.treatment-human-jut_persons{
+  right: 128px;
+}
+/* Обработка 2 */
+
+/* Цены 1 */
+.price-body {
+  display: flex;
+  position: relative;
+}
+.price-body-deratization {
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.price-title {
+  margin-bottom: 50px;
+}
+.price-title.deratization {
+  font-size: 35px;
+}
+.price_select {
+  display: grid;
+  background-color: #f8f8f8;
+  border: 1px solid #f8f8f8;
+  border-radius: 15px;
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  transition: all 0.15s;
+}
+.price_select.open {
+  border: 1px solid #e8edf0;
+}
+.price_select-disinsection {
+  grid-template-columns: 386px;
+  position: absolute;
+  z-index: 3;
+  right: 0;
+  top: 0;
+}
+.price_select-phone {
+  display: none;
+}
+.price_select-btn {
+  color: #282e31;
+  background-color: transparent;
+  font-size: 22px;
+  font-weight: 400;
+  width: 100%;
+  min-height: 60px;
+  padding: 15px 30px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 15px;
+  position: relative;
+  text-align: left;
+}
+.price_select-btn:hover {
+  color: #00a13e;
+}
+.price_select-btn::after {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_186_139)'%3e%3cpath d='M8.0853 11.6669L14.7604 4.99172C14.9149 4.83733 15 4.63124 15 4.41148C15 4.19173 14.9149 3.98563 14.7604 3.83124L14.2689 3.33966C13.9487 3.01979 13.4282 3.01979 13.1084 3.33966L7.50311 8.94498L1.89157 3.33344C1.73706 3.17905 1.53108 3.09381 1.31145 3.09381C1.09158 3.09381 0.885602 3.17905 0.730968 3.33344L0.239632 3.82502C0.0851202 3.97953 -4.77197e-08 4.18551 -5.73254e-08 4.40526C-6.69312e-08 4.62502 0.0851201 4.83111 0.239632 4.9855L6.9208 11.6669C7.0758 11.8217 7.28274 11.9067 7.50274 11.9062C7.7236 11.9067 7.93042 11.8217 8.0853 11.6669Z' fill='url(%23paint0_linear_186_139)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='paint0_linear_186_139' x1='7.5' y1='3.09381' x2='7.5' y2='11.9062' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3cclipPath id='clip0_186_139'%3e%3crect width='15' height='15' fill='white' transform='translate(15) rotate(90)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  right: 30px;
+  top: 50%;
+  transform: translate(0, -50%);
+  -webkit-transition: all 0.15s;
+  -o-transition: all 0.15s;
+  transition: all 0.15s;
+}
+.price_select.open .price_select-btn::after {
+  transform: translate(0, -50%) rotate(-180deg);
+}
+.price_select-list {
+  display: none;
+  padding: 10px 30px 20px 30px;
+}
+.price_select.open .price_select-list {
+  display: grid;
+}
+.price_select-info {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8edf0;
+  padding: 14px 0;
+}
+.price_select-info span {
+  cursor: default;
+}
+.price_select-info:hover span {
+  background: linear-gradient(90deg, #00ab4b 0%, #13c959 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.price_select-info:first-child {
+  padding: 0 0 14px 0;
+}
+.price_select-info:last-child {
+  padding: 14px 0 0 0;
+  border-bottom: 0;
+}
+.price_select-data {
+  color: #282e31;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.price-cards {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-gap: 30px;
+}
+.price_card {
+  padding: 30px;
+  background: #ffffff;
+  box-shadow: 0px 0px 25px rgba(139, 149, 154, 0.15);
+  border-radius: 15px;
+}
+.price_card.deratization {
+  margin-bottom: 30px;
+}
+.price_card-heading {
+  color: #282e31;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-left: 30px;
+  position: relative;
+}
+.price_card-heading::after {
+  left: 0;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+}
+.price_card-heading.mechanical::after {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M19.414 12.93H.586A.586.586 0 0 1 0 12.344v-1.172a2.933 2.933 0 0 1 2.93-2.93h11.21V6.484a.587.587 0 0 0-.585-.586H5.273a2.933 2.933 0 0 1-2.93-2.93c0-.323.263-.585.587-.585h10.625a4.106 4.106 0 0 1 4.101 4.101v1.817A2.935 2.935 0 0 1 20 11.171v1.173a.586.586 0 0 1-.586.586Z' fill='url(%23b)'/%3e%3cpath d='m19.938 16.769-.124-.247a9.377 9.377 0 0 1-.817-2.42H1.003a9.378 9.378 0 0 1-.817 2.42l-.124.247a.586.586 0 0 0 .524.848h4.14V15.86a.586.586 0 0 1 1.172 0v1.758h3.516V15.86a.586.586 0 0 1 1.172 0v1.758h3.516V15.86a.586.586 0 1 1 1.171 0v1.758h4.141a.586.586 0 0 0 .524-.848Z' fill='url(%23c)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='b' x1='0' y1='7.656' x2='20' y2='7.656' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3clinearGradient id='c' x1='0' y1='15.859' x2='20' y2='15.859' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+.price_card-heading.impregnation::after {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M11.367 8.548h7.062v7.523h-7.062V8.548Z' fill='url(%23b)'/%3e%3cpath d='M10.781 7.376h7.649V6.42a.587.587 0 0 0-.062-.262l-1.492-2.98H10.94l-.752.388V2.83c0-.856-.696-1.552-1.552-1.552H3.124c-.857 0-1.553.696-1.553 1.552v14.845A2.327 2.327 0 0 0 3.896 20h12.209a2.327 2.327 0 0 0 2.325-2.325v-.432H10.78a.586.586 0 0 1-.586-.586V7.962c0-.323.263-.586.586-.586Zm-2.937-.86c0 .196-.099.38-.263.488L4.824 8.828a.591.591 0 0 1-.65-.002.59.59 0 0 1-.26-.487V4.207c0-.323.263-.586.586-.586h2.758c.323 0 .586.263.586.586v2.308Z' fill='url(%23c)'/%3e%3cpath d='M16.869 2.005V.585A.586.586 0 0 0 16.283 0h-4.299a.586.586 0 0 0-.586.586v1.42h5.47Z' fill='url(%23d)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='b' x1='11.367' y1='12.309' x2='18.429' y2='12.309' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3clinearGradient id='c' x1='1.571' y1='10.639' x2='18.43' y2='10.639' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3clinearGradient id='d' x1='11.398' y1='1.003' x2='16.869' y2='1.003' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+.price_card-heading.apartment::after {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.04 5.273v14.141c0 .324.261.586.585.586h.879v-3.008a.586.586 0 1 1 1.172 0V20H4.14V4.687H.625a.586.586 0 0 0-.586.586Zm2.05 1.758a.586.586 0 1 1 0 1.172.586.586 0 0 1 0-1.172Zm0 2.344a.586.586 0 1 1 0 1.172.586.586 0 0 1 0-1.172Zm0 2.344a.586.586 0 1 1 0 1.172.586.586 0 0 1 0-1.172Zm0 2.344a.586.586 0 1 1 0 1.171.586.586 0 0 1 0-1.171Z' fill='url(%23a)'/%3e%3cpath d='M19.375 4.688h-3.516V20h1.465v-3.008a.586.586 0 0 1 1.172 0V20h.879a.586.586 0 0 0 .586-.586V5.274a.586.586 0 0 0-.586-.587ZM17.91 15.233a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.343a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Z' fill='url(%23b)'/%3e%3cpath d='M8.242 17.578h1.172V20H8.242v-2.422Z' fill='url(%23c)'/%3e%3cpath d='M10.586 17.578h1.172V20h-1.172v-2.422Z' fill='url(%23d)'/%3e%3cpath d='M14.102 0H5.898a.586.586 0 0 0-.585.586V20H7.07v-3.008c0-.323.263-.586.586-.586h4.688c.323 0 .586.263.586.586V20h1.758V.586A.586.586 0 0 0 14.101 0ZM7.656 15.234a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.343a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.343a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172ZM10 15.234a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.343a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.343a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm2.344 11.718a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.343a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.344a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Zm0-2.343a.586.586 0 1 1 0-1.172.586.586 0 0 1 0 1.172Z' fill='url(%23e)'/%3e%3cdefs%3e%3clinearGradient id='a' x1='.039' y1='12.344' x2='4.141' y2='12.344' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3clinearGradient id='b' x1='15.859' y1='12.344' x2='19.961' y2='12.344' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3clinearGradient id='c' x1='8.242' y1='18.789' x2='9.414' y2='18.789' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3clinearGradient id='d' x1='10.586' y1='18.789' x2='11.758' y2='18.789' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3clinearGradient id='e' x1='5.313' y1='10' x2='14.688' y2='10' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+.price_card-heading.house::after {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M19.664 8.94 10.691.765a1.021 1.021 0 0 0-1.382 0L.336 8.941c-.316.287-.42.73-.266 1.128.154.398.53.655.957.655H2.46v8.193c0 .324.263.588.588.588h4.919a.588.588 0 0 0 .588-.588v-4.974h2.89v4.974c0 .324.264.588.589.588h4.918a.588.588 0 0 0 .588-.588v-8.193h1.434c.426 0 .802-.257.956-.655a1.02 1.02 0 0 0-.266-1.128Z' fill='url(%23b)'/%3e%3cpath d='M17.387 1.67h-3.95l4.538 4.126V2.257a.588.588 0 0 0-.588-.588Z' fill='url(%23c)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='b' x1='0' y1='10' x2='20' y2='10' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3clinearGradient id='c' x1='13.437' y1='3.732' x2='17.975' y2='3.732' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+.price_card-heading.plot::after {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23a)'%3e%3cpath d='M17.66 6.971a3.08 3.08 0 0 0-1.26-2.499 3.089 3.089 0 0 0-2.037-.61A4.401 4.401 0 0 0 10 0C7.757 0 5.9 1.69 5.637 3.863a3.087 3.087 0 0 0-2.037.61A3.08 3.08 0 0 0 2.34 6.97c0 .99.479 1.91 1.247 2.49-.643.745-1 1.695-1 2.704a4.158 4.158 0 0 0 4.154 4.154 4.13 4.13 0 0 0 2.673-.974V12.55a.585.585 0 0 1-.14-.104l-2.13-2.13a.586.586 0 0 1 .829-.828l1.441 1.441V4.766a.586.586 0 0 1 1.172 0v3.937l.875-.875a.586.586 0 1 1 .828.828l-1.68 1.68-.023.022v4.987a4.13 4.13 0 0 0 2.673.974 4.158 4.158 0 0 0 4.154-4.154c0-1.01-.357-1.959-1-2.705a3.129 3.129 0 0 0 1.246-2.489Z' fill='url(%23b)'/%3e%3cpath d='M10.218 14.995a4.412 4.412 0 0 1-.436 0 4.176 4.176 0 0 1-.368.35v4.07a.586.586 0 0 0 1.172 0v-4.07a4.2 4.2 0 0 1-.368-.35Z' fill='url(%23c)'/%3e%3c/g%3e%3cdefs%3e%3clinearGradient id='b' x1='2.341' y1='10' x2='17.659' y2='10' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3clinearGradient id='c' x1='2.341' y1='10' x2='17.659' y2='10' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3cclipPath id='a'%3e%3cpath fill='%23fff' d='M0 0h20v20H0z'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e");
+}
+.price_card-heading.expenses::after {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M.22 2.071a.713.713 0 0 1 .52-.22h11.852c.201 0 .375.074.521.22.147.147.22.32.22.521v2.223h1.852c.208 0 .434.05.677.15.243.1.438.224.585.37l2.291 2.292c.1.1.188.216.26.347.074.131.128.25.163.353.035.105.06.247.075.429.015.181.025.314.03.399a8.33 8.33 0 0 1 0 .44 28.15 28.15 0 0 0-.007.405v3.704c.2 0 .374.073.521.22.147.146.22.32.22.52a.93.93 0 0 1-.046.307.438.438 0 0 1-.157.214 3.86 3.86 0 0 1-.19.133.64.64 0 0 1-.273.07c-.127.012-.214.02-.26.023a3.748 3.748 0 0 1-.295 0 18.42 18.42 0 0 0-.26-.006h-.741c0 .818-.29 1.516-.868 2.095a2.855 2.855 0 0 1-2.095.868c-.818 0-1.516-.29-2.095-.868a2.854 2.854 0 0 1-.868-2.095H7.407c0 .818-.29 1.516-.868 2.095a2.854 2.854 0 0 1-2.095.868c-.818 0-1.516-.29-2.094-.868a2.854 2.854 0 0 1-.868-2.095l-.26.006c-.151.004-.25.004-.296 0a37.929 37.929 0 0 1-.26-.023.637.637 0 0 1-.272-.07 3.631 3.631 0 0 1-.191-.133.437.437 0 0 1-.157-.214.923.923 0 0 1-.046-.306V2.591c0-.2.073-.374.22-.52Zm13.553 14.156c.293.293.64.44 1.042.44.401 0 .748-.147 1.042-.44.293-.293.44-.64.44-1.042 0-.4-.147-.748-.44-1.042a1.424 1.424 0 0 0-1.042-.44c-.401 0-.749.147-1.042.44-.293.294-.44.641-.44 1.042s.147.749.44 1.042Zm-.44-6.968h4.445v-.347c0-.1-.035-.185-.104-.255L15.417 6.4a.346.346 0 0 0-.255-.104h-1.829V9.26Zm-9.93 6.968c.293.293.64.44 1.041.44.402 0 .75-.147 1.042-.44.293-.293.44-.64.44-1.042 0-.4-.147-.748-.44-1.042a1.425 1.425 0 0 0-1.042-.44c-.4 0-.748.147-1.041.44-.293.294-.44.641-.44 1.042s.146.749.44 1.042Z' fill='url(%23a)'/%3e%3cdefs%3e%3clinearGradient id='a' x1='20' y1='10' x2='0' y2='10' gradientUnits='userSpaceOnUse'%3e%3cstop stop-color='%2301A665'/%3e%3cstop offset='1' stop-color='%233DC571'/%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
+}
+.price_card-list {
+  display: grid;
+}
+.price_card-info {
+  padding: 14px 0;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e8edf0;
+}
+.price_card-info span {
+  cursor: default;
+}
+.price_card-info:hover span {
+  background: linear-gradient(90deg, #00ab4b 0%, #13c959 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.price_card-info:first-child {
+  padding: 0 0 14px 0;
+}
+.price_card-info:last-child {
+  padding: 14px 0 0 0;
+  border: 0;
+}
+.price_card-data {
+  color: #282e31;
+  font-weight: 400;
+  white-space: nowrap;
+}
+.price_card-data .br {
+  display: inline;
+}
+.price-table {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 100%;
+  box-shadow: 0px 0px 25px rgba(139, 149, 154, 0.15);
+  padding: 0 30px;
+}
+.price-table-phone{
+  display: none;
+}
+.price_block {
+  display: grid;
+  grid-template-rows: 69px 55px 61px;
+  border-right: 1px solid #e8edf0;
+}
+.price_block:last-child {
+  border-right: 0;
+}
+.price_block-element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1px solid #e8edf0;
+}
+.price_block-element:last-child {
+  border-bottom: 0;
+}
+.price_block-heading {
+  color: #282e31;
+  font-size: 22px;
+  font-weight: 600;
+}
+.price_block-heading.first {
+  font-weight: 400;
+}
+.price_block-data {
+  color: #282e31;
+  font-weight: 400;
+}
+.price-heading {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 50px;
+}
+.price-heading .price-title {
+  margin-bottom: 0;
+  margin-right: 10px;
+  line-height: 1em;
+}
+.price-text {
+  color: #282e31;
+  font-size: 22px;
+  font-weight: 400;
+}
+.price_card.jur_persons {
+  max-width: 386px;
+}
+.price_card-heading.jur_persons {
+  padding: 0;
+}
+/* Цены 2 */
+
+@media screen and (max-width: 1350px) {
+  .header_fly .nav_modal {
+    left: 100%;
+    transform: translate(-40%, -10px);
+  }
+  .header_fly .nav_modal.open {
+    transform: translate(-40%, 0);
+  }
+}
+@media screen and (max-width: 1200px) {
+  .treatment-body {
+    flex-direction: column;
+    align-items: unset;
+  }
+  .treatment-info {
+    margin-bottom: 30px;
+  }
+  .treatment-list_text-disinfection {
+    max-width: 100%;
+  }
+  .treatment-block-img {
+    height: 525px;
+  }
+  .treatment-background {
+    width: 100%;
+    height: 100%;
+  }
+  .treatment-body.deratization {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .main {
+    padding-top: 90px;
+  }
+  .price-cards {
+    margin-bottom: 30px;
+  }
+  .price_select {
+    display: none;
+  }
+  .price_select-phone {
+    position: relative;
+    display: block;
+  }
+}
+@media screen and (max-width: 992px) {
+  .main-title {
+    font-size: 35px;
+  }
+  .main-text {
+    font-size: 20px;
+  }
+  .main-human.disinfection {
+    right: 200px;
+  }
+  .main-human.disinsection {
+    width: 420px;
+    height: 265px;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  .main-human.deratization {
+    right: 0;
+  }
+  .main-human.jur_persons {
+    right: 125px;
+  }
+  .price-heading {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .price-heading .price-title {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+  .price_block-heading{
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-info {
+    align-content: start;
+    padding: 40px;
+  }
+  .main-title {
+    font-size: 30px;
+  }
+  .main-text {
+    font-size: 18px;
+  }
+  .main-human.disinfection {
+    width: 245px;
+    height: 270px;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  .main-block.deratization {
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  .main-human.deratization {
+    width: 300px;
+    right: -60px;
+    transform: translate(0);
+  }
+  .main-human.jur_persons {
+    width: 190px;
+    height: 278px;
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  .main-background {
+    display: none;
+  }
+  .main-background-phone {
+    display: block;
+  }
+  .treatment-block-img {
+    height: 300px;
+  }
+  .treatment-background {
+    display: none;
+  }
+  .treatment-background-phone {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+  }
+  .treatment-human-disinfection,
+  .treatment-human-disinsection,
+  .treatment-human-deratization {
+    right: 50%;
+    transform: translate(50%, 0);
+  }
+  .treatment-human-disinfection {
+    width: 228px;
+    height: 320px;
+  }
+  .treatment-human-disinsection {
+    width: 320px;
+    height: 315px;
+  }
+  .treatment-human-deratization.one {
+    width: 238px;
+    height: 190px;
+  }
+  .treatment-human-deratization.two {
+    width: 195px;
+    height: 319px;
+  }
+  .treatment-human-jut_persons{
+    width: 264px;
+    height: 319px;
+  }
+  .price_select-deratization {
+    display: block;
+  }
+  .treatment-info {
+    width: 100%;
+  }
+  .price_card-data .br {
+    display: block;
+  }
+  .treatment-block-img {
+    width: 100%;
+  }
+  .treatment-block-img.deratization {
+    height: 170px;
+  }
+  .treatment-list_text-jut_persons{
+    margin-bottom: 15px;
+  }
+  .treatment-list{
+    grid-gap: 10px;
+  }
+  .price-body-deratization {
+    flex-direction: column;
+  }
+  .price-title {
+    margin-bottom: 30px;
+  }
+  .price_card-heading {
+    font-size: 18px;
+  }
+  .price_card-heading::after {
+    top: 2px;
+  }
+  .price_select-btn {
+    font-size: 18px;
+  }
+  .price_select-btn::after {
+    width: 18px;
+    height: 18px;
+  }
+  .price-heading .price-title {
+    margin-bottom: 20px;
+  }
+  .price-text {
+    font-size: 18px;
+  }
+  .price-table {
+    display: none;
+  }
+  .price-table-phone {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  }
+  .price_card-heading.price_block-heading {
+    font-size: 18px;
+  }
+  .price_card-name {
+    color: #282e31;
+    font-weight: 600;
+  }
+  .price-heading{
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .main-info {
+    padding: 20px;
+    grid-gap: 10px;
+  }
+  .main-title {
+    font-size: 25px;
+  }
+  .main-title.jur_persons {
+    font-size: 22px;
+  }
+  .main-text {
+    font-size: 16px;
+    max-width: 305px;
+  }
+  .price-cards {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    margin-bottom: 20px;
+  }
+  .price_card {
+    padding: 20px;
+  }
+  .price-title.deratization {
+    font-size: 25px;
+  }
+  .price_card-heading {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .price_card-heading::after {
+    top: 0;
+  }
+  .price_card-info {
+    padding: 10px 0;
+  }
+  .price_card-info:first-child {
+    padding: 0 0 10px 0;
+  }
+  .price_card-info:last-child {
+    padding: 10px 0 0 0;
+  }
+  .price_select-btn {
+    min-height: 50px;
+    font-size: 16px;
+    padding: 14px 20px;
+  }
+  .price_select-btn::after {
+    width: 16px;
+    height: 16px;
+    right: 20px;
+  }
+  .price_select-list {
+    padding: 10px 20px 20px 20px;
+  }
+  .price_select-info {
+    padding: 10px 0;
+  }
+  .price_card-info:first-child {
+    padding: 0 0 10px 0;
+  }
+  .price_card-info:last-child {
+    padding: 10px 0 0 0;
+  }
+  .price-heading .price-title {
+    margin-bottom: 10px;
+  }
+  .price-text {
+    font-size: 16px;
+  }
+}

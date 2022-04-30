@@ -108,3 +108,35 @@ document.onscroll = function () {
     }
   }
 };
+// // Отправка данных на сервер
+// function send(event, php) {
+//   event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+//   if (event.target.name.value != "" && event.target.contact.value != "") {
+//     var req = new XMLHttpRequest();
+//     req.open("POST", php, true);
+//     req.onload = function () {
+//       $(".btn-form").attr("disabled", true);
+//       if (req.status >= 200 && req.status < 400) {
+//         json = JSON.parse(this.response); // Ебанный internet explorer 11
+//         // ЗДЕСЬ УКАЗЫВАЕМ ДЕЙСТВИЯ В СЛУЧАЕ УСПЕХА ИЛИ НЕУДАЧИ
+//         if (json.result == "success") {
+//           // Если сообщение отправлено
+//           event.target.reset();
+//           $(".btn-form").attr("disabled", false);
+//         } else {
+//           // Если произошла ошибка
+//           $(".btn-form").attr("disabled", false);
+//           alert("Ошибка. Сообщение не отправлено");
+//         }
+//         // Если не удалось связаться с php файлом
+//       } else {
+//         alert("Ошибка сервера. Номер: " + req.status);
+//       }
+//     };
+//     // Если не удалось отправить запрос. Стоит блок на хостинге
+//     req.onerror = function () {
+//       alert("Ошибка отправки запроса");
+//     };
+//     req.send(new FormData(event.target));
+//   } 
+// }

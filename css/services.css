@@ -72,16 +72,16 @@
 .treatment-list_text-disinfection {
   max-width: 624px;
 }
-.treatment-list_text-jut_persons{
+.treatment-list_text-jut_persons {
   max-width: 594px;
   margin-bottom: 30px;
 }
-.treatment-list{
+.treatment-list {
   display: grid;
   grid-gap: 15px;
 }
-.treatment-list li{
-  color: #282E31;
+.treatment-list li {
+  color: #282e31;
   font-weight: 400;
 }
 .treatment-text .help {
@@ -113,7 +113,7 @@
 .treatment-human-disinsection {
   right: 93px;
 }
-.treatment-human-jut_persons{
+.treatment-human-jut_persons {
   right: 128px;
 }
 /* Обработка 2 */
@@ -313,7 +313,7 @@
   box-shadow: 0px 0px 25px rgba(139, 149, 154, 0.15);
   padding: 0 30px;
 }
-.price-table-phone{
+.price-table-phone {
   display: none;
 }
 .price_block {
@@ -446,7 +446,7 @@
     margin-right: 0;
     margin-bottom: 30px;
   }
-  .price_block-heading{
+  .price_block-heading {
     font-size: 18px;
   }
 }
@@ -504,6 +504,7 @@
   }
   .treatment-human-disinfection,
   .treatment-human-disinsection,
+  .treatment-human-jut_persons,
   .treatment-human-deratization {
     right: 50%;
     transform: translate(50%, 0);
@@ -524,7 +525,7 @@
     width: 195px;
     height: 319px;
   }
-  .treatment-human-jut_persons{
+  .treatment-human-jut_persons {
     width: 264px;
     height: 319px;
   }
@@ -543,10 +544,10 @@
   .treatment-block-img.deratization {
     height: 170px;
   }
-  .treatment-list_text-jut_persons{
+  .treatment-list_text-jut_persons {
     margin-bottom: 15px;
   }
-  .treatment-list{
+  .treatment-list {
     grid-gap: 10px;
   }
   .price-body-deratization {
@@ -590,7 +591,7 @@
     color: #282e31;
     font-weight: 600;
   }
-  .price-heading{
+  .price-heading {
     margin-bottom: 30px;
   }
 }

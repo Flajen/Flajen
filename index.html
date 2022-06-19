@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
   <title>Белый лис</title>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -86,19 +87,46 @@
             </div>
             <div class="home-video">
               <div class="home-video-wrapper">
-                <img src="./img/home/video.png" alt="Прачечная-химчистка" class="home-img">
-                <button type="button" name="videoPlay" class="home-video-play icon"></button>
+                <!-- <img src="./img/home/video.png" alt="Прачечная-химчистка" class="home-img"> -->
+                <!-- <video src="video/home.mov" class="home-img"></video> -->
+                <!-- <video controls width="400" height="300" class=""> -->
+                <!-- <source src="./video/home.mov" type="video/mov"> -->
+                <!-- <source src="video/home.mp4" type="video/mp4"> -->
+                <!-- <source src="video.webm" type="video/webm"> -->
+                <!-- <source src="video.ogv" type="video/ogg"> -->
+                <!-- <param name="movie" value="video.swf"> -->
+                <!-- </video> -->
+                <video controls src="./video/home.mov" poster="./img/home/video.png" class="home-img"></video>
+                <!-- <button type="button" name="videoPlay" class="home-video-play icon"></button> -->
               </div>
-              <div class="home_cashback">
+              <!-- <div class="home_cashback">
                 <img src="./img/home/cashback.png" alt="Вернём 10% при своевременной оплате наших услуг"
                   class="home_cashback-img">
                 <p class="home_cashback-text">Вернём <span class="help">10%</span> при своевременной оплате наших услуг
                 </p>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
       </section>
+
+      <div class="header_fly">
+        <div class="container">
+          <div class="header_fly-wrapper">
+            <ul class="header_fly-links">
+              <li><a href="#home" class="header_fly-link">Главная</a></li>
+              <li><a href="#delivery" class="header_fly-link">Доставка</a></li>
+              <li><a href="#services" class="header_fly-link">Стоимость услуг</a></li>
+              <li><a href="#advantages" class="header_fly-link">Преимущества</a></li>
+              <li><a href="#technology" class="header_fly-link">Технология стирки</a></li>
+              <li><a href="#partners" class="header_fly-link">Партнёры</a></li>
+              <li><a href="#questions" class="header_fly-link">Вопрос-ответ</a></li>
+              <li><a href="#contacts" class="header_fly-link">Контакты</a></li>
+            </ul>
+            <button class="header_fly-btn btn btn-feedback">Оставить заявку</button>
+          </div>
+        </div>
+      </div>
 
       <section class="delivery" id="delivery">
         <div class="delivery_block block">
@@ -198,7 +226,8 @@
 
       <section class="advantages" id="advantages">
         <div class="advantages-img-wrapper">
-          <img src="./img/advantages/bg.png" alt="Наши преимущества" class="advantages-img">
+          <img src="./img/advantages/bg.png" alt="Наши преимущества" class="advantages-img desktop">
+          <img src="./img/advantages/bg-mob.png" alt="Наши преимущества" class="advantages-img mobile">
         </div>
         <div class="container">
           <h2 class="advantages-title title">Наши преимущества</h2>

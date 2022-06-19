@@ -17,6 +17,15 @@ body {
   margin: 0;
   padding: 0;
 }
+.disable-scroll {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
 .oxh {
   overflow-x: hidden;
   width: 100%;
@@ -264,6 +273,45 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.header_fly {
+  position: fixed;
+  z-index: 40;
+  left: 35px;
+  top: 0;
+  width: calc(100% - 70px);
+  background-color: #fff;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0px 0px 45px rgba(130, 142, 147, 0.1);
+  padding: 17px 0 18px 0;
+  transform: translate(0, -300px);
+  transition: all 0.2s;
+}
+.header_fly.open {
+  transform: translate(0, 0);
+}
+.header_fly-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_fly-links {
+  display: flex;
+  align-items: center;
+}
+.header_fly-link {
+  font-size: 15px;
+  white-space: nowrap;
+  margin-right: 36px;
+}
+.header_fly-btn {
+  color: #fff;
+  background: linear-gradient(93.89deg, #5388f0 0%, #356dda 100%);
+  padding: 13px 23px 14px 23px;
+}
+.header_fly-btn:hover {
+  background: linear-gradient(93.89deg, #0a44b4 0%, #0a44b4 100%);
+}
 /* Шапка конец */
 
 /* Главная начало */
@@ -272,6 +320,7 @@ header {
   border-radius: 20px;
   width: 100%;
   padding: 170px 0 120px 0;
+  box-shadow: 0px 30px 65px rgba(7, 42, 113, 0.2);
 }
 .home-wrapper {
   display: grid;
@@ -375,12 +424,15 @@ header {
 .delivery {
   position: relative;
   padding: 500px 0 215px 0;
+  box-shadow: 0px 30px 65px rgba(7, 42, 113, 0.2);
+  border-radius: 20px;
 }
 .delivery_block {
   position: absolute;
   left: 0;
   top: 0;
   padding: 85px 0 90px 0;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   z-index: 3;
 }
 .delivery_block-wrapper {
@@ -861,6 +913,10 @@ footer {
   .oxh {
     padding: 30px;
   }
+  .advantages .container,
+  .services .container {
+    padding: 0;
+  }
   .container {
     padding: 0 20px;
   }
@@ -939,6 +995,13 @@ footer {
 
   .technology-img.line.desktop {
     display: block;
+  }
+
+  .footer-img.desktop {
+    display: block;
+  }
+  .footer-img.mobile {
+    display: none;
   }
 }
 @media screen and (max-width: 1200px) {
@@ -1086,12 +1149,6 @@ footer {
 
   .footer-wrapper {
     grid-template-columns: 1fr;
-  }
-  .footer-img.desktop {
-    display: block;
-  }
-  .footer-img.mobile {
-    display: none;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1266,14 +1323,19 @@ footer {
     width: 15px;
     height: 15px;
   }
+  .block {
+    border-radius: 15px;
+  }
   .card {
     padding: 15px 20px 20px 20px;
+    border-radius: 15px;
   }
 
   header {
     width: calc(100% - 20px);
     left: 10px;
     top: 10px;
+    border-radius: 15px;
   }
   .header-phone {
     font-size: 15px;
@@ -1292,6 +1354,7 @@ footer {
   .home-block {
     padding: 15px 20px 20px 20px;
     grid-gap: 5px;
+    border-radius: 15px;
   }
   .home-price,
   .home-subtitle {
@@ -1307,11 +1370,13 @@ footer {
   .home-img {
     width: 280px;
     height: auto;
+    border-radius: 15px;
   }
   .home_cashback {
     width: 280px;
     padding: 15px 15px 15px 105px;
     bottom: -65px;
+    border-radius: 15px;
   }
   .home_cashback-img {
     left: 15px;
@@ -1392,6 +1457,10 @@ footer {
   }
   .advantages_card {
     padding: 20px;
+    border-radius: 15px;
+  }
+  .advantages-img {
+    border-radius: 15px;
   }
 
   .technology {
@@ -1443,14 +1512,34 @@ footer {
     height: 405px;
     width: 100%;
     overflow: hidden;
-    border-radius: 20px;
+    border-radius: 15px;
   }
   .contacts-img {
     width: auto;
     position: absolute;
     left: -40px;
+    border-radius: 15px;
+  }
+  .contacts-block {
+    padding: 20px;
+  }
+  .contacts-heading {
+    margin-bottom: 15px;
+  }
+  .contacts-info {
+    grid-gap: 10px;
+  }
+  .contacts-social {
+    margin-top: 15px;
+    grid-gap: 30px;
   }
 
+  footer {
+    padding: 20px 20px 30px 20px;
+  }
+  .footer-wrapper {
+    grid-gap: 20px;
+  }
   .footer-nav {
     grid-gap: 20px 40px;
   }
@@ -1459,6 +1548,7 @@ footer {
   }
   .footer-btn {
     margin-bottom: 10px;
+    margin-top: 5px;
   }
   .footer-phone {
     font-size: 18px;

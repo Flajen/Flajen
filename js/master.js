@@ -13,9 +13,24 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     });
   });
+  // Отключение скролла
+  let disableScroll = function () {
+    let pagePosition = window.scrollY;
+    document.body.classList.add("disable-scroll");
+    document.body.dataset.position = pagePosition;
+    document.body.style.top = -pagePosition + "px";
+  };
+  let enableScroll = function () {
+    let pagePosition = parseInt(document.body.dataset.position, 10);
+    document.body.style.top = "auto";
+    document.body.classList.remove("disable-scroll");
+    window.scroll({ top: pagePosition, left: 0 });
+    document.body.removeAttribute("data-position");
+  };
   // Шапка
   const onScrollHeader = () => {
     const header = document.querySelector("header");
+    const headerFly = document.querySelector(".header_fly");
     let prevScroll = window.pageYOffset;
     let currentScroll;
     window.addEventListener("scroll", () => {
@@ -24,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
         header.classList.add("fly");
       } else {
         header.classList.remove("fly");
+      }
+      if (currentScroll > 100) {
+        headerFly.classList.add("open");
+      } else {
+        headerFly.classList.remove("open");
       }
       prevScroll = currentScroll;
     });
@@ -39,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 1,
       });
       headerWindow.classList.remove("open");
+      enableScroll();
     } else {
       gsap.to(headerWindow, {
         height: "auto",
@@ -46,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
         duration: 1,
       });
       headerWindow.classList.add("open");
+      disableScroll();
     }
   });
   // Список
@@ -95,8 +117,8 @@ document.addEventListener("DOMContentLoaded", function () {
         e.target.classList.contains("popup-close")
       ) {
         element.classList.remove("open");
-        body.classList.remove("overflow");
         document.body.style.paddingRight = 0;
+        enableScroll();
         setTimeout(function () {
           element.style.display = "none";
         }, 300);
@@ -110,8 +132,8 @@ document.addEventListener("DOMContentLoaded", function () {
       feedbackPopup.style.display = "flex";
       setTimeout(function () {
         feedbackPopup.classList.add("open");
-        body.classList.add("overflow");
         document.body.style.paddingRight = `${scrollSize}px`;
+        disableScroll();
       }, 300);
     });
   }

@@ -507,6 +507,7 @@ header {
 .delivery-btn {
   color: #5388f0;
   background-color: #fff;
+  padding: 19px 5px;
 }
 .delivery-btn:hover {
   color: #fff;
@@ -1350,6 +1351,7 @@ footer {
     height: 40px;
   }
   .home-block {
+    width: 280px;
     padding: 15px 20px 20px 20px;
     grid-gap: 5px;
     border-radius: 15px;
@@ -1401,6 +1403,12 @@ footer {
     width: 11px;
     height: 11px;
     top: 2px;
+  }
+  .delivery-form {
+    grid-template-columns: 280px;
+  }
+  .delivery-btn {
+    padding: 19px 5px;
   }
 
   .services {
@@ -1520,11 +1528,7 @@ footer {
   .contacts-img {
     width: auto;
     position: absolute;
-    left: -40px;
     border-radius: 15px;
-  }
-  .contacts-block {
-    padding: 20px;
   }
   .contacts-heading {
     margin-bottom: 15px;
@@ -1563,6 +1567,12 @@ footer {
   }
 }
 @media screen and (max-width: 425px) {
+  .contacts-block {
+    padding: 20px;
+  }
 }
 @media screen and (max-width: 375px) {
+  .contacts-img {
+    left: -40px;
+  }
 }

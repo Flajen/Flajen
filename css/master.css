@@ -675,6 +675,7 @@ header {
 .questions_card {
   cursor: default;
   position: relative;
+  overflow: hidden;
 }
 .card.questions_card {
   padding: 20px 30px;

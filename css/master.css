@@ -378,16 +378,8 @@ header {
   height: 480px;
   border-radius: 20px;
   position: relative;
+  object-fit: cover;
   z-index: 1;
-}
-.home-video-play {
-  width: 70px;
-  height: 70px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  z-index: 2;
 }
 .home_cashback {
   width: 528px;
@@ -920,6 +912,13 @@ footer {
   .container {
     padding: 0 20px;
   }
+  .header_fly {
+    width: calc(100% - 60px);
+    left: 30px;
+  }
+  .header_fly-link {
+    margin-right: 26px;
+  }
 }
 @media screen and (max-width: 1240px) {
   .desktop {
@@ -930,6 +929,9 @@ footer {
   }
   .mobile.header-wrapper {
     display: flex;
+  }
+  .header_fly {
+    display: none;
   }
   header {
     width: calc(100% - 60px);
@@ -1330,6 +1332,10 @@ footer {
     padding: 15px 20px 20px 20px;
     border-radius: 15px;
   }
+  .advantages .container,
+  .services .container {
+    padding: 0 20px;
+  }
 
   header {
     width: calc(100% - 20px);
@@ -1346,6 +1352,7 @@ footer {
 
   .home {
     margin-bottom: 155px;
+    padding: 100px 0;
   }
   .home_cashback-img {
     width: 80px;
@@ -1362,10 +1369,6 @@ footer {
   }
   .home-wrapper {
     grid-gap: 20px;
-  }
-  .home-video-play {
-    width: 40px;
-    height: 40px;
   }
   .home-img {
     width: 280px;
@@ -1409,6 +1412,9 @@ footer {
     top: 2px;
   }
 
+  .services {
+    margin-bottom: 290px;
+  }
   .services-cards {
     grid-template-columns: repeat(auto-fit, 280px);
     grid-auto-rows: 130px;

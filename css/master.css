@@ -1576,3 +1576,33 @@ footer {
     left: -40px;
   }
 }
+/* 
+[aos="fade"] {
+  transform: translate(0, -130px);
+  transition-property: all;
+}
+
+[aos="fade"].aos-animate {
+  transform: translate(0, 0);
+} 
+*/
+
+[data-aos="anim-up"] {
+  transform: translate(0, 5px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos="anim-up"].aos-animate {
+  transform: translate(0, 0);
+  opacity: 1;
+}
+
+[data-aos="anim-block-up"] {
+  transform: translate(0, 60px);
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos="anim-block-up"].aos-animate {
+  transform: translate(0, 0);
+  opacity: 1;
+}

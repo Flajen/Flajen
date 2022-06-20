@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/aos.css">
   <link rel="stylesheet" href="./css/master.css">
   <link rel="stylesheet" href="./css/icon.css">
 </head>
@@ -20,7 +21,7 @@
     <header class="open">
       <div class="container">
         <div class="header-wrapper desktop">
-          <a href="/" class="header-logo logo">
+          <a href="/" class="header-logo logo" data-aos="fade" data-aos-delay="0">
             <img src="./img/logo.png" alt="Белый лис" class="header-img">
           </a>
           <nav>
@@ -41,7 +42,7 @@
         </div>
         <div class="header-wrapper mobile">
           <div class="header-cap">
-            <a href="#home" class="header-logo logo">
+            <a href="#home" class="header-logo logo" data-aos="fade" data-aos-delay="0">
               <img src="./img/logo-mob.png" alt="Белый лис" class="header-img">
             </a>
             <button type="button" name="burger" class="header-burger icon"></button>
@@ -78,11 +79,15 @@
         <div class="container">
           <div class="home-wrapper">
             <div class="home-info">
-              <h1 class="home-title title">Прачечная-химчистка</h1>
+              <h1 class="home-title title" data-aos="anim-up" data-aos-delay="100">
+                Прачечная-химчистка</h1>
               <div class="home-block">
-                <p class="home-subtitle">Услуги профессиональной стирки прямого и фасонного белья</p>
-                <p class="home-price">от 42 р/кг</p>
-                <button class="home-btn btn btn-feedback">Стать партнёром</button>
+                <p class="home-subtitle" data-aos="anim-up" data-aos-delay="250">Услуги
+                  профессиональной стирки
+                  прямого и фасонного белья</p>
+                <p class="home-price" data-aos="anim-up" data-aos-delay="350">от 42 р/кг</p>
+                <button class="home-btn btn btn-feedback" data-aos="anim-up" data-aos-delay="450">Стать
+                  партнёром</button>
               </div>
             </div>
             <div class="home-video">
@@ -131,9 +136,11 @@
             <div class="delivery_block-wrapper">
               <img src="./img/delivery/car.png" alt="Бесплатная доставка и забор белья" class="delivery-car">
               <div class="delivery_block-body">
-                <h2 class="delivery-title title"><span class="help">Бесплатная</span> доставка и забор белья</h2>
-                <p class="delivery-text weight icon-after">Москва от 30 кг</p>
-                <p class="delivery-text weight icon-after">Московская область от 60 кг</p>
+                <h2 class="delivery-title title" data-aos="anim-up" data-aos-delay="50"><span
+                    class="help">Бесплатная</span> доставка и забор белья</h2>
+                <p class="delivery-text weight icon-after" data-aos="anim-up" data-aos-delay="150">Москва от 30 кг</p>
+                <p class="delivery-text weight icon-after" data-aos="anim-up" data-aos-delay="250">Московская область
+                  от 60 кг</p>
               </div>
             </div>
           </div>
@@ -142,11 +149,13 @@
           <img src="./img/delivery/bg.png" alt="Вернём свежее и чистое бельё за 24 часа" class="delivery-bg">
         </div>
         <div class="container">
-          <h3 class="delivery-heading">Вернём свежее и чистое бельё<br> за 24 часа</h3>
+          <h3 class="delivery-heading" data-aos="anim-up" data-aos-delay="450">Вернём свежее и чистое бельё<br> за 24
+            часа</h3>
           <form action="./form/send.php" method="post" class="delivery-form">
             <input type="tel" name="phone" id="delivery-phone" data-tel-input maxlength="18" placeholder="Ваш телефон"
-              class="delivery-input input">
-            <button type="submit" name="deliveryBtn" class="delivery-btn btn">Оставить заявку</button>
+              class="delivery-input input" data-aos="anim-up" data-aos-delay="650">
+            <button type="submit" name="deliveryBtn" class="delivery-btn btn" data-aos="anim-up"
+              data-aos-delay="850">Оставить заявку</button>
           </form>
         </div>
       </section>
@@ -155,7 +164,7 @@
         <div class="container">
           <h2 class="title">Стоимость услуг</h2>
           <div class="services-cards cards">
-            <div class="services_card card">
+            <div class="services_card card" data-aos="anim-block-up" data-aos-delay="50">
               <div>
                 <h3 class="services_card-heading">Прямое бельё</h3>
                 <p class="services_card-text">Пододеяльник, простынь, наволочка</p>
@@ -163,21 +172,21 @@
               <span class="services_card-price">от 42 ₽/кг</span>
               <span class="services_card-icon icon one"></span>
             </div>
-            <div class="services_card card">
+            <div class="services_card card" data-aos="anim-block-up" data-aos-delay="250">
               <div>
                 <h3 class="services_card-heading">Одеяло, плед, покрывало, подушка, наматрасник</h3>
               </div>
               <span class="services_card-price">100 ₽/ед</span>
               <span class="services_card-icon icon two"></span>
             </div>
-            <div class="services_card card">
+            <div class="services_card card" data-aos="anim-block-up" data-aos-delay="450">
               <div>
                 <h3 class="services_card-heading">Шторы, тюль, чехлы</h3>
               </div>
               <span class="services_card-price">160 ₽/ед</span>
               <span class="services_card-icon icon three"></span>
             </div>
-            <div class="services_card card">
+            <div class="services_card card" data-aos="anim-block-up" data-aos-delay="650">
               <div>
                 <h3 class="services_card-heading">Спецодежда</h3>
                 <p class="services_card-text">Брюки, жилеты, куртки</p>
@@ -185,7 +194,7 @@
               <span class="services_card-price">180 ₽/ед</span>
               <span class="services_card-icon icon four"></span>
             </div>
-            <div class="services_card card">
+            <div class="services_card card" data-aos="anim-block-up" data-aos-delay="850">
               <div>
                 <h3 class="services_card-heading">Пятновыводка</h3>
                 <p class="services_card-text">Прямое бельё</p>
@@ -193,7 +202,7 @@
               <span class="services_card-price">180 ₽/ед</span>
               <span class="services_card-icon icon five"></span>
             </div>
-            <div class="services_card card">
+            <div class="services_card card" data-aos="anim-block-up" data-aos-delay="1050">
               <div>
                 <h3 class="services_card-heading">Мелкий ремонт</h3>
                 <p class="services_card-text">Прямое бельё, спецодежда</p>
@@ -201,7 +210,7 @@
               <span class="services_card-price">200 ₽/ед</span>
               <span class="services_card-icon icon six"></span>
             </div>
-            <div class="services_card card">
+            <div class="services_card card" data-aos="anim-block-up" data-aos-delay="1250">
               <div>
                 <h3 class="services_card-heading">Ресторанный текстиль</h3>
                 <p class="services_card-text">Прямое бельё</p>
@@ -209,7 +218,7 @@
               <span class="services_card-price">80 ₽/кг</span>
               <span class="services_card-icon icon seven"></span>
             </div>
-            <div class="services_card card">
+            <div class="services_card card" data-aos="anim-block-up" data-aos-delay="1450">
               <div>
                 <h3 class="services_card-heading">Ресторанный текстиль</h3>
                 <p class="services_card-text">Фасонка</p>
@@ -230,14 +239,14 @@
           <h2 class="advantages-title title">Наши преимущества</h2>
           <div class="advantages-wrapper">
             <div class="advantages-cards">
-              <div class="advantages_card">
+              <div class="advantages_card" data-aos="anim-block-up" data-aos-delay="50">
                 <div class="advantages_card-heading-wrapper">
                   <span class="advantages_card-icon icon calendar"></span>
                   <h3 class="advantages_card-heading">Пунктуальность</h3>
                 </div>
                 <p class="advantages_card-text">Придерживаемся оговоренных сроков забора и доставки белья</p>
               </div>
-              <div class="advantages_card">
+              <div class="advantages_card" data-aos="anim-block-up" data-aos-delay="250">
                 <div class="advantages_card-heading-wrapper">
                   <span class="advantages_card-icon icon communication"></span>
                   <h3 class="advantages_card-heading">Озонирование</h3>
@@ -247,7 +256,7 @@
               </div>
             </div>
             <div class="advantages-cards">
-              <div class="advantages_card">
+              <div class="advantages_card" data-aos="anim-block-up" data-aos-delay="450">
                 <div class="advantages_card-heading-wrapper">
                   <span class="advantages_card-icon icon quality"></span>
                   <h3 class="advantages_card-heading">Качество</h3>
@@ -255,7 +264,7 @@
                 <p class="advantages_card-text">Профессиональные оборудование и химические средства позволяют нам
                   сохранять высокий уровень качества стирки</p>
               </div>
-              <div class="advantages_card">
+              <div class="advantages_card" data-aos="anim-block-up" data-aos-delay="650">
                 <div class="advantages_card-heading-wrapper">
                   <span class="advantages_card-icon icon sewing"></span>
                   <h3 class="advantages_card-heading">Ремонт белья</h3>
@@ -264,7 +273,7 @@
               </div>
             </div>
             <div class="advantages-cards">
-              <div class="advantages_card">
+              <div class="advantages_card" data-aos="anim-block-up" data-aos-delay="850">
                 <div class="advantages_card-heading-wrapper">
                   <span class="advantages_card-icon icon fast-delivery"></span>
                   <h3 class="advantages_card-heading">Мобильность</h3>
@@ -272,7 +281,7 @@
                 <p class="advantages_card-text">В исключительных случаях производим доставку раньше, либо вне очереди
                 </p>
               </div>
-              <div class="advantages_card">
+              <div class="advantages_card" data-aos="anim-block-up" data-aos-delay="1050">
                 <div class="advantages_card-heading-wrapper">
                   <span class="advantages_card-icon icon hours"></span>
                   <h3 class="advantages_card-heading">На связи 24/7</h3>
@@ -286,7 +295,7 @@
 
       <section class="technology" id="technology">
         <div class="container">
-          <h2 class="title">Технология стирки</h2>
+          <h2 class="title" data-aos="anim-up" data-aos-delay="50">Технология стирки</h2>
           <div class="technology-wrapper">
             <img src="./img/technology/line.png" alt="Технология стирки" class="technology-img line desktop">
             <img src="./img/technology/mob-line.png" alt="Технология стирки" class="technology-img line mobile">
@@ -317,20 +326,34 @@
         <div class="container">
           <h2 class="title">Наши партнёры</h2>
           <div class="partners-cards cards">
-            <img src="./img/partners/1.png" alt="" class="partners_card card">
-            <img src="./img/partners/2.png" alt="" class="partners_card card">
-            <img src="./img/partners/3.png" alt="" class="partners_card card">
-            <img src="./img/partners/4.png" alt="" class="partners_card card">
-            <img src="./img/partners/5.png" alt="" class="partners_card card">
-            <img src="./img/partners/6.png" alt="" class="partners_card card">
-            <img src="./img/partners/7.png" alt="" class="partners_card card">
-            <img src="./img/partners/8.png" alt="" class="partners_card card">
-            <img src="./img/partners/9.png" alt="" class="partners_card card">
-            <img src="./img/partners/10.png" alt="" class="partners_card card">
-            <img src="./img/partners/11.png" alt="" class="partners_card card">
-            <img src="./img/partners/12.png" alt="" class="partners_card card">
-            <img src="./img/partners/13.png" alt="" class="partners_card card">
-            <img src="./img/partners/14.png" alt="" class="partners_card card">
+            <img src="./img/partners/1.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="50">
+            <img src="./img/partners/2.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="150">
+            <img src="./img/partners/3.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="250">
+            <img src="./img/partners/4.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="350">
+            <img src="./img/partners/5.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="450">
+            <img src="./img/partners/6.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="550">
+            <img src="./img/partners/7.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="650">
+            <img src="./img/partners/8.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="750">
+            <img src="./img/partners/9.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="850">
+            <img src="./img/partners/10.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="950">
+            <img src="./img/partners/11.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="1050">
+            <img src="./img/partners/12.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="1150">
+            <img src="./img/partners/13.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="1250">
+            <img src="./img/partners/14.png" alt="" class="partners_card card" data-aos="anim-block-up"
+              data-aos-delay="1350">
           </div>
         </div>
       </section>
@@ -340,7 +363,7 @@
           <h2 class="title">Ваши вопросы — наши ответы</h2>
           <div class="questions-wrapper">
             <div class="questions-cards">
-              <div class="questions_card card">
+              <div class="questions_card card" data-aos="anim-block-up" data-aos-delay="50">
                 <h3 class="questions_card-heading"><span class="number">1.</span> Выполняете ли Вы корпоративные заказы
                   в большом объёме?
                 </h3>
@@ -351,7 +374,7 @@
                     мы может выполнить заказ в срочном порядке в течении суток.</p>
                 </div>
               </div>
-              <div class="questions_card card">
+              <div class="questions_card card" data-aos="anim-block-up" data-aos-delay="250">
                 <h3 class="questions_card-heading"><span class="number">2.</span> Даёте ли вы гарантию, что в процессе
                   стирки
                   бельё не будет испорчено?
@@ -364,7 +387,7 @@
                     подсчёты, потери или смешивания.</p>
                 </div>
               </div>
-              <div class="questions_card card">
+              <div class="questions_card card" data-aos="anim-block-up" data-aos-delay="450">
                 <h3 class="questions_card-heading"><span class="number">3.</span> Можно ли заказать пробную стирку?
                 </h3>
                 <button type="button" name="questionsBtn" class="questions_card-btn icon"></button>
@@ -376,7 +399,7 @@
               </div>
             </div>
             <div class="questions-cards">
-              <div class="questions_card card">
+              <div class="questions_card card" data-aos="anim-block-up" data-aos-delay="650">
                 <h3 class="questions_card-heading"><span class="number">4.</span> Сколько времени требуется для
                   выполнения
                   стирки от забора до возврата белья?
@@ -388,7 +411,7 @@
                     осуществляем не позднее 24 часов.</p>
                 </div>
               </div>
-              <div class="questions_card card">
+              <div class="questions_card card" data-aos="anim-block-up" data-aos-delay="850">
                 <h3 class="questions_card-heading"><span class="number">5.</span> Для постоянных клиентов существуют
                   бонусные
                   системы, акции?
@@ -400,7 +423,7 @@
                     в видео возврата 10% от общего счёта.</p>
                 </div>
               </div>
-              <div class="questions_card card">
+              <div class="questions_card card" data-aos="anim-block-up" data-aos-delay="1050">
                 <h3 class="questions_card-heading"><span class="number">6.</span> У вас есть услуга выведения пятен?
                 </h3>
                 <button type="button" name="questionsBtn" class="questions_card-btn icon"></button>
@@ -418,10 +441,10 @@
         <div class="container">
           <h2 class="title">Контакты</h2>
           <div class="contacts-wrapper">
-            <div class="contacts-img-wrapper">
+            <div class="contacts-img-wrapper" data-aos="anim-block-up" data-aos-delay="50">
               <img src="./img/contacts/human.png" alt="" class="contacts-img">
             </div>
-            <div class="contacts-block block">
+            <div class="contacts-block block" data-aos="anim-block-up" data-aos-delay="150">
               <div class="contacts-body">
                 <h3 class="contacts-heading">По вопросам сотрудничества:</h3>
                 <div class="contacts-info">
@@ -469,35 +492,55 @@
     <footer class="block">
       <div class="container">
         <div class="footer-wrapper">
-          <a href="/" class="footer-logo logo">
+          <a href="/" class="footer-logo logo" data-aos="fade" data-aos-delay="0">
             <img src="./img/footer-logo.png" alt="Белый лис" class="footer-img desktop">
             <img src="./img/footer-logo-mob.png" alt="Белый лис" class="footer-img mobile">
           </a>
           <ul class="footer-nav">
-            <li><a href="#home" class="footer-nav-link nav-link">Главная</a></li>
-            <li><a href="#technology" class="footer-nav-link nav-link">Технология стирки</a></li>
-            <li><a href="#delivery" class="footer-nav-link nav-link">Доставка</a></li>
-            <li><a href="#partners" class="footer-nav-link nav-link">Партнёры</a></li>
-            <li><a href="#services" class="footer-nav-link nav-link">Стоимость услуг</a></li>
-            <li><a href="#questions" class="footer-nav-link nav-link">Вопрос-ответ</a></li>
-            <li><a href="#advantages" class="footer-nav-link nav-link">Преимущества</a></li>
-            <li><a href="#contacts" class="footer-nav-link nav-link">Контакты</a></li>
+            <li><a href="#home" class="footer-nav-link nav-link" data-aos="anim-up" data-aos-delay="50">Главная</a></li>
+            <li><a href="#technology" class="footer-nav-link nav-link" data-aos="anim-up"
+                data-aos-delay="150">Технология стирки</a></li>
+            <li><a href="#delivery" class="footer-nav-link nav-link" data-aos="anim-up"
+                data-aos-delay="250">Доставка</a></li>
+            <li><a href="#partners" class="footer-nav-link nav-link" data-aos="anim-up"
+                data-aos-delay="350">Партнёры</a></li>
+            <li><a href="#services" class="footer-nav-link nav-link" data-aos="anim-up" data-aos-delay="450">Стоимость
+                услуг</a></li>
+            <li><a href="#questions" class="footer-nav-link nav-link" data-aos="anim-up"
+                data-aos-delay="550">Вопрос-ответ</a></li>
+            <li><a href="#advantages" class="footer-nav-link nav-link" data-aos="anim-up"
+                data-aos-delay="650">Преимущества</a></li>
+            <li><a href="#contacts" class="footer-nav-link nav-link" data-aos="anim-up"
+                data-aos-delay="750">Контакты</a></li>
           </ul>
           <div class="footer-info">
-            <button type="button" name="footerBtn" class="footer-btn btn btn-feedback">Оставить заявку на
+            <button type="button" name="footerBtn" class="footer-btn btn btn-feedback" data-aos="anim-up"
+              data-aos-delay="950">Оставить заявку на
               звонок</button>
-            <a href="tel:+79636200013" class="footer-phone">+7 (963)-620-00-13</a>
-            <a href="mailto:mail@mail.ru" class="footer-mail">mail@mail.ru</a>
-            <p class="footer-addres">Москва, ул. Пушкина, д. 8, пом. 5</p>
-            <p class="footer-schedule">График работы: Круглосуточно</p>
+            <a href="tel:+79636200013" class="footer-phone" data-aos="anim-up" data-aos-delay="1050">+7
+              (963)-620-00-13</a>
+            <a href="mailto:mail@mail.ru" class="footer-mail" data-aos="anim-up" data-aos-delay="1150">mail@mail.ru</a>
+            <p class="footer-addres" data-aos="anim-up" data-aos-delay="1250">Москва, ул. Пушкина, д. 8, пом. 5</p>
+            <p class="footer-schedule" data-aos="anim-up" data-aos-delay="1350">График работы: Круглосуточно</p>
           </div>
         </div>
       </div>
     </footer>
   </div>
 
+  <script src="./js/aos.js"></script>
   <script src="./js/gsap.min.js"></script>
   <script src="./js/master.js"></script>
+
+  <script>
+    AOS.init({
+      // offset: 100,
+      duration: 350,
+      easing: 'linear',
+      // delay: 50,
+      once: true,
+    });
+  </script>
 </body>
 
 </html>

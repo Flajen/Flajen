@@ -633,7 +633,7 @@ header {
 }
 .technology-img.line {
   left: 145px;
-  top: -26px;
+  /* top: -26px; */
   z-index: -1;
 }
 .technology-cards {
@@ -1081,8 +1081,8 @@ footer {
   .technology-img.line {
     left: 145px;
     top: -24px;
-    width: 594px;
-    height: 399px;
+    /* width: 594px; */
+    /* height: 399px; */
   }
   .technology-wrapper {
     grid-template-columns: repeat(auto-fit, 280px);
@@ -1160,8 +1160,10 @@ footer {
   }
   .technology-img.line.mobile {
     display: block;
-    width: 440px;
-    height: 1079px;
+    /* width: 440px; */
+    /* height: 1079px; */
+    height: 990px;
+    top: 0;
     left: 50%;
     transform: translate(-50%, 0);
   }
@@ -1180,8 +1182,17 @@ footer {
     font-size: 18px;
   }
 
+  .contacts-wrapper {
+    width: 450px;
+    margin: 0 auto;
+  }
   .contacts-heading {
     font-size: 18px;
+  }
+  .contacts-img-wrapper {
+    width: 100%;
+    height: 530px;
+    top: calc(100% - 20px);
   }
 
   .footer-wrapper {
@@ -1280,8 +1291,8 @@ footer {
     margin-bottom: 480px;
   }
   .technology-img.line.mobile {
-    width: 425px;
-    height: 1040px;
+    /* width: 425px; */
+    /* height: 1040px; */
   }
   .technology-cards {
     grid-template-columns: 392px;
@@ -1306,11 +1317,16 @@ footer {
   .contacts {
     margin-bottom: 540px;
   }
+  .contacts-wrapper {
+    width: 366px;
+  }
   .contacts-heading {
     font-size: 16px;
   }
   .contacts-img-wrapper {
-    top: calc(100% - 30px);
+    width: 100%;
+    height: 530px;
+    top: calc(100% - 50px);
   }
 
   .footer-img {
@@ -1522,8 +1538,7 @@ footer {
     padding: 15px;
   }
   .technology-img.line.mobile {
-    width: 320px;
-    height: 785px;
+    height: 690px;
   }
   .technology-img.bg {
     width: 382px;
@@ -1559,6 +1574,9 @@ footer {
   .contacts {
     margin-bottom: 450px;
   }
+  .contacts-wrapper {
+    width: 280px;
+  }
   .contacts-img-wrapper {
     height: 405px;
     width: 100%;
@@ -1579,6 +1597,11 @@ footer {
   .contacts-social {
     margin-top: 15px;
     grid-gap: 30px;
+  }
+
+  .contacts-img-wrapper {
+    height: 405px;
+    top: calc(100% - 50px);
   }
 
   footer {
@@ -1627,11 +1650,6 @@ footer {
 @media screen and (max-width: 425px) {
   .contacts-block {
     padding: 20px;
-  }
-}
-@media screen and (max-width: 375px) {
-  .contacts-img {
-    left: -40px;
   }
 }
 

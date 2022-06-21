@@ -98,8 +98,6 @@
                   <source src="./video/home.webm" type="video/webm">
                   <source src="./video/home.ogv" type="video/ogg">
                 </video>
-                <!-- <video autoplay loop muted src="./video/home.mp4" poster="./img/home/video.png" class="home-img">
-                </video> -->
               </div>
               <div class="home_cashback">
                 <img src="./img/home/cashback.png" alt="Вернём 10% при своевременной оплате наших услуг"
@@ -306,11 +304,17 @@
               <p class="technology_card card"><span class="number">3.</span> Выбор программы стирки в зависимости от
                 загрязнений и типа белья</p>
             </div>
-            <div class="technology-cards">
+            <div class="technology-cards desktop">
               <p class="technology_card card"><span class="number">7.</span> Сортировка и подсчёты</p>
               <p class="technology_card card"><span class="number">6.</span> Глаженье</p>
               <p class="technology_card card"><span class="number">5.</span> Сушка</p>
               <p class="technology_card card"><span class="number">4.</span> Стирка</p>
+            </div>
+            <div class="technology-cards mobile">
+              <p class="technology_card card"><span class="number">4.</span> Стирка</p>
+              <p class="technology_card card"><span class="number">5.</span> Сушка</p>
+              <p class="technology_card card"><span class="number">6.</span> Глаженье</p>
+              <p class="technology_card card"><span class="number">7.</span> Сортировка и подсчёты</p>
             </div>
             <div class="technology-cards">
               <p class="technology_card card"><span class="number">8.</span> Упаковка</p>
@@ -538,10 +542,9 @@
 
   <script>
     AOS.init({
-      // offset: 100,
+      offset: 40,
       duration: 350,
       easing: 'linear',
-      // delay: 50,
       once: true,
     });
   </script>

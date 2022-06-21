@@ -640,6 +640,9 @@ header {
   position: relative;
   z-index: 2;
 }
+.technology-cards.mobile {
+  display: none;
+}
 /* Технология конец */
 
 /* Партнеры начало */
@@ -998,6 +1001,13 @@ footer {
   .technology-img.line.desktop {
     display: block;
   }
+  .technology-img.line.mobile,
+  .technology-cards.mobile {
+    display: none;
+  }
+  .technology-cards.desktop {
+    display: grid;
+  }
 
   .footer-img.desktop {
     display: block;
@@ -1139,6 +1149,12 @@ footer {
   .technology-wrapper {
     grid-template-columns: minmax(200px, 500px);
     justify-content: center;
+  }
+  .technology-cards.desktop {
+    display: none;
+  }
+  .technology-cards.mobile {
+    display: grid;
   }
 
   .questions_card-heading {
@@ -1405,10 +1421,14 @@ footer {
     top: 2px;
   }
   .delivery-form {
+    grid-gap: 15px;
     grid-template-columns: 280px;
   }
+  .delivery-input {
+    padding: 15px;
+  }
   .delivery-btn {
-    padding: 19px 5px;
+    padding: 16px 5px;
   }
 
   .services {
@@ -1565,6 +1585,24 @@ footer {
   .footer-schedule {
     font-size: 15px;
   }
+
+  .popup {
+    padding: 10px;
+  }
+  .popup-body {
+    padding: 20px;
+  }
+  .popup-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .popup-form {
+    margin-top: 15px;
+    grid-gap: 15px;
+  }
+  .popup-input {
+    padding: 15px;
+  }
 }
 @media screen and (max-width: 425px) {
   .contacts-block {
@@ -1576,16 +1614,6 @@ footer {
     left: -40px;
   }
 }
-/* 
-[aos="fade"] {
-  transform: translate(0, -130px);
-  transition-property: all;
-}
-
-[aos="fade"].aos-animate {
-  transform: translate(0, 0);
-} 
-*/
 
 [data-aos="anim-up"] {
   transform: translate(0, 5px);

@@ -520,7 +520,7 @@ header {
   margin-bottom: 835px;
 }
 .services-cards {
-  grid-template-columns: repeat(auto-fit, 289px);
+  grid-template-columns: repeat(4, minmax(270px, 289px));
   grid-auto-rows: 170px;
 }
 .services_card {
@@ -996,6 +996,10 @@ footer {
     background: linear-gradient(93.89deg, #5388f0 0%, #356dda 100%);
     padding: 15px 40px;
     margin-bottom: 15px;
+  }
+
+  .services-cards {
+    grid-template-columns: repeat(auto-fit, 289px);
   }
 
   .advantages-wrapper {

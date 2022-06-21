@@ -576,17 +576,20 @@ header {
 .advantages-wrapper {
   display: grid;
   grid-auto-flow: dense;
-  grid-template-columns: repeat(auto-fit, 392px);
-  align-items: center;
-  align-content: center;
-  justify-content: center;
+  /* grid-template-columns: repeat(auto-fit, 392px); */
+  grid-template-columns: repeat(3, minmax(100px, 392px));
+  /* align-items: center; */
+  /* align-content: center; */
+  /* justify-content: center; */
   grid-gap: 20px;
 }
 .advantages-cards {
   display: grid;
+  /* grid-template-columns: minmax(200px, 392px); */
   grid-gap: 20px;
 }
 .advantages_card {
+  width: 100%;
   background: #ffffff;
   border-radius: 20px;
   padding: 30px;
@@ -908,6 +911,7 @@ footer {
   .oxh {
     padding: 30px;
   }
+  .partners .container,
   .advantages .container,
   .services .container {
     padding: 0;
@@ -996,6 +1000,13 @@ footer {
     background: linear-gradient(93.89deg, #5388f0 0%, #356dda 100%);
     padding: 15px 40px;
     margin-bottom: 15px;
+  }
+
+  .advantages-wrapper {
+    grid-template-columns: repeat(auto-fit, 392px);
+    align-items: center;
+    align-content: center;
+    justify-content: center;
   }
 
   .technology-img.line.desktop {
@@ -1340,6 +1351,7 @@ footer {
     padding: 15px 20px 20px 20px;
     border-radius: 15px;
   }
+  .partners .container,
   .advantages .container,
   .services .container {
     padding: 0 20px;

@@ -633,7 +633,7 @@ header {
 }
 .technology-img.line {
   left: 145px;
-  /* top: -26px; */
+  top: -26px;
   z-index: -1;
 }
 .technology-cards {

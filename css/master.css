@@ -650,11 +650,7 @@ header {
 
 /* Партнеры начало */
 .partners-cards {
-  grid-template-columns: repeat(auto-fit, 156px);
-}
-.partners_card {
-  width: 156px;
-  height: 156px;
+  grid-template-columns: repeat(7, minmax(100px, 156px));
 }
 .card.partners_card {
   padding: 0;
@@ -1018,6 +1014,14 @@ footer {
   }
   .technology-cards.desktop {
     display: grid;
+  }
+
+  .partners-cards {
+    grid-template-columns: repeat(auto-fit, 156px);
+  }
+  .partners_card {
+    width: 156px;
+    height: 156px;
   }
 
   .footer-img.desktop {

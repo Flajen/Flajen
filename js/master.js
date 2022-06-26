@@ -38,6 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  if (document.querySelector(".scroller")) {
+    const elСomparison = document.querySelector(".scroller");
+    elСomparison.addEventListener("mouseenter", () => {
+      cursor.setText("тянуть");
+      cursor.addState("-comparisonColor");
+    });
+    elСomparison.addEventListener("mouseleave", () => {
+      cursor.removeText();
+      cursor.removeState("-comparisonColor");
+    });
+  }
+
   // Наведение на ссылку
   document
     .querySelectorAll(".hover")

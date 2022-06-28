@@ -1,0 +1,283 @@
+/* Основное */
+.home_breadcrumbs {
+  display: flex;
+  font-size: 16px;
+  font-weight: 300;
+  margin-bottom: 37px;
+}
+.home_breadcrumbs-link {
+  font-weight: 400;
+}
+.home_breadcrumbs-slash {
+  margin: 0 6px;
+}
+.case-title {
+  font-size: 70px;
+  font-weight: 500;
+  margin-bottom: 60px;
+}
+.case-background {
+  width: 100%;
+  height: 1080px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Сайт */
+
+/* Главная начало */
+.home-heading {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 250px;
+}
+.home-title {
+  margin-right: 322px;
+}
+.home-subtitle {
+  max-width: 665px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 135%;
+  margin-top: 10px;
+}
+.home-background {
+  background-color: #167fae;
+}
+.home-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-15deg);
+}
+/* Главная конец */
+
+/* О нас и задача начало */
+.task-body,
+.about-body {
+  display: flex;
+}
+.task-title,
+.about-title {
+  font-size: 20px;
+  font-weight: 600;
+  white-space: nowrap;
+  margin-right: 282px;
+}
+.task-text,
+.about-text {
+  display: grid;
+  max-width: 865px;
+  font-size: 25px;
+  grid-gap: 34px;
+  line-height: 135%;
+}
+.about-img-wrapper {
+  width: 100%;
+  margin-top: 350px;
+}
+.about-img {
+  width: 100%;
+  object-fit: cover;
+}
+.task-img-wrapper {
+  width: 1640px;
+  height: 920px;
+  background-color: #167fae;
+  margin: 350px auto 0 auto;
+  position: relative;
+}
+.task-bg {
+  width: 811px;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  object-fit: cover;
+}
+.task-img {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: -40px 50px 150px -20px rgba(4, 50, 70, 0.85);
+  border-radius: 20px;
+}
+/* О нас и задача конец */
+
+/* О проекте начало */
+.telling-body {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.telling-cards {
+  display: grid;
+  grid-gap: 95px;
+}
+.telling_card {
+  display: grid;
+  grid-gap: 30px;
+  justify-items: center;
+}
+.telling_card-img-wrapper {
+  width: 100%;
+  height: 630px;
+  background-color: #b2daf3;
+}
+.telling_card-title {
+  max-width: 470px;
+  font-size: 20px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 135%;
+}
+/* О проекте конец */
+
+/* Адаптивно начало */
+.adaptively-background {
+  background-color: #fae390;
+}
+.adaptively-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-20deg);
+}
+/* Адаптивно конец */
+
+/* Сравнение начало */
+#page {
+  max-width: 1640px;
+  width: 100%;
+  height: 920px;
+  position: relative;
+  margin: 0 auto;
+  background-color: #ddeff6;
+}
+.wrapper {
+  width: 1200px;
+  height: 627px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  overflow: hidden;
+  box-shadow: -40px 50px 150px -20px rgba(124, 181, 206, 0.85);
+  border-radius: 20px;
+}
+.before,
+.after {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.content-image {
+  height: 100%;
+}
+.after {
+  width: 450px;
+}
+.scroller {
+  width: 2px;
+  height: 100%;
+  background-color: #0066ff;
+  box-shadow: 0px 0px 25px rgba(36, 36, 37, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -1px;
+  z-index: 2;
+}
+.scroller::after {
+  content: "";
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='45' height='45' viewBox='0 0 45 45' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_149_45)'%3e%3cpath d='M38 23L30.5 27.3301V18.6699L38 23Z' fill='%230066FF'/%3e%3cpath d='M8 23L15.5 27.3301V18.6699L8 23Z' fill='%230066FF'/%3e%3ccircle cx='23' cy='23' r='2' fill='%230066FF'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_149_45'%3e%3crect width='15' height='45' fill='white' transform='translate(45 15) rotate(90)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Сравнение конец */
+
+/* Следующие начало */
+.projects-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  margin-bottom: 80px;
+}
+.projects_card {
+  position: relative;
+}
+.projects_card-info {
+  padding: 30px;
+}
+.projects_card-info.one {
+  background-color: #bee4cd;
+}
+.projects_card-info.two {
+  background-color: #dacdfd;
+}
+.projects_card-title {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 135%;
+}
+.projects_card-subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 135%;
+}
+.projects_card-link {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.projects-link-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.projects-link {
+  font-size: 18px;
+  margin: 0 auto;
+  padding: 20px 117px 21px 77px;
+  border-radius: 100px;
+  border: 1px solid #000000;
+  background-color: #fff;
+  position: relative;
+}
+.projects-link::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='m14.515 4.516-.891.89 3.964 3.965H0v1.26h17.588l-3.964 3.964.89.891L20 10.001l-5.485-5.485Z' fill='%23000'/%3e%3c/svg%3e");
+  position: absolute;
+  right: 77px;
+  top: 22px;
+}
+/* Следующие конец */

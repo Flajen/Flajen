@@ -1,18 +1,48 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Плавный скролл
   var Scrollbar = window.Scrollbar;
-  var hestp = Scrollbar.init(document.querySelector("#bodyOverflow"), {
+  var scroll = Scrollbar.init(document.querySelector("#bodyOverflow"), {
     plugins: {
       disableScroll: {
         direction: "x",
+        direction: "y",
       },
     },
   });
-  // console.log(hestp.offset["y"]);
-  // console.log(hestp.getSize());
-  hestp.addListener(() => {
-    // console.log(hestp.offset["y"]);
+  // console.log(scroll.offset["y"]);
+  // console.log(scroll.getSize());
+
+  let containerHight = scroll.getSize().container["height"];
+  let contentHight = scroll.getSize().content["height"];
+  // 1080 размер окна
+  // -30% до 30%
+  scroll.addListener(() => {
+    var scrollTop = scroll.scrollTop;
+    windowTop = scrollTop;
+    windowBottom = scrollTop + containerHight;
+    if (windowBottom > 700 && scrollTop < 1800) {
+      var parametrImg = scrollTop / 30 - 25;
+      if (document.querySelector(".home-img")) {
+        document.querySelector(
+          ".home-img"
+        ).style.transform = `translate3d(0, ${parametrImg}%, 0)`;
+      }
+    }
+    if (windowBottom > 8900 && scrollTop < 10000) {
+      var parametrImg = scrollTop / 100;
+      //   if (document.querySelector(".adaptively-img")) {
+      //     document.querySelector(
+      //       ".adaptively-img"
+      //     ).style.transform = `translate3d(0, ${parametrImg}%, 0)`;
+      //   }
+    }
   });
+  // scroll.addListener((status) => {
+  //   console.log(status.offset["y"]);
+  // });
+  //
+  // scroll.scrollTop = 700;
+  // scroll.destroy();
   // console.log(document.documentElement.clientHeight);
 
   // Мышка
@@ -60,6 +90,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cursor.removeState("-comparisonColor");
     });
   }
+  // cursor.destroy();
 
   // Наведение на ссылку
   document
@@ -79,16 +110,16 @@ document.addEventListener("DOMContentLoaded", function () {
   let menuBlackout = document.querySelector(".menu-blackout");
   function closeMenu() {
     burger.classList.remove("open");
-    gsap.to(menuBlackout, { opacity: 0, duration: 0.5 });
+    gsap.to(menuBlackout, { opacity: 0, duration: 0.7 });
     gsap.to(menu, {
-      right: "-80%",
+      right: "-100%",
       padding: "223px 40px 91px 40px",
-      duration: 0.5,
+      duration: 0.7,
     });
     setTimeout(() => {
       menu.classList.remove("open");
       menuBlackout.classList.remove("open");
-    }, 500);
+    }, 700);
   }
   function openMenu() {
     if (menu.classList.contains("open")) {
@@ -97,11 +128,11 @@ document.addEventListener("DOMContentLoaded", function () {
       burger.classList.add("open");
       menu.classList.add("open");
       menuBlackout.classList.add("open");
-      gsap.to(menuBlackout, { opacity: 0.8, duration: 0.5 });
+      gsap.to(menuBlackout, { opacity: 0.8, duration: 0.7 });
       gsap.to(menu, {
         right: 0,
         padding: "223px 80px 91px 80px",
-        duration: 0.5,
+        duration: 0.7,
       });
     }
   }

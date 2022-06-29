@@ -116,6 +116,7 @@ main {
   background-color: #fff;
   position: relative;
   z-index: 2;
+  overflow: hidden;
 }
 section {
   margin-bottom: 350px;
@@ -239,7 +240,7 @@ header {
   background-color: #fff;
   padding: 223px 80px 91px 80px;
   overflow-y: auto;
-  right: -80%;
+  right: -100%;
   z-index: 15;
 }
 .menu.open {

@@ -1,4 +1,28 @@
 document.addEventListener("DOMContentLoaded", () => {
+  new Swiper(".swiperOne", {
+    slidesPerView: "auto",
+    spaceBetween: 5,
+    speed: 7000,
+    loop: true,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+  });
+  new Swiper(".swiperTwo", {
+    slidesPerView: "auto",
+    spaceBetween: 5,
+    speed: 7000,
+    loop: true,
+    allowTouchMove: false,
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+      reverseDirection: true,
+    },
+  });
+
   let active = false;
   document
     .querySelector(".scroller")

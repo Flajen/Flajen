@@ -5,45 +5,57 @@ document.addEventListener("DOMContentLoaded", function () {
     plugins: {
       disableScroll: {
         direction: "x",
-        direction: "y",
       },
     },
   });
-  // console.log(scroll.offset["y"]);
-  // console.log(scroll.getSize());
-
-  let containerHight = scroll.getSize().container["height"];
-  let contentHight = scroll.getSize().content["height"];
-  // 1080 размер окна
-  // -30% до 30%
+  scroll.track.xAxis.element.remove();
+  // Параллакс
+  let lastPosition = 0;
+  let setPosition = -50;
+  // let elemHight = document.querySelector(".home-background").offsetHeight;
+  // let mainTop = document.querySelector("main").offsetTop;
+  // let elemTop = document.querySelector(".home-background").offsetTop;
   scroll.addListener(() => {
+    let containerHight = scroll.getSize().container["height"];
+    let contentHight = scroll.getSize().content["height"];
+    let footerHight = document.querySelector("footer").offsetHeight;
     var scrollTop = scroll.scrollTop;
     windowTop = scrollTop;
     windowBottom = scrollTop + containerHight;
-    if (windowBottom > 700 && scrollTop < 1800) {
-      var parametrImg = scrollTop / 30 - 25;
-      if (document.querySelector(".home-img")) {
+    if (document.querySelector(".home-img")) {
+      if (windowBottom > 700 && scrollTop < 1800) {
+        var parametrImg = scrollTop / 30 - 25;
+        document.querySelector(".home-img").style.willChange = "transform";
         document.querySelector(
           ".home-img"
         ).style.transform = `translate3d(0, ${parametrImg}%, 0)`;
+      } else {
+        document.querySelector(".home-img").style.willChange = "auto";
       }
     }
-    if (windowBottom > 8900 && scrollTop < 10000) {
-      var parametrImg = scrollTop / 100;
-      //   if (document.querySelector(".adaptively-img")) {
-      //     document.querySelector(
-      //       ".adaptively-img"
-      //     ).style.transform = `translate3d(0, ${parametrImg}%, 0)`;
-      //   }
-    }
+    // if (scrollTop > contentHight - 1040 && scrollTop > lastPosition) {
+    // if (windowBottom > contentHight - footerHight) {
+    //   if (windowBottom > lastPosition) {
+    //     if (setPosition <= 0) {
+    //       setPosition = setPosition + 1;
+    //       document.querySelector(
+    //         "footer"
+    //       ).style.transform = `translate3d(0, ${setPosition}%, 0)`;
+    //     }
+    //   } else {
+    //     if (setPosition >= -30) {
+    //       setPosition = setPosition - 1;
+    //       document.querySelector(
+    //         "footer"
+    //       ).style.transform = `translate3d(0, ${setPosition}%, 0)`;
+    //     }
+    //   }
+    //   document.querySelector("footer").style.willChange = "transform";
+    //   // lastPosition = windowBottom;
+    // } else {
+    //   document.querySelector("footer").style.willChange = "auto";
+    // }
   });
-  // scroll.addListener((status) => {
-  //   console.log(status.offset["y"]);
-  // });
-  //
-  // scroll.scrollTop = 700;
-  // scroll.destroy();
-  // console.log(document.documentElement.clientHeight);
 
   // Мышка
   var cursor = new MouseFollower();
@@ -90,7 +102,11 @@ document.addEventListener("DOMContentLoaded", function () {
       cursor.removeState("-comparisonColor");
     });
   }
-  // cursor.destroy();
+  let checkWindowSize =
+    window.innerWidth || document.documentElement.clientWidth;
+  if (checkWindowSize < 1280) {
+    cursor.destroy();
+  }
 
   // Наведение на ссылку
   document
@@ -109,13 +125,13 @@ document.addEventListener("DOMContentLoaded", function () {
   let menu = document.querySelector(".menu");
   let menuBlackout = document.querySelector(".menu-blackout");
   function closeMenu() {
-    burger.classList.remove("open");
     gsap.to(menuBlackout, { opacity: 0, duration: 0.7 });
     gsap.to(menu, {
       right: "-100%",
       padding: "223px 40px 91px 40px",
       duration: 0.7,
     });
+    burger.classList.remove("open");
     setTimeout(() => {
       menu.classList.remove("open");
       menuBlackout.classList.remove("open");

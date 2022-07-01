@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+  <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
   <title>акцент - Desjoyaux</title>
   <link rel="stylesheet" href="../css/swiper-bundle.min.css">
@@ -129,8 +130,13 @@
             <div class="telling-cards">
               <div class="telling_card">
                 <div class="telling_card-img-wrapper one">
-                  <img src="../img/desjoyaux/telling/1.png"
-                    alt="Факты и фотографии о производственных мощностях компании" class="telling_card-img">
+                  <div class="telling_card-img-parallax">
+                    <img src="../img/desjoyaux/telling/1.png"
+                      alt="Факты и фотографии о производственных мощностях компании" class="telling_card-img">
+                    <img src="../img/desjoyaux/telling/1-2.png"
+                      alt="Факты и фотографии о производственных мощностях компании"
+                      class="telling_card-img-additionally">
+                  </div>
                 </div>
                 <h3 class="telling_card-title">Факты и фотографии о производственных мощностях компании</h3>
               </div>
@@ -156,6 +162,8 @@
               <div class="telling_card">
                 <div class="telling_card-img-wrapper four">
                   <img src="../img/desjoyaux/telling/4.png" alt="Шоурум в Санкт-Петербурге" class="telling_card-img">
+                  <img src="../img/desjoyaux/telling/4-2.png" alt="Шоурум в Санкт-Петербурге"
+                    class="telling_card-img-additionally">
                 </div>
                 <h3 class="telling_card-title">Шоурум в Санкт-Петербурге</h3>
               </div>
@@ -237,7 +245,7 @@
             <a href="https://t.me/akcent_agency" class="footer_card-link">@akcent_agency</a>
           </div>
         </div>
-        <img src="../img/copyright.png" alt="авторское право">
+        <img src="../img/copyright.png" alt="авторское право" class="footer-copyright">
       </div>
     </footer>
   </div>
@@ -264,7 +272,6 @@
 <script src="../js/gsap.min.js"></script>
 <script src="../js/mouse-follower.min.js"></script>
 <script src="../js/smooth-scrollbar.js"></script>
-<script src="../js/simpleParallax.min.js"></script>
 <script src="../js/swiper-bundle.min.js"></script>
 <script src="../js/master.js"></script>
 <script src="../js/case.js"></script>

@@ -59,53 +59,53 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Мышка
   var cursor = new MouseFollower();
-  const el = document.querySelector(".burger");
-  let burgerLine = document.querySelectorAll(".burger-line");
-  el.addEventListener("mouseenter", () => {
-    cursor.setText("");
-    cursor.addState("burgerColor");
-    for (let i = 0; i < burgerLine.length; i++) {
-      const element = burgerLine[i];
-      element.classList.add("burgerColor");
-    }
-  });
-  el.addEventListener("mouseleave", () => {
-    cursor.removeText();
-    cursor.removeState("burgerColor");
-    for (let i = 0; i < burgerLine.length; i++) {
-      const element = burgerLine[i];
-      element.classList.remove("burgerColor");
-    }
-  });
-  if (document.querySelector(".color_project")) {
-    const colorProject = document.querySelectorAll(".color_project");
-    for (let i = 0; i < colorProject.length; i++) {
-      const el = colorProject[i];
-      el.addEventListener("mouseenter", () => {
-        cursor.setText("смотреть");
-        cursor.addState(el.getAttribute("data-setColor"));
-      });
-      el.addEventListener("mouseleave", () => {
-        cursor.removeText();
-        cursor.removeState(el.getAttribute("data-setColor"));
-      });
-    }
-  }
-  if (document.querySelector(".scroller")) {
-    const elСomparison = document.querySelector(".scroller");
-    elСomparison.addEventListener("mouseenter", () => {
-      cursor.setText("тянуть");
-      cursor.addState("-comparisonColor");
-    });
-    elСomparison.addEventListener("mouseleave", () => {
-      cursor.removeText();
-      cursor.removeState("-comparisonColor");
-    });
-  }
   let checkWindowSize =
     window.innerWidth || document.documentElement.clientWidth;
   if (checkWindowSize < 1280) {
     cursor.destroy();
+    const el = document.querySelector(".burger");
+    let burgerLine = document.querySelectorAll(".burger-line");
+    el.addEventListener("mouseenter", () => {
+      cursor.setText("");
+      cursor.addState("burgerColor");
+      for (let i = 0; i < burgerLine.length; i++) {
+        const element = burgerLine[i];
+        element.classList.add("burgerColor");
+      }
+    });
+    el.addEventListener("mouseleave", () => {
+      cursor.removeText();
+      cursor.removeState("burgerColor");
+      for (let i = 0; i < burgerLine.length; i++) {
+        const element = burgerLine[i];
+        element.classList.remove("burgerColor");
+      }
+    });
+    if (document.querySelector(".color_project")) {
+      const colorProject = document.querySelectorAll(".color_project");
+      for (let i = 0; i < colorProject.length; i++) {
+        const el = colorProject[i];
+        el.addEventListener("mouseenter", () => {
+          cursor.setText("смотреть");
+          cursor.addState(el.getAttribute("data-setColor"));
+        });
+        el.addEventListener("mouseleave", () => {
+          cursor.removeText();
+          cursor.removeState(el.getAttribute("data-setColor"));
+        });
+      }
+    }
+    if (document.querySelector(".scroller")) {
+      const elСomparison = document.querySelector(".scroller");
+      elСomparison.addEventListener("mouseenter", () => {
+        cursor.setText("тянуть");
+        cursor.addState("-comparisonColor");
+      });
+      elСomparison.addEventListener("mouseleave", () => {
+        cursor.removeText();
+        cursor.removeState("-comparisonColor");
+      });
+    }
   }
 
   // Наведение на ссылку
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(menuBlackout, { opacity: 0, duration: 0.7 });
     gsap.to(menu, {
       right: "-100%",
-      padding: "223px 40px 91px 40px",
+      // padding: "223px 40px 91px 40px",
       duration: 0.7,
     });
     burger.classList.remove("open");
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gsap.to(menuBlackout, { opacity: 0.8, duration: 0.7 });
       gsap.to(menu, {
         right: 0,
-        padding: "223px 80px 91px 80px",
+        // padding: "223px 80px 91px 80px",
         duration: 0.7,
       });
     }

@@ -146,14 +146,24 @@ header {
   cursor: pointer;
 }
 .burger {
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
   background-color: transparent;
   position: fixed;
-  right: 56px;
-  top: 70px;
+  right: 60px;
+  top: 77px;
   z-index: 300;
   transition: all 0.5s;
+}
+.burger::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  left: -20px;
+  bottom: -20px;
+  right: -20px;
+  top: -20px;
 }
 .burgerColor {
   color: #000 !important;
@@ -177,64 +187,95 @@ header {
   position: absolute;
   /* right: 50%; */
   /* transform: translate(50%, 0); */
-  transition: background-color 0.25s linear, width 0.2s linear,
-    transform 0.2s linear;
-  /* transition: width 0.5s linear; */
+  /* transition: background-color 0.25s linear, width 0.2s linear,
+    transform 0.2s linear; */
+  /* transition: all 0.5s linear; */
 }
 .burger-line.one {
-  top: 15px;
-  left: 7.5px;
+  top: 7.5px;
+  left: 0;
 }
 .burger-line.two {
-  bottom: 15px;
-  right: 7.5px;
+  bottom: 7.5px;
+  right: 0;
+}
+.burger-line.one,
+.burger-line.two {
+  /* animation: menu 0.2s timing-function delay iteration-count direction fill-mode; */
 }
 .burger.open .burger-line.one,
 .burger.open .burger-line.two {
-  /* width: 5px; */
+  /* width: 0; */
+  /* opacity: 0; */
+  transition: all 0.2s;
 }
 .burger.open .burger-line.one {
-  transform: rotate(45deg);
-  top: 19px;
+  /* transform: rotate(45deg); */
+  /* top: 19px; */
+  animation-name: burgerLineOne;
+  animation-timing-function: linear;
+  animation-delay: 0s;
+  animation-duration: 0.9s;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
 }
 .burger.open .burger-line.two {
-  transform: rotate(-45deg);
-  bottom: 19px;
+  /* transform: rotate(-45deg); */
+  /* bottom: 19px; */
 }
-.burger-line.three,
-.burger-line.four {
-  opacity: 0;
-}
-@keyframes menu {
+@keyframes burgerLineOne {
   0% {
-    width: 25px;
+    width: 100%;
+    transform: rotate(0deg);
+  }
+  30% {
+    width: 0;
   }
   40% {
-    width: 0;
+    transform: rotate(0deg);
   }
   50% {
     transform: rotate(45deg);
   }
+  90% {
+    top: 14px;
+  }
   100% {
+    width: 100%;
+    top: 14px;
+    transform: rotate(45deg);
   }
 }
 /* Меню */
+/* .menu-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+} */
 .menu-blackout,
 .menu {
   position: fixed;
   top: 0;
   height: 100vh;
+  visibility: hidden;
+  pointer-events: none;
+  user-select: none;
 }
 .menu-blackout {
   width: 100%;
-  display: none;
+  display: block;
   right: 0;
-  background-color: #f4f1e9;
+  background-color: rgba(244, 241, 233, 1);
   opacity: 0;
   z-index: 10;
+  visibility: visible;
 }
 .menu-blackout.open {
-  display: block;
+  pointer-events: auto;
+  user-select: auto;
 }
 .menu-logo-link {
   position: absolute;
@@ -243,18 +284,31 @@ header {
   left: 60px;
 }
 .menu {
-  width: 587px;
-  display: none;
+  width: 350px;
+  display: grid;
   align-content: space-between;
   background-color: #fff;
-  padding: 223px 80px 91px 80px;
+  padding: 223px 30px 91px 30px;
   overflow-y: auto;
   right: -100%;
   z-index: 15;
+  transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 .menu.open {
-  display: grid;
+  width: 587px;
+  visibility: visible;
+  pointer-events: auto;
+  user-select: auto;
+  padding: 223px 80px 91px 80px;
+  right: 0%;
 }
+/* .menu.anim {
+  width: 587px;
+  visibility: visible;
+  opacity: 1;
+  padding: 223px 80px 91px 80px;
+  right: 0%;
+} */
 .menu-title {
   font-size: 56px;
   font-weight: 500;
@@ -354,7 +408,7 @@ footer {
     padding: 0 150px;
   }
   .burger {
-    top: 55px;
+    top: 62px;
   }
   .menu-logo-link {
     top: 60px;
@@ -362,6 +416,9 @@ footer {
   header {
     padding: 60px 60px 0 60px;
     margin-bottom: 214px;
+  }
+  .menu-title {
+    font-size: 45px;
   }
   .footer-title {
     margin-bottom: 120px;
@@ -381,8 +438,8 @@ footer {
     padding: 0 100px;
   }
   .burger {
-    top: 34px;
-    right: 44px;
+    top: 42px;
+    right: 40px;
   }
   .menu-logo-link {
     top: 40px;
@@ -391,6 +448,9 @@ footer {
   header {
     padding: 40px 40px 0 40px;
     margin-bottom: 184px;
+  }
+  .menu-title {
+    font-size: 40px;
   }
   footer {
     padding: 160px 0 176px 0;
@@ -408,10 +468,6 @@ footer {
 @media screen and (max-width: 992px) {
   .container {
     padding: 0 100px;
-  }
-  .burger {
-    top: 34px;
-    right: 44px;
   }
   header {
     margin-bottom: 234px;
@@ -456,8 +512,8 @@ footer {
     padding: 0 30px;
   }
   .burger {
-    top: 19px;
-    right: 24px;
+    top: 26px;
+    right: 30px;
   }
   .menu-logo-link {
     top: 25px;
@@ -466,6 +522,13 @@ footer {
   header {
     padding: 25px 30px 0 30px;
     margin-bottom: 79px;
+  }
+  .menu-title {
+    font-size: 35px;
+  }
+  .menu.open {
+    width: 372px;
+    padding: 200px 40px 70px 60px;
   }
   footer {
     padding: 170px 0 166px 0;
@@ -484,16 +547,16 @@ footer {
   .container {
     padding: 0 20px;
   }
-  .burger {
-    top: 16px;
-    right: 16px;
-  }
   header {
     padding: 25px 20px 0 20px;
     margin-bottom: 59px;
   }
   .header_menu-text {
     display: none;
+  }
+  .menu.open {
+    width: 100%;
+    padding: 150px 20px 40px 20px;
   }
   footer {
     padding: 130px 0 111px 0;

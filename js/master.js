@@ -61,8 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var cursor = new MouseFollower();
   let checkWindowSize =
     window.innerWidth || document.documentElement.clientWidth;
-  if (checkWindowSize < 1280) {
-    cursor.destroy();
+  if (checkWindowSize > 1280) {
     const el = document.querySelector(".burger");
     let burgerLine = document.querySelectorAll(".burger-line");
     el.addEventListener("mouseenter", () => {
@@ -106,6 +105,8 @@ document.addEventListener("DOMContentLoaded", function () {
         cursor.removeState("-comparisonColor");
       });
     }
+  } else {
+    cursor.destroy();
   }
 
   // Наведение на ссылку
@@ -124,32 +125,41 @@ document.addEventListener("DOMContentLoaded", function () {
   let burgerText = document.querySelector(".header_menu-text");
   let menu = document.querySelector(".menu");
   let menuBlackout = document.querySelector(".menu-blackout");
+  let menuCheck = false;
+  if (menuCheck) {
+    console.log(1);
+  }
   function closeMenu() {
-    gsap.to(menuBlackout, { opacity: 0, duration: 0.7 });
-    gsap.to(menu, {
-      right: "-100%",
-      // padding: "223px 40px 91px 40px",
-      duration: 0.7,
-    });
+    gsap.to(menuBlackout, { opacity: 0, duration: 0.4 });
+    menu.classList.remove("anim");
+    // gsap.to(menu, {
+    //   right: "-100%",
+    //   // padding: "223px 40px 91px 40px",
+    //   duration: 0.7,
+    // });
     burger.classList.remove("open");
-    setTimeout(() => {
-      menu.classList.remove("open");
-      menuBlackout.classList.remove("open");
-    }, 700);
+    // setTimeout(() => {
+    menu.classList.remove("open");
+    menuBlackout.classList.remove("open");
+    menuCheck = false;
+    // }, 700);
   }
   function openMenu() {
-    if (menu.classList.contains("open")) {
+    if (menuCheck) {
       closeMenu();
     } else {
       burger.classList.add("open");
       menu.classList.add("open");
+      // setTimeout(() => {
+      menuCheck = true;
+      // }, 700);
       menuBlackout.classList.add("open");
-      gsap.to(menuBlackout, { opacity: 0.8, duration: 0.7 });
-      gsap.to(menu, {
-        right: 0,
-        // padding: "223px 80px 91px 80px",
-        duration: 0.7,
-      });
+      gsap.to(menuBlackout, { opacity: 0.8, duration: 0.4 });
+      // gsap.to(menu, {
+      //   right: 0,
+      //   // padding: "223px 80px 91px 80px",
+      //   duration: 0.7,
+      // });
     }
   }
   burgerText.addEventListener("click", openMenu);

@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Меню
   let burger = document.querySelector(".burger");
   let burgerText = document.querySelector(".header_menu-text");
+  let menuWrapper = document.querySelector(".menu-wrapper");
   let menu = document.querySelector(".menu");
   let menuBlackout = document.querySelector(".menu-blackout");
   let menuCheck = false;
@@ -130,17 +131,13 @@ document.addEventListener("DOMContentLoaded", function () {
     console.log(1);
   }
   function closeMenu() {
-    gsap.to(menuBlackout, { opacity: 0, duration: 0.4 });
+    gsap.to(menuWrapper, { opacity: 0, duration: 0.6 });
+    gsap.to(menuBlackout, { opacity: 0, duration: 0.6 });
     menu.classList.remove("anim");
-    // gsap.to(menu, {
-    //   right: "-100%",
-    //   // padding: "223px 40px 91px 40px",
-    //   duration: 0.7,
-    // });
     burger.classList.remove("open");
     // setTimeout(() => {
+    menuWrapper.classList.remove("open");
     menu.classList.remove("open");
-    menuBlackout.classList.remove("open");
     menuCheck = false;
     // }, 700);
   }
@@ -149,17 +146,11 @@ document.addEventListener("DOMContentLoaded", function () {
       closeMenu();
     } else {
       burger.classList.add("open");
+      menuWrapper.classList.add("open");
       menu.classList.add("open");
-      // setTimeout(() => {
+      gsap.to(menuWrapper, { opacity: 1, duration: 0.6 });
+      gsap.to(menuBlackout, { opacity: 0.8, duration: 0.6 });
       menuCheck = true;
-      // }, 700);
-      menuBlackout.classList.add("open");
-      gsap.to(menuBlackout, { opacity: 0.8, duration: 0.4 });
-      // gsap.to(menu, {
-      //   right: 0,
-      //   // padding: "223px 80px 91px 80px",
-      //   duration: 0.7,
-      // });
     }
   }
   burgerText.addEventListener("click", openMenu);

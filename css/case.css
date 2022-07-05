@@ -176,6 +176,16 @@
   grid-gap: 30px;
   justify-items: center;
 }
+.telling_card-img-parallax {
+  position: relative;
+}
+.telling_card-parallax-img {
+  position: relative;
+}
+.telling_card-parallax-img-additionally {
+  position: absolute;
+  z-index: 3;
+}
 .telling_card-img-wrapper {
   width: 100%;
   height: 630px;
@@ -184,10 +194,6 @@
 }
 .telling_card-img {
   border-radius: 10px;
-}
-.telling_card-img-additionally {
-  position: absolute;
-  z-index: 3;
 }
 .telling_card-img-wrapper.one,
 .telling_card-img-wrapper.four {

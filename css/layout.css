@@ -124,6 +124,9 @@ main {
 section {
   margin-bottom: 350px;
 }
+.prlx-wrapper {
+  height: 100%;
+}
 /* Шапка */
 header {
   padding: 75px 60px 0 60px;

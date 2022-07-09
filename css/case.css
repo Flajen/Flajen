@@ -180,9 +180,6 @@
   margin: auto;
   border-radius: 10px;
 }
-.telling_card-img-wrapper .prlx-wrapper {
-  height: 100%;
-}
 .telling_card-img-wrapper.one .telling_card-parallax-img {
   margin: 127px auto auto auto;
 }

@@ -198,7 +198,9 @@
 }
 .telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
   top: 237px;
-  left: 158px;
+  /* left: 158px; */
+  left: 50%;
+  transform: translateX(-50%);
   box-shadow: -20px 40px 100px -10px rgba(20, 108, 148, 0.5);
 }
 .telling_card-img-wrapper {
@@ -465,6 +467,29 @@
   .telling_card-img-wrapper.three {
     height: 490px;
   }
+  .telling_card-img-wrapper.one .telling_card-parallax-img {
+    width: 80%;
+    margin: auto;
+  }
+  .telling_card-img-wrapper.one .telling_card-parallax-img-additionally {
+    width: 110px;
+    top: 165px;
+    left: 329px;
+  }
+  .telling_card-img-wrapper.two .telling_card-img {
+    width: 80%;
+  }
+  .telling_card-img-wrapper.three .telling_card-img {
+    height: 90%;
+  }
+  .telling_card-img-wrapper.four .telling_card-parallax-img {
+    height: 80%;
+    margin: auto;
+  }
+  .telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
+    width: 220px;
+    top: 156px;
+  }
   .telling_card-title {
     font-size: 18px;
   }
@@ -554,6 +579,15 @@
   .telling_card-img-wrapper.three {
     height: 432px;
   }
+  .telling_card-img-wrapper.one .telling_card-parallax-img-additionally {
+    width: 100px;
+    top: 155px;
+    left: 320px;
+  }
+  .telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
+    width: 190px;
+    top: 130px;
+  }
   .telling_card-title {
     font-size: 16px;
   }
@@ -621,6 +655,15 @@
   }
   .telling_card-img-wrapper.three {
     height: 306px;
+  }
+  .telling_card-img-wrapper.one .telling_card-parallax-img-additionally {
+    width: 80px;
+    top: 105px;
+    left: 250px;
+  }
+  .telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
+    width: 140px;
+    top: 90px;
   }
 
   #page {
@@ -723,6 +766,15 @@
   .telling_card-img-wrapper.three {
     height: 580px;
   }
+  .telling_card-img-wrapper.one .telling_card-parallax-img-additionally {
+    width: 170px;
+    top: 165px;
+    left: 450px;
+  }
+  .telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
+    width: 260px;
+    top: 180px;
+  }
   .telling_card-title {
     font-size: 20px;
   }
@@ -800,6 +852,12 @@
   }
   .telling_card {
     grid-gap: 20px;
+  }
+  .telling_card-img-wrapper {
+    height: 304px;
+  }
+  .telling_card-img-wrapper.three {
+    height: 360px;
   }
   .telling_card-title {
     padding: 0 20px;

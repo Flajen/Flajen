@@ -1,61 +1,23 @@
+// @ts-nocheck
 document.addEventListener("DOMContentLoaded", function () {
   // Плавный скролл
-  var Scrollbar = window.Scrollbar;
-  var scroll = Scrollbar.init(document.querySelector("#bodyOverflow"), {
-    plugins: {
-      disableScroll: {
-        direction: "x",
+  const Scrollbar = window.Scrollbar;
+  const smoothScrollbar = Scrollbar.init(
+    document.querySelector("#bodyOverflow"),
+    {
+      plugins: {
+        disableScroll: {
+          direction: "x",
+        },
       },
-    },
-  });
-  scroll.track.xAxis.element.remove();
-  // Параллакс
-  let lastPosition = 0;
-  let setPosition = -50;
-  // let elemHight = document.querySelector(".home-background").offsetHeight;
-  // let mainTop = document.querySelector("main").offsetTop;
-  // let elemTop = document.querySelector(".home-background").offsetTop;
-  scroll.addListener(() => {
-    let containerHight = scroll.getSize().container["height"];
-    let contentHight = scroll.getSize().content["height"];
-    let footerHight = document.querySelector("footer").offsetHeight;
-    var scrollTop = scroll.scrollTop;
-    windowTop = scrollTop;
-    windowBottom = scrollTop + containerHight;
-    if (document.querySelector(".home-img")) {
-      if (windowBottom > 700 && scrollTop < 1800) {
-        var parametrImg = scrollTop / 30 - 25;
-        document.querySelector(".home-img").style.willChange = "transform";
-        document.querySelector(
-          ".home-img"
-        ).style.transform = `translate3d(0, ${parametrImg}%, 0)`;
-      } else {
-        document.querySelector(".home-img").style.willChange = "auto";
-      }
     }
-    // if (scrollTop > contentHight - 1040 && scrollTop > lastPosition) {
-    // if (windowBottom > contentHight - footerHight) {
-    //   if (windowBottom > lastPosition) {
-    //     if (setPosition <= 0) {
-    //       setPosition = setPosition + 1;
-    //       document.querySelector(
-    //         "footer"
-    //       ).style.transform = `translate3d(0, ${setPosition}%, 0)`;
-    //     }
-    //   } else {
-    //     if (setPosition >= -30) {
-    //       setPosition = setPosition - 1;
-    //       document.querySelector(
-    //         "footer"
-    //       ).style.transform = `translate3d(0, ${setPosition}%, 0)`;
-    //     }
-    //   }
-    //   document.querySelector("footer").style.willChange = "transform";
-    //   // lastPosition = windowBottom;
-    // } else {
-    //   document.querySelector("footer").style.willChange = "auto";
-    // }
-  });
+  );
+  smoothScrollbar.track.xAxis.element.remove();
+
+  /**
+   * Скролл анимации
+   */
+  InitScrollAnimations(smoothScrollbar);
 
   // Мышка
   var cursor = new MouseFollower();
@@ -135,11 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.to(menuBlackout, { opacity: 0, duration: 0.6 });
     menu.classList.remove("anim");
     burger.classList.remove("open");
-    // setTimeout(() => {
     menuWrapper.classList.remove("open");
     menu.classList.remove("open");
     menuCheck = false;
-    // }, 700);
   }
   function openMenu() {
     if (menuCheck) {
@@ -159,3 +119,257 @@ document.addEventListener("DOMContentLoaded", function () {
     closeMenu();
   });
 });
+
+function InitScrollAnimations(scrollbarInstance) {
+  /** CSS селекторы для Parallax. Кроме футера */
+  const parallaxSelectors = [
+    ".home-main_card-img",
+    ".home_card-img",
+    ".home-img",
+    // ".task-img-wrapper",
+    ".adaptively-img",
+    // ".about-img",
+    // "#page",
+    ".telling_card-parallax-img-wrapper",
+    // ".projects_card-img",
+  ];
+
+  /** Для анимации первых экранов при загрузке */
+  const onloadAnimImgSelectors = [".home-img", ".home-main_card-img"];
+
+  /** CSS селекторы текст анимации при загрузке (первый экран) */
+  const onloadTextSelectors = [".home-title", ".home-subtitle"];
+
+  /** CSS селекторы текст анимации при скролле */
+  const parallaxTextSelectors = [
+    ".about-title",
+    ".about-text",
+    ".task-title",
+    ".task-text",
+  ];
+
+  /** Имя класса для врапера */
+  const prlxWrapperClassName = "prlx-wrapper";
+
+  /** Имя класса обертки для текста (каждого слова) */
+  //const innerTextWrappeClassName = ''
+
+  /** Footer parallax selector */
+  const footerParallaxSelector = ".footer-wrapper";
+
+  const parallaxTargets = parallaxSelectors.length
+    ? [...document.querySelectorAll(parallaxSelectors.toString())]
+    : [];
+
+  const onloadImgTargets = onloadAnimImgSelectors.length
+    ? [...document.querySelectorAll(onloadAnimImgSelectors.toString())]
+    : [];
+
+  const onloadTextTargets = onloadTextSelectors.length
+    ? [...document.querySelectorAll(onloadTextSelectors.toString())]
+    : [];
+
+  const parallaxTextTargets = parallaxTextSelectors.length
+    ? [...document.querySelectorAll(parallaxTextSelectors.toString())]
+    : [];
+
+  /**
+   * Оборачиваем во врапер
+   */
+  const toWrapTargets = [...parallaxTargets, ...onloadImgTargets];
+  toWrapTargets.forEach((wrapTarget) => {
+    if (!wrapTarget.closest(`.${prlxWrapperClassName}`)) {
+      const elWrapper = createEl(
+        "div",
+        [prlxWrapperClassName],
+        [["overflow", "hidden"]]
+      );
+      wrapElement(wrapTarget, elWrapper);
+    }
+  });
+
+  /**
+   * Onload анимации
+   */
+  gsap.fromTo(
+    document.body,
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+      duration: 1,
+      ease: "sine.out",
+    },
+    "+=0.03s"
+  );
+
+  onloadImgTargets.forEach((target) => {
+    gsap.fromTo(
+      target,
+      {
+        scale: 1.3,
+      },
+      {
+        scale: 1,
+        duration: 1.5,
+        ease: "sine.out",
+      }
+    );
+  });
+
+  /** Анимации текста при загрузке */
+  const allAnimTextTargets = [...onloadTextTargets, ...parallaxTextTargets];
+  allAnimTextTargets.forEach((el) => {
+    el.style.transformOrigin = "top left";
+  });
+  gsap.fromTo(
+    onloadTextTargets,
+    {
+      y: "40px",
+      scaleY: 1.2,
+      opacity: 0,
+    },
+    {
+      y: "0%",
+      rotateX: 0,
+      scaleY: 1,
+      opacity: 1,
+      duration: 1,
+      stagger: 0.02,
+      ease: "power3.out",
+      delay: 0.5,
+    }
+  );
+
+  /**
+   * Подписывает GSAP на изменеия скролла
+   */
+  gsap.registerPlugin(ScrollTrigger);
+
+  ScrollTrigger.scrollerProxy(document.body, {
+    scrollTop(value) {
+      if (arguments.length) scrollbarInstance.scrollTop = value;
+      return scrollbarInstance.scrollTop;
+    },
+  });
+
+  scrollbarInstance.addListener(ScrollTrigger.update);
+
+  /**
+   * Parallax
+   */
+  parallaxTargets.forEach((target) => {
+    gsap.fromTo(
+      target,
+      {
+        y: "-20%",
+      },
+      {
+        y: "20%",
+        ease: "none",
+        duration: 1,
+        scrollTrigger: {
+          trigger: target,
+          start: "top bottom",
+          end: "bottom -=20%",
+          scrub: true,
+          onToggle: ({ isActive }) => {
+            target.style.willChange = isActive ? "transform" : "auto";
+          },
+        },
+      }
+    );
+  });
+
+  parallaxTextTargets.forEach((target) => {
+    gsap.fromTo(
+      target,
+      {
+        y: "30px",
+        scaleY: 1.2,
+        opacity: 0,
+      },
+      {
+        y: "0%",
+        opacity: 1,
+        scaleY: 1,
+        duration: 1,
+        stagger: 0.01,
+        ease: "power3.out",
+        delay: 0.2,
+        scrollTrigger: {
+          trigger: target,
+          scrub: false,
+          onToggle: ({ isActive }) => {
+            target.style.willChange = isActive ? "transform" : "auto";
+          },
+        },
+      }
+    );
+  });
+
+  /**
+   * Footer parallax
+   */
+  const footerParallaxEL = document.querySelector(footerParallaxSelector);
+  if (footerParallaxEL) {
+    gsap.fromTo(
+      footerParallaxEL,
+      {
+        y: "-50%",
+      },
+      {
+        y: "0%",
+        ease: "none",
+        duration: 0.4,
+        scrollTrigger: {
+          trigger: footerParallaxEL,
+          start: "top bottom",
+          end: "top top",
+          scrub: true,
+          onToggle: ({ isActive }) => {
+            footerParallaxEL.style.willChange = isActive ? "transform" : "auto";
+          },
+        },
+      }
+    );
+  }
+
+  /**
+   * Оборачивает DOM элемент
+   * @param {HTMLElement} el - элемент который нужно обернуть
+   * @param {HTMLElement} wrapper - элемент которым нужно обернуть
+   */
+  function wrapElement(el, wrapper) {
+    el?.parentNode?.insertBefore(wrapper, el);
+    wrapper.appendChild(el);
+  }
+
+  /**
+   * Создает новый элемент с параметрами
+   * @param {String} tag - тег
+   * @param {String[]} classNames - массив с именами классов
+   * @param {[String, String|Number]} styles - массив с CSS свойствами [[key, value]]
+   * @returns {HTMLElement}
+   */
+  function createEl(tag = "div", classNames = [], styles = []) {
+    const el = document.createElement(tag);
+
+    classNames.length &&
+      classNames[0] &&
+      classNames.forEach((className) => el.classList.add(className));
+
+    styles.length &&
+      styles.forEach((styleItem) => {
+        if (
+          styleItem[0] &&
+          (typeof styleItem[1] == "number" || typeof styleItem[1] == "string")
+        ) {
+          el.style[styleItem[0]] = styleItem[1];
+        }
+      });
+
+    return el;
+  }
+}

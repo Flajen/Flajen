@@ -126,12 +126,14 @@ function InitScrollAnimations(scrollbarInstance) {
     ".home-main_card-img",
     ".home_card-img",
     ".home-img",
-    // ".task-img-wrapper",
+    ".task-img-wrapper",
     ".adaptively-img",
-    // ".about-img",
-    // "#page",
-    ".telling_card-parallax-img-wrapper",
-    // ".projects_card-img",
+    ".about-img",
+    "#page",
+    // ".telling_card-img",
+    // ".telling_card-parallax-img-wrapper",
+    ".telling_card-img-wrapper",
+    ".projects_card-img",
   ];
 
   /** Для анимации первых экранов при загрузке */

@@ -71,7 +71,7 @@ body {
 *::after,
 *::before {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -98,7 +98,7 @@ body {
 img {
   display: block;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 li {
   list-style: none;
@@ -141,19 +141,19 @@ header {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 .header_menu {
   display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   grid-gap: 22px;
   padding-right: 47px;
 }
@@ -189,8 +189,8 @@ header {
 }
 .mf-cursor.burgerColor::before {
   -webkit-transform: scale(1.32);
-      -ms-transform: scale(1.32);
-          transform: scale(1.32);
+  -ms-transform: scale(1.32);
+  transform: scale(1.32);
   opacity: 1 !important;
 }
 .-comparisonColor {
@@ -227,13 +227,13 @@ header {
   -webkit-animation: burgerLineOne 0.75s linear 0s forwards; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
   animation: burgerLineOne 0.75s linear 0s forwards; /* IE 10+, Fx 29+ */
   -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-play-state: running;
 }
 .burger.open .burger-line.two {
   -webkit-animation: burgerLineTwo 0.75s linear 0s forwards; /* Safari 4+ */ /* Fx 5+ */ /* Opera 12+ */
   animation: burgerLineTwo 0.75s linear 0s forwards; /* IE 10+, Fx 29+ */
   -webkit-animation-play-state: running;
-          animation-play-state: running;
+  animation-play-state: running;
 }
 @-webkit-keyframes burgerLineOne {
   0% {
@@ -241,34 +241,34 @@ header {
     top: 7.5px;
     left: 0;
     -webkit-transform: rotate(0) scaleX(1);
-            transform: rotate(0) scaleX(1);
+    transform: rotate(0) scaleX(1);
     -webkit-transform-origin: left center;
-            transform-origin: left center;
+    transform-origin: left center;
   }
   30% {
     opacity: 1;
     top: 7.5px;
     left: 0;
     -webkit-transform: rotate(0) scaleX(0);
-            transform: rotate(0) scaleX(0);
+    transform: rotate(0) scaleX(0);
     -webkit-transform-origin: left center;
-            transform-origin: left center;
+    transform-origin: left center;
   }
   30.1% {
     opacity: 0;
     top: 5px;
     left: 3px;
     -webkit-transform: rotate(0) scaleX(0);
-            transform: rotate(0) scaleX(0);
+    transform: rotate(0) scaleX(0);
   }
   31% {
     opacity: 1;
     top: 5px;
     left: 3px;
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
     -webkit-transform: rotate(45deg) scaleX(0);
-            transform: rotate(45deg) scaleX(0);
+    transform: rotate(45deg) scaleX(0);
   }
   100%,
   80% {
@@ -276,9 +276,9 @@ header {
     top: 5px;
     left: 3px;
     -webkit-transform: rotate(45deg) scaleX(1);
-            transform: rotate(45deg) scaleX(1);
+    transform: rotate(45deg) scaleX(1);
     -webkit-transform-origin: left center;
-            transform-origin: left center;
+    transform-origin: left center;
   }
 }
 @keyframes burgerLineOne {
@@ -287,34 +287,34 @@ header {
     top: 7.5px;
     left: 0;
     -webkit-transform: rotate(0) scaleX(1);
-            transform: rotate(0) scaleX(1);
+    transform: rotate(0) scaleX(1);
     -webkit-transform-origin: left center;
-            transform-origin: left center;
+    transform-origin: left center;
   }
   30% {
     opacity: 1;
     top: 7.5px;
     left: 0;
     -webkit-transform: rotate(0) scaleX(0);
-            transform: rotate(0) scaleX(0);
+    transform: rotate(0) scaleX(0);
     -webkit-transform-origin: left center;
-            transform-origin: left center;
+    transform-origin: left center;
   }
   30.1% {
     opacity: 0;
     top: 5px;
     left: 3px;
     -webkit-transform: rotate(0) scaleX(0);
-            transform: rotate(0) scaleX(0);
+    transform: rotate(0) scaleX(0);
   }
   31% {
     opacity: 1;
     top: 5px;
     left: 3px;
     -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
+    transform: rotate(45deg);
     -webkit-transform: rotate(45deg) scaleX(0);
-            transform: rotate(45deg) scaleX(0);
+    transform: rotate(45deg) scaleX(0);
   }
   100%,
   80% {
@@ -322,9 +322,9 @@ header {
     top: 5px;
     left: 3px;
     -webkit-transform: rotate(45deg) scaleX(1);
-            transform: rotate(45deg) scaleX(1);
+    transform: rotate(45deg) scaleX(1);
     -webkit-transform-origin: left center;
-            transform-origin: left center;
+    transform-origin: left center;
   }
 }
 @-webkit-keyframes burgerLineTwo {
@@ -449,7 +449,7 @@ header {
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: justify;
-      align-content: space-between;
+  align-content: space-between;
   background-color: #fff;
   padding: 223px 30px 91px 30px;
   overflow-y: auto;
@@ -468,6 +468,9 @@ header {
   -moz-user-select: auto;
   -ms-user-select: auto;
   user-select: auto;
+}
+.menu-wrapper.open {
+  opacity: 1;
 }
 .menu-wrapper.open .menu {
   width: 587px;
@@ -492,15 +495,15 @@ header {
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .menu-title div:hover span {
   -webkit-transform: translateY(-16%);
-      -ms-transform: translateY(-16%);
-          transform: translateY(-16%);
+  -ms-transform: translateY(-16%);
+  transform: translateY(-16%);
   -webkit-transition-delay: 0.3s;
-       -o-transition-delay: 0.3s;
-          transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
 }
 .menu-cards {
   display: -ms-grid;
@@ -511,8 +514,8 @@ header {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   grid-gap: 2px;
 }
 .menu_card-title {
@@ -546,11 +549,11 @@ footer {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 293px;
 }
 .footer_card {
@@ -678,12 +681,12 @@ footer {
   .footer-cards {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     text-align: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     margin-bottom: 100px;
   }
   .footer_card {

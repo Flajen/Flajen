@@ -22,49 +22,66 @@ document.addEventListener("DOMContentLoaded", () => {
       reverseDirection: true,
     },
   });
-
-  let active = false;
-  document
-    .querySelector(".scroller")
-    .addEventListener("mousedown", function () {
-      active = true;
-      document.querySelector(".scroller").classList.add("scrolling");
-    });
-  document.body.addEventListener("mouseup", function () {
-    active = false;
-    document.querySelector(".scroller").classList.remove("scrolling");
+  const sliderPage = document.querySelector(".wrapper");
+  const before = document.querySelector(".before");
+  const beforeImage = before.querySelector("img");
+  const change = document.querySelector(".change");
+  const body = document.body;
+  let isActive = false;
+  document.addEventListener("DOMContentLoaded", () => {
+    let width = sliderPage.offsetWidth;
+    beforeImage.style.width = `${width}px`;
   });
-  document.body.addEventListener("mouseleave", function () {
-    active = false;
-    document.querySelector(".scroller").classList.remove("scrolling");
+  change.addEventListener("mousedown", () => {
+    isActive = true;
   });
-  document.body.addEventListener("mousemove", function (e) {
-    if (!active) return;
+  body.addEventListener("mouseup", () => {
+    isActive = false;
+  });
+  body.addEventListener("mouseleave", () => {
+    isActive = false;
+  });
+  const beforeAfterSlider = (x) => {
+    let shift = Math.max(0, Math.min(x, sliderPage.offsetWidth));
+    before.style.width = `${shift}px`;
+    change.style.left = `${shift}px`;
+  };
+  const pauseEvents = (e) => {
+    e.stopPropagation();
+    e.preventDefault();
+    return false;
+  };
+  body.addEventListener("mousemove", (e) => {
+    if (!isActive) {
+      return;
+    }
     let x = e.pageX;
-    x -= document.querySelector(".wrapper").getBoundingClientRect().left;
-    scrollIt(x);
+    x -= sliderPage.getBoundingClientRect().left;
+    beforeAfterSlider(x);
+    pauseEvents(e);
   });
-  function scrollIt(x) {
-    let transform = Math.max(
-      0,
-      Math.min(x, document.querySelector(".wrapper").offsetWidth)
-    );
-    document.querySelector(".after").style.width = transform + "px";
-    document.querySelector(".scroller").style.left = transform + "px";
-  }
-  scrollIt(450);
-  document
-    .querySelector(".scroller")
-    .addEventListener("touchstart", function () {
-      active = true;
-      document.querySelector(".scroller").classList.add("scrolling");
-    });
-  document.body.addEventListener("touchend", function () {
-    active = false;
-    document.querySelector(".scroller").classList.remove("scrolling");
+  change.addEventListener("touchstart", () => {
+    isActive = true;
   });
-  document.body.addEventListener("touchcancel", function () {
-    active = false;
-    document.querySelector(".scroller").classList.remove("scrolling");
+  body.addEventListener("touchend", () => {
+    isActive = false;
+  });
+  body.addEventListener("touchcancel", () => {
+    isActive = false;
+  });
+  body.addEventListener("touchmove", (e) => {
+    if (!isActive) {
+      return;
+    }
+    let x;
+    let i;
+    for (i = 0; i < e.changedTouches.length; i++) {
+      x = e.changedTouches[i].pageX;
+    }
+
+    x -= sliderPage.getBoundingClientRect().left;
+
+    beforeAfterSlider(x);
+    pauseEvents(e);
   });
 });

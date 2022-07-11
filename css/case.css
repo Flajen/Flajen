@@ -174,36 +174,6 @@
   grid-gap: 30px;
   justify-items: center;
 }
-.telling_card-parallax-img-wrapper {
-  display: flex;
-  height: 100%;
-  position: relative;
-}
-.telling_card-parallax-img {
-  position: relative;
-  margin: auto;
-  border-radius: 10px;
-}
-.telling_card-img-wrapper.one .telling_card-parallax-img {
-  margin: 127px auto auto auto;
-}
-.telling_card-parallax-img-additionally {
-  position: absolute;
-  z-index: 3;
-  border-radius: 10px;
-}
-.telling_card-img-wrapper.one .telling_card-parallax-img-additionally {
-  top: 266px;
-  left: 399px;
-  box-shadow: -20px 40px 100px -10px rgba(42, 117, 161, 0.7);
-}
-.telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
-  top: 237px;
-  /* left: 158px; */
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: -20px 40px 100px -10px rgba(20, 108, 148, 0.5);
-}
 .telling_card-img-wrapper {
   width: 100%;
   height: 630px;
@@ -212,6 +182,11 @@
 }
 .telling_card-img {
   border-radius: 10px;
+}
+.telling_card-img-wrapper.one .telling_card-img,
+.telling_card-img-wrapper.four .telling_card-img {
+  width: 100%;
+  height: 100%;
 }
 .telling_card-img-wrapper.one,
 .telling_card-img-wrapper.four {
@@ -237,9 +212,9 @@
   bottom: 0;
   transform: translate(-50%, 0);
 }
-.telling_card-img-wrapper.one .telling_card-img {
+/* .telling_card-img-wrapper.one .telling_card-img {
   box-shadow: -30px 40px 120px -20px rgba(42, 117, 162, 0.5);
-}
+} */
 .telling_card-img-wrapper.two .telling_card-img {
   box-shadow: -30px 40px 120px -20px rgba(118, 118, 118, 0.5);
 }
@@ -247,9 +222,9 @@
   box-shadow: -30px 40px 120px -20px rgba(112, 89, 15, 0.5);
   border-radius: 10px 10px 0 0;
 }
-.telling_card-img-wrapper.four .telling_card-img {
+/* .telling_card-img-wrapper.four .telling_card-img {
   box-shadow: -20px 40px 100px -10px rgba(20, 108, 148, 0.3);
-}
+} */
 .telling_card-title {
   max-width: 470px;
   font-size: 20px;
@@ -260,9 +235,6 @@
 /* О проекте конец */
 
 /* Адаптивно начало */
-/* .adaptively-background {
-  background-color: #fae390;
-} */
 .adaptively-img {
   width: 100%;
   height: 100%;
@@ -288,51 +260,40 @@
   position: absolute;
   left: 50%;
   top: 50%;
+  margin: 0 auto;
   transform: translate3d(-50%, -50%, 0);
   overflow: hidden;
   box-shadow: -40px 50px 150px -20px rgba(124, 181, 206, 0.85);
   border-radius: 20px;
 }
-.before,
+.wrapper img {
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+.before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  z-index: 2;
+  width: 35%;
+  height: 100%;
+}
 .after {
   width: 100%;
   height: 100%;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-size: cover;
-  background-position: center;
+}
+.change {
+  display: block;
   position: absolute;
+  left: 35%;
   top: 0;
-  left: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-.content-image {
-  height: 100%;
-}
-.after {
-  width: 450px;
-}
-.scroller {
-  width: 2px;
-  height: 100%;
-  background-color: #0066ff;
-  box-shadow: 0px 0px 25px rgba(36, 36, 37, 0.3);
-  position: absolute;
-  top: 0;
-  left: 0;
-  margin-left: -1px;
-  z-index: 2;
-}
-.scroller::after {
-  content: "";
-  width: 45px;
+  z-index: 10;
+  width: 40px;
+  transform: translateX(-20px);
   height: 100%;
   background-color: transparent;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
 }
 /* Сравнение конец */
 
@@ -474,28 +435,11 @@
   .telling_card-img-wrapper.three {
     height: 490px;
   }
-  .telling_card-img-wrapper.one .telling_card-parallax-img {
-    width: 80%;
-    margin: auto;
-  }
-  .telling_card-img-wrapper.one .telling_card-parallax-img-additionally {
-    width: 110px;
-    top: 165px;
-    left: 329px;
-  }
   .telling_card-img-wrapper.two .telling_card-img {
     width: 80%;
   }
   .telling_card-img-wrapper.three .telling_card-img {
     height: 90%;
-  }
-  .telling_card-img-wrapper.four .telling_card-parallax-img {
-    height: 80%;
-    margin: auto;
-  }
-  .telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
-    width: 220px;
-    top: 156px;
   }
   .telling_card-title {
     font-size: 18px;
@@ -588,15 +532,6 @@
   .telling_card-img-wrapper.three {
     height: 432px;
   }
-  .telling_card-img-wrapper.one .telling_card-parallax-img-additionally {
-    width: 100px;
-    top: 155px;
-    left: 320px;
-  }
-  .telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
-    width: 190px;
-    top: 130px;
-  }
   .telling_card-title {
     font-size: 16px;
   }
@@ -664,15 +599,6 @@
   }
   .telling_card-img-wrapper.three {
     height: 306px;
-  }
-  .telling_card-img-wrapper.one .telling_card-parallax-img-additionally {
-    width: 80px;
-    top: 105px;
-    left: 250px;
-  }
-  .telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
-    width: 140px;
-    top: 90px;
   }
 
   #page {
@@ -776,15 +702,6 @@
   }
   .telling_card-img-wrapper.three {
     height: 580px;
-  }
-  .telling_card-img-wrapper.one .telling_card-parallax-img-additionally {
-    width: 170px;
-    top: 165px;
-    left: 450px;
-  }
-  .telling_card-img-wrapper.four .telling_card-parallax-img-additionally {
-    width: 260px;
-    top: 180px;
   }
   .telling_card-title {
     font-size: 20px;

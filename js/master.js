@@ -56,8 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
     }
-    if (document.querySelector(".scroller")) {
-      const elСomparison = document.querySelector(".scroller");
+    if (document.querySelector(".change")) {
+      const elСomparison = document.querySelector(".change");
       elСomparison.addEventListener("mouseenter", () => {
         cursor.setText("тянуть");
         cursor.addState("-comparisonColor");
@@ -261,28 +261,32 @@ function InitScrollAnimations(scrollbarInstance) {
   /**
    * Parallax
    */
-  parallaxTargets.forEach((target) => {
-    gsap.fromTo(
-      target,
-      {
-        y: "-20%",
-      },
-      {
-        y: "20%",
-        ease: "none",
-        duration: 1,
-        scrollTrigger: {
-          trigger: target,
-          start: "top bottom",
-          end: "bottom -=20%",
-          scrub: true,
-          onToggle: ({ isActive }) => {
-            target.style.willChange = isActive ? "transform" : "auto";
-          },
+  let checkWindowSize =
+    window.innerWidth || document.documentElement.clientWidth;
+  if (checkWindowSize > 992) {
+    parallaxTargets.forEach((target) => {
+      gsap.fromTo(
+        target,
+        {
+          y: "-20%",
         },
-      }
-    );
-  });
+        {
+          y: "20%",
+          ease: "none",
+          duration: 1,
+          scrollTrigger: {
+            trigger: target,
+            start: "top bottom",
+            end: "bottom -=20%",
+            scrub: true,
+            onToggle: ({ isActive }) => {
+              target.style.willChange = isActive ? "transform" : "auto";
+            },
+          },
+        }
+      );
+    });
+  }
 
   parallaxTextTargets.forEach((target) => {
     gsap.fromTo(

@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", function () {
   function closeMenu() {
     gsap.to(menuWrapper, { opacity: 0, duration: 0.6 });
     gsap.to(menuBlackout, { opacity: 0, duration: 0.6 });
-    menu.classList.remove("anim");
     burger.classList.remove("open");
     menuWrapper.classList.remove("open");
     menu.classList.remove("open");

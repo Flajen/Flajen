@@ -1,5 +1,7 @@
 /* Основное */
 .home_breadcrumbs {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   font-size: 16px;
   font-weight: 300;
@@ -27,9 +29,15 @@
 
 /* Главная начало */
 .home-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   margin-bottom: 250px;
 }
 .home-title {
@@ -58,6 +66,8 @@
 /* О нас и задача начало */
 .task-body,
 .about-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .task-title,
@@ -69,6 +79,7 @@
 }
 .task-text,
 .about-text {
+  display: -ms-grid;
   display: grid;
   max-width: 865px;
   font-size: 25px;
@@ -106,8 +117,11 @@
   z-index: 2;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: -40px 50px 150px -20px rgba(4, 50, 70, 0.85);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: -40px 50px 150px -20px rgba(4, 50, 70, 0.85);
+          box-shadow: -40px 50px 150px -20px rgba(4, 50, 70, 0.85);
   border-radius: 20px;
 }
 /* О нас и задача конец */
@@ -132,15 +146,12 @@
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
-  display: -webkit-flex;
   display: flex;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
-  -webkit-justify-content: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  -webkit-align-items: center;
   align-items: center;
 }
 .swiper-slide img {
@@ -150,19 +161,27 @@
 }
 .swiper-wrapper {
   -webkit-transition-timing-function: linear !important;
-  transition-timing-function: linear !important;
+  -o-transition-timing-function: linear !important;
+     transition-timing-function: linear !important;
 }
 /* Слайдер конец */
 
 /* О проекте начало */
 .telling-body {
+  display: -ms-grid;
   display: grid;
   grid-gap: 30px;
+  -ms-grid-columns: 1fr 30px 1fr;
   grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
-  align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
 }
 .telling-cards {
+  display: -ms-grid;
   display: grid;
   grid-gap: 95px;
 }
@@ -170,6 +189,7 @@
   margin-top: 100px;
 }
 .telling_card {
+  display: -ms-grid;
   display: grid;
   grid-gap: 30px;
   justify-items: center;
@@ -204,22 +224,28 @@
   z-index: 2;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .telling_card-img-wrapper.three .telling_card-img {
   top: auto;
   left: 50%;
   bottom: 0;
-  transform: translate(-50%, 0);
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 /* .telling_card-img-wrapper.one .telling_card-img {
   box-shadow: -30px 40px 120px -20px rgba(42, 117, 162, 0.5);
 } */
 .telling_card-img-wrapper.two .telling_card-img {
-  box-shadow: -30px 40px 120px -20px rgba(118, 118, 118, 0.5);
+  -webkit-box-shadow: -30px 40px 120px -20px rgba(118, 118, 118, 0.5);
+          box-shadow: -30px 40px 120px -20px rgba(118, 118, 118, 0.5);
 }
 .telling_card-img-wrapper.three .telling_card-img {
-  box-shadow: -30px 40px 120px -20px rgba(112, 89, 15, 0.5);
+  -webkit-box-shadow: -30px 40px 120px -20px rgba(112, 89, 15, 0.5);
+          box-shadow: -30px 40px 120px -20px rgba(112, 89, 15, 0.5);
   border-radius: 10px 10px 0 0;
 }
 /* .telling_card-img-wrapper.four .telling_card-img {
@@ -261,15 +287,18 @@
   left: 50%;
   top: 50%;
   margin: 0 auto;
-  transform: translate3d(-50%, -50%, 0);
+  -webkit-transform: translate3d(-50%, -50%, 0);
+          transform: translate3d(-50%, -50%, 0);
   overflow: hidden;
-  box-shadow: -40px 50px 150px -20px rgba(124, 181, 206, 0.85);
+  -webkit-box-shadow: -40px 50px 150px -20px rgba(124, 181, 206, 0.85);
+          box-shadow: -40px 50px 150px -20px rgba(124, 181, 206, 0.85);
   border-radius: 20px;
 }
 .wrapper img {
   height: 100%;
   display: block;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .before {
   position: absolute;
@@ -291,7 +320,9 @@
   top: 0;
   z-index: 10;
   width: 40px;
-  transform: translateX(-20px);
+  -webkit-transform: translateX(-20px);
+      -ms-transform: translateX(-20px);
+          transform: translateX(-20px);
   height: 100%;
   background-color: transparent;
 }
@@ -299,17 +330,22 @@
 
 /* Следующие начало */
 .projects-cards {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 30px 1fr;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 30px;
   margin-bottom: 80px;
 }
 .projects_card {
+  display: -ms-grid;
   display: grid;
   position: relative;
 }
 .projects_card .prlx-wrapper img {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 .projects_card-img {
   width: 100%;
@@ -342,9 +378,15 @@
   top: 0;
 }
 .projects-link-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .projects-link {
   font-size: 18px;
@@ -456,12 +498,17 @@
   }
 
   .projects_card {
+    -ms-grid-rows: 1fr 120px;
     grid-template-rows: 1fr 120px;
   }
   .projects_card-info {
+    display: -ms-grid;
     display: grid;
-    align-items: center;
-    align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     padding: 15px 25px;
   }
 }
@@ -551,12 +598,17 @@
     margin-bottom: 70px;
   }
   .projects_card {
+    -ms-grid-rows: 1fr 110px;
     grid-template-rows: 1fr 110px;
   }
   .projects_card-info {
+    display: -ms-grid;
     display: grid;
-    align-items: center;
-    align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     padding: 15px 20px;
   }
 }
@@ -615,12 +667,17 @@
     margin-bottom: 60px;
   }
   .projects_card {
+    -ms-grid-rows: 1fr 120px;
     grid-template-rows: 1fr 120px;
   }
   .projects_card-info {
+    display: -ms-grid;
     display: grid;
-    align-items: center;
-    align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     padding: 10px 20px;
   }
 }
@@ -634,8 +691,13 @@
   }
 
   .home-heading {
-    align-items: flex-start;
-    flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     margin-bottom: 110px;
   }
   .home-title {
@@ -647,7 +709,10 @@
 
   .task-body,
   .about-body {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .task-title,
   .about-title {
@@ -688,6 +753,7 @@
   }
 
   .telling-body {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-gap: 40px;
   }
@@ -718,17 +784,23 @@
   }
 
   .projects-cards {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-gap: 40px;
     margin-bottom: 40px;
   }
   .projects_card {
+    -ms-grid-rows: 1fr 90px;
     grid-template-rows: 1fr 90px;
   }
   .projects_card-info {
+    display: -ms-grid;
     display: grid;
-    align-items: center;
-    align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
     padding: 10px 20px;
   }
 }

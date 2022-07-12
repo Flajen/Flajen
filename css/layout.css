@@ -131,6 +131,29 @@ section {
   width: 100%;
   height: 100%;
 }
+
+.btn-hover {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.btn-hover span {
+  display: block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  background-color: #000000;
+  transition: width 1.2s ease-in-out, height 1.2s ease-in-out;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+.btn-hover:hover span {
+  width: 500px;
+  height: 500px;
+}
 /* Шапка */
 header {
   padding: 75px 60px 0 60px;
@@ -212,10 +235,12 @@ header {
 .burger-line.one {
   top: 7.5px;
   left: 0;
+  animation: burgerLineCloseOne 0.75s linear 0s forwards;
 }
 .burger-line.two {
   bottom: 7.5px;
   right: 0;
+  animation: burgerLineCloseTwo 0.75s linear 0s forwards;
 }
 .burger.open .burger-line.one,
 .burger.open .burger-line.two {
@@ -411,15 +436,110 @@ header {
     transform-origin: right center;
   }
 }
+@keyframes burgerLineCloseOne {
+  0% {
+    opacity: 1;
+    top: 5px;
+    left: 3px;
+    -webkit-transform: rotate(45deg) scaleX(1);
+    transform: rotate(45deg) scaleX(1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  30% {
+    opacity: 1;
+    top: 5px;
+    left: 3px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg) scaleX(0);
+    transform: rotate(45deg) scaleX(0);
+  }
+  30.1% {
+    opacity: 0;
+    top: 5px;
+    left: 3px;
+    -webkit-transform: rotate(0) scaleX(0);
+    transform: rotate(0) scaleX(0);
+  }
+  31% {
+    opacity: 1;
+    top: 7.5px;
+    left: 0;
+    -webkit-transform: rotate(0) scaleX(0);
+    transform: rotate(0) scaleX(0);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+  100%,
+  80% {
+    opacity: 1;
+    top: 7.5px;
+    left: 0;
+    -webkit-transform: rotate(0) scaleX(1);
+    transform: rotate(0) scaleX(1);
+    -webkit-transform-origin: left center;
+    transform-origin: left center;
+  }
+}
+@keyframes burgerLineCloseTwo {
+  0% {
+    opacity: 1;
+    top: 5px;
+    left: -4px;
+    -webkit-transform: rotate(-45deg) scaleX(1);
+    transform: rotate(-45deg) scaleX(1);
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+  50% {
+    opacity: 1;
+    top: 5px;
+    left: -4px;
+    -webkit-transform: rotate(-45deg) scaleX(0);
+    transform: rotate(-45deg) scaleX(0);
+  }
+  50.1% {
+    opacity: 0;
+    top: 7.5px;
+    top: auto;
+    bottom: 7.5px;
+    left: 0;
+    -webkit-transform: rotate(0) scaleX(0);
+    transform: rotate(0) scaleX(0);
+  }
+  51%,
+  55% {
+    opacity: 1;
+    top: 7.5px;
+    top: auto;
+    bottom: 7.5px;
+    left: 0;
+    -webkit-transform: rotate(0) scaleX(0);
+    transform: rotate(0) scaleX(0);
+  }
+  100% {
+    opacity: 1;
+    top: 7.5px;
+    top: auto;
+    bottom: 7.5px;
+    left: 0;
+    -webkit-transform: rotate(0) scaleX(1);
+    transform: rotate(0) scaleX(1);
+    -webkit-transform-origin: right center;
+    transform-origin: right center;
+  }
+}
 /* Меню */
 .menu-wrapper {
 }
 .menu-wrapper,
 .menu-blackout,
 .menu {
-  height: 100vh;
+  min-height: 100vh;
   position: fixed;
   top: 0;
+  bottom: 0;
   /* visibility: hidden; */
   pointer-events: none;
   -webkit-user-select: none;
@@ -431,6 +551,7 @@ header {
 .menu-blackout {
   width: 100%;
   left: 0;
+  right: 0;
   opacity: 0;
 }
 .menu-blackout {
@@ -481,6 +602,7 @@ header {
   font-size: 56px;
   font-weight: 500;
   margin-bottom: 24px;
+  margin-right: auto;
 }
 .menu-title div {
   display: -webkit-box;
@@ -496,11 +618,12 @@ header {
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  text-shadow: 0 65px black;
 }
 .menu-title div:hover span {
-  -webkit-transform: translateY(-16%);
-  -ms-transform: translateY(-16%);
-  transform: translateY(-16%);
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%);
   -webkit-transition-delay: 0.3s;
   -o-transition-delay: 0.3s;
   transition-delay: 0.3s;
@@ -533,6 +656,10 @@ footer {
   width: 100%;
   min-height: 100vh;
   padding: 270px 0 100px 0;
+}
+.footerColor{
+  color: #FFF !important;
+  background-color: #fff !important;
 }
 .footer-title {
   color: #fff;
@@ -618,6 +745,9 @@ footer {
   .menu-title {
     font-size: 45px;
   }
+  .menu-title span {
+    text-shadow: 0 52px black;
+  }
   .footer-title {
     margin-bottom: 120px;
   }
@@ -649,6 +779,9 @@ footer {
   }
   .menu-title {
     font-size: 40px;
+  }
+  .menu-title span {
+    text-shadow: 0 46px black;
   }
   footer {
     padding: 160px 0 176px 0;
@@ -728,6 +861,9 @@ footer {
   }
   .menu-title {
     font-size: 35px;
+  }
+  .menu-title span {
+    text-shadow: 0 41px black;
   }
   .menu {
     padding: 200px 20px 70px 30px;

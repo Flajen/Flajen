@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
   var cursor = new MouseFollower();
   let checkWindowSize =
     window.innerWidth || document.documentElement.clientWidth;
+  let burgerLine = document.querySelectorAll(".burger-line");
   if (checkWindowSize > 1280) {
     const el = document.querySelector(".burger");
-    let burgerLine = document.querySelectorAll(".burger-line");
     el.addEventListener("mouseenter", () => {
       cursor.setText("");
       cursor.addState("burgerColor");
@@ -41,6 +41,13 @@ document.addEventListener("DOMContentLoaded", function () {
         const element = burgerLine[i];
         element.classList.remove("burgerColor");
       }
+    });
+    const cursorFooter = document.querySelector("footer");
+    cursorFooter.addEventListener("mouseenter", () => {
+      cursor.addState("footerColor");
+    });
+    cursorFooter.addEventListener("mouseleave", () => {
+      cursor.removeState("footerColor");
     });
     if (document.querySelector(".color_project")) {
       const colorProject = document.querySelectorAll(".color_project");
@@ -71,16 +78,54 @@ document.addEventListener("DOMContentLoaded", function () {
     cursor.destroy();
   }
 
-  // Наведение на ссылку
+  // Наведение на элементы
   document
     .querySelectorAll(".hover")
     .forEach(
       (button) =>
         (button.innerHTML =
-          "<div><span>" +
+          `<div><span>` +
           button.textContent.trim().split("").join("</span><span>") +
           "</span></div>")
     );
+  var hoverDelay = 0;
+  var menuTitle = document
+    .querySelector(".menu-title")
+    .querySelectorAll("span");
+  for (let i = 0; i < menuTitle.length; i++) {
+    hoverDelay += 0.05;
+    const element = menuTitle[i];
+    element.style = `transition-delay: ${hoverDelay}s;`;
+  }
+  document.querySelectorAll(".btn-hover").forEach((el) => {
+    el.addEventListener("mouseover", (e) => {
+      el.querySelector("span").style.left = `${e.offsetX}px`;
+      el.querySelector("span").style.top = `${e.offsetY}px`;
+    });
+    el.addEventListener("mouseout", (e) => {
+      el.querySelector("span").style.left = `${e.offsetX}px`;
+      el.querySelector("span").style.top = `${e.offsetY}px`;
+    });
+  });
+  const documentHeight = smoothScrollbar.getSize()["content"]["height"];
+  let footerHeight = document.querySelector("footer").offsetHeight;
+  var burgerTop =
+    document.querySelector(".burger").getBoundingClientRect().top +
+    document.body.scrollTop;
+  let burgerHeight = document.querySelector(".burger").clientHeight / 2;
+  let setPosition = documentHeight - footerHeight - burgerTop - burgerHeight;
+  let currentScroll = 0;
+  smoothScrollbar.addListener((status) => {
+    currentScroll = status.offset["y"];
+    for (let i = 0; i < burgerLine.length; i++) {
+      const elem = burgerLine[i];
+      if (currentScroll > setPosition) {
+        elem.style.background = "white";
+      } else {
+        elem.style.background = "black";
+      }
+    }
+  });
 
   // Меню
   let burger = document.querySelector(".burger");
@@ -89,9 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let menu = document.querySelector(".menu");
   let menuBlackout = document.querySelector(".menu-blackout");
   let menuCheck = false;
-  if (menuCheck) {
-    console.log(1);
-  }
   function closeMenu() {
     gsap.to(menuWrapper, { opacity: 0, duration: 0.6 });
     gsap.to(menuBlackout, { opacity: 0, duration: 0.6 });
@@ -129,8 +171,6 @@ function InitScrollAnimations(scrollbarInstance) {
     ".adaptively-img",
     ".about-img",
     "#page",
-    // ".telling_card-img",
-    // ".telling_card-parallax-img-wrapper",
     ".telling_card-img-wrapper",
     ".projects_card-img",
   ];

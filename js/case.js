@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new Swiper(".swiperOne", {
     slidesPerView: "auto",
     spaceBetween: 5,
-    speed: 7000,
+    speed: 12000,
     loop: true,
     allowTouchMove: false,
     autoplay: {
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   new Swiper(".swiperTwo", {
     slidesPerView: "auto",
     spaceBetween: 5,
-    speed: 7000,
+    speed: 12000,
     loop: true,
     allowTouchMove: false,
     autoplay: {

@@ -107,16 +107,15 @@ document.addEventListener("DOMContentLoaded", function () {
       el.querySelector("span").style.top = `${e.offsetY}px`;
     });
   });
-  const documentHeight = smoothScrollbar.getSize()["content"]["height"];
-  let footerHeight = document.querySelector("footer").offsetHeight;
-  var burgerTop =
-    document.querySelector(".burger").getBoundingClientRect().top +
-    document.body.scrollTop;
-  let burgerHeight = document.querySelector(".burger").clientHeight / 2;
-  let setPosition = documentHeight - footerHeight - burgerTop - burgerHeight;
-  let currentScroll = 0;
   smoothScrollbar.addListener((status) => {
-    currentScroll = status.offset["y"];
+    const documentHeight = smoothScrollbar.getSize()["content"]["height"];
+    let footerHeight = document.querySelector("footer").offsetHeight;
+    var burgerTop =
+      document.querySelector(".burger").getBoundingClientRect().top +
+      document.body.scrollTop;
+    let burgerHeight = document.querySelector(".burger").clientHeight / 2;
+    let setPosition = documentHeight - footerHeight - burgerTop - burgerHeight;
+    let currentScroll = status.offset["y"];
     for (let i = 0; i < burgerLine.length; i++) {
       const elem = burgerLine[i];
       if (currentScroll > setPosition) {
@@ -137,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function closeMenu() {
     gsap.to(menuWrapper, { opacity: 0, duration: 0.6 });
     gsap.to(menuBlackout, { opacity: 0, duration: 0.6 });
+    gsap.to(menu, { right: "-100%", opacity: 0, duration: 0.8 });
     burger.classList.remove("open");
     menuWrapper.classList.remove("open");
     menu.classList.remove("open");
@@ -151,6 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
       menu.classList.add("open");
       gsap.to(menuWrapper, { opacity: 1, duration: 0.6 });
       gsap.to(menuBlackout, { opacity: 0.8, duration: 0.6 });
+      gsap.to(menu, { right: "0%", opacity: 1, duration: 0.8 });
       menuCheck = true;
     }
   }

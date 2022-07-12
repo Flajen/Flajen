@@ -566,7 +566,8 @@ header {
   left: 60px;
 }
 .menu {
-  width: 350px;
+  max-width: 350px;
+  width: 100%;
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: justify;
@@ -576,9 +577,9 @@ header {
   overflow-y: auto;
   right: -100%;
   z-index: 15;
-  -webkit-transition: all 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
-  -o-transition: all 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
-  transition: all 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -webkit-transition: padding 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  -o-transition: padding 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
+  transition: padding 0.6s cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }
 .menu-wrapper.open,
 .menu-wrapper.open .menu-blackout,
@@ -594,9 +595,9 @@ header {
   opacity: 1;
 }
 .menu-wrapper.open .menu {
-  width: 587px;
+  max-width: 587px;
   padding: 223px 80px 91px 80px;
-  right: 0%;
+  /* right: 0%; */
 }
 .menu-title {
   font-size: 56px;
@@ -657,8 +658,8 @@ footer {
   min-height: 100vh;
   padding: 270px 0 100px 0;
 }
-.footerColor{
-  color: #FFF !important;
+.footerColor {
+  color: #fff !important;
   background-color: #fff !important;
 }
 .footer-title {

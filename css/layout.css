@@ -908,7 +908,8 @@ footer {
   }
   .menu-wrapper.open .menu {
     width: 100%;
-    padding: 150px 20px 40px 20px;
+    /* padding: 150px 20px 40px 20px; */
+    padding: 150px 20px 60px 20px;
   }
   footer {
     padding: 130px 0 111px 0;

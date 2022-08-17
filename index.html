@@ -37,15 +37,33 @@
             <a href="#contacts" class="nav_menu-link header_nav-link navigation">Контакты</a>
           </nav>
           <a href="tel:88008000000" class="phone header_phone icon">8 (800) 800-00-00</a>
+          <button type="button" name="openHeader" class="header-btn">
+            <span class="line one"></span>
+            <span class="line two"></span>
+            <span class="line three"></span>
+          </button>
         </div>
       </div>
     </header>
+    <div class="header_menu">
+      <a href="tel:88008000000" class="phone header_menu-phone footer_phone icon">8 (800) 800-00-00</a>
+      <nav class="nav_menu header_menu-nav">
+        <a href="#portfolio" class="nav_menu-link header_nav-link navigation">Портфолио</a>
+        <a href="#approach" class="nav_menu-link header_nav-link navigation">Наш подход</a>
+        <a href="#materials" class="nav_menu-link header_nav-link navigation">Материалы</a>
+        <a href="#style" class="nav_menu-link header_nav-link navigation">Стиль</a>
+        <a href="#partners" class="nav_menu-link header_nav-link navigation">Партнёры</a>
+        <a href="#faq" class="nav_menu-link header_nav-link navigation">FAQ</a>
+        <a href="#photos" class="nav_menu-link header_nav-link navigation">Производство</a>
+        <a href="#contacts" class="nav_menu-link header_nav-link navigation">Контакты</a>
+      </nav>
+    </div>
     <main>
 
       <section class="home" id="home">
         <div class="container">
           <div class="heading-cap home_heading-cap">
-            <h2 class="title">
+            <h2 class="title home-title">
               Изготовление <span class="help">индивидуальной</span> мебели и декора для ресторанов и общественных
               помещений, а также малых архитектурных форм
             </h2>
@@ -267,16 +285,12 @@
                 </div>
               </li>
             </ul>
-            <!-- <div class="comparison approach-comparison">
-
-            </div> -->
-
-            <div class="split-container">
+            <div class="split-container approach-comparison">
               <div class="split-content-left">
-                <img src="./img/approach/new.png" alt="" draggable="false" onselectstart="return false">
+                <img class="responsive-img" src="./img/approach/new.png" alt="" draggable="false">
               </div>
               <div class="split-content-right">
-                <img src="./img/approach/old.png" alt="" draggable="false" onselectstart="return false">
+                <img class="responsive-img" src="./img/approach/old.png" alt="" draggable="false">
               </div>
             </div>
           </div>
@@ -287,18 +301,6 @@
           </div>
         </div>
       </section>
-
-      <!-- <div id="page" onselectstart="return false">
-        <div class="wrapper" onselectstart="return false">
-          <div class="before">
-            <img src="./img/approach/new.png" alt="" draggable="false" onselectstart="return false">
-          </div>
-          <div class="after">
-            <img src="./img/approach/old.png" alt="" draggable="false" onselectstart="return false">
-          </div>
-          <div class="change"></div>
-        </div>
-      </div> -->
 
       <section class="materials" id="materials">
         <div class="container">
@@ -474,9 +476,15 @@
                 </div>
               </div>
             </div>
-            <div class="swiper-pagination"></div>
+            <!-- <div class="swiper-pagination"></div>
             <div class="swiper-next swiper-btn"></div>
-            <div class="swiper-prev swiper-btn"></div>
+            <div class="swiper-prev swiper-btn"></div> -->
+            <div class="swiper_controls">
+              <div class="swiper_controls-prev swiper_controls-btn"></div>
+              <div class="swiper_controls-pagination"></div>
+              <div class="swiper-pagination"></div>
+              <div class="swiper_controls-next swiper_controls-btn"></div>
+            </div>
           </div>
         </div>
       </section>
@@ -645,12 +653,12 @@
             </div>
           </div> -->
           <ul class="faq-cards">
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">Как вызвать дизайнера на замер?
                   Сколько стоят его услуги?
                   Платный ли выезд?</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -661,10 +669,10 @@
                 </div>
               </div>
             </li>
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">Можете ли Вы сделать 3D-проект будущей мебели? Платно ли это?</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -674,10 +682,10 @@
                 </div>
               </div>
             </li>
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">Какой срок изготовления мебели?</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -687,10 +695,10 @@
                 </div>
               </div>
             </li>
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">Как происходит оплата? Какой срок гарантии?</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -702,11 +710,11 @@
                 </div>
               </div>
             </li>
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">Какие материалы Вы применяете при изготовлении мебели? Как подобрать мебель
                   по цвету?</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -720,11 +728,11 @@
                 </div>
               </div>
             </li>
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">Смогут ли Ваши специалисты врезать купленное нами оборудование в мебель?
                   А встраиваемую технику?</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -735,11 +743,11 @@
                 </div>
               </div>
             </li>
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">Придется ли мне заказывать услуги специалистов со стороны? Например, для
                   сборки или установки мебели.</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -749,11 +757,11 @@
                 </div>
               </div>
             </li>
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">Почему стоимость мебели, изготовленной на заказ, выше чем стоимость
                   серийной? Где заказать мебель вашего производства?</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -766,11 +774,11 @@
                 </div>
               </div>
             </li>
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">Сколько стоит доплатить за сборку и доставку мебели? Предоставляете ли
                   вы скидки на мебель?</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -782,11 +790,11 @@
                 </div>
               </div>
             </li>
-            <li class="faq_card" role="button" tabindex="0">
+            <li class="faq_card">
               <div class="faq_card-cap">
                 <h3 class="faq_card-heading">У меня в комнате есть мебель. Возможно ли изготовить мебель, которая будет
                   совпадать по цвету с уже имеющейся и впишется ли в дизайн?</h3>
-                <div role="button" tabindex="-1" class="faq_card-close"></div>
+                <div role="button" tabindex="0" class="faq_card-close"></div>
               </div>
               <div class="faq_card-content-wrapper">
                 <div class="faq_card-content">
@@ -870,14 +878,20 @@
               <img src="./img/photos/14.png" alt="" class="photos-img">
             </div>
           </div>
+          <div class="swiper_controls">
+            <div class="swiper_controls-prev swiper_controls-btn"></div>
+            <div class="swiper_controls-pagination"></div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper_controls-next swiper_controls-btn"></div>
+          </div>
         </div>
-        <div class="container">
+        <!-- <div class="container">
           <div>
             <div class="swiper-pagination"></div>
             <div class="swiper-next swiper-btn"></div>
             <div class="swiper-prev swiper-btn"></div>
           </div>
-        </div>
+        </div> -->
       </section>
 
       <section class="contacts" id="contacts">
@@ -919,6 +933,7 @@
       </section>
     </main>
 
+
     <footer>
       <div class="container">
         <div class="footer-body">
@@ -938,17 +953,98 @@
           <a href="tel:88008000000" class="phone footer_phone icon">8 (800) 800-00-00</a>
         </div>
       </div>
-      <img src="./img/footer/bg.png" alt="" class="footer-bg">
+      <!-- <img src="./img/footer/bg.png" alt="" class="footer-bg"> -->
+      <div class="background-wrapper">
+        <div class="background-img-warpper">
+          <img src="./img/bg.png" alt="" class="background-img">
+        </div>
+      </div>
     </footer>
+
+    <!-- Попапы ↓↓↓ -->
+    <div class="blackout"></div>
+    <div class="popup portfolio-popup">
+      <div class="popup-body">
+        <div class="container">
+
+        </div>
+      </div>
+    </div>
+    <div style="display:none;">
+      <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+      <div thumbsSlider="" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
+          </div>
+          <div class="swiper-slide">
+            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Попапы ↑↑↑ -->
   </div>
   <!-- Сайт ↑↑↑ -->
-
-  <!-- Попапы ↓↓↓ -->
-  <div class="blackout"></div>
-  <div>
-
-  </div>
-  <!-- Попапы ↑↑↑ -->
 
   <!-- Скрипты ↓↓↓ -->
   <script src="./js/swiper-bundle.min.js"></script>

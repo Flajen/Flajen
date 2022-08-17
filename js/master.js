@@ -27,25 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   });
 
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    spaceBetween: 10,
-    slidesPerView: 4,
-    freeMode: false,
-    watchSlidesProgress: true,
-  });
-  new Swiper(".mySwiper2", {
-    loop: true,
-    spaceBetween: 10,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
-
   // Общие переменные
   const blackout = document.querySelector(".blackout");
   function onBlackout() {
@@ -292,10 +273,49 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Попапы
-  // disableScroll();
+  var portfolioCardBtn = document.querySelectorAll(".portfolio_card-btn");
+  var popup = document.querySelector(".popup");
+  var popupClose = document.querySelectorAll(".popup-close");
+  for (let i = 0; i < portfolioCardBtn.length; i++) {
+    const element = portfolioCardBtn[i];
+    element.addEventListener("click", () => {
+      blackout.classList.add("open", "popupBlackout");
+      popup.classList.add("open");
+      disableScroll();
+    });
+  }
+  for (let i = 0; i < popupClose.length; i++) {
+    popupClose[i].addEventListener("click", () => {
+      blackout.classList.remove("open", "popupBlackout");
+      popup.classList.remove("open");
+      enableScroll();
+    });
+  }
+  var swiper = new Swiper(".popupSwiperSmall", {
+    loop: false,
+    spaceBetween: 20,
+    slidesPerView: 4,
+    freeMode: false,
+    watchSlidesProgress: true,
+  });
+  new Swiper(".popupSwiperBig", {
+    loop: false,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: swiper,
+    },
+  });
   blackout.addEventListener("click", () => {
     blackout.classList.remove("open");
     enableScroll();
+  });
+
+  new SimpleBar(document.getElementById("popup-scroll"), {
+    autoHide: false,
   });
 
   // Сравнение

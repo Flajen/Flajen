@@ -272,52 +272,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Попапы
-  var portfolioCardBtn = document.querySelectorAll(".portfolio_card-btn");
-  var popup = document.querySelector(".popup");
-  var popupClose = document.querySelectorAll(".popup-close");
-  for (let i = 0; i < portfolioCardBtn.length; i++) {
-    const element = portfolioCardBtn[i];
-    element.addEventListener("click", () => {
-      blackout.classList.add("open", "popupBlackout");
-      popup.classList.add("open");
-      disableScroll();
-    });
-  }
-  for (let i = 0; i < popupClose.length; i++) {
-    popupClose[i].addEventListener("click", () => {
-      blackout.classList.remove("open", "popupBlackout");
-      popup.classList.remove("open");
-      enableScroll();
-    });
-  }
-  var swiper = new Swiper(".popupSwiperSmall", {
-    loop: false,
-    spaceBetween: 20,
-    slidesPerView: 4,
-    freeMode: false,
-    watchSlidesProgress: true,
-  });
-  new Swiper(".popupSwiperBig", {
-    loop: false,
-    spaceBetween: 20,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    thumbs: {
-      swiper: swiper,
-    },
-  });
-  blackout.addEventListener("click", () => {
-    blackout.classList.remove("open");
-    enableScroll();
-  });
-
-  new SimpleBar(document.getElementById("popup-scroll"), {
-    autoHide: false,
-  });
-
   // Сравнение
   document.querySelectorAll(".no-js").forEach((el) => {
     el.classList.remove("no-js");
@@ -385,4 +339,101 @@ document.addEventListener("DOMContentLoaded", () => {
       separator.style.marginLeft = positionX + "px";
     }
   });
+
+  // Попапы
+  var portfolioCardBtn = document.querySelectorAll(".portfolio_card-btn");
+  var styleCardBtn = document.querySelectorAll(".style_card-btn");
+  var popup = document.querySelectorAll(".popup");
+  var popupPortfolio = document.querySelector(".portfolio-popup");
+  var popupStyle = document.querySelector(".style-popup");
+  var popupClose = document.querySelectorAll(".popup-close");
+  for (let i = 0; i < portfolioCardBtn.length; i++) {
+    const element = portfolioCardBtn[i];
+    element.addEventListener("click", () => {
+      blackout.classList.add("open", "popupBlackout");
+      popupPortfolio.classList.add("open");
+      disableScroll();
+    });
+  }
+  for (let i = 0; i < styleCardBtn.length; i++) {
+    const element = styleCardBtn[i];
+    element.addEventListener("click", () => {
+      blackout.classList.add("open", "popupBlackout");
+      popupStyle.classList.add("open");
+      disableScroll();
+    });
+  }
+  for (let i = 0; i < popupClose.length; i++) {
+    popupClose[i].addEventListener("click", () => {
+      blackout.classList.remove("open", "popupBlackout");
+      popup[i].classList.remove("open");
+      enableScroll();
+    });
+  }
+  var popupSwiperSmall = document.querySelectorAll(".popupSwiperSmall");
+  var popupSwiperBig = document.querySelectorAll(".popupSwiperBig");
+  for (let i = 0; i < popupSwiperSmall.length; i++) {
+    const element = popupSwiperSmall[i];
+    var swiper = new Swiper(element, {
+      loop: false,
+      spaceBetween: 20,
+      slidesPerView: 4,
+      freeMode: false,
+      watchSlidesProgress: true,
+    });
+  }
+  for (let i = 0; i < popupSwiperBig.length; i++) {
+    const element = popupSwiperBig[i];
+    new Swiper(element, {
+      loop: false,
+      spaceBetween: 20,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  }
+  if (window.innerWidth <= 1100) {
+    var popupBtnText = document.querySelectorAll(".popup-btn");
+    for (let i = 0; i < popupBtnText.length; i++) {
+      const element = popupBtnText[i];
+      element.innerHTML = element.innerHTML.split(" ")[0];
+    }
+  }
+  // var swiper = new Swiper(".popupSwiperSmall", {
+  //   loop: false,
+  //   spaceBetween: 20,
+  //   slidesPerView: 4,
+  //   freeMode: false,
+  //   watchSlidesProgress: true,
+  // });
+  // new Swiper(".popupSwiperBig", {
+  //   loop: false,
+  //   spaceBetween: 20,
+  //   navigation: {
+  //     nextEl: ".swiper-button-next",
+  //     prevEl: ".swiper-button-prev",
+  //   },
+  //   thumbs: {
+  //     swiper: swiper,
+  //   },
+  // });
+  blackout.addEventListener("click", () => {
+    blackout.classList.remove("open");
+    enableScroll();
+  });
+
+  // new SimpleBar(document.getElementById("popup-scroll-portfolio"), {
+  //   autoHide: false,
+  // });
+  var popupSroll = document.querySelectorAll(".popup-scroll");
+  for (let i = 0; i < popupSroll.length; i++) {
+    new SimpleBar(popupSroll[i], {
+      autoHide: false,
+    });
+  }
+  // simpleBar.unMount();
 });

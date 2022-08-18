@@ -429,6 +429,7 @@ header.fly .header-body {
   grid-gap: 15px;
 }
 .approach_card-title {
+  line-height: 1.3em;
   font-weight: 400;
   font-size: 18px;
 }
@@ -448,6 +449,7 @@ header.fly .header-body {
   display: grid;
   grid-gap: 7px;
   color: #e9e6de;
+  line-height: 1.25em;
 }
 .approach_card-list > li {
   position: relative;
@@ -591,7 +593,7 @@ header.fly .header-body {
   }
   .approach_card-list,
   .approach_card-list-nested {
-    grid-gap: 4px;
+    grid-gap: 5px;
   }
 }
 @media (max-width: 380px) {

@@ -2,8 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   new Swiper(".homeSwiper", {
     slidesPerView: "auto",
     centeredSlides: true,
-    spaceBetween: 150,
-    // spaceBetween: 80,
     speed: 9500,
     loop: true,
     allowTouchMove: false,
@@ -29,10 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Общие переменные
   const blackout = document.querySelector(".blackout");
-  function onBlackout() {
-    blackout.classList.add("open");
-    disableScroll();
-  }
 
   // Шапка
   var headerHight = document.querySelector("header").clientHeight,
@@ -52,17 +46,17 @@ document.addEventListener("DOMContentLoaded", () => {
     if (headerBtn.classList.contains("open")) {
       headerBtn.classList.remove("open");
       headerMenu.classList.remove("open");
-      blackout.classList.remove("open", "headerBlackout");
+      blackout.classList.remove("open");
     } else {
       headerBtn.classList.add("open");
       headerMenu.classList.add("open");
-      blackout.classList.add("open", "headerBlackout");
+      blackout.classList.add("open");
       document
         .querySelector(".headerBlackout")
         .addEventListener("click", () => {
           headerBtn.classList.remove("open");
           headerMenu.classList.remove("open");
-          blackout.classList.remove("open", "headerBlackout");
+          blackout.classList.remove("open");
         });
     }
   });
@@ -86,63 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     check = false;
   };
-
-  // Плавный скролл
-  document.querySelectorAll("a.navigation").forEach((link) => {
-    link.addEventListener("click", function (e) {
-      e.preventDefault();
-      const href = this.getAttribute("href").substring(1);
-      const scrollTarget = document.getElementById(href);
-      const topOffset = document.querySelector("header").offsetHeight + 20;
-      if (scrollTarget) {
-        const elementPosition = scrollTarget.getBoundingClientRect().top;
-        const offsetPosition = elementPosition - topOffset;
-        window.scrollBy({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-      } else {
-        return;
-      }
-    });
-  });
-  // // собираем все якоря; устанавливаем время анимации и количество кадров
-  // const anchors = [].slice.call(document.querySelectorAll('a[href*="#"]')),
-  //   animationTime = 800,
-  //   framesCount = 90;
-
-  // anchors.forEach(function (item) {
-  //   item.addEventListener("click", function (e) {
-  //     e.preventDefault();
-  //     // для каждого якоря берем соответствующий ему элемент и определяем его координату Y
-  //     let coordY =
-  //       document
-  //         .querySelector(item.getAttribute("href"))
-  //         .getBoundingClientRect().top +
-  //       window.pageYOffset -
-  //       (headerHight + 20);
-  //     // запускаем интервал, в котором
-  //     let scroller = setInterval(function () {
-  //       // считаем на сколько скроллить за 1 такт
-  //       let scrollBy = coordY / framesCount;
-  //       // если к-во пикселей для скролла за 1 такт больше расстояния до элемента
-  //       // и дно страницы не достигнуто
-  //       if (
-  //         scrollBy > window.pageYOffset - coordY &&
-  //         window.innerHeight + window.pageYOffset < document.body.offsetHeight
-  //       ) {
-  //         // то скроллим на к-во пикселей, которое соответствует одному такту
-  //         window.scrollBy(0, scrollBy);
-  //       } else {
-  //         // иначе добираемся до элемента и выходим из интервала
-  //         window.scrollTo(0, coordY);
-  //         clearInterval(scroller);
-  //       }
-  //       // время интервала равняется частному от времени анимации и к-ва кадров
-  //     }, animationTime / framesCount);
-  //   });
-  // });
-
+  // Слайдеры
   new Swiper(".materialsSwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
@@ -172,12 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
         allowTouchMove: false,
       },
     },
-
-    observer: true,
-    observeParents: true,
-    observeSlideChildren: true,
   });
-
   new Swiper(".photosSwiper", {
     slidesPerView: "auto",
     centeredSlides: false,
@@ -187,9 +120,6 @@ document.addEventListener("DOMContentLoaded", () => {
         speed: 1000,
         centeredSlides: true,
         spaceBetween: 15,
-        // pagination: {
-        //   type: "fraction",
-        // },
       },
       770: {
         centeredSlides: false,
@@ -213,23 +143,25 @@ document.addEventListener("DOMContentLoaded", () => {
       prevEl: ".swiper_controls-prev",
     },
   });
-
-  // var menu = ["Slide 1", "Slide 2", "Slide 3"];
-  // var swiper = new Swiper(".swiper-container", {
-  //   pagination: {
-  //     el: ".swiper-pagination.pagination-bottom, .swiper-pagination.pagination-top",
-  //     clickable: true,
-  //     renderBullet: function (index, className) {
-  //       return '<span class="' + className + '">' + menu[index] + "</span>";
-  //     },
-  //   },
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
-  // });
-
   // Вопросы
+  var faqCardOne = document.querySelectorAll(".faq_card");
+  var faqCardContentOne = faqCardOne[0].querySelector(
+    ".faq_card-content-wrapper"
+  );
+  faqCardOne[0].classList.add("open");
+  if (window.innerWidth < 1200) {
+    gsap.to(faqCardContentOne, {
+      opacity: 1,
+      height: "auto",
+      duration: 0.7,
+    });
+  } else {
+    gsap.to(faqCardContentOne, {
+      opacity: 1,
+      x: 0,
+      duration: 0.7,
+    });
+  }
   document.querySelectorAll(".faq_card").forEach((faqCard) => {
     faqCard.addEventListener("click", function (e) {
       if (
@@ -271,7 +203,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
-
   // Сравнение
   document.querySelectorAll(".no-js").forEach((el) => {
     el.classList.remove("no-js");
@@ -339,61 +270,78 @@ document.addEventListener("DOMContentLoaded", () => {
       separator.style.marginLeft = positionX + "px";
     }
   });
-
   // Попапы
-  var portfolioCardBtn = document.querySelectorAll(".portfolio_card-btn");
-  var styleCardBtn = document.querySelectorAll(".style_card-btn");
-  var popup = document.querySelectorAll(".popup");
-  var popupPortfolio = document.querySelector(".portfolio-popup");
-  var popupStyle = document.querySelector(".style-popup");
-  var popupClose = document.querySelectorAll(".popup-close");
+  var portfolioCardBtn = document.querySelectorAll(".portfolio_card-btn"),
+    styleCardBtn = document.querySelectorAll(".style_card-btn"),
+    popupSroll = document.querySelectorAll(".popup-scroll"),
+    popup = document.querySelectorAll(".popup"),
+    popupPortfolio = document.querySelector(".portfolio-popup"),
+    popupStyle = document.querySelector(".style-popup");
+  for (let i = 0; i < popupSroll.length; i++) {
+    new SimpleBar(popupSroll[i], {
+      autoHide: false,
+    });
+  }
+  function checkPopup() {
+    for (let i = 0; i < popup.length; i++) {
+      if (popup[i].classList.contains("open")) {
+        var popupSwiperBig = popup[i].querySelector(".popupSwiperBig");
+        if (window.innerWidth > 670) {
+          var popupSwiperSmall = popup[i].querySelector(".popupSwiperSmall");
+          var swiper = new Swiper(popupSwiperSmall, {
+            loop: false,
+            spaceBetween: 20,
+            slidesPerView: 4,
+            freeMode: false,
+            watchSlidesProgress: true,
+            observer: true,
+            observeParents: true,
+            observeSlideChildren: true,
+          });
+        }
+        new Swiper(popupSwiperBig, {
+          loop: false,
+          spaceBetween: 20,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          thumbs: {
+            swiper: swiper,
+          },
+          observer: true,
+          observeParents: true,
+          observeSlideChildren: true,
+        });
+      }
+    }
+  }
   for (let i = 0; i < portfolioCardBtn.length; i++) {
-    const element = portfolioCardBtn[i];
-    element.addEventListener("click", () => {
+    portfolioCardBtn[i].addEventListener("click", () => {
       blackout.classList.add("open", "popupBlackout");
       popupPortfolio.classList.add("open");
       disableScroll();
+      checkPopup();
     });
   }
   for (let i = 0; i < styleCardBtn.length; i++) {
-    const element = styleCardBtn[i];
-    element.addEventListener("click", () => {
+    styleCardBtn[i].addEventListener("click", () => {
       blackout.classList.add("open", "popupBlackout");
       popupStyle.classList.add("open");
       disableScroll();
+      checkPopup();
     });
   }
-  for (let i = 0; i < popupClose.length; i++) {
-    popupClose[i].addEventListener("click", () => {
-      blackout.classList.remove("open", "popupBlackout");
-      popup[i].classList.remove("open");
-      enableScroll();
-    });
-  }
-  var popupSwiperSmall = document.querySelectorAll(".popupSwiperSmall");
-  var popupSwiperBig = document.querySelectorAll(".popupSwiperBig");
-  for (let i = 0; i < popupSwiperSmall.length; i++) {
-    const element = popupSwiperSmall[i];
-    var swiper = new Swiper(element, {
-      loop: false,
-      spaceBetween: 20,
-      slidesPerView: 4,
-      freeMode: false,
-      watchSlidesProgress: true,
-    });
-  }
-  for (let i = 0; i < popupSwiperBig.length; i++) {
-    const element = popupSwiperBig[i];
-    new Swiper(element, {
-      loop: false,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      thumbs: {
-        swiper: swiper,
-      },
+  for (let i = 0; i < popup.length; i++) {
+    popup[i].addEventListener("click", (e) => {
+      if (
+        e.target.classList.contains("popup") ||
+        e.target.classList.contains("popup-close")
+      ) {
+        blackout.classList.remove("open", "popupBlackout");
+        popup[i].classList.remove("open");
+        enableScroll();
+      }
     });
   }
   if (window.innerWidth <= 1100) {
@@ -403,37 +351,4 @@ document.addEventListener("DOMContentLoaded", () => {
       element.innerHTML = element.innerHTML.split(" ")[0];
     }
   }
-  // var swiper = new Swiper(".popupSwiperSmall", {
-  //   loop: false,
-  //   spaceBetween: 20,
-  //   slidesPerView: 4,
-  //   freeMode: false,
-  //   watchSlidesProgress: true,
-  // });
-  // new Swiper(".popupSwiperBig", {
-  //   loop: false,
-  //   spaceBetween: 20,
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
-  //   thumbs: {
-  //     swiper: swiper,
-  //   },
-  // });
-  blackout.addEventListener("click", () => {
-    blackout.classList.remove("open");
-    enableScroll();
-  });
-
-  // new SimpleBar(document.getElementById("popup-scroll-portfolio"), {
-  //   autoHide: false,
-  // });
-  var popupSroll = document.querySelectorAll(".popup-scroll");
-  for (let i = 0; i < popupSroll.length; i++) {
-    new SimpleBar(popupSroll[i], {
-      autoHide: false,
-    });
-  }
-  // simpleBar.unMount();
 });

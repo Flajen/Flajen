@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ElectricFamily</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/layout.css">
+  <link rel="stylesheet" href="./css/master.css">
+</head>
+
+<body>
+  <div class="body-overflow">
+    <header>
+      <div class="container">
+        <div class="header-body">
+          <a href="#home" class="logo header-logo navigation">
+            <img src="./img/logo.svg" alt="ElectricFamily" class="logo-img desktop">
+            <img src="./img/logo-ft.svg" alt="ElectricFamily" class="logo-img mobile">
+            <p class="logo-text">Electric<span class="help">Family</span></p>
+          </a>
+          <nav class="header-nav">
+            <a href="#advantages" class="nav_link header-nav_link navigation">Преимущества</a>
+            <a href="#experience" class="nav_link header-nav_link navigation">О нас</a>
+            <a href="#reviews" class="nav_link header-nav_link navigation">Отзывы</a>
+            <a href="#questions" class="nav_link header-nav_link navigation">Консультация</a>
+            <a href="#contacts" class="nav_link header-nav_link navigation">Контакты</a>
+          </nav>
+          <div class="header-right">
+            <a href="tel:+79154535541" class="phone header-phone icon-after">+7 (915) 453-55-41</a>
+            <button class="header-btn mobile">
+              <span class="header-line one"></span>
+              <span class="header-line two"></span>
+              <span class="header-line three"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="header_popup">
+      <div class="container">
+        <div class="header_popup-body">
+          <div class="header_popup-nav">
+            <a href="#home" class="nav_link header_popup-nav_link navigation">Главная</a>
+            <a href="#advantages" class="nav_link header_popup-nav_link navigation">Преимущества</a>
+            <a href="#experience" class="nav_link header_popup-nav_link navigation">О нас</a>
+            <a href="#reviews" class="nav_link header_popup-nav_link navigation">Отзывы</a>
+            <a href="#questions" class="nav_link header_popup-nav_link navigation">Консультация</a>
+            <a href="#contacts" class="nav_link header_popup-nav_link navigation">Контакты</a>
+          </div>
+          <div class="header_popup-phone-wrapper">
+            <a href="tel:+79154535541" class="phone header_popup-phone icon-after">+7 (915) 453-55-41</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="home" id="home">
+        <div class="container">
+          <h1 class="home-title">Монтаж электрики в квартирах и частных домах <span class="help">под ключ</span></h1>
+          <p class="home-subtitle">
+            Проектируем и монтируем системы электроснабжения любой сложности, начиная от прокладки кабеля и установки
+            розеток, до сборки электрических щитов
+          </p>
+        </div>
+        <div class="home-img-wrapper">
+          <img src="./img/home/bg.png" alt="Монтаж электрики в квартирах и частных домах под ключ"
+            class="home-img desktop">
+          <img src="./img/home/bg-phone.png" alt="Монтаж электрики в квартирах и частных домах под ключ"
+            class="home-img mobile">
+        </div>
+        <div class="home_block">
+          <h2 class="home_block-title">Хотите <span class="help">быстро получить расчёт</span> на монтаж электрики под
+            ключ?</h2>
+          <div>
+            <h3 class="home_block-heading">
+              Оставьте заявку, вам позвонит дежурный сотрудник:
+            </h3>
+            <ul class="home_block-list list">
+              <li>уточнит ваши задачи и пожелания</li>
+              <li>сориентирует по условиям и цене</li>
+            </ul>
+            <button type="button" name="openPopup" class="btn btnRequest">Оставить заявку</button>
+          </div>
+          <img src="./img/home/wire.png" alt="Хотите быстро получить расчёт на монтаж электрики под ключ"
+            class="home_block-img">
+        </div>
+      </section>
+
+      <section class="advantages" id="advantages">
+        <div class="container">
+          <h2 class="title">Наши преимущества</h2>
+          <div class="advantages-body">
+            <div class="advantages_block">
+              <h3 class="advantages_block-title">Гарантия на работы 5 лет</h3>
+              <p class="advantages_block-subtitle">
+                Работа с качественными материалами, технадзор и обученные специалисты позволяют смело давать заказчикам
+                гарантии
+              </p>
+              <img src="./img/advantages/bg.png" alt="Гарантия на работы 5 лет" class="advantages_block-img">
+            </div>
+            <div class="advantages-cards">
+              <div class="advantages_card">
+                <img src="./img/advantages/plug.svg" alt="Качественные материалы" class="advantages_card-img">
+                <h3 class="advantages_card-title">Качественные материалы</h3>
+                <p class="advantages_card-subtitle">
+                  Работаем только с качественным материалами от проверенных производителей, на которые можно дать
+                  гарантию
+                </p>
+              </div>
+              <div class="advantages_card">
+                <img src="./img/advantages/glass.svg" alt="Собственный технадзор" class="advantages_card-img">
+                <h3 class="advantages_card-title">Собственный технадзор</h3>
+                <p class="advantages_card-subtitle">
+                  Проверяет качество после каждого выполненного этапа
+                </p>
+              </div>
+              <div class="advantages_card">
+                <img src="./img/advantages/teamwork.svg" alt="Большой штат людей" class="advantages_card-img">
+                <h3 class="advantages_card-title">Большой штат людей</h3>
+                <p class="advantages_card-subtitle">
+                  При необходимости, например болезни исполнителя — быстро пришлём замену на ваш объект
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="experience" id="experience">
+        <div class="experience-wrapper">
+          <div class="experience-block">
+            <h2 class="experience-title"><span class="help">12 лет</span> на рынке</h2>
+            <p class="experience-text">
+              Начинали с мелких работ по замене розеток, а теперь делаем все работы под ключ и сами обучаем новых
+              работников нашим стандартам
+            </p>
+            <h3 class="experience-heading">Своя школа подготовки мастеров:</h3>
+            <div class="experience-cards">
+              <p class="experience_card">
+                <span class="help">Обучаем</span> новых работников своим своим регламентам и стандартам качества
+              </p>
+              <p class="experience_card">
+                <span class="help">Повышаем квалификацию</span> хорошо зарекомендовавших себя сотрудников
+              </p>
+            </div>
+          </div>
+          <img src="./img/experience/bg.png" alt="12 лет на рынке" class="experience-img">
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <div class="container">
+          <h2 class="title">Отзывы о нашей компании</h2>
+          <div class="reviews-cards">
+            <div class="reviews_card" role="button" tabindex="0">
+              <span class="reviews_card-background"></span>
+              <img src="./img/reviews/1.png" alt="видеоотзыв №1" class="reviews_card-img">
+              <span class="reviews_card-shading"></span>
+              <div class="reviews_card-play-wrapper">
+                <p class="reviews_card-play">Смотреть<br> видеоотзыв №1</p>
+              </div>
+            </div>
+
+            <div class="reviews_card" role="button" tabindex="0">
+              <span class="reviews_card-background"></span>
+              <img src="./img/reviews/2.png" alt="видеоотзыв №2" class="reviews_card-img">
+              <span class="reviews_card-shading"></span>
+              <div class="reviews_card-play-wrapper">
+                <p class="reviews_card-play">Смотреть<br> видеоотзыв №2</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="questions" id="questions">
+        <div class="container">
+          <div class="questions-block">
+            <h2 class="questions-title">Если у Вас <span class="help">возник вопрос:</span></h2>
+            <img src="./img/questions/lamp.png" alt="Если у Вас возник вопрос" class="questions-img">
+            <div>
+              <ul class="questions-list list">
+                <li>Обратитесь за бесплатной консультацией прямо сейчас по телефону: <a href="tel:+79154535541"
+                    class="questions-link">+7 (915) 453-55-41</a></li>
+                <li>Оставьте заявку на сайте</li>
+              </ul>
+              <button type="button" name="openPopup" class="btn btnRequest">Оставить заявку</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <h2 class="title">Контакты</h2>
+          <div class="contacts-body">
+            <div class="contacts_block contacts_icon-phone icon-after">
+              <p class="contacts_block-title">Телефон:</p>
+              <a href="tel:+7 (915) 453-55-41" class="contacts_block-text contacts_block-link">+7 (915) 453-55-41</a>
+            </div>
+            <div class="contacts_block contacts_icon-email icon-after">
+              <p class="contacts_block-title">Электронная почта:</p>
+              <a href="mailto:electric-family@mail.ru"
+                class="contacts_block-text contacts_block-link">electric-family@mail.ru</a>
+            </div>
+            <div class="contacts_block contacts_icon-address icon-after">
+              <p class="contacts_block-title">Адрес офиса:</p>
+              <p class="contacts_block-text">г. Москва, ул. Пушкина, дом 7, офис 67</p>
+            </div>
+            <div class="contacts_block contacts_icon-schedule icon-after">
+              <p class="contacts_block-title">График работы:</p>
+              <p class="contacts_block-text">Пн-Сб, 10:00-20:00</p>
+            </div>
+          </div>
+
+          <div class="contacts-map">
+            <script type="text/javascript" charset="utf-8" async
+              src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aee9dd68f82fc11dd4a9f5c17323d5a2bdcc932519d03d69b0002f27d920bd82c&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-body">
+          <a href="#home" class="logo footer-logo navigation">
+            <img src="./img/logo-ft.svg" alt="ElectricFamily" class="logo-img">
+            <p class="logo-text">Electric<span class="help">Family</span></p>
+          </a>
+          <nav class="footer-nav">
+            <a href="#home" class="nav_link footer-nav_link navigation">Главная</a>
+            <a href="#advantages" class="nav_link footer-nav_link navigation">Преимущества</a>
+            <a href="#experience" class="nav_link footer-nav_link navigation">О нас</a>
+            <a href="#reviews" class="nav_link footer-nav_link navigation">Отзывы</a>
+            <a href="#questions" class="nav_link footer-nav_link navigation">Консультация</a>
+            <a href="#contacts" class="nav_link footer-nav_link navigation">Контакты</a>
+          </nav>
+          <a href="#!" class="instagram footer-instagram icon-after">@electric_family</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- Попапы ↓↓↓ -->
+  <div class="popup popup-request">
+    <div class="popup-body">
+      <div class="popup-close" role="button" tabindex="0"></div>
+      <h2 class="popup-title">Оставьте заявку</h2>
+      <p class="popup-subtitle">
+        Наш дежурный сотрудник позвонит вам
+      </p>
+      <form action="./form/send.php" method="post" class="popup-form">
+        <div class="popup-input-cards">
+          <div class="popup-input-wrapper">
+            <input type="text" name="name" placeholder="Имя" class="popup-input">
+          </div>
+          <div class="popup-input-wrapper">
+            <input type="tel" name="phone" placeholder="Номер телефона" class="popup-input" data-tel-input
+              maxlength="18" required>
+          </div>
+        </div>
+        <button type="submit" name="sendRequest" class="btn popup-btn">Оставить заявку</button>
+      </form>
+    </div>
+  </div>
+  <!-- Попапы ↑↑↑ -->
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/gsap.min.js"></script>
+  <script src="./js/master.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/scroll.js"></script>
+</body>
+
+</html>

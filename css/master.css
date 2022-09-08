@@ -173,6 +173,10 @@ header.fly .header-body {
   grid-template-columns: minmax(383px, 802px) minmax(200px, 430px);
   margin-bottom: 144px;
 }
+.home-title {
+  font-size: 35px;
+  max-width: 700px;
+}
 .home-portfolio {
   font-size: 16px;
   font-weight: 500;

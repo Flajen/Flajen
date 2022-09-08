@@ -271,9 +271,6 @@ header.fly .header-body {
   -ms-grid-columns: minmax(383px, 730px) minmax(200px, 530px);
   grid-template-columns: minmax(383px, 730px) minmax(200px, 530px);
 }
-.portfolio-title {
-  font-size: 35px;
-}
 .portfolio-cards {
   display: -ms-grid;
   display: grid;

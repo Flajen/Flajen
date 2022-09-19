@@ -819,6 +819,9 @@ header.white .header-link:hover {
     height: 230px;
     top: calc(100% - 30px);
   }
+  .section-heading {
+    grid-gap: 30px;
+  }
 }
 /* Блок ↑↑↑ */
 

@@ -166,6 +166,17 @@ p.table_column-start-column {
 .table-info.down {
   bottom: -43px;
 }
+@media (max-width: 1220px) {
+  .table_data{
+    min-height: 57px;
+  }
+  .table-3 .table_column {
+    grid-template-columns: 255px 97px 105px;
+  }
+  .table-7 .table_column {
+    grid-template-columns: 135px 60px 60px 60px 60px 60px 70px;
+  }
+}
 /* Таблицы ↑↑↑ */
 
 /* Таблица сравнения ↓↓↓ */
@@ -199,6 +210,23 @@ p.table_column-start-column {
 .dimensions-tolerances-main .table_data p {
   padding: 20px 40px;
 }
+@media (max-width: 1220px) {
+  .dimensions-tolerances-heading {
+    margin-bottom: 50px;
+  }
+  .dimensions-tolerances-heading {
+    grid-template-columns: auto;
+  }
+  .dimensions-tolerances .table {
+    margin-top: 0;
+  }
+  .dimensions-tolerances-main .table_header p {
+    padding: 30px 20px;
+  }
+  .dimensions-tolerances-main .table_data p {
+    padding: 15px 20px;
+  }
+}
 /* Размеры и допуски ↑↑↑ */
 
 /* Марки стали ↓↓↓ */
@@ -230,6 +258,24 @@ p.table_column-start-column {
 }
 .features .table {
   margin-top: 0;
+}
+@media (max-width: 1220px) {
+  .steel-grades {
+    margin-bottom: 100px;
+  }
+  .steel-grades-main .table_header p {
+    padding: 20px 10px;
+  }
+  .steel-grades-main .table_data p {
+    padding: 15px 10px;
+  }
+  .table-7 .stamp {
+    padding: 20px !important;
+  }
+  .features-title {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
 }
 /* Марки стали ↑↑↑ */
 

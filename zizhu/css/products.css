@@ -1,0 +1,64 @@
+/* Продукция ↓↓↓ */
+.products-block {
+  padding: 100px;
+}
+.products-btn-wrapper {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+/* Продукция ↑↑↑ */
+
+/* Техническая информация ↓↓↓ */
+.info-cards {
+  display: grid;
+  grid-template-areas:
+    "one one two two"
+    "three four four five";
+  grid-gap: 20px;
+}
+.info_card {
+  display: flex;
+  align-items: center;
+  background: #faf7f4;
+  padding: 38px 40px;
+}
+.info_card p {
+  width: 100%;
+  color: #252525;
+  font-size: 20px;
+  font-weight: 500;
+}
+.info_card p .help {
+  color: #d71e1e;
+}
+.info_card.one {
+  grid-area: one;
+  border-radius: 30px 0px 0px 0px;
+}
+.info_card.two {
+  grid-area: two;
+}
+.info_card.three {
+  grid-area: three;
+}
+.info_card.four {
+  grid-area: four;
+}
+.info_card.five {
+  grid-area: five;
+  border-radius: 0px 0px 30px 0px;
+}
+.info_card .arrow {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_293_463)'%3e%3cpath d='M0.698979 0.459473V0.753053V1.13938H12.3802L0.458984 13.0606L0.940341 13.5414L12.8617 1.62019V13.3013H13.1922H13.5415V0.459473H0.698979Z' fill='%23DBD8D5'/%3e%3cpath d='M0.698979 0.459473V0.259473H0.498979V0.459473H0.698979ZM0.698979 1.13938H0.498979V1.33938H0.698979V1.13938ZM12.3802 1.13938L12.5216 1.2808L12.863 0.939378H12.3802V1.13938ZM0.458984 13.0606L0.317563 12.9192L0.176062 13.0607L0.317643 13.2021L0.458984 13.0606ZM0.940341 13.5414L0.798999 13.6829L0.94042 13.8242L1.08176 13.6829L0.940341 13.5414ZM12.8617 1.62019H13.0617V1.13735L12.7202 1.47877L12.8617 1.62019ZM12.8617 13.3013H12.6617V13.5013H12.8617V13.3013ZM13.5415 13.3013V13.5013H13.7415V13.3013H13.5415ZM13.5415 0.459473H13.7415V0.259473H13.5415V0.459473ZM0.498979 0.459473V0.753053H0.898979V0.459473H0.498979ZM0.498979 0.753053V1.13938H0.898979V0.753053H0.498979ZM0.698979 1.33938H12.3802V0.939378H0.698979V1.33938ZM12.2388 0.997957L0.317563 12.9192L0.600406 13.202L12.5216 1.2808L12.2388 0.997957ZM0.317643 13.2021L0.798999 13.6829L1.08168 13.3999L0.600326 12.9191L0.317643 13.2021ZM1.08176 13.6829L13.0031 1.76161L12.7202 1.47877L0.79892 13.4L1.08176 13.6829ZM12.6617 1.62019V13.3013H13.0617V1.62019H12.6617ZM12.8617 13.5013H13.1922V13.1013H12.8617V13.5013ZM13.1922 13.5013H13.5415V13.1013H13.1922V13.5013ZM13.7415 13.3013V0.459473H13.3415V13.3013H13.7415ZM13.5415 0.259473H0.698979V0.659473H13.5415V0.259473Z' fill='%23DBD8D5'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_293_463'%3e%3crect width='14' height='14' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  margin-left: 5px;
+}
+/* Техническая информация ↑↑↑ */

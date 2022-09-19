@@ -1,0 +1,169 @@
+/* Проект ↓↓↓ */
+.project-body {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: minmax(400px, 680px) 1fr;
+  min-height: 450px;
+  background-color: #faf7f4;
+  border-radius: 30px 0px;
+  overflow: hidden;
+}
+.project-name {
+  display: grid;
+  align-items: end;
+  position: relative;
+  padding: 35px 50px;
+}
+.project-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.project-text {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+  z-index: 2;
+}
+.project-cards {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  padding: 50px;
+}
+.project_card {
+  display: grid;
+  grid-gap: 10px;
+  border-bottom: 1px solid #dbd8d5;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+}
+.project_card:last-child {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.project_card-heading {
+  font-size: 18px;
+  font-weight: 600;
+}
+.project_card-text {
+  font-size: 18px;
+}
+.project_card-list {
+  display: grid;
+  grid-gap: 20px;
+}
+.project_card-block {
+  display: grid;
+  grid-gap: 10px;
+}
+@media (max-width: 1220px) {
+  .project-body {
+    max-width: 580px;
+    grid-auto-flow: row;
+    grid-template-columns: auto;
+    grid-template-rows: 310px auto;
+    margin: 0 auto;
+  }
+  .project-name {
+    padding: 15px 20px;
+  }
+  .project-text {
+    font-size: 13px;
+  }
+  .project-cards {
+    padding: 20px;
+  }
+  .project_card {
+    grid-gap: 7px;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+  }
+  .project_card-heading {
+    font-size: 14px;
+  }
+  .project_card-text {
+    font-size: 14px;
+  }
+  .project_card-list{
+    grid-gap: 10px;
+  }
+}
+/* Проект ↑↑↑ */
+
+/* Другие проекты ↓↓↓ */
+.otherSwiper .swiper-slide {
+  display: grid;
+  grid-template-rows: 310px auto;
+  width: 100%;
+  height: auto;
+  background: #faf7f4;
+  border-radius: 30px 0px;
+  overflow: hidden;
+}
+.otherSwiper-body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+}
+.other-img {
+  border-radius: 30px 0px 0px 0px;
+}
+.other-heading {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.other-text {
+  margin-bottom: 25px;
+}
+.other-link {
+  color: #d71e1e;
+  font-weight: 600;
+  margin-top: auto;
+}
+.other-body {
+  position: relative;
+}
+.otherSwiper-swiperBtn-wrapper {
+  position: absolute;
+  right: 0;
+  top: -130px;
+}
+@media (max-width: 1220px) {
+  .other .container {
+    padding: 0;
+  }
+  .other .section-heading {
+    padding: 0 20px;
+  }
+  .otherSwiper .swiper-slide {
+    max-width: 480px;
+  }
+  .otherSwiper-body {
+    padding: 20px;
+  }
+  .other-heading {
+    margin-bottom: 10px;
+  }
+  .other-text {
+    margin-bottom: 10px;
+  }
+  .otherSwiper-swiperBtn-wrapper {
+    position: relative;
+    top: auto;
+    right: 0;
+    margin-top: 25px;
+    padding: 0 20px;
+  }
+  .otherSwiper {
+    padding: 0 20px;
+  }
+}
+/* Другие проекты ↑↑↑ */

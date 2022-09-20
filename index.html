@@ -5,1209 +5,499 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>REST WOOD</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Philosopher:ital@0;1&family=Ubuntu:ital,wght@0,300;0,400;0,500;1,300&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css" />
+  <title>ZIZHURUS</title>
+  <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/layout.css">
-  <link rel="stylesheet" href="./css/master.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-  <!-- Сайт ↓↓↓ -->
-  <img src="./img/main/bg.png" alt="" class="main-bg">
-  <div class="body-wrapper">
-    <header>
+  <div class="overflow-hidden">
+    <header class="white">
       <div class="container">
         <div class="header-body">
-          <a href="/" class="logo header_logo">
-            <img src="./img/logo.svg" alt="RESTWOOD">
-          </a>
-          <nav class="nav_menu header_nav">
-            <a href="#portfolio" class="nav_menu-link header_nav-link navigation">Портфолио</a>
-            <a href="#approach" class="nav_menu-link header_nav-link navigation">Наш подход</a>
-            <a href="#materials" class="nav_menu-link header_nav-link navigation">Материалы</a>
-            <a href="#style" class="nav_menu-link header_nav-link navigation">Стиль</a>
-            <a href="#partners" class="nav_menu-link header_nav-link navigation">Партнёры</a>
-            <a href="#faq" class="nav_menu-link header_nav-link navigation">FAQ</a>
-            <a href="#photos" class="nav_menu-link header_nav-link navigation">Производство</a>
-            <a href="#contacts" class="nav_menu-link header_nav-link navigation">Контакты</a>
-          </nav>
-          <a href="tel:88008000000" class="phone header_phone icon">8 (800) 800-00-00</a>
-          <button type="button" name="openHeader" class="header-btn">
-            <span class="line one"></span>
-            <span class="line two"></span>
-            <span class="line three"></span>
-          </button>
+          <div class="logo">
+            <a href="/" class="logo-link">
+              <img src="./img/wihte_logo.png" alt="Эксклюзивный представитель Anshan Zizhu на территории РФ и стран СНГ"
+                class="logo-img">
+            </a>
+            <p class="logo-text">Эксклюзивный представитель Anshan Zizhu на территории РФ и стран СНГ</p>
+          </div>
+          <div class="header-right">
+            <div class="phone-wrapper">
+              <a href="tel:+74951087659" class="phone-primary icon">+7 (495) 108-76-59</a>
+              <a href="tel:88007772946" class="phone-secondary">8 800 777-29-46</a>
+            </div>
+            <button class="btn-request btnRequest">Заявка на расчёт проекта</button>
+            <button class="burger">
+              <span class="burger-line one"></span>
+              <span class="burger-line two"></span>
+              <span class="burger-line three"></span>
+            </button>
+          </div>
         </div>
+        <nav class="header-links">
+          <a href="./products.html" class="header-link">Продукция</a>
+          <a href="./about.html" class="header-link">О компании</a>
+          <a href="./projects.html" class="header-link">Проекты</a>
+          <a href="./contacts.html" class="header-link">Контакты</a>
+        </nav>
       </div>
     </header>
-    <div class="header_menu">
-      <a href="tel:88008000000" class="phone header_menu-phone footer_phone icon">8 (800) 800-00-00</a>
-      <nav class="nav_menu header_menu-nav">
-        <a href="#portfolio" class="nav_menu-link header_nav-link navigation">Портфолио</a>
-        <a href="#approach" class="nav_menu-link header_nav-link navigation">Наш подход</a>
-        <a href="#materials" class="nav_menu-link header_nav-link navigation">Материалы</a>
-        <a href="#style" class="nav_menu-link header_nav-link navigation">Стиль</a>
-        <a href="#partners" class="nav_menu-link header_nav-link navigation">Партнёры</a>
-        <a href="#faq" class="nav_menu-link header_nav-link navigation">FAQ</a>
-        <a href="#photos" class="nav_menu-link header_nav-link navigation">Производство</a>
-        <a href="#contacts" class="nav_menu-link header_nav-link navigation">Контакты</a>
-      </nav>
+    <div class="header-fly">
+      <div class="container">
+        <div class="header-up">
+          <a href="/" class="logo-link">
+            <img src="./img/logo.png" alt="Эксклюзивный представитель Anshan Zizhu на территории РФ и стран СНГ"
+              class="logo-img">
+          </a>
+          <nav class="header-links">
+            <a href="./products.html" class="header-link">Продукция</a>
+            <a href="./about.html" class="header-link">О компании</a>
+            <a href="./projects.html" class="header-link">Проекты</a>
+            <a href="./contacts.html" class="header-link">Контакты</a>
+          </nav>
+          <div class="header-right">
+            <button class="btn-request btnRequest">Заявка на расчёт проекта</button>
+            <button class="burger">
+              <span class="burger-line one"></span>
+              <span class="burger-line two"></span>
+              <span class="burger-line three"></span>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <main>
-      <section class="home" id="home">
+    <div class="header-menu">
+      <div class="header-container">
         <div class="container">
-          <div class="heading-cap home_heading-cap">
-            <h2 class="title home-title">
-              Изготовление <span class="help">индивидуальной</span> мебели и декора для ресторанов и общественных
-              помещений, а также малых архитектурных форм
-            </h2>
-            <div class="subtitle-wrapper">
-              <p class="subtitle spot icon">
-                Занимаемся полным циклом создания мебели и обустройства интерьеров, начиная от идеи
-                и заканчивая готовыми изделиями
-              </p>
-              <a href="#portfolio" class="home-portfolio icon navigation">посмотреть Портфолио</a>
+          <div class="header-body">
+            <div class="logo">
+              <a href="/" class="logo-link">
+                <img src="./img/logo.png" alt="Эксклюзивный представитель Anshan Zizhu на территории РФ и стран СНГ"
+                  class="logo-img">
+              </a>
+              <p class="logo-text">Эксклюзивный представитель Anshan Zizhu на территории РФ и стран СНГ</p>
             </div>
-          </div>
-        </div>
-        <div class="swiper homeSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="./img/home/1.png" alt=""></div>
-            <div class="swiper-slide"><img src="./img/home/2.png" alt=""></div>
-            <div class="swiper-slide"><img src="./img/home/3.png" alt=""></div>
-            <div class="swiper-slide"><img src="./img/home/4.png" alt=""></div>
-            <div class="swiper-slide"><img src="./img/home/5.png" alt=""></div>
-            <div class="swiper-slide"><img src="./img/home/6.png" alt=""></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="portfolio" id="portfolio">
-        <div class="container">
-          <div class="heading-cap portfolio_heading-cap">
-            <h2 class="title portfolio-title">
-              Примеры <span class="help">комплексного оснащения</span> ресторанов и общественных
-              зон от REST WOOD</h2>
-            <div class="subtitle-wrapper">
-              <p class="subtitle spot icon">
-                Комплексный подход минимизирует риски на каждом этапе ведения проекта. При таком
-                принципе работы
-                в наших совместных интересах запустить проект качественно и в срок
-              </p>
-            </div>
-          </div>
-          <div class="portfolio-cards">
-            <div class="portfolio_card">
-              <img src="./img/portfolio/cards/1.png" alt="Ресторан «Винодельня №1»" class="portfolio_card-img">
-              <span class="portfolio_card-shading"></span>
-              <div class="portfolio_card-body">
-                <h3 class="portfolio_card-title">Ресторан «Винодельня №1»</h3>
-                <p class="portfolio_card-address icon">Сретенка, 15</p>
+            <div class="header-right">
+              <div class="phone-wrapper">
+                <a href="tel:+74951087659" class="phone-primary icon">+7 (495) 108-76-59</a>
+                <a href="tel:88007772946" class="phone-secondary">8 800 777-29-46</a>
               </div>
-              <button type="button" name="openPortfolio" class="portfolio_card-btn">
-                подробнее
-                <span class="portfolio_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card">
-              <img src="./img/portfolio/cards/2.png" alt="Суши-бар" class="portfolio_card-img">
-              <span class="portfolio_card-shading"></span>
-              <div class="portfolio_card-body">
-                <h3 class="portfolio_card-title">Суши-бар</h3>
-                <p class="portfolio_card-address icon">Новокузнецкая</p>
-              </div>
-              <button type="button" name="openPortfolio" class="portfolio_card-btn">
-                подробнее
-                <span class="portfolio_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card">
-              <img src="./img/portfolio/cards/3.png" alt="Пиццерия " class="portfolio_card-img">
-              <span class="portfolio_card-shading"></span>
-              <div class="portfolio_card-body">
-                <h3 class="portfolio_card-title">Пиццерия </h3>
-                <p class="portfolio_card-address icon">Красногорск</p>
-              </div>
-              <button type="button" name="openPortfolio" class="portfolio_card-btn">
-                подробнее
-                <span class="portfolio_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card">
-              <img src="./img/portfolio/cards/4.png" alt="" class="portfolio_card-img">
-              <span class="portfolio_card-shading"></span>
-              <div class="portfolio_card-body">
-                <h3 class="portfolio_card-title">Ресторан The Toy</h3>
-                <p class="portfolio_card-address icon">Краснопресненская</p>
-              </div>
-              <button type="button" name="openPortfolio" class="portfolio_card-btn">
-                подробнее
-                <span class="portfolio_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card">
-              <img src="./img/portfolio/cards/5.png" alt="" class="portfolio_card-img">
-              <span class="portfolio_card-shading"></span>
-              <div class="portfolio_card-body">
-                <h3 class="portfolio_card-title">Ресторан</h3>
-                <p class="portfolio_card-address icon">ТЦ Вегас</p>
-              </div>
-              <button type="button" name="openPortfolio" class="portfolio_card-btn">
-                подробнее
-                <span class="portfolio_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card">
-              <img src="./img/portfolio/cards/6.png" alt="" class="portfolio_card-img">
-              <span class="portfolio_card-shading"></span>
-              <div class="portfolio_card-body">
-                <h3 class="portfolio_card-title">Активити-парк Тейка Бум</h3>
-                <p class="portfolio_card-address icon">ТРЦ Ривьера</p>
-              </div>
-              <button type="button" name="openPortfolio" class="portfolio_card-btn">
-                подробнее
-                <span class="portfolio_card-btn-arrow"></span>
+              <button class="btn-request btnRequest">Заявка на расчёт проекта</button>
+              <button class="burger close">
+                <span class="burger-line one"></span>
+                <span class="burger-line two"></span>
+                <span class="burger-line three"></span>
               </button>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="background-section approach" id="approach">
-        <div class="container">
-          <div class="background-content">
-            <div class="heading-cap approach_heading-cap">
-              <h2 class="title white">Наш <span class="help">подход</span></h2>
-              <div class="subtitle-wrapper white">
-                <p class="subtitle">
-                  Наш подход к работе выражается в сочетании творчества, высоких требований к качеству, конструктивной
-                  точности, педантичности и ценовой гибкости
+          <div class="header-menu-cards">
+            <div class="header-menu-card">
+              <p class="header-menu-heading">ООО «ЗИЗХУ РУС»</p>
+              <div class="header-menu-list">
+                <p class="header-menu-text">
+                  <a href="tel:+74951087659" class="header-menu-phone">+7 (495) 108-76-59</a><br>
+                  121596 г. Москва ул. Горбунова, д. 2 стр. 3<br>
+                  БЦ «Гранд Сетунь Плаза», оф. А916
+                </p>
+                <p class="header-menu-text">
+                  <a href="tel:+73433182873" class="header-menu-phone">+7 (343) 318-28-73</a><br>
+                  620014 г. Екатеринбург<br>
+                  пер. Центральный рынок, 6-220/2
                 </p>
               </div>
             </div>
-            <ul class="approach-wrapper">
-              <li class="approach_card one">
-                <div class="approach_card-body">
-                  <h3 class="approach_card-title">
-                    Любой наш индивидуальный проект начинается с:
-                  </h3>
-                  <ul class="approach_card-list">
-                    <li>
-                      визуального обследования объекта (даже если в этом нет необходимости)
-                    </li>
-                    <li>
-                      личной встречи с клиентом
-                    </li>
-                    <li>
-                      обсуждения всех пожеланий и требований
-                    </li>
-                  </ul>
+            <div class="header-menu-right">
+              <div class="header-menu-card">
+                <p class="header-menu-heading">О компании</p>
+                <div class="header-menu-list">
+                  <a href="/" class="header-menu-link">Главная</a>
+                  <a href="./about.html" class="header-menu-link">О компании</a>
+                  <a href="./projects.html" class="header-menu-link">Проекты</a>
+                  <a href="./products.html" class="header-menu-link">Продукция</a>
+                  <a href="./contacts.html" class="header-menu-link">Контакты</a>
                 </div>
-              </li>
-              <li class="approach_card two">
-                <div class="approach_card-body">
-                  <h3 class="approach_card-title">
-                    Далее наш дизайнер разрабатывает:
-                  </h3>
-                  <div class="approach_card-block">
-                    <ul class="approach_card-list">
-                      <li>
-                        концепцию
-                      </li>
-                      <li>
-                        внешний вид изделий
-                      </li>
-                      <li>
-                        дает задание на производство для изготовления образцов применяемых материалов
-                      </li>
-                    </ul>
-                    <p class="approach_card-text">
-                      Параллельно наш конструктор выполняет все необходимые чертежи и рассчеты предметов мебели
-                      и декора.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="approach_card three">
-                <div class="approach_card-body">
-                  <h3 class="approach_card-title">
-                    Мы подготавливаем детальную смету с договором и после утверждения,
-                    запускаем изделия в производство.
-                  </h3>
-                  <div class="approach_card-block">
-                    <ul class="approach_card-list">
-                      <li>
-                        Предоставляем все необходимые образцы используемых материалов
-                      </li>
-                      <li>
-                        При необходимости создаём трехмерную визуализацию для полного понимания итогового вида
-                        планируемого изделия
-                      </li>
-                      <li class="help">
-                        Даём возможность поэтапного контроля хода работ:
-                      </li>
-                    </ul>
-                    <ul class="approach_card-list-nested">
-                      <li>
-                        Личные визиты на производства по адресу г. Москва, шоссе Энтузиастов, д. 54, стр. 7
-                      </li>
-                      <li>
-                        Фотоотчёт процесса работ
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </li>
-              <li class="approach_card four">
-                <div class="approach_card-body">
-                  <h3 class="approach_card-title">
-                    <span class="help">По завершению изготовления изделий, мы уведомляем об этом заказчика и, в
-                      оговоренную дату, наша
-                      монтажная бригада</span> выезжает на обьект и монтирует все изделия. <span class="help">После чего
-                      мы переходим к сдаче
-                      проекта заказчику.</span>
-                  </h3>
-                </div>
-              </li>
-              <li class="approach_card five">
-                <div class="approach_card-body">
-                  <h3 class="approach_card-title">
-                    <span class="help">По завершению всех работ, мы предоставляем гарантию и возможность</span>
-                    послегарантийного обслуживания
-                    <span class="help">(при необходимости).</span>
-                  </h3>
-                </div>
-              </li>
-            </ul>
-            <div class="split-container approach-comparison">
-              <div class="split-content-left">
-                <img class="responsive-img" src="./img/approach/new.png" alt="" draggable="false">
               </div>
-              <div class="split-content-right">
-                <img class="responsive-img" src="./img/approach/old.png" alt="" draggable="false">
+              <div class="header-menu-card">
+                <p class="header-menu-heading">Техническая информация</p>
+                <div class="header-menu-list">
+                  <a href="./comparisons.html" class="header-menu-link">Сравнение с конкурентами</a>
+                  <a href="./justification-effectiveness.html" class="header-menu-link">Обоснование эффективности</a>
+                  <a href="./steel-grades.html" class="header-menu-link">Марки стали шпунтов Zizhu</a>
+                  <a href="./dimensions-tolerances.html" class="header-menu-link">Размеры и допуски</a>
+                  <a href="./durability-reliability.html" class="header-menu-link">Долговечность и надежность</a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="background-wrapper">
-          <div class="background-img-warpper">
-            <img src="./img/bg.png" alt="" class="background-img">
-          </div>
-        </div>
-      </section>
-
-      <section class="materials" id="materials">
-        <div class="container">
-          <div class="heading-cap materials_heading-cap">
-            <h2 class="title">Основные используемые <span class="help">материалы</span></h2>
-            <div class="subtitle-wrapper">
-              <p class="subtitle">
-                Мы используем различные материалы и их разновидности, типы обработок и
-                окрасок, в зависимости от технических условий, предоставленых заказчиком
-              </p>
-            </div>
-          </div>
-          <div class="swiper materialsSwiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/1.png" alt="Дуб черешчатый" class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Дуб черешчатый</h3>
-                    <p class="materials-text">Он распространен на западе Европы и России, поэтому также часто его
-                      называют среднеевропейским,
-                      обыкновенным или английским. Это одна из самых долговечных разновидностей, крайне устойчивая
-                      к появлению гнили и распространению грибка. Что касается внешнего вида, то сердцевинная часть
-                      обычно светло-коричневого цвета с легким оливковым оттенком и ярким рисунком.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/2.png" alt="Дуб Кавказский
-                  " class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Дуб Кавказский</h3>
-                    <p class="materials-text">Этот вид также называется южным, так как по внешнему виду и свойствам
-                      аналогичен породам, произрастающим в Адыгее и Краснодарском крае, или скальным. Деревья за счет
-                      не столь благодатной почвы вырастают лишь до 30-40 м, а из-за теплого климата более устойчиво при
-                      сушке, но и сильнее страдает при перепадах влажности. Также древесина менее гибкая, а прочность
-                      деревьев из отдельных регионов может превосходить таковую у черешчатого дуба. Массив кавказского
-                      дуба отличается желтоватым цветом и своеобразным терпким ароматом за счет большого количества
-                      дубильных веществ. Текстура красивая и ярко выраженная.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/3.png" alt="Дуб Дальневосточный" class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Дуб Дальневосточный</h3>
-                    <p class="materials-text">Деревья с дальнего востока, наоборот, постоянно находятся на влажном
-                      воздухе, поэтому они хорошо переносят перепады температур и славятся влагостойкостью. Наиболее
-                      распространен среди них дуб монгольский — невысокое (до 30 м), твердое дерево. Его выделяет чуть
-                      более высокая плотность — 730 кг/м3 и внешний вид — широкая (порядка 20 см) желтоватая заболонь,
-                      крупные сердцевинные лучи и коричневое с небольшой желтизной ядро. В целом, массив выглядит более
-                      благородно за счет глубоких оттенков.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/4.png" alt="Южноамериканский дуб" class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Южноамериканский дуб</h3>
-                    <p class="materials-text">Растет в юго-восточной Боливии. Выделяется нежным, светло-коричево-желтым,
-                      солнечным оттенком древесины. Со временем не темнеет, а приобретает серебристый оттенок, который
-                      иногда имитируют искусственно. За счет хорошей естественной стойкости к внешним воздействиям,
-                      усиленной натуральными покрытиями на основе масел и восков, этот вид дуба подходит не только для
-                      домашней, но и садовой мебели. Например, обеденных групп для летних террас и веранд.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/5.png" alt="Американский красный дуб" class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Американский красный дуб</h3>
-                    <p class="materials-text">Произрастает в штатах Алабама, Теннеси и Кентукки, а также в Канаде, где
-                      он распространен наиболее широко. Местные производства используют его очень широко —
-                      от изготовления мебели до винных бочек и шпона. Название получил за цвет древесины различных
-                      оттенков красного — от розового до насыщенного красно-коричневого. Текстура крупная. Качество
-                      массива сильно зависит от условий произрастания. У северных деревьев, растущих медленно, она более
-                      плотная и равномерная. У южных — «рыхлая».
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/6.png" alt="Белый дуб" class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Белый дуб</h3>
-                    <p class="materials-text">Плотная, прочная древесина светлых оттенков — от бледно-желтых до
-                      бледно-коричневого с розоватым. Используется максимально широко. Белый
-                      дуба прекрасно подходит для производства напольных покрытий, деталей лестниц, мебели, дверей.
-                      И особенно ценится эта порода у виноделов — бочки из него идеально подходят для вин и крепких
-                      алкогольных напитков.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/7.png" alt="Орех" class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Орех</h3>
-                    <p class="materials-text">Древесина ореха является ценной породой дерева, применяемой для
-                      изготовления высококачественных предметов, и используется для оформления дорогих интерьеров домов.
-                      Используется для изготовления мебели, паркета, дверей, а также оформления интерьеров помещений.
-                      По причине высокой стоимости для этих целей обычно используется шпон. Древесина отличается высокой
-                      динамической прочностью и минимальной склонностью к растрескиванию. Ценители дорогих пород дерева
-                      отличают древесину привычного грецкого ореха от уникального — тулипьера, который извлекается
-                      из стволов дерева, получаемого из восточного США. Его название происходит от французского языка
-                      и связано с удивительными цветами дерева, сходными с тюльпанами желтого цвета. Древесина
-                      характеризуется светлым цветом, темными прожилками и зеленоватым оттенком. </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/8.png" alt="Бук" class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Бук</h3>
-                    <p class="materials-text">Древесина бука обладает привлекательным бледно-кремовым цветом.
-                      Иногда можно наблюдать лёгкие розовые или коричневые оттенки. Шпон из этой породы более тёмный,
-                      что обусловлено технологией производства. После обработки паром материал становится золотистым.
-                      Текстура тонкая, средней однородности. Прямые волокна создают рисунок с лёгким блеском. Дерево
-                      выглядит интересно и живо. Натуральный бук без покрытия весьма недолговечен. Его часто атакуют
-                      грибковые заболевания, он может гнить. Бук практически не пахнет. Его древесина прочная и твёрдая.
-                      Текстура позволяет проводить любую обработку. Древесина податлива при нарезке и шлифовке.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/9.png" alt="Лиственница" class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Лиственница</h3>
-                    <p class="materials-text">Лиственница — это дерево, которое знакомо многим своими целебными
-                      свойствами и незабываемым ароматом. Но мало кто знает, что в силу своих особенностей эта порода
-                      не уступает дубу. Речь идет о прочности и влагостойкости, чем обусловлено активное использование
-                      ее в строительстве. В нашей стране насаждения лиственницы широко представлены на Дальнем Востоке
-                      и в Восточной Сибири. Устойчивость к повышенной влажности обуславливает активное использование
-                      лиственницы для постройки и отделки бань и других помещений с избытком влаги. Все та же
-                      влагостойкость материала из лиственницы является причиной, по которой используется дерево и для
-                      изготовления садовой мебели. Ей не страшны дождь, снег, перепады температур, что позволяет
-                      использовать
-                      мебель из лиственницы на открытых верандах и террасах.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="materials-card">
-                  <img src="./img/materials/10.png" alt="Хвоя" class="materials-img">
-                  <div class="materials-block">
-                    <h3 class="materials-heading">Хвоя</h3>
-                    <div class="materials-info">
-                      <p class="materials-text">Благодаря строению и физическим показателям хвойных можно выделить
-                        следующие их преимущества:</p>
-                      <ul class="materials-list">
-                        <li>долговечность</li>
-                        <li>низкая гигроскопичность</li>
-                        <li>высокое противодействие загниванию и поражению вредителями</li>
-                        <li>прочность</li>
-                        <li>легкая обработка</li>
-                        <li>прямые стволы способствуют меньшему количеству дефектов, повышают качество пиломатериала
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- <div class="swiper-pagination"></div>
-            <div class="swiper-next swiper-btn"></div>
-            <div class="swiper-prev swiper-btn"></div> -->
-            <div class="swiper_controls">
-              <div class="swiper_controls-prev swiper_controls-btn"></div>
-              <div class="swiper_controls-pagination"></div>
-              <div class="swiper-pagination"></div>
-              <div class="swiper_controls-next swiper_controls-btn"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="style" id="style">
-        <div class="container">
-          <div class="heading-cap style_heading-cap">
-            <h2 class="title"><span class="help">стили</span> в интерьере</h2>
-            <div class="subtitle-wrapper">
-              <p class="subtitle">
-                Предлагаем Вашему вниманию ряд популярных стилей в интерьере
-              </p>
-            </div>
-          </div>
-          <div class="style-cards">
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/1.png" alt="Готика" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Готика</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/2.png" alt="Барокко" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Барокко</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/3.png" alt="Классицизм" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Классицизм</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/4.png" alt="Ампир" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Ампир</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/5.png" alt="Модерн" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Модерн</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/6.png" alt="Функционализм" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Функционализм</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/7.png" alt="Минимализм" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Минимализм</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/8.png" alt="Хай-тек" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Хай-тек</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/9.png" alt="Этника" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Этника</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-            <div class="portfolio_card style_card">
-              <img src="./img/style/cards/10.png" alt="Эклектика" class="style_card-img">
-              <span class="style_card-shading"></span>
-              <div class="style_card-body">
-                <h3 class="style_card-title">Эклектика</h3>
-                <span class="style_card-open"></span>
-              </div>
-              <button type="button" name="openStyle" class="style_card-btn">
-                подробнее
-                <span class="style_card-btn-arrow"></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="partners" id="partners">
-        <div class="container">
-          <div class="heading-cap">
-            <h2 class="title">Наши <span class="help">партнёры</span></h2>
-          </div>
-          <div class="partners-cards">
-            <div class="partners_card"></div>
-            <div class="partners_card"></div>
-            <div class="partners_card"></div>
-            <div class="partners_card"></div>
-            <div class="partners_card"></div>
-            <div class="partners_card"></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="faq" id="faq">
-        <div class="container">
-          <div class="heading-cap">
-            <h2 class="title">Часто задаваемые <span class="help">вопросы</span></h2>
-          </div>
-          <ul class="faq-cards">
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">Как вызвать дизайнера на замер?
-                  Сколько стоят его услуги?
-                  Платный ли выезд?</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>Вызвать дизайнера можно позвонив нам по телефону или отправить письмо нам на почту.</p>
-                  <p>Услуги дизайнера и выезд на обмер бесплатны в пределах Москвы и МО. </p>
-                  <p>Выезд в другие города за дополнительную плату, размер которой зависит от расстояния.⠀</p>
-                  <span class="faq_card-number">1</span>
-                </div>
-              </div>
-            </li>
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">Можете ли Вы сделать 3D-проект будущей мебели? Платно ли это?</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>По вашему желанию наш дизайнер создаст для Вас трехмерную модель мебели в специализированной
-                    программе. Услуга является бесплатной при условии заключения договора.</p>
-                  <span class="faq_card-number">2</span>
-                </div>
-              </div>
-            </li>
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">Какой срок изготовления мебели?</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>Средний срок изготовления мебели составляет 2 недели (кроме кухонь). Кухни в зависимости от типа
-                    фасадов от 4-х до 6-ти недель.</p>
-                  <span class="faq_card-number">3</span>
-                </div>
-              </div>
-            </li>
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">Как происходит оплата? Какой срок гарантии?</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>Сразу же после заключения договора на оказание услуг по изготовлению мебели, Вы вносите предоплату
-                    (как правило, 70% от общей стоимости мебели). Окончательный расчет производится непосредственно
-                    по факту установки.</p>
-                  <p>На всю мебель, изготовленную и собранную нашими мастерами, гарантия — 2 года.</p>
-                  <span class="faq_card-number">4</span>
-                </div>
-              </div>
-            </li>
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">Какие материалы Вы применяете при изготовлении мебели? Как подобрать мебель
-                  по цвету?</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>Мы используем различные материалы и их разновидности, типы обработок и окрасок, в зависимости
-                    от технических условий, предоставленых заказчиком.</p>
-                  <p>Среди основных используемых материалов можно выделить дуб, орех, лиственницу, бук и т.д. А также
-                    различные виды металлов, пластик, стекло, ткань.</p>
-                  <p>Выбирать цвет мебели стоит исходя из ваших личных предпочтений. Ведь пользоваться ей будете вы.
-                    Также цвет мебели должен гармонично вписываться в интерьер комнаты.</p>
-                  <span class="faq_card-number">5</span>
-                </div>
-              </div>
-            </li>
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">Смогут ли Ваши специалисты врезать купленное нами оборудование в мебель?
-                  А встраиваемую технику?</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>Да, наши специалисты без проблем встроят оборудование и технику.</p>
-                  <p>Габаритные размеры купленной вами техники, мойки или раковины необходимо дать дизайнеру в процессе
-                    проектирования будущей мебели.</p>
-                  <span class="faq_card-number">6</span>
-                </div>
-              </div>
-            </li>
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">Придется ли мне заказывать услуги специалистов со стороны? Например, для
-                  сборки или установки мебели.</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>Нет, не придется. Для качественного выполнения сопутствующих работ у нас свои специалисты.</p>
-                  <p>Стоимость их услуг уже включена в стоимость заказа.</p>
-                  <span class="faq_card-number">7</span>
-                </div>
-              </div>
-            </li>
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">Почему стоимость мебели, изготовленной на заказ, выше чем стоимость
-                  серийной? Где заказать мебель вашего производства?</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>У каждого предмета мебели, выполненного по индивидуальному проекту, разный размер и конструкция.
-                    Индивидуальное проектирование мебели предполагает выезд дизайнера, создание новых чертежей
-                    и 3D-проектов, деталировки. Сборка каждый раз разного изделия занимает больше времени и сил, чем
-                    сборка одинаковых изделий при серийном производстве. Эти нюансы влияют на стоимость мебели.</p>
-                  <p>Вы можете заказать мебель, позвонив нам по телефону или отправить письмо нам на почту.</p>
-                  <span class="faq_card-number">8</span>
-                </div>
-              </div>
-            </li>
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">Сколько стоит доплатить за сборку и доставку мебели? Предоставляете ли
-                  вы скидки на мебель?</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>Ничего не нужно доплачивать. Доставка и монтаж мебели уже включены в стоимость заказа.</p>
-                  <p>Да, мы предоставляем скидки в зависимости от объема заказанной Вами мебели. В каждом конкретном
-                    случае возможность скидки и ее размер обсуждается отдельно. Также у нас существуют скидки, если Вы
-                    заказываете у нас мебель повторно.</p>
-                  <span class="faq_card-number">9</span>
-                </div>
-              </div>
-            </li>
-            <li class="faq_card">
-              <div class="faq_card-cap">
-                <h3 class="faq_card-heading">У меня в комнате есть мебель. Возможно ли изготовить мебель, которая будет
-                  совпадать по цвету с уже имеющейся и впишется ли в дизайн?</h3>
-                <div role="button" tabindex="0" class="faq_card-close"></div>
-              </div>
-              <div class="faq_card-content-wrapper">
-                <div class="faq_card-content">
-                  <p>Практически во всех случая удается подобрать не только цвет, но и текстуру.</p>
-                  <span class="faq_card-number">10</span>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <section class="background-section order" id="order">
-        <div class="container">
-          <div class="background-content">
-            <div class="heading-cap order_heading-cap">
-              <h2 class="title white">Для заказа <span class="help">индивидуального проекта</span> вы можете:</h2>
-              <ul class="order-list">
-                <li>Позвонить по номеру <a href="tel:+78008000000" class="order-phone">+7 (800) 800-00-00</a></li>
-                <li><a href="#!" class="order-link">Написать в телеграм</a></li>
-                <li><a href="#!" class="order-link">Написать в чат</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="background-wrapper">
-          <div class="background-img-warpper">
-            <img src="./img/bg.png" alt="" class="background-img">
-          </div>
-        </div>
-      </section>
-
-      <section class="photos" id="photos">
-        <div class="container">
-          <div class="heading-cap">
-            <h2 class="title">Фотографии с <span class="help">производства</span></h2>
-          </div>
-        </div>
-        <div class="swiper photosSwiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">
-              <img src="./img/photos/1.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/2.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/3.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/4.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/5.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/6.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/7.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/8.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/9.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/10.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/11.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/12.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/13.png" alt="" class="photos-img">
-            </div>
-            <div class="swiper-slide">
-              <img src="./img/photos/14.png" alt="" class="photos-img">
-            </div>
-          </div>
-          <div class="swiper_controls">
-            <div class="swiper_controls-prev swiper_controls-btn"></div>
-            <div class="swiper_controls-pagination"></div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper_controls-next swiper_controls-btn"></div>
-          </div>
-        </div>
-        <!-- <div class="container">
-          <div>
-            <div class="swiper-pagination"></div>
-            <div class="swiper-next swiper-btn"></div>
-            <div class="swiper-prev swiper-btn"></div>
-          </div>
-        </div> -->
-      </section>
-
-      <section class="contacts" id="contacts">
-        <div class="container">
-          <div class="heading-cap">
-            <h2 class="title">Контакты</h2>
-          </div>
-          <div class="contacts-body">
-            <div class="contacts-info">
-              <div class="contacts-group contacts-phone icon">
-                <p class="contacts-paragraph ">Номер телефона:</p>
-                <a class="contacts-link">+7 (800) 800-00-00</a>
-              </div>
-              <div class="contacts-group contacts-email icon">
-                <p class="contacts-paragraph">E-mail:</p>
-                <a class="contacts-link">mail@mail.ru</a>
-              </div>
-              <div class="contacts-group contacts-graphic icon">
-                <p class="contacts-paragraph">График работы:</p>
-                <p class="contacts-link">с 08:00 до 22:00</p>
-              </div>
-              <div class="contacts-group contacts-address icon">
-                <p class="contacts-paragraph">Адрес:</p>
-                <p class="contacts-link">г. Москва, шоссе Энтузиастов, д. 54, стр. 7</p>
-              </div>
-              <div class="contacts-group contacts-telegram icon">
-                <a class="contacts-link underline" href="#">Написать в телеграм</a>
-              </div>
-              <div class="contacts-group contacts-download icon">
-                <a class="contacts-link underline" href="#">Скачать реквизиты</a>
-              </div>
-            </div>
-            <div class="contacts-maps">
-              <script type="text/javascript" charset="utf-8" async
-                src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa5b1beafbae816727154128e9d1e7f337f0c957bd57c230eef3b202dd660738e&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-
-    <footer>
-      <div class="container">
-        <div class="footer-body">
-          <a href="/" class="logo footer_logo">
-            <img src="./img/footer/logo.svg" alt="RESTWOOD">
-          </a>
-          <nav class="nav_menu footer_nav">
-            <a href="#!" class="nav_menu-link footer_nav-link navigation">Портфолио</a>
-            <a href="#!" class="nav_menu-link footer_nav-link navigation">Наш подход</a>
-            <a href="#!" class="nav_menu-link footer_nav-link navigation">Материалы</a>
-            <a href="#!" class="nav_menu-link footer_nav-link navigation">Стиль</a>
-            <a href="#!" class="nav_menu-link footer_nav-link navigation">Партнёры</a>
-            <a href="#!" class="nav_menu-link footer_nav-link navigation">FAQ</a>
-            <a href="#!" class="nav_menu-link footer_nav-link navigation">Производство</a>
-            <a href="#!" class="nav_menu-link footer_nav-link navigation">Контакты</a>
-          </nav>
-          <a href="tel:88008000000" class="phone footer_phone icon">8 (800) 800-00-00</a>
         </div>
       </div>
-      <!-- <img src="./img/footer/bg.png" alt="" class="footer-bg"> -->
-      <div class="background-wrapper">
-        <div class="background-img-warpper">
-          <img src="./img/bg.png" alt="" class="background-img">
+    </div>
+    <div class="header-mobile white up">
+      <div class="header-mobile-cap">
+        <a href="/" class="header-mobile-logo-link">
+          <img src="./img/logo.png" alt="" class="header-mobile-logo">
+          <img src="./img/wihte_logo.png" alt="" class="header-mobile-logo white">
+        </a>
+        <button class="burger">
+          <span class="burger-line one"></span>
+          <span class="burger-line two"></span>
+          <span class="burger-line three"></span>
+        </button>
+      </div>
+      <div class="header-mobile-body">
+        <p class="header-mobile-subtitle">Эксклюзивный представитель Anshan Zizhu на территории РФ и стран СНГ</p>
+        <button class="btn header-mobile-btn btnRequest">Заявка на расчёт проекта</button>
+        <div class="header-menu-right">
+          <div class="header-menu-card">
+            <p class="header-menu-heading">О компании</p>
+            <div class="header-menu-list">
+              <a href="/" class="header-menu-link">Главная</a>
+              <a href="./about.html" class="header-menu-link">О&nbsp;компании</a>
+              <a href="./projects.html" class="header-menu-link">Проекты</a>
+              <a href="./products.html" class="header-menu-link">Продукция</a>
+              <a href="./contacts.html" class="header-menu-link">Контакты</a>
+            </div>
+          </div>
+          <div class="header-menu-card">
+            <p class="header-menu-heading">Техническая информация</p>
+            <div class="header-menu-list">
+              <a href="./comparisons.html" class="header-menu-link">Сравнение с&nbsp;конкурентами</a>
+              <a href="./justification-effectiveness.html" class="header-menu-link">Обоснование эффективности</a>
+              <a href="./steel-grades.html" class="header-menu-link">Марки стали шпунтов Zizhu</a>
+              <a href="./dimensions-tolerances.html" class="header-menu-link">Размеры и&nbsp;допуски</a>
+              <a href="./durability-reliability.html" class="header-menu-link">Долговечность и&nbsp;надежность</a>
+            </div>
+          </div>
+          <div class="phone-wrapper">
+            <a href="tel:+74951087659" class="phone-primary icon">+7 (495) 108-76-59</a>
+            <a href="tel:88007772946" class="phone-secondary">8 800 777-29-46</a>
+          </div>
         </div>
+      </div>
+    </div>
+    <main>
+      <section class="home">
+        <div class="container">
+          <div class="home-body">
+            <div class="home-content">
+              <p class="home-author">Anshan Zizhu</p>
+              <h1 class="home-title"><span class="help">Шпунт Ларсена</span><br> от мирового производителя</h1>
+            </div>
+            <button class="btn home-btn btnRequest">Заявка на расчёт проекта</button>
+          </div>
+        </div>
+        <img src="./img/home/bg.png" alt="ZIZHURUS" class="home-img">
+      </section>
+
+      <section class="products">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-title">Продукция</h2>
+            <p class="section-subtitle">
+              Компания ZizhuRus предлагает полный ассортимент стальных шпунтовых свай Anshan Zizhu, включающий корытные
+              и зетовые шпунты, плоские шпунты для создания трубошпунтовых стен, угловые соединения. Всю продукцию можно
+              заказать в нашей компании, оставив заявку на расчет шпунта.
+            </p>
+          </div>
+          <div class="products-cards">
+            <div class="products_card">
+              <img src="./img/home/products/1.png" alt="Z-шпунт" class="products_card-img">
+              <p class="products_card-link icon"><span class="help">Z</span>-шпунт</p>
+              <a href="#!" class="products_card-watch">Посмотреть каталог</a>
+            </div>
+            <div class="products_card">
+              <img src="./img/home/products/2.png" alt="U-шпунт" class="products_card-img">
+              <p class="products_card-link icon"><span class="help">U</span>-шпунт</p>
+              <a href="#!" class="products_card-watch">Посмотреть каталог</a>
+            </div>
+            <div class="products_card">
+              <img src="./img/home/products/3.png" alt="H-шпунт" class="products_card-img">
+              <p class="products_card-link icon"><span class="help">H</span>-шпунт</p>
+              <a href="#!" class="products_card-watch">Посмотреть каталог</a>
+            </div>
+            <div class="products_card">
+              <img src="./img/home/products/4.png" alt="Плоский шпунт" class="products_card-img">
+              <p class="products_card-link icon"><span class="help">Плоский</span> шпунт</p>
+              <a href="#!" class="products_card-watch">Посмотреть каталог</a>
+            </div>
+            <div class="products_card">
+              <img src="./img/home/products/5.png" alt="Угловой шпунт" class="products_card-img">
+              <p class="products_card-link icon"><span class="help">Угловой</span> шпунт</p>
+              <a href="#!" class="products_card-watch">Посмотреть каталог</a>
+            </div>
+            <div class="products_card">
+              <img src="./img/home/products/6.png" alt="Шпунтовые стенки" class="products_card-img">
+              <p class="products_card-link icon">Шпунтовые<span class="help"> стенки</span></p>
+              <a href="#!" class="products_card-watch">Посмотреть каталог</a>
+            </div>
+          </div>
+          <div class="products_certificates">
+            <h3 class="products_certificates-title">Сертификаты качества:</h3>
+            <div class="products_certificates-cards">
+              <div class="products_certificates_card">
+                <img src="./img/home/products/certificates/1.png" alt="Результаты экспертизы Bureau Veritas"
+                  class="products_certificates_card-img">
+                <h4 class="products_certificates_card-title">Результаты экспертизы Bureau Veritas</h4>
+                <div class="products_certificates_card-watch-wrapper">
+                  <a href="#!" class="products_certificates_card-watch icon">Посмотреть</a>
+                </div>
+              </div>
+              <div class="products_certificates_card">
+                <img src="./img/home/products/certificates/2.png"
+                  alt="Cвидетельство МИНСТРОЯ РОССИИ о пригодности шпунта на территории РФ"
+                  class="products_certificates_card-img">
+                <h4 class="products_certificates_card-title">Cвидетельство МИНСТРОЯ РОССИИ о пригодности шпунта на
+                  территории РФ</h4>
+                <div class="products_certificates_card-watch-wrapper">
+                  <a href="#!" class="products_certificates_card-watch icon">Посмотреть</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="deliveries">
+        <div class="container-big">
+          <div class="deliveries-body">
+            <div class="deliveries-block seedBack">
+              <div class="contaier">
+                <h2 class="deliveries-title"><span class="underlined">Прямые поставки</span> с завода</h2>
+                <p class="deliveries-subtitle">
+                  Шпунт Anshan Zizhu Rus поставляется напрямую с производства в Шанхае
+                  до двух основных хабов на территории РФ: <span class="help">Москва и Санкт-Петербург</span>
+                </p>
+                <ul class="deliveries-list">
+                  <li class="deliveries_item">
+                    <h3 class="marker deliveries_item-heading">Море + ЖД</h3>
+                    <p class="deliveries_item-text">50-55 дней с момента выхода судна</p>
+                  </li>
+                  <li class="deliveries_item">
+                    <h3 class="marker deliveries_item-heading">Прямое ЖД</h3>
+                    <p class="deliveries_item-text">30-35 дней с момента выхода поезда</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <img src="./img/home/deliveries/bg.png" alt="Прямые поставки с завода" class="deliveries-img">
+          </div>
+        </div>
+      </section>
+
+      <section class="projects">
+        <div class="projects-container">
+          <div class="projects-body">
+            <div class="projects-right">
+              <div>
+                <h2 class="section-title projects-title">Продукция</h2>
+                <p class="projects-subtitle">Шпунты Zizhu активно применяются в строительстве портов и морских гаваней,
+                  а также внесены в проекты
+                  строительства и реконструкции</p>
+              </div>
+              <div class="swiperBtn-wrapper">
+                <div class="swiperBtn swiperBtn-prev projectsSwiper-prev icon"></div>
+                <div class="swiperBtn swiperBtn-next projectsSwiper-next icon"></div>
+              </div>
+            </div>
+            <div class="swiper projectsSwiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/home/projects/1.png" alt="Центральный ФО" class="projects-img">
+                  <div class="projectsSwiper-body">
+                    <h3 class="projects-heading">Центральный ФО</h3>
+                    <p class="projects-text">
+                      Поставка металлического шпунта на объекты дорожного, жилищного и промышленного строительства
+                      в Центральном Федеральном Округе
+                    </p>
+                    <a href="./projects/centralnyj-fo.html" class="projects-link">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/home/projects/2.png" alt="Порт «ВАНИНО», бухта Мучке" class="projects-img">
+                  <div class="projectsSwiper-body">
+                    <h3 class="projects-heading">Порт «ВАНИНО», бухта Мучке</h3>
+                    <p class="projects-text">
+                      Строительство и реконструкция транспортно-перегрузочного комплекса для перевалки угля в морском
+                      порту Ванино, бухта Мучке
+                    </p>
+                    <a href="./projects/buhta-muchke.html" class="projects-link">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/home/projects/3.png" alt="Бухта «СУХОДОЛ»" class="projects-img">
+                  <div class="projectsSwiper-body">
+                    <h3 class="projects-heading">Бухта «СУХОДОЛ»</h3>
+                    <p class="projects-text">
+                      Строительство нового специализированного порта на Дальневосточном побережье РФ для облегчения
+                      доступа к портовой инфраструктуре малых и средних угледобывающих предприятий
+                    </p>
+                    <a href="./projects/buhta-suhodol.html" class="projects-link">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/home/projects/4.png" alt="АЭС «РУППУР»" class="projects-img">
+                  <div class="projectsSwiper-body">
+                    <h3 class="projects-heading">АЭС «РУППУР»</h3>
+                    <p class="projects-text">
+                      Поставка шпунта металлического на атомную электростанцию «РУППУР»
+                    </p>
+                    <a href="./projects/centralnyj-fo-2.html" class="projects-link">Подробнее</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/home/projects/5.png" alt="Автомобильная дорога М-4 «Дон»" class="projects-img">
+                  <div class="projectsSwiper-body">
+                    <h3 class="projects-heading">Автомобильная дорога М-4 «Дон»</h3>
+                    <p class="projects-text">
+                      Поставка металлического шпунта для строительства дороги
+                    </p>
+                    <a href="./projects/avtomobilnaya-doroga.html" class="projects-link">Подробнее</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="partners">
+        <div class="container">
+          <div class="section-heading">
+            <h2 class="section-title">Партнёры</h2>
+          </div>
+          <div class="partners-cards">
+            <div class="partners_card one">
+              <img src="./img/home/partners/cards/1.png" alt="ЗАО «ЦНИИПСК им. Мельникова»" class="partners_card-img">
+              <h3 class="partners_card-heading">ЗАО «ЦНИИПСК им. Мельникова»</h3>
+              <p class="partners_card-text">
+                ЗАО «Центральный имени трудового красного знамени научно-исследовательский и проектный институт
+                строительных металлоконструкций им. Мельникова»
+              </p>
+            </div>
+            <div class="partners_card two">
+              <img src="./img/home/partners/cards/2.png" alt="АО «ЛЕНМОРНИИПРОЕКТ»" class="partners_card-img">
+              <h3 class="partners_card-heading">АО «ЛЕНМОРНИИПРОЕКТ»</h3>
+              <p class="partners_card-text">
+                Генеральный проектировщик объектов морского транспорта, входит в тройку крупнейших российских компаний
+                по проектированию морских портов, терминалов и транспортных систем
+              </p>
+            </div>
+            <div class="partners_card three">
+              <img src="./img/home/partners/cards/3.png" alt="ФАУ «ФЦС»" class="partners_card-img">
+              <h3 class="partners_card-heading">ФАУ «ФЦС»</h3>
+              <p class="partners_card-text">
+                Федеральное автономное учреждение «Федеральный центр нормирования, стандартизации и технической оценки
+                соответствия в строительстве»
+              </p>
+            </div>
+            <div class="partners_card four">
+              <img src="./img/home/partners/cards/4.png" alt="ООО «Морстройтехнология»" class="partners_card-img">
+              <h3 class="partners_card-heading">ООО «Морстройтехнология»</h3>
+              <p class="partners_card-text">
+                Инжиниринговый центр по исследованиям и проектировании морских портов и терминалов и гидротехнических
+                сооружений
+              </p>
+            </div>
+            <div class="partners_card five">
+              <img src="./img/home/partners/cards/5.png" alt="ЗАО ГТ «Морстрой»" class="partners_card-img">
+              <h3 class="partners_card-heading">ЗАО ГТ «Морстрой»</h3>
+              <p class="partners_card-text">
+                Проектирование гидротехнических сооружений на территории Российской Федерации и за ее пределами, в том
+                числе крупнейшие российские морские перегрузочные комплексы
+              </p>
+            </div>
+            <img src="./img/home/partners/bg.png" alt="" class="partners-img">
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <div class="popup popupScroll popupRequest">
+      <div class="popup-body seedBack">
+        <div class="popup-close" role="button"></div>
+        <h2 class="popup-title">Заявка на расчёт проекта</h2>
+        <form action="" method="post" class="popup-inputs">
+          <div class="popup_input-wrapper input-wrapper icon">
+            <input type="text" name="name" placeholder="ФИО" class="popup_input input">
+          </div>
+          <div class="popup_input-wrapper input-wrapper icon">
+            <input type="tel" name="phone" placeholder="Телефон" class="popup_input input">
+          </div>
+          <div class="popup_input-wrapper input-wrapper icon">
+            <input type="email" name="email" placeholder="Email" class="popup_input input">
+          </div>
+        </form>
+        <button class="btn popup-btn">Отправить заявку</button>
+      </div>
+    </div>
+    <div class="popup popupScroll popupSuccess">
+      <div class="popup-body seedBack">
+        <div class="popup-close" role="button"></div>
+        <span class="popup-img"></span>
+        <h2 class="popup-title">Ваша заявка отправлена</h2>
+        <p class="popup-subtitle">Мы свяжемся с Вами в течение дня</p>
+      </div>
+    </div>
+
+    <footer class="seedBack">
+      <div class="container">
+        <div class="footer-body">
+          <div class="footer-company">
+            <h3 class="footer-heading">ООО «ЗИЗХУ РУС»</h3>
+            <div class="footer-company-body">
+              <p class="footer-company-text">
+                <a href="tel:+74951087659" class="footer-company-phone">+7 (495) 108-76-59</a>
+                119590 г. Москва ул. Минская, д. 2 стр. Ж<br>
+                БЦ «Виктори Парк Плаза», оф. 219
+              </p>
+              <p class="footer-company-text">
+                <a href="tel:+73433182873" class="footer-company-phone">+7 (343) 318-28-73</a>
+                620014 г. Екатеринбург<br>
+                пер. Центральный рынок, 6-220/2
+              </p>
+            </div>
+          </div>
+          <div class="footer-about">
+            <h3 class="footer-heading">О компании</h3>
+            <nav class="footer-nav">
+              <a href="/" class="footer-link">Главная</a>
+              <a href="./about.html" class="footer-link">О компании</a>
+              <a href="./projects.html" class="footer-link">Проекты</a>
+              <a href="./products.html" class="footer-link">Продукция</a>
+              <a href="./contacts.html" class="footer-link">Контакты</a>
+            </nav>
+          </div>
+          <div class="footer-info">
+            <h3 class="footer-heading">Техническая информация</h3>
+            <nav class="footer-nav">
+              <a href="./comparisons.html" class="footer-link">Сравнение с конкурентами</a>
+              <a href="./justification-effectiveness.html" class="footer-link">Обоснование эффективности</a>
+              <a href="./steel-grades.html" class="footer-link">Марки стали шпунтов Zizhu</a>
+              <a href="./dimensions-tolerances.html" class="footer-link">Размеры и допуски</a>
+              <a href="./durability-reliability.html" class="footer-link">Долговечность и надежность</a>
+            </nav>
+          </div>
+          <div class="footer-main">
+            <a href="/" class="footer_logo-link">
+              <img src="./img/footer_logo.png" alt="ЗИЗХУ РУС" class="footer_logo-img">
+            </a>
+            <a href="tel:+74951087659" class="footer-phone icon">+7 (495) 108-76-59</a>
+            <a href="mailto:info@zizhurus.ru" class="footer-email icon">info@zizhurus.ru</a>
+            <p class="footer-representative">Официальный представитель
+              ZIZHU Group в России</p>
+          </div>
+        </div>
+        <p class="footer-copyright">Copyright ООО «ЗИЗХУ РУС»</p>
       </div>
     </footer>
 
-    <!-- Попапы ↓↓↓ -->
-    <div class="blackout"></div>
-    <div class="popup portfolio-popup">
-      <div class="popup-wrapper">
-        <button type="button" name="popupClose" class="popup-close"></button>
-        <div id="popup-scroll-portfolio" class="popup-scroll">
-          <div class="popup-body">
-            <div class="popup-sectipn">
-              <div class="popup-heading">
-                <h2 class="popup-title">Ресторан «Винодельня № 1»</h2>
-                <div class="popup-info">
-                  <p class="popup-square">Площадь помещения: <span class="popup-size">300 м²</span></p>
-                  <p class="popup-address icon">Сретенка, 15</p>
-                </div>
-              </div>
-              <div class="popup-content">
-                <div class="swiper popupSwiperBig">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/4.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/5.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/6.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/7.png" />
-                    </div>
-                  </div>
-                </div>
-                <div thumbsSlider="" class="swiper popupSwiperSmall">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/4.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/5.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/6.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/portfolio/popup/slider/1/7.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="popup-sectipn">
-              <div class="popup-about popup-about-portfolio">
-                <h2 class="popup-heading-title">О проекте</h2>
-                <div class="popup-about-info">
-                  <div class="popup-about-block">
-                    <h3 class="popup-about-title">Комплексное изготовление мебели для ресторана:</h3>
-                    <div>
-                      <ul class="popup-about-list">
-                        <li>Изготовление встроенного винного шкафа</li>
-                        <li>Изготовление винного охлаждаемого шкафа с регулируемой температурой</li>
-                        <li>Изготовление барных стоек из мдф, подвесных конструкций из латуни с бокалодержателями</li>
-                        <li>Изготвление столов, настенных панелей, оконных откосов</li>
-                        <li>Изготовление уличной мебели</li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="popup-about-block">
-                    <h3 class="popup-about-title">Период выполнения работ:</h3>
-                    <div>
-                      <p>первый квартал 2019 года</p>
-                    </div>
-                  </div>
-                  <div class="popup-about-block">
-                    <h3 class="popup-about-title">Используемые материалы:</h3>
-                    <div>
-                      <p>Дуб, мдф, латунь, нержавеющая сталь, стекло.</p>
-                    </div>
-                  </div>
-                  <div class="popup-about-block">
-                    <h3 class="popup-about-title">Исполнители:</h3>
-                    <div>
-                      <p>Руководитель проекта Чукин И. В., Ключников М. А. (мастер), Николаев С. П. (мастер), Говоров Н.
-                        П. (мастер), Петрик Д. В. (проектировщик мебели)</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="popup-sectipn">
-              <div class="popup-heading">
-                <h2 class="popup-heading-title">3D проект/реальный объект</h2>
-              </div>
-              <div class="popup-content">
-                <div class="split-container approach-comparison">
-                  <div class="split-content-left">
-                    <img class="responsive-img" src="./img/portfolio/popup/comparison/1/before.png" alt=""
-                      draggable="false">
-                  </div>
-                  <div class="split-content-right">
-                    <img class="responsive-img" src="./img/portfolio/popup/comparison/1/after.png" alt=""
-                      draggable="false">
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="popup-sectipn">
-              <div class="popup-heading">
-                <h2 class="popup-heading-title">Проект объекта</h2>
-              </div>
-              <div class="popup-content">
-                <img src="./img/portfolio/popup/project/1.png" alt="Ресторан «Винодельня № 1»"
-                  class="popup-project-img">
-              </div>
-            </div>
-
-            <div class="popup-navigation">
-              <button type="button" name="prevProject" disabled
-                class="popup-prev popup-disabled popup-btn icon">Предыдущий
-                проект</button>
-              <div class="popup-pagination">
-                <span class="popup-pagination-active">1</span>
-                <span>/</span>
-                <span class="popup-pagination-total">12</span>
-              </div>
-              <button type="button" name="nextProject" class="popup-next popup-btn icon">Следующий проект</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="popup style-popup">
-      <div class="popup-wrapper">
-        <button type="button" name="popupClose" class="popup-close"></button>
-        <div id="popup-scroll-style" class="popup-scroll">
-          <div class="popup-body">
-            <div class="popup-sectipn">
-              <div class="popup-heading">
-                <h2 class="popup-title">Готика</h2>
-              </div>
-              <div class="popup-content">
-                <div class="swiper popupSwiperBig">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/4.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/5.png" />
-                    </div>
-                  </div>
-                </div>
-                <div thumbsSlider="" class="swiper popupSwiperSmall">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/1.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/2.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/3.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/4.png" />
-                    </div>
-                    <div class="swiper-slide">
-                      <img src="./img/style/popup/slider/1/5.png" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="popup-sectipn">
-              <div class="popup-about popup-about-style">
-                <h2 class="popup-heading-title">О стиле</h2>
-                <div class="popup-about-info">
-                  <div class="popup-about-block">
-                    <div class="popup-about-text">
-                      <p>13-14 века.</p>
-                      <p>Величественный, вселяющий страх стиль.</p>
-                      <p>
-                        Говоря об этом стиле, непременно надо заметить, что немало он взял именно из церковной
-                        обстановки. И немудрено, так как именно в те времена господство церкви было непоколебимым.
-                        В интерьере предпочтение отдается темным оттенкам.
-                        В тоже время обязательно обилие света. Для готического интерьера характерны резные двери
-                        и высокие своды, большие камины, лепнина, витражи. Для мебели характерно наличие резных ножек,
-                        обивки в
-                        соответствующей цветовой гамме. Мебель может и незамысловатая, но весьма тяжелая. Частенько
-                        мебельные фасады были покрыты росписью.
-                      </p>
-                      <p>Материалы: дуб, орех, ель или сосна, кедр.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="popup-navigation">
-              <button type="button" name="prevStyle" disabled
-                class="popup-prev popup-disabled popup-btn icon">предыдущий стиль</button>
-              <div class="popup-pagination">
-                <span class="popup-pagination-active">1</span>
-                <span>/</span>
-                <span class="popup-pagination-total">10</span>
-              </div>
-              <button type="button" name="nextStyle" class="popup-next popup-btn icon">Следующий стиль</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Попапы ↑↑↑ -->
   </div>
-  <!-- Сайт ↑↑↑ -->
-
-  <!-- Скрипты ↓↓↓ -->
-  <script src="./js/swiper-bundle.min.js"></script>
-  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
-  <script src="./js/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="./js/master.js"></script>
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="./js/scroll.js"></script>
+  <script src="./js/index.js"></script>
 </body>
 
 </html>

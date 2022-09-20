@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Таблицы соответствия шпунтов Zizhu с основными конкурентами - ZIZHURUS</title>
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/layout.css">
   <link rel="stylesheet" href="./css/table.css">
 </head>
@@ -136,7 +137,10 @@
     </div>
     <div class="header-mobile">
       <div class="header-mobile-cap">
-        <img src="./img/logo.png" alt="" class="header-mobile-logo">
+        <a href="/" class="header-mobile-logo-link">
+          <img src="./img/logo.png" alt="" class="header-mobile-logo">
+          <img src="./img/wihte_logo.png" alt="" class="header-mobile-logo white">
+        </a>
         <img src="./img/wihte_logo.png" alt="" class="header-mobile-logo white">
         <button class="burger">
           <span class="burger-line one"></span>
@@ -211,7 +215,7 @@
             <img src="./img/comparisons/one.png" alt="Z-профиль Zizhu / Arcelor mittal" class="table-img">
             <img src="./img/comparisons/one-phone.png" alt="Z-профиль Zizhu / Arcelor mittal" class="table-img mobile">
           </div>
-          <div class="table table-12">
+          <div class="table table-desktop table-12">
             <div class="table_row">
               <div class="table_column table_black table_header">
                 <p class="first"></p>
@@ -322,6 +326,93 @@
             </div>
           </div>
         </div>
+        <div class="table-mobile">
+          <div class="tabel_mobile-container">
+            <div class="tabel_mobile-select">
+              <button class="tabel_mobile-btn icon">Выбрать профиль</button>
+              <div class="tabel_mobile-list">
+                <button class="tabel_mobile-link" data-link="one">Anshan Zizhu ZZ12-770 / Arcelor mittal
+                  AZ12-770</button>
+                <button class="tabel_mobile-link" data-link="two">Anshan Zizhu ZZ13-770 / Arcelor mittal
+                  ZZ13-770</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper tabelSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="table table-4 active" data-tabel="one">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ12-770</p>
+                      <p class="table_column-start-column">AZ12-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="table table-4" data-tabel="two">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ50-770</p>
+                      <p class="table_column-start-column">AZ92-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="u-profile" id="u-profile">
@@ -333,7 +424,7 @@
             <img src="./img/comparisons/two.png" alt="U-профиль Zizhu / Arcelor mittal" class="table-img">
             <img src="./img/comparisons/two-phone.png" alt="U-профиль Zizhu / Arcelor mittal" class="table-img mobile">
           </div>
-          <div class="table table-13">
+          <div class="table table-desktop table-13">
             <div class="table_row">
               <div class="table_column table_black table_header">
                 <p class="first"></p>
@@ -450,7 +541,7 @@
               </div>
             </div>
           </div>
-          <div class="table table-10">
+          <div class="table table-desktop table-10">
             <div class="table_row">
               <div class="table_column table_black table_header">
                 <p class="first"></p>
@@ -546,6 +637,180 @@
             </div>
           </div>
         </div>
+        <div class="table-mobile">
+          <div class="tabel_mobile-container">
+            <div class="tabel_mobile-select">
+              <button class="tabel_mobile-btn icon">Выбрать профиль</button>
+              <div class="tabel_mobile-list">
+                <button class="tabel_mobile-link" data-link="one">Anshan Zizhu ZZ12-770 / Arcelor mittal
+                  AZ12-770</button>
+                <button class="tabel_mobile-link" data-link="two">Anshan Zizhu ZZ13-770 / Arcelor mittal
+                  ZZ13-770</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper tabelSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="table table-4 active" data-tabel="one">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ12-770</p>
+                      <p class="table_column-start-column">AZ12-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="table table-4" data-tabel="two">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ50-770</p>
+                      <p class="table_column-start-column">AZ92-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-mobile">
+          <div class="tabel_mobile-container">
+            <div class="tabel_mobile-select">
+              <button class="tabel_mobile-btn icon">Выбрать профиль</button>
+              <div class="tabel_mobile-list">
+                <button class="tabel_mobile-link" data-link="one">Anshan Zizhu ZZ12-770 / Arcelor mittal
+                  AZ12-770</button>
+                <button class="tabel_mobile-link" data-link="two">Anshan Zizhu ZZ13-770 / Arcelor mittal
+                  ZZ13-770</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper tabelSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="table table-4 active" data-tabel="one">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ12-770</p>
+                      <p class="table_column-start-column">AZ12-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="table table-4" data-tabel="two">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ50-770</p>
+                      <p class="table_column-start-column">AZ92-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="larsen" id="larsen">
@@ -558,7 +823,7 @@
             <img src="./img/comparisons/three-phone.png" alt="U-профиль Zizhu / Arcelor mittal"
               class="table-img mobile">
           </div>
-          <div class="table table-10">
+          <div class="table table-desktop table-10">
             <div class="table_row">
               <div class="table_column table_black table_header">
                 <p class="first"></p>
@@ -654,6 +919,93 @@
             </div>
           </div>
         </div>
+        <div class="table-mobile">
+          <div class="tabel_mobile-container">
+            <div class="tabel_mobile-select">
+              <button class="tabel_mobile-btn icon">Выбрать профиль</button>
+              <div class="tabel_mobile-list">
+                <button class="tabel_mobile-link" data-link="one">Anshan Zizhu ZZ12-770 / Arcelor mittal
+                  AZ12-770</button>
+                <button class="tabel_mobile-link" data-link="two">Anshan Zizhu ZZ13-770 / Arcelor mittal
+                  ZZ13-770</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper tabelSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="table table-4 active" data-tabel="one">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ12-770</p>
+                      <p class="table_column-start-column">AZ12-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="table table-4" data-tabel="two">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ50-770</p>
+                      <p class="table_column-start-column">AZ92-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="vitkovice" id="vitkovice">
@@ -665,7 +1017,7 @@
             <img src="./img/comparisons/four.png" alt="U-профиль Zizhu / Arcelor mittal" class="table-img">
             <img src="./img/comparisons/four-phone.png" alt="U-профиль Zizhu / Arcelor mittal" class="table-img mobile">
           </div>
-          <div class="table table-13">
+          <div class="table table-desktop table-13">
             <p class="table-info up">* - Уточняется по запросу</p>
             <div class="table_row">
               <div class="table_column table_black table_header">
@@ -785,6 +1137,93 @@
             <p class="table-info down">* - Уточняется по запросу</p>
           </div>
         </div>
+        <div class="table-mobile">
+          <div class="tabel_mobile-container">
+            <div class="tabel_mobile-select">
+              <button class="tabel_mobile-btn icon">Выбрать профиль</button>
+              <div class="tabel_mobile-list">
+                <button class="tabel_mobile-link" data-link="one">Anshan Zizhu ZZ12-770 / Arcelor mittal
+                  AZ12-770</button>
+                <button class="tabel_mobile-link" data-link="two">Anshan Zizhu ZZ13-770 / Arcelor mittal
+                  ZZ13-770</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper tabelSwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="table table-4 active" data-tabel="one">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ12-770</p>
+                      <p class="table_column-start-column">AZ12-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="table table-4" data-tabel="two">
+                  <div class="table_row">
+                    <div class="table_column table_black table_header">
+                      <p class="table_column-center-column"></p>
+                      <p class="table_column-center-column">Anshan Zizhu</p>
+                      <p class="table_column-center-column">Arcelor mittal</p>
+                      <p class="table_column-center-column">Различие характеристик</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Z-профиль</p>
+                      <p class="table_column-start-column">ZZ50-770</p>
+                      <p class="table_column-start-column">AZ92-770</p>
+                      <p class="table_column-start-column">∆</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Ширина (w), мм</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">770</p>
+                      <p class="table_column-start-column">0</p>
+                    </div>
+                    <div class="table_column table_data">
+                      <p class="table_column-start-column">Высота (h), мм</p>
+                      <p class="table_column-start-column">343,5</p>
+                      <p class="table_column-start-column">344</p>
+                      <p class="table_column-start-column">-0,5</p>
+                    </div>
+                    <div class="table_column table_light table_data">
+                      <p class="table_column-start-column">Толщина(tf), мм</p>
+                      <p class="table_column-start-column">8,6</p>
+                      <p class="table_column-start-column">8,5</p>
+                      <p class="table_column-start-column">0,1</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="application">
@@ -877,7 +1316,9 @@
       </div>
     </footer>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
   <script src="./js/master.js"></script>
+  <script src="./js/table.js"></script>
   <script src="./js/jquery-3.6.1.min.js"></script>
   <script src="./js/scroll.js"></script>
 </body>

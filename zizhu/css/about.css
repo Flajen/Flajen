@@ -212,6 +212,7 @@
       "four"
       "five"
       "six";
+      grid-gap: 15px;
   }
   .partners_card {
     grid-template-areas:

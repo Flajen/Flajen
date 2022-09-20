@@ -235,7 +235,10 @@
   .products_card-watch {
     font-size: 15px;
   }
-  .products_certificates-title{
+  .products_certificates-cards{
+    grid-gap: 15px;
+  }
+  .products_certificates-title {
     font-size: 17px;
     margin-bottom: 30px;
   }
@@ -510,6 +513,7 @@
       "four"
       "five"
       "six";
+    grid-gap: 15px;
   }
   .partners_card {
     grid-template-areas:

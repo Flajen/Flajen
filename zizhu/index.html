@@ -29,7 +29,7 @@
               <a href="tel:+74951087659" class="phone-primary icon">+7 (495) 108-76-59</a>
               <a href="tel:88007772946" class="phone-secondary">8 800 777-29-46</a>
             </div>
-            <button class="btn-request">Заявка на расчёт проекта</button>
+            <button class="btn-request btnRequest">Заявка на расчёт проекта</button>
             <button class="burger">
               <span class="burger-line one"></span>
               <span class="burger-line two"></span>
@@ -59,7 +59,7 @@
             <a href="./contacts.html" class="header-link">Контакты</a>
           </nav>
           <div class="header-right">
-            <button class="btn-request">Заявка на расчёт проекта</button>
+            <button class="btn-request btnRequest">Заявка на расчёт проекта</button>
             <button class="burger">
               <span class="burger-line one"></span>
               <span class="burger-line two"></span>
@@ -85,7 +85,7 @@
                 <a href="tel:+74951087659" class="phone-primary icon">+7 (495) 108-76-59</a>
                 <a href="tel:88007772946" class="phone-secondary">8 800 777-29-46</a>
               </div>
-              <button class="btn-request">Заявка на расчёт проекта</button>
+              <button class="btn-request btnRequest">Заявка на расчёт проекта</button>
               <button class="burger close">
                 <span class="burger-line one"></span>
                 <span class="burger-line two"></span>
@@ -135,10 +135,12 @@
         </div>
       </div>
     </div>
-    <div class="header-mobile white">
+    <div class="header-mobile white up">
       <div class="header-mobile-cap">
-        <img src="./img/logo.png" alt="" class="header-mobile-logo">
-        <img src="./img/wihte_logo.png" alt="" class="header-mobile-logo white">
+        <a href="/" class="header-mobile-logo-link">
+          <img src="./img/logo.png" alt="" class="header-mobile-logo">
+          <img src="./img/wihte_logo.png" alt="" class="header-mobile-logo white">
+        </a>
         <button class="burger">
           <span class="burger-line one"></span>
           <span class="burger-line two"></span>
@@ -147,7 +149,7 @@
       </div>
       <div class="header-mobile-body">
         <p class="header-mobile-subtitle">Эксклюзивный представитель Anshan Zizhu на территории РФ и стран СНГ</p>
-        <button class="btn header-mobile-btn">Заявка на расчёт проекта</button>
+        <button class="btn header-mobile-btn btnRequest">Заявка на расчёт проекта</button>
         <div class="header-menu-right">
           <div class="header-menu-card">
             <p class="header-menu-heading">О компании</p>
@@ -184,7 +186,7 @@
               <p class="home-author">Anshan Zizhu</p>
               <h1 class="home-title"><span class="help">Шпунт Ларсена</span><br> от мирового производителя</h1>
             </div>
-            <button class="btn home-btn">Заявка на расчёт проекта</button>
+            <button class="btn home-btn btnRequest">Заявка на расчёт проекта</button>
           </div>
         </div>
         <img src="./img/home/bg.png" alt="ZIZHURUS" class="home-img">
@@ -413,6 +415,33 @@
       </section>
 
     </main>
+    <div class="popup popupScroll popupRequest">
+      <div class="popup-body seedBack">
+        <div class="popup-close" role="button"></div>
+        <h2 class="popup-title">Заявка на расчёт проекта</h2>
+        <form action="" method="post" class="popup-inputs">
+          <div class="popup_input-wrapper input-wrapper icon">
+            <input type="text" name="name" placeholder="ФИО" class="popup_input input">
+          </div>
+          <div class="popup_input-wrapper input-wrapper icon">
+            <input type="tel" name="phone" placeholder="Телефон" class="popup_input input">
+          </div>
+          <div class="popup_input-wrapper input-wrapper icon">
+            <input type="email" name="email" placeholder="Email" class="popup_input input">
+          </div>
+        </form>
+        <button class="btn popup-btn">Отправить заявку</button>
+      </div>
+    </div>
+    <div class="popup popupScroll popupSuccess">
+      <div class="popup-body seedBack">
+        <div class="popup-close" role="button"></div>
+        <span class="popup-img"></span>
+        <h2 class="popup-title">Ваша заявка отправлена</h2>
+        <p class="popup-subtitle">Мы свяжемся с Вами в течение дня</p>
+      </div>
+    </div>
+
     <footer class="seedBack">
       <div class="container">
         <div class="footer-body">

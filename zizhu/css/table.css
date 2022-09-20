@@ -117,6 +117,9 @@ p.table_column-start-column {
 .all {
   grid-column-start: 1;
 }
+.table-4 .all {
+  grid-column-end: 5;
+}
 .table-10 .all {
   grid-column-end: 11;
 }
@@ -166,15 +169,119 @@ p.table_column-start-column {
 .table-info.down {
   bottom: -43px;
 }
+.table-mobile {
+  display: none;
+}
 @media (max-width: 1220px) {
-  .table_data{
+  .section-nav {
+    grid-template-columns: minmax(0, 580px);
+    grid-auto-flow: row;
+    grid-gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  .section-link {
+    padding: 20px;
+  }
+  .table-heading {
+    grid-template-columns: auto;
+  }
+  .table-title {
+    font-size: 25px;
+  }
+  .table-img {
+    display: none;
+  }
+  .table-img.mobile {
+    display: block;
+  }
+  .table {
+    margin-top: 20px;
+  }
+  .table_data {
     min-height: 57px;
   }
   .table-3 .table_column {
     grid-template-columns: 255px 97px 105px;
   }
+  .table-4 .table_column {
+    grid-template-columns: 135px 146px 150px 156px;
+  }
+  .table-6 .table_column {
+    grid-template-columns: 240px repeat(4, 70px) 82px;
+  }
   .table-7 .table_column {
     grid-template-columns: 135px 60px 60px 60px 60px 60px 70px;
+  }
+  .table-desktop {
+    display: none;
+  }
+  .table-mobile {
+    display: grid;
+    margin-top: 30px;
+  }
+  /* .tabel_mobile-wrapper{
+
+  } */
+  .tabel_mobile-container {
+    padding: 0 20px;
+  }
+  .tabel_mobile-select {
+    background: #faf7f4;
+    border: 1px solid #d71e1e;
+  }
+  .tabel_mobile-btn {
+    width: 100%;
+    color: #d71e1e;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 20px 40px 20px 20px;
+    text-align: left;
+  }
+  .tabel_mobile-btn::after {
+    width: 15px;
+    height: 15px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_532_3086)'%3e%3cpath d='M14.0721 3.24255L14.9751 4.14555L7.49995 11.6207L0.0247993 4.14555L0.927795 3.24255L7.49995 9.81421L14.0721 3.24255Z' fill='%23D71E1E'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_532_3086'%3e%3crect width='15' height='15' fill='white' transform='translate(15) rotate(90)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+    left: auto;
+    right: 20px;
+    transition: transform 0.2s;
+  }
+  .tabel_mobile-select.open .tabel_mobile-btn::after {
+    transform: translateY(-50%) rotate(180deg);
+  }
+  .tabel_mobile-list {
+    display: none;
+    padding: 0 20px 20px 20px;
+  }
+  .tabel_mobile-select.open .tabel_mobile-list {
+    display: block;
+  }
+  .tabel_mobile-link {
+    width: 100%;
+    color: #252525;
+    font-size: 13px;
+    font-weight: 400;
+    border-bottom: 1px solid #dbd8d5;
+    text-align: left;
+    padding: 15px 0;
+  }
+  .tabel_mobile-link:first-child {
+    padding: 0 0 15px 0;
+  }
+  .tabel_mobile-link:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding: 15px 0 0 0;
+  }
+  [data-tabel] {
+    display: none;
+  }
+  /* [data-tabel="one"] {
+    display: grid;
+  } */
+  .active[data-tabel] {
+    display: grid;
   }
 }
 /* Таблицы ↑↑↑ */
@@ -193,6 +300,17 @@ p.table_column-start-column {
 .comparisons-main .table_data p {
   font-size: 16px;
   padding: 10px 9px;
+}
+@media (max-width: 1220px) {
+  .comparisons {
+    margin-bottom: 100px;
+  }
+  .comparisons-heading {
+    grid-template-columns: auto;
+  }
+  .comparisons-main .table_data p {
+    font-size: 14px;
+  }
 }
 /* Таблица сравнения ↑↑↑ */
 
@@ -340,15 +458,56 @@ p.table_column-start-column {
   border-radius: 30px 0px;
   padding: 20px 35px;
 }
+@media (max-width: 1220px) {
+  .durability-reliability,
+  .tolerance-water {
+    margin-bottom: 100px;
+  }
+  .durability-reliability-main .table_header p {
+    padding: 20px 10px;
+  }
+  .durability-reliability-main .table_data p {
+    padding: 15px 10px;
+  }
+  .tolerances-heading,
+  .intensity {
+    grid-auto-flow: row;
+    grid-template-columns: auto;
+  }
+  .intensity-img {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+  .intensity-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .tolerances-title {
+    font-size: 25px;
+  }
+  .tolerances-block {
+    padding: 20px;
+  }
+}
 /* Долговечность и надежность  ↑↑↑ */
 
 /* Обоснование эффективности  ↓↓↓ */
 .justification-effectiveness-main .table_header p {
+  font-size: 14px;
   padding: 20px 15px;
 }
 .justification-effectiveness-main .table_data p {
   font-size: 16px;
   padding: 10px 15px;
+}
+.justification-effectiveness-main .table_header p.all {
+  padding: 10px;
+}
+.justification-effectiveness-main .table {
+  margin-top: 0;
+}
+.justification-effectiveness-main .bold {
+  font-weight: 700;
 }
 .justification-effectiveness,
 .larsen-l5-um {
@@ -404,8 +563,230 @@ p.table_column-start-column {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+  align-content: center;
+  align-items: center;
+  margin-bottom: 120px;
 }
 .justification-effectiveness-header {
   font-size: 40px;
+}
+.justification-effectiveness-block {
+  padding: 20px 35px;
+  background: #faf7f4;
+  border-radius: 30px 0px;
+}
+.maximum_moment-body {
+  display: grid;
+  grid-template-columns: 555px 580px;
+  grid-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin-top: 70px;
+}
+.maximum_moment-list {
+  display: grid;
+  grid-gap: 10px;
+}
+.maximum_moment-text {
+  line-height: 1.4em;
+}
+.maximum_moment-text .help {
+  color: #252525;
+  font-weight: 400;
+}
+.maximum_moment-cards {
+  display: grid;
+  grid-gap: 20px;
+}
+.maximum_moment_card {
+  padding: 20px 35px;
+  background: #faf7f4;
+  border-radius: 30px 0px;
+}
+.maximum_moment_card-heading {
+  font-size: 17px;
+  color: #d71e1e;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.comparison_table-heading {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  margin: 150px 0 70px 0;
+}
+.comparison_table-title {
+  font-size: 35px;
+  font-weight: 700;
+}
+.comparison_table-block {
+  display: grid;
+  grid-gap: 10px;
+  padding: 20px 35px;
+  background: #faf7f4;
+  border-radius: 30px 0px;
+}
+.comparison_table-text {
+  line-height: 1.4em;
+}
+.comparison_table-text .help {
+  color: #252525;
+  font-weight: 400;
+}
+.benefit-wrapper {
+  display: grid;
+  grid-template-columns: 600px minmax(0, 780px);
+  min-height: 290px;
+  position: relative;
+  margin-top: 150px;
+}
+.benefit-img {
+  max-width: 680px;
+  border-radius: 30px 0px;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+}
+.benefit-info {
+  display: grid;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 35px;
+  padding: 40px 60px 40px 100px;
+  position: relative;
+  z-index: 4;
+}
+.benefit-title {
+  color: #fff;
+  font-size: 40px;
+}
+h4.benefit-title {
+  font-size: 26px;
+}
+.benefit-title .underlined {
+  display: inline-block;
+}
+h4.benefit-title .underlined::after {
+  bottom: 4px;
+}
+.benefit-block {
+  display: grid;
+  grid-gap: 10px;
+  align-items: center;
+  align-content: center;
+  border-radius: 30px 0px;
+  padding: 50px 100px;
+  position: relative;
+  z-index: 4;
+}
+.benefit-text {
+  color: #faf7f4;
+  line-height: 1.4em;
+}
+.benefit-text.marker::after {
+  top: 9px;
+  transform: translate(0);
+}
+.benefit-text .help {
+  color: #fff;
+  font-weight: 500;
+}
+@media (max-width: 1220px) {
+  .justification-effectiveness {
+    margin-bottom: 100px;
+  }
+  .justification-effectiveness-heading {
+    grid-template-columns: auto;
+    /* margin-bottom: 100px; */
+    margin-bottom: 0;
+  }
+  .justification-effectiveness-main .table_data p {
+    font-size: 14px;
+  }
+  .justification-effectiveness-main .table {
+    margin-top: 20px;
+  }
+  .сalculation {
+    grid-template-columns: auto;
+  }
+  .сalculation-title {
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  .сalculation_text-list {
+    grid-gap: 7px;
+  }
+  .сalculation_block {
+    padding: 20px;
+  }
+  .сalculation-formula {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+  .сalculation_block-list {
+    grid-gap: 7px;
+  }
+  .justification-effectiveness-header {
+    font-size: 25px;
+  }
+  #larsen-l5-um .justification-effectiveness-heading {
+    margin-bottom: 20px;
+  }
+  .maximum_moment-body {
+    grid-template-columns: auto;
+    margin-top: 30px;
+  }
+  .maximum_moment-cards {
+    grid-gap: 15px;
+  }
+  .maximum_moment_card {
+    padding: 20px;
+  }
+  .maximum_moment_card-heading {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .maximum_moment-list {
+    grid-gap: 7px;
+  }
+  .comparison_table-heading {
+    grid-template-columns: auto;
+    margin: 60px 0 20px 0;
+  }
+  .comparison_table-title {
+    font-size: 20px;
+  }
+  .comparison_table-block {
+    padding: 20px;
+  }
+  .benefit-wrapper {
+    grid-template-columns: auto;
+    margin-top: 60px;
+  }
+  .benefit-info {
+    padding: 20px;
+    grid-gap: 10px;
+  }
+  .benefit-img {
+    height: 160px;
+  }
+  .benefit-title {
+    font-size: 25px;
+  }
+  h4.benefit-title {
+    font-size: 18px;
+  }
+  .benefit-block {
+    padding: 20px;
+  }
+  .justification-effectiveness-block {
+    padding: 20px;
+  }
 }
 /* Обоснование эффективности  ↑↑↑ */

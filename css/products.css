@@ -46,6 +46,11 @@
   color: #252525;
   font-size: 20px;
   font-weight: 500;
+  transition: color 0.2s;
+}
+.info_card:hover p,
+.info_card:focus-visible p {
+  color: #d71e1e;
 }
 .info_card p .help {
   color: #d71e1e;

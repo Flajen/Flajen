@@ -46,9 +46,16 @@
   grid-area: rus;
 }
 .contacts_card-map {
+  width: 100%;
+  min-height: 320px;
+  height: 100%;
   grid-area: map;
 }
+.contacts_card-map iframe {
+  border: 0;
+}
 .contacts_card-img {
+  min-height: 320px;
   grid-area: img;
 }
 .contacts_card-eng {

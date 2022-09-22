@@ -203,7 +203,7 @@
           </div>
           <div class="documentation-cards">
             <div class="documentation_card">
-              <button class="documentation_card-btn icon">Сертификаты соответсвия</button>
+              <button class="documentation_card-btn icon">Сертификаты соответствия</button>
               <div class="documentation_card-window">
                 <div class="documentation_card-body">
                   <div class="documentation_card-column">
@@ -385,29 +385,51 @@
           <div class="application-body">
             <div class="application-info">
               <h2 class="application-title">
-                Заявка на <span class="underlined">расчёт проекта</span>
+                Отдел продаж
               </h2>
-              <ul class="application-list">
-                <li class="marker application-text">Подберём шпунт для ваших задач</li>
-                <li class="marker application-text">Рассчитаем требуемый объём продукции</li>
-                <li class="marker application-text">Сориентируем по сроку поставки</li>
-                <li class="marker application-text">Укажем акутальную цену</li>
-              </ul>
+              <div class="application-contacts">
+                <div class="application_contact">
+                  <a href="tel:88007772946" class="application_contact-link application_contact-phone icon">
+                    8 800 777-29-46
+                  </a>
+                  <a href="mailto:sales@zizhurus.ru" class="application_contact-link application_contact-email icon">
+                    sales@zizhurus.ru
+                  </a>
+                  <p class="application_contact-text application_contact-address">
+                    121087 г. Москва, ул. Барклая, д. 6, стр. 5, БЦ «Барклай плаза» оф. 612/2
+                  </p>
+                </div>
+                <div class="application_contact">
+                  <a href="tel:+73433182873" class="application_contact-link application_contact-phone icon">
+                    +7 343 318-28-73
+                  </a>
+                  <a href="mailto:info@zizhurus.ru" class="application_contact-link application_contact-email icon">
+                    info@zizhurus.ru
+                  </a>
+                  <p class="application_contact-text application_contact-address">
+                    620014 г. Екатеринбург, пер, Центральный рынок, д.6 — 220/
+                  </p>
+                </div>
+              </div>
             </div>
             <form action="" method="post" class="application-form seedBack">
-              <h3 class="application-heading">Для получения КП, заполните поля ниже, мы с вами свяжемся</h3>
+              <h3 class="application-heading sales_department-heading">Оставьте <span class="underlined">заявку
+                  на консультацию</span>
+                технического специалиста</h3>
+              <p class="sales_department-text">Узнайте сколько вы сможете сэкономить с нами</p>
               <div class="application_input-list">
                 <div class="application_input-wrapper input-wrapper icon">
                   <input type="text" name="name" placeholder="Как к вам обращаться" class="application_input input">
                 </div>
                 <div class="application_input-wrapper input-wrapper icon">
-                  <input type="tel" name="phone" placeholder="Телефон для связи" class="application_input input">
+                  <input type="tel" name="phone" placeholder="Телефон для связи (обязательно)"
+                    class="application_input input">
                 </div>
-                <div class="application_input-wrapper input-wrapper icon">
-                  <input type="text" name="company" placeholder="Наименование компании" class="application_input input">
-                </div>
-                <div class="application_input-wrapper input-wrapper icon">
-                  <input type="email" name="email" placeholder="Email для КП" class="application_input input">
+                <textarea name="comment" rows="2" placeholder="Комментарий"
+                  class="application_input input textarea"></textarea>
+                <div class="file-wrapper">
+                  <input type="file" name="file" class="file">
+                  <p class="file-text icon">Прикрепить файл</p>
                 </div>
               </div>
               <button class="btn application-btn">Отправить заявку</button>

@@ -51,13 +51,11 @@ document.addEventListener("DOMContentLoaded", () => {
       headerBtn.classList.add("open");
       headerMenu.classList.add("open");
       blackout.classList.add("open");
-      document
-        .querySelector(".headerBlackout")
-        .addEventListener("click", () => {
-          headerBtn.classList.remove("open");
-          headerMenu.classList.remove("open");
-          blackout.classList.remove("open");
-        });
+      document.querySelector(".blackout").addEventListener("click", () => {
+        headerBtn.classList.remove("open");
+        headerMenu.classList.remove("open");
+        blackout.classList.remove("open");
+      });
     }
   });
 
@@ -272,16 +270,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   // Попапы
   var portfolioCardBtn = document.querySelectorAll(".portfolio_card-btn"),
-    styleCardBtn = document.querySelectorAll(".style_card-btn"),
-    popupSroll = document.querySelectorAll(".popup-scroll"),
+    styleCardBtn = document.querySelectorAll(".stylePopupBtn"),
     popup = document.querySelectorAll(".popup"),
-    popupPortfolio = document.querySelector(".portfolio-popup"),
-    popupStyle = document.querySelector(".style-popup");
-  for (let i = 0; i < popupSroll.length; i++) {
-    new SimpleBar(popupSroll[i], {
-      autoHide: false,
-    });
-  }
+    popupPortfolio = document.querySelector(".portfolio-popup");
+  document.querySelectorAll(".popup-scroll").forEach(
+    (elem) =>
+      new SimpleBar(elem, {
+        autoHide: false,
+      })
+  );
   function checkPopup() {
     for (let i = 0; i < popup.length; i++) {
       if (popup[i].classList.contains("open")) {
@@ -324,12 +321,23 @@ document.addEventListener("DOMContentLoaded", () => {
       checkPopup();
     });
   }
+  function openPopup(btnStyle, atr) {
+    for (let i = 0; i < popup.length; i++) {
+      const elemPopup = popup[i];
+      if (elemPopup.getAttribute(atr) === btnStyle) {
+        blackout.classList.add("open", "popupBlackout");
+        elemPopup.classList.add("open");
+        disableScroll();
+        checkPopup();
+      } else {
+        elemPopup.classList.remove("open");
+      }
+    }
+  }
   for (let i = 0; i < styleCardBtn.length; i++) {
-    styleCardBtn[i].addEventListener("click", () => {
-      blackout.classList.add("open", "popupBlackout");
-      popupStyle.classList.add("open");
-      disableScroll();
-      checkPopup();
+    var elem = styleCardBtn[i];
+    elem.addEventListener("click", (e) => {
+      openPopup(e.target.getAttribute("data-style"), "data-style");
     });
   }
   for (let i = 0; i < popup.length; i++) {
@@ -344,11 +352,12 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-  if (window.innerWidth <= 1100) {
-    var popupBtnText = document.querySelectorAll(".popup-btn");
-    for (let i = 0; i < popupBtnText.length; i++) {
-      const element = popupBtnText[i];
-      element.innerHTML = element.innerHTML.split(" ")[0];
-    }
-  }
+
+  // if (window.innerWidth <= 1100) {
+  //   var popupBtnText = document.querySelectorAll(".popup-btn");
+  //   for (let i = 0; i < popupBtnText.length; i++) {
+  //     const element = popupBtnText[i];
+  //     element.innerHTML = element.innerHTML.split(" ")[0];
+  //   }
+  // }
 });

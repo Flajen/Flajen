@@ -508,7 +508,7 @@
                 <h3 class="style_card-title">Готика</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="one">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -520,7 +520,7 @@
                 <h3 class="style_card-title">Барокко</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="two">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -532,7 +532,7 @@
                 <h3 class="style_card-title">Классицизм</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="three">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -544,7 +544,7 @@
                 <h3 class="style_card-title">Ампир</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="four">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -556,7 +556,7 @@
                 <h3 class="style_card-title">Модерн</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="five">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -568,7 +568,7 @@
                 <h3 class="style_card-title">Функционализм</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="six">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -580,7 +580,7 @@
                 <h3 class="style_card-title">Минимализм</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="seven">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -592,7 +592,7 @@
                 <h3 class="style_card-title">Хай-тек</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="eight">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -604,7 +604,7 @@
                 <h3 class="style_card-title">Этника</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="nine">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -616,7 +616,7 @@
                 <h3 class="style_card-title">Эклектика</h3>
                 <span class="style_card-open"></span>
               </div>
-              <button type="button" name="openStyle" class="style_card-btn">
+              <button type="button" name="openStyle" class="style_card-btn stylePopupBtn" data-style="ten">
                 подробнее
                 <span class="style_card-btn-arrow"></span>
               </button>
@@ -1108,7 +1108,7 @@
       </div>
     </div>
 
-    <div class="popup style-popup">
+    <div class="popup style-popup" data-style="one">
       <div class="popup-wrapper">
         <button type="button" name="popupClose" class="popup-close"></button>
         <div id="popup-scroll-style" class="popup-scroll">
@@ -1185,14 +1185,834 @@
             </div>
 
             <div class="popup-navigation">
-              <button type="button" name="prevStyle" disabled
-                class="popup-prev popup-disabled popup-btn icon">предыдущий стиль</button>
+              <button type="button" name="prevStyle" disabled class="popup-prev popup-btn icon">
+                Предыдущий стиль
+              </button>
               <div class="popup-pagination">
                 <span class="popup-pagination-active">1</span>
                 <span>/</span>
                 <span class="popup-pagination-total">10</span>
               </div>
-              <button type="button" name="nextStyle" class="popup-next popup-btn icon">Следующий стиль</button>
+              <button type="button" name="nextStyle" class="popup-next popup-btn stylePopupBtn icon" data-style="two">
+                Следующий стиль
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup style-popup" data-style="two">
+      <div class="popup-wrapper">
+        <button type="button" name="popupClose" class="popup-close"></button>
+        <div id="popup-scroll-style" class="popup-scroll">
+          <div class="popup-body">
+            <div class="popup-sectipn">
+              <div class="popup-heading">
+                <h2 class="popup-title">Барокко</h2>
+              </div>
+              <div class="popup-content">
+                <div class="swiper popupSwiperBig">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/5.png" />
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper popupSwiperSmall">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/2/5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sectipn">
+              <div class="popup-about popup-about-style">
+                <h2 class="popup-heading-title">О стиле</h2>
+                <div class="popup-about-info">
+                  <div class="popup-about-block">
+                    <div class="popup-about-text">
+                      <p>Конец 16 — начало 18 веков.</p>
+                      <p>В переводе с итальянского «причудливый».</p>
+                      <p>
+                        В первую очередь роскошный. Мебель воспринимается как предмет искусства, украшает интерьер.
+                        Учитывая особенности и «размах» данного стиля, он не подойдет для маленьких помещений.
+                        В небольшом интерьере можно использовать лишь отдельно взятые элементы стиля барокко. Для
+                        создания роскоши задействуют только дорогие отделочные материалы: мрамор, ценные породы дерева,
+                        слоновая кость, хрусталь и т.п. Для оформления используются исключительно пастельные цвета.
+                        Мебель в стиле барокко обязательно украшена позолотой и имеет массу резных деталей. Наличие
+                        обивки из декоративных тканей, украшения из бахромы. К примеру, всем известные большие кровати
+                        с балдахинами, шкафы невероятных размеров, стулья с резными спинками.
+                      </p>
+                      <p>Материал: орех, черное дерево.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-navigation">
+              <button type="button" name="prevStyle" class="popup-prev popup-btn stylePopupBtn icon" data-style="one">
+                предыдущий стиль
+              </button>
+              <div class="popup-pagination">
+                <span class="popup-pagination-active">2</span>
+                <span>/</span>
+                <span class="popup-pagination-total">10</span>
+              </div>
+              <button type="button" name="nextStyle" class="popup-next popup-btn stylePopupBtn icon" data-style="three">
+                Следующий стиль
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup style-popup" data-style="three">
+      <div class="popup-wrapper">
+        <button type="button" name="popupClose" class="popup-close"></button>
+        <div id="popup-scroll-style" class="popup-scroll">
+          <div class="popup-body">
+            <div class="popup-sectipn">
+              <div class="popup-heading">
+                <h2 class="popup-title">Классицизм</h2>
+              </div>
+              <div class="popup-content">
+                <div class="swiper popupSwiperBig">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/5.png" />
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper popupSwiperSmall">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/3/5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sectipn">
+              <div class="popup-about popup-about-style">
+                <h2 class="popup-heading-title">О стиле</h2>
+                <div class="popup-about-info">
+                  <div class="popup-about-block">
+                    <div class="popup-about-text">
+                      <p>
+                        Пожалуй, данный стиль никогда не был и, пожалуй, не будет подвержен веяниям моды. Строгие формы
+                        и пропорции. Все просто и понятно,
+                        минимум декора. Особенностями данного стиля являются массивные конструкции правильные формы
+                        и светлые тона. Мебель выполнена из ценных пород дерева, имеет тонкие изящные ножки, а для
+                        обивки используется дорогая ткань.
+                      </p>
+                      <p>
+                        Материал: предпочтительны благородные породы дерева.
+                        Нередко имеется инкрустация редкими породами дерева, позолотой или резьбой. Преобладает
+                        натуральный цвет дерева.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-navigation">
+              <button type="button" name="prevStyle" class="popup-prev popup-btn stylePopupBtn icon" data-style="two">
+                предыдущий стиль
+              </button>
+              <div class="popup-pagination">
+                <span class="popup-pagination-active">3</span>
+                <span>/</span>
+                <span class="popup-pagination-total">10</span>
+              </div>
+              <button type="button" name="nextStyle" class="popup-next popup-btn stylePopupBtn icon" data-style="four">
+                Следующий стиль
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup style-popup" data-style="four">
+      <div class="popup-wrapper">
+        <button type="button" name="popupClose" class="popup-close"></button>
+        <div id="popup-scroll-style" class="popup-scroll">
+          <div class="popup-body">
+            <div class="popup-sectipn">
+              <div class="popup-heading">
+                <h2 class="popup-title">Ампир</h2>
+              </div>
+              <div class="popup-content">
+                <div class="swiper popupSwiperBig">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/5.png" />
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper popupSwiperSmall">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/4/5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sectipn">
+              <div class="popup-about popup-about-style">
+                <h2 class="popup-heading-title">О стиле</h2>
+                <div class="popup-about-info">
+                  <div class="popup-about-block">
+                    <div class="popup-about-text">
+                      <p>Конец 18 — начало 19 веков.</p>
+                      <p>
+                        Ампир («имперский стиль») — появился во Франции в период правления императора Наполеона.
+                        Королевский стиль в мебели характеризуется наличием декоративных накладок из бронзы, к примеру,
+                        в виде
+                        львиных лап. В первый черед мебель старались придать вид пышный, помпезный, совершенно
+                        не озадачиваясь тем, что она должна быть и удобной.
+                        Мебель в стиле ампир отличается изысканностью.
+                        Нередко копируют мебель античного Рима и Греции.
+                        Изготавливается из ценных пород дерева и часто имеет украшения из орнаментов с золотым
+                        покрытием.
+
+                      </p>
+                      <p>
+                        Материал: в основном — красное дерево.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-navigation">
+              <button type="button" name="prevStyle" class="popup-prev popup-btn stylePopupBtn icon" data-style="three">
+                предыдущий стиль
+              </button>
+              <div class="popup-pagination">
+                <span class="popup-pagination-active">4</span>
+                <span>/</span>
+                <span class="popup-pagination-total">10</span>
+              </div>
+              <button type="button" name="nextStyle" class="popup-next popup-btn stylePopupBtn icon" data-style="five">
+                Следующий стиль
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup style-popup" data-style="five">
+      <div class="popup-wrapper">
+        <button type="button" name="popupClose" class="popup-close"></button>
+        <div id="popup-scroll-style" class="popup-scroll">
+          <div class="popup-body">
+            <div class="popup-sectipn">
+              <div class="popup-heading">
+                <h2 class="popup-title">Модерн</h2>
+              </div>
+              <div class="popup-content">
+                <div class="swiper popupSwiperBig">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/5.png" />
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper popupSwiperSmall">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/5/5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sectipn">
+              <div class="popup-about popup-about-style">
+                <h2 class="popup-heading-title">О стиле</h2>
+                <div class="popup-about-info">
+                  <div class="popup-about-block">
+                    <div class="popup-about-text">
+                      <p>
+                        Конец 19 — начало 20 веков.
+                      </p>
+                      <p>
+                        В общем данный стиль можно легко охарактеризовать, как отказ от углов и линий прямых. Важно
+                        показать обтекаемые формы. Природные изгибы во всем: будь то каркас или, скажем, фурнитура.
+                        Причем последняя, должна быть достаточно изящна. Схожесть с природным миром — животные,
+                        насекомые, деревья. Основной материал для декорирования — дерево. Нередко встречаются элементы
+                        из кованого металла. Также применяются витражи, стекло, лепнина не чужды стилю модерн. Свет
+                        приглушенный и мягкий. Мебель отличается плавными округлым линиями.
+                      </p>
+                      <p>
+                        Материал: дерево.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-navigation">
+              <button type="button" name="prevStyle" class="popup-prev popup-btn stylePopupBtn icon" data-style="four">
+                предыдущий стиль
+              </button>
+              <div class="popup-pagination">
+                <span class="popup-pagination-active">5</span>
+                <span>/</span>
+                <span class="popup-pagination-total">10</span>
+              </div>
+              <button type="button" name="nextStyle" class="popup-next popup-btn stylePopupBtn icon" data-style="six">
+                Следующий стиль
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup style-popup" data-style="six">
+      <div class="popup-wrapper">
+        <button type="button" name="popupClose" class="popup-close"></button>
+        <div id="popup-scroll-style" class="popup-scroll">
+          <div class="popup-body">
+            <div class="popup-sectipn">
+              <div class="popup-heading">
+                <h2 class="popup-title">Функционализм</h2>
+              </div>
+              <div class="popup-content">
+                <div class="swiper popupSwiperBig">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/5.png" />
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper popupSwiperSmall">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/6/5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sectipn">
+              <div class="popup-about popup-about-style">
+                <h2 class="popup-heading-title">О стиле</h2>
+                <div class="popup-about-info">
+                  <div class="popup-about-block">
+                    <div class="popup-about-text">
+                      <p>
+                        Начало 20 века.
+                      </p>
+                      <p>
+                        Как понятно из названия, мебель предельно функциональна. Акцент ставится на удобство. Форма
+                        определяется функцией. К примеру, кресло повторяет точно линию спины. Весь дизайн авторский.
+                        Простота и комфорт в интерьере. Некоторые элементы декора несут в себе определенные функции.
+                        Применяются встроенные ниши и стеллажи. Мебель достаточно дешевая и общедоступная. Часто
+                        используется столь популярная мебель-трансформеры. Выполненная из плит ЛДСП различных цветов
+                        и фактур, для скрытия торцов подобных материалов входит кромка меламиновая, а затем кромка ПВХ.
+                      </p>
+                      <p>
+                        Выполнена из высокотехнологичных материалов.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-navigation">
+              <button type="button" name="prevStyle" class="popup-prev popup-btn stylePopupBtn icon" data-style="five">
+                предыдущий стиль
+              </button>
+              <div class="popup-pagination">
+                <span class="popup-pagination-active">6</span>
+                <span>/</span>
+                <span class="popup-pagination-total">10</span>
+              </div>
+              <button type="button" name="nextStyle" class="popup-next popup-btn stylePopupBtn icon" data-style="seven">
+                Следующий стиль
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class=" popup style-popup" data-style="seven">
+      <div class="popup-wrapper">
+        <button type="button" name="popupClose" class="popup-close"></button>
+        <div id="popup-scroll-style" class="popup-scroll">
+          <div class="popup-body">
+            <div class="popup-sectipn">
+              <div class="popup-heading">
+                <h2 class="popup-title">Минимализм</h2>
+              </div>
+              <div class="popup-content">
+                <div class="swiper popupSwiperBig">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/5.png" />
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper popupSwiperSmall">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/7/5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sectipn">
+              <div class="popup-about popup-about-style">
+                <h2 class="popup-heading-title">О стиле</h2>
+                <div class="popup-about-info">
+                  <div class="popup-about-block">
+                    <div class="popup-about-text">
+                      <p>20 век.</p>
+                      <p>
+                        Предельная простота оформления. Незамысловатые линии — в основном это строгие формы, прямые
+                        углы. Мало мебели, минимум обстановки — все это ради освобождения пространства. Чем меньше
+                        мебели и всяких элементов в интерьере, тем оно лучше. Преобладает белый цвет, ведь именно
+                        он способен наполнить пространство "воздухом",но есть и черный, подчеркивающий контраст,
+                        и серый. Характерно отсутствие декора: минимум картин, ваз, подушек, светильников и т.п. Также
+                        нередко используется мебель-трансформеры. Встречается и авторская мебель, специально
+                        разработанная для данного стиля.
+                      </p>
+                      <p>
+                        Материалы природные простые.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-navigation">
+              <button type="button" name="prevStyle" class="popup-prev popup-btn stylePopupBtn icon" data-style="six">
+                предыдущий стиль
+              </button>
+              <div class="popup-pagination">
+                <span class="popup-pagination-active">7</span>
+                <span>/</span>
+                <span class="popup-pagination-total">10</span>
+              </div>
+              <button type="button" name="nextStyle" class="popup-next popup-btn stylePopupBtn icon" data-style="eight">
+                Следующий стиль
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup style-popup" data-style="eight">
+      <div class="popup-wrapper">
+        <button type="button" name="popupClose" class="popup-close"></button>
+        <div id="popup-scroll-style" class="popup-scroll">
+          <div class="popup-body">
+            <div class="popup-sectipn">
+              <div class="popup-heading">
+                <h2 class="popup-title">Хай-тек</h2>
+              </div>
+              <div class="popup-content">
+                <div class="swiper popupSwiperBig">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/5.png" />
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper popupSwiperSmall">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/8/5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sectipn">
+              <div class="popup-about popup-about-style">
+                <h2 class="popup-heading-title">О стиле</h2>
+                <div class="popup-about-info">
+                  <div class="popup-about-block">
+                    <div class="popup-about-text">
+                      <p>Конец 20 века.</p>
+                      <p>
+                        Современные технологии — главные критерий. А интерьер напоминает больше убранство космического
+                        корабля. Преобладает белый цвет. Особое внимание уделяется освещению. Которое под стать стилю
+                        являет собой последние технологические достижения. Мебель имеет простую геометрию
+                        и функциональна. Все это делает мебель похожей на технику, как бы сливается с ней в один целый
+                        механизм. Декора как такового не предусмотрено.
+                      </p>
+                      <p>
+                        Материалы: стекло, пластик, металл.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-navigation">
+              <button type="button" name="prevStyle" class="popup-prev popup-btn stylePopupBtn icon" data-style="seven">
+                предыдущий стиль
+              </button>
+              <div class="popup-pagination">
+                <span class="popup-pagination-active">8</span>
+                <span>/</span>
+                <span class="popup-pagination-total">10</span>
+              </div>
+              <button type="button" name="nextStyle" class="popup-next popup-btn stylePopupBtn icon" data-style="nine">
+                Следующий стиль
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup style-popup" data-style="nine">
+      <div class="popup-wrapper">
+        <button type="button" name="popupClose" class="popup-close"></button>
+        <div id="popup-scroll-style" class="popup-scroll">
+          <div class="popup-body">
+            <div class="popup-sectipn">
+              <div class="popup-heading">
+                <h2 class="popup-title">Этника</h2>
+              </div>
+              <div class="popup-content">
+                <div class="swiper popupSwiperBig">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/5.png" />
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper popupSwiperSmall">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/9/5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sectipn">
+              <div class="popup-about popup-about-style">
+                <h2 class="popup-heading-title">О стиле</h2>
+                <div class="popup-about-info">
+                  <div class="popup-about-block">
+                    <div class="popup-about-text">
+                      <p>
+                        Символы, присущие конкретному государству c его историей, которые придают весьма экзотичный вид
+                        интерьеру. Мебель также должна гармонировать с выбранной культурой и вписываться в интерьер.
+                      </p>
+                      <p>
+                        Материалы также должны максимально соответствовать культуре страны.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-navigation">
+              <button type="button" name="prevStyle" class="popup-prev popup-btn stylePopupBtn icon" data-style="eight">
+                предыдущий стиль
+              </button>
+              <div class="popup-pagination">
+                <span class="popup-pagination-active">9</span>
+                <span>/</span>
+                <span class="popup-pagination-total">10</span>
+              </div>
+              <button type="button" name="nextStyle" class="popup-next popup-btn stylePopupBtn icon" data-style="ten">
+                Следующий стиль
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="popup style-popup" data-style="ten">
+      <div class="popup-wrapper">
+        <button type="button" name="popupClose" class="popup-close"></button>
+        <div id="popup-scroll-style" class="popup-scroll">
+          <div class="popup-body">
+            <div class="popup-sectipn">
+              <div class="popup-heading">
+                <h2 class="popup-title">Эклектика</h2>
+              </div>
+              <div class="popup-content">
+                <div class="swiper popupSwiperBig">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/5.png" />
+                    </div>
+                  </div>
+                </div>
+                <div thumbsSlider="" class="swiper popupSwiperSmall">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/1.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/2.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/3.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/4.png" />
+                    </div>
+                    <div class="swiper-slide">
+                      <img src="./img/style/popup/slider/10/5.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-sectipn">
+              <div class="popup-about popup-about-style">
+                <h2 class="popup-heading-title">О стиле</h2>
+                <div class="popup-about-info">
+                  <div class="popup-about-block">
+                    <div class="popup-about-text">
+                      <p>
+                        Само по себе данное название означает смешение. И правда, происходит смешение разных стилей.
+                        Данный стиль вне времени. Ибо так или иначе, а смешение стилей при построении того или иного
+                        интерьера все равно происходит. Тут все зависит от дизайнера и его способностей грамотно
+                        и плавно соединить стили, и не допустить конфликта между ними.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="popup-navigation">
+              <button type="button" name="prevStyle" class="popup-prev popup-btn stylePopupBtn icon" data-style="nine">
+                предыдущий стиль
+              </button>
+              <div class="popup-pagination">
+                <span class="popup-pagination-active">10</span>
+                <span>/</span>
+                <span class="popup-pagination-total">10</span>
+              </div>
+              <button type="button" name="nextStyle" disabled class="popup-next popup-btn icon">
+                Следующий стиль
+              </button>
             </div>
           </div>
         </div>

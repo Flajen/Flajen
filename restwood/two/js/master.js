@@ -62,10 +62,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // Блокировка скролла
   var check = false;
   let disableScroll = function () {
-    let pagePosition = window.scrollY;
-    document.body.classList.add("disable-scroll");
-    document.body.dataset.position = pagePosition;
-    document.body.style.top = -pagePosition + "px";
+    if (!check) {
+      let pagePosition = window.scrollY;
+      document.body.classList.add("disable-scroll");
+      document.body.dataset.position = pagePosition;
+      document.body.style.top = -pagePosition + "px";
+    }
     check = true;
   };
   let enableScroll = function () {
@@ -357,7 +359,6 @@ document.addEventListener("DOMContentLoaded", () => {
   //   var popupBtnText = document.querySelectorAll(".popup-btn");
   //   for (let i = 0; i < popupBtnText.length; i++) {
   //     const element = popupBtnText[i];
-  //     console.log(element.innerHTML);
   //     element.innerHTML = element.innerHTML.split(" ")[0];
   //   }
   // }

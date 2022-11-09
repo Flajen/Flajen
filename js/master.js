@@ -10,14 +10,17 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let anchor of anchors) {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
+      enableScroll();
       const blockID = e.target.getAttribute("href");
       var scrollOffset = offsetTop(document.querySelector(blockID)).top;
-      var durationOffset =
-        offsetTop(document.querySelector(blockID)).top / 10 / 100;
+      if (window.innerWidth <= 1110) {
+        var heightHeader =
+          document.querySelector(".header_mobile-cap").offsetHeight;
+        scrollOffset -= heightHeader;
+      }
       gsap.to(window, { duration: 2.4, scrollTo: scrollOffset });
     });
   }
-  // document.querySelector(".header_mobile-cap")
 
   // Слайдер
   new Swiper(".certificationSwiper", {
@@ -62,13 +65,37 @@ document.addEventListener("DOMContentLoaded", () => {
     observer: true,
   });
 
-  var burger = document.querySelector(".burger");
+  var burger = document.querySelector(".burger"),
+    headerMobile = document.querySelector(".header_mobile"),
+    headerMobileWindow = document.querySelector(".header_mobile-window"),
+    headerMobileLink = document.querySelectorAll(".header_mobile-link");
+  function closeMenu() {
+    burger.classList.remove("open");
+    headerMobile.classList.remove("open");
+    gsap.to(headerMobileWindow, {
+      height: 0,
+      duration: 0.75,
+    });
+    // enableScroll();
+  }
   burger.addEventListener("click", () => {
     if (burger.classList.contains("open")) {
-      burger.classList.remove("open");
+      enableScroll();
+      closeMenu();
     } else {
       burger.classList.add("open");
+      headerMobile.classList.add("open");
+      gsap.to(headerMobileWindow, {
+        height: "calc(100vh - 100%)",
+        duration: 0.75,
+      });
+      disableScroll();
     }
+  });
+  headerMobileLink.forEach((link) => {
+    link.addEventListener("click", () => {
+      closeMenu();
+    });
   });
 
   // Маска для телефона
@@ -177,6 +204,7 @@ document.addEventListener("DOMContentLoaded", () => {
   certificationBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
       popupCertification.classList.add("open");
+      disableScroll();
     });
   });
 
@@ -233,6 +261,46 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 0.75,
       });
     }
+  });
+
+  var homeBlockSelect = document.querySelector(".home_block-select"),
+    homeBlockInput = document.querySelector(".home_block-input"),
+    homeBlockWindow = document.querySelector(".home_block-window"),
+    homeBlockOptions = document.querySelectorAll(".home_block-option");
+  function closeSelect() {
+    homeBlockSelect.classList.remove("open");
+    gsap.to(homeBlockWindow, {
+      height: 0,
+      borderRadius: 0,
+      duration: 0.75,
+    });
+  }
+  homeBlockSelect.addEventListener("click", () => {
+    if (homeBlockSelect.classList.contains("open")) {
+      closeSelect();
+    } else {
+      homeBlockSelect.classList.add("open");
+      gsap.to(homeBlockWindow, {
+        height: "auto",
+        borderRadius: "0 0 5px 5px",
+        duration: 0.75,
+      });
+    }
+  });
+  homeBlockOptions.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      homeBlockInput.value = btn.innerHTML.trim();
+    });
+  });
+  homeBlockInput.addEventListener("keydown", function (event) {
+    if (event.code == "Enter") {
+      closeSelect();
+    }
+  });
+
+  // Свой скролл
+  new SimpleBar(document.getElementById("home_block-scroll"), {
+    autoHide: false,
   });
 
   // Отправка формы

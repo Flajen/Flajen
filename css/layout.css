@@ -28,6 +28,7 @@ a {
   text-decoration: none;
 }
 button {
+  color: inherit;
   cursor: pointer;
 }
 button,
@@ -106,6 +107,10 @@ address {
 }
 .container {
   padding: 0 20px;
+}
+.container-swiper{
+  position: relative;
+  z-index: 0;
 }
 .reqular {
   font-weight: 400;
@@ -437,6 +442,8 @@ footer .header-links-wrapper {
     display: none;
   }
   .header_mobile {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     left: 0;
     top: 0;
@@ -444,10 +451,10 @@ footer .header-links-wrapper {
     z-index: 30;
   }
   .header_mobile.mobile {
-    display: block !important;
+    display: grid !important;
+    grid-template-rows: auto 1fr;
   }
   .header_mobile.open {
-    min-height: 100vh;
   }
   .header_mobile-cap {
     display: flex;
@@ -456,6 +463,8 @@ footer .header-links-wrapper {
     background-color: #fff;
     border-bottom: 1px solid #dde5f3;
     padding: 15px 20px;
+    position: relative;
+    z-index: 1;
   }
   .header_mobile-logo.logo {
     grid-template-areas:
@@ -491,12 +500,27 @@ footer .header-links-wrapper {
     overflow: hidden;
     position: absolute;
     left: 0;
-    top: 87px;
+    top: 100%;
     right: 0;
     z-index: -1;
   }
   .header_mobile-body {
     background-color: #fff;
+    border-radius: 0 0 10px 10px;
+  }
+  .header_mobile-links {
+    padding: 12.5px 0;
+    border-bottom: 1px solid #dde5f3;
+  }
+  .header_mobile-link {
+    font-size: 15px;
+    padding: 12.5px 20px;
+  }
+  .header_mobile-contacts {
+    padding: 25px 20px 30px 20px;
+  }
+  .header_mobile-contacts .hotline-text {
+    margin-bottom: 10px;
   }
   .header-body {
     grid-template-columns: auto;
@@ -633,8 +657,15 @@ footer .header-links-wrapper {
   .popup-body {
     width: 100%;
   }
-  .popup-body img {
+  .popup-certification {
     width: 100%;
+  }
+  .success_block {
+    padding: 30px 15px 50px 15px;
+    margin: 0 auto;
+  }
+  .success_block-title {
+    font-size: 20px;
   }
 }
 /* Попап ↑↑↑ */

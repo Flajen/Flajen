@@ -656,6 +656,10 @@
 /* Осмотр ↑↑↑ */
 
 /* Цены ↓↓↓ */
+.price .container {
+  position: relative;
+  z-index: 5;
+}
 .price_controller {
   display: grid;
   grid-gap: 30px;
@@ -773,6 +777,8 @@
     border-radius: 5px;
     padding: 20px 45px 20px 20px;
     text-align: left;
+    position: relative;
+    z-index: 6;
   }
   .price_controller-field::after {
     width: 14px;
@@ -794,7 +800,7 @@
     position: absolute;
     left: 0;
     top: 100%;
-    z-index: -1;
+    z-index: 3;
     overflow: hidden;
     user-select: none;
     pointer-events: none;

@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
       height: 0,
       duration: 0.75,
     });
-    // enableScroll();
   }
   burger.addEventListener("click", () => {
     if (burger.classList.contains("open")) {
@@ -167,7 +166,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Элементы
   var certificationBtn = document.querySelectorAll(".certification-window"),
-    popupCertification = document.querySelector(".popup-certification");
+    priceTableLink = document.querySelectorAll(".price_table-link");
+  popupCertification = document.querySelector(".popup-certification");
+  popupForm = document.querySelector(".popup-form");
   const popups = document.querySelectorAll(".popup");
   var check = false;
   let disableScroll = function () {
@@ -203,7 +204,14 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   certificationBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
+      popupCertification.querySelector(".popup-certification-img").setAttribute("src", btn.getAttribute("data-cert"));
       popupCertification.classList.add("open");
+      disableScroll();
+    });
+  });
+  priceTableLink.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      popupForm.classList.add("open");
       disableScroll();
     });
   });

@@ -204,7 +204,9 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   certificationBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
-      popupCertification.querySelector(".popup-certification-img").setAttribute("src", btn.getAttribute("data-cert"));
+      popupCertification
+        .querySelector(".popup-certification-img")
+        .setAttribute("src", btn.getAttribute("data-cert"));
       popupCertification.classList.add("open");
       disableScroll();
     });
@@ -273,6 +275,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   var homeBlockSelect = document.querySelector(".home_block-select"),
     homeBlockInput = document.querySelector(".home_block-input"),
+    homeBlockField = document.querySelector(".home_block-field"),
     homeBlockWindow = document.querySelector(".home_block-window"),
     homeBlockOptions = document.querySelectorAll(".home_block-option");
   function closeSelect() {
@@ -298,13 +301,15 @@ document.addEventListener("DOMContentLoaded", () => {
   homeBlockOptions.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       homeBlockInput.value = btn.innerHTML.trim();
+      homeBlockField.innerHTML = btn.innerHTML.trim();
+      homeBlockField.classList.add('text')
     });
   });
-  homeBlockInput.addEventListener("keydown", function (event) {
-    if (event.code == "Enter") {
-      closeSelect();
-    }
-  });
+  // homeBlockInput.addEventListener("keydown", function (event) {
+  //   if (event.code == "Enter") {
+  //     closeSelect();
+  //   }
+  // });
 
   // Свой скролл
   new SimpleBar(document.getElementById("home_block-scroll"), {

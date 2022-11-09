@@ -627,6 +627,7 @@ footer .header-links-wrapper {
   width: 100%;
   position: relative;
   z-index: 3;
+  margin: 0 auto;
 }
 .form_block {
   background-color: #fff;

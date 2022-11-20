@@ -470,7 +470,7 @@ footer .header-links-wrapper {
     grid-template-areas:
       "img name"
       "img date";
-    grid-template-columns: 47px 135px;
+    grid-template-columns: 47px 155px;
     grid-template-rows: 42px 17px;
   }
   .header_mobile-logo .logo-img {

@@ -30,10 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
   var currentStep = 0;
   btnForm.addEventListener('click', (e) => {
     if (btnForm.getAttribute('data-submit')) {
-      console.log(1);
       document.querySelector('form').reset();
     }
-    // e.preventDefault();
     for (let i = 0; i < steps.length; i++) {
       const element = steps[i];
       if (!element.success) {
@@ -66,6 +64,44 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+  const inputOtherCheckbox = document.querySelector(
+    '.input_checkbox[name="other"]'
+  );
+  const inputOther = document.querySelector('.input_other');
+  inputOtherCheckbox.addEventListener('click', () => {
+    if (inputOtherCheckbox.checked) {
+      inputOther.removeAttribute('disabled');
+    } else {
+      inputOther.setAttribute('disabled', 'disabled');
+    }
+  });
+  const inputRadio = document.querySelectorAll('.input_radio[name="room"]');
+  const formStepThree = document.querySelector(
+    '.form-step[data-window="three"]'
+  );
+
+  inputRadio.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      console.log(formStepThree);
+      if (btn.value == 'Квартира') {
+        formStepThree.querySelector('.form-title').innerHTML =
+          'Сколько комнат в квартире?';
+        formStepThree.querySelector('.form-subtitle').innerHTML =
+          'Впишите количество';
+        formStepThree
+          .querySelector('.form-input')
+          .setAttribute('placeholder', '4');
+      } else {
+        formStepThree.querySelector('.form-title').innerHTML =
+          'Какова площадь помещения?';
+        formStepThree.querySelector('.form-subtitle').innerHTML =
+          'Впишите площадь в м<sup>2</sup>';
+        formStepThree
+          .querySelector('.form-input')
+          .setAttribute('placeholder', '45');
+      }
+    });
+  });
 
   const areaBlock = new SimpleBar(document.querySelector('.area-block'), {
     autoHide: false,
@@ -78,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
   var areaTime = null;
   function closeArea() {
     areaWrapper.classList.remove('open');
-    // gsap.to(areaWindow, { height: 0, duration: 0.4 });
     gsap.to(areaWindow, { opacity: 0, y: -10, duration: 0.4 });
     areaTime = setTimeout(() => {
       areaWindow.classList.add('hide');
@@ -93,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
         areaWindow.classList.remove('hide');
       }
       areaWrapper.classList.add('open');
-      // gsap.to(areaWindow, { height: 'auto', duration: 0.4 });
       gsap.to(areaWindow, { opacity: 1, y: 0, duration: 0.4 });
       areaBlock.recalculate();
     }

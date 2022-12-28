@@ -41,7 +41,7 @@ section:first-child {
   margin-bottom: 50px;
 }
 @media (max-width: 992px) {
-  main .home  {
+  main .home {
     padding-top: 80px;
   }
 }
@@ -667,7 +667,7 @@ input[type='range']:active::-webkit-slider-thumb {
   grid-area: seven;
   padding: 30px 34px;
 }
-.diagnostics .price-heading{
+.diagnostics .price-heading {
   padding-left: 0;
   margin-bottom: 16px;
 }
@@ -711,13 +711,13 @@ input[type='range']:active::-webkit-slider-thumb {
   }
   .price-cards {
     grid-template-areas:
-    'one'
-    'two'
-    'three'
-    'seven'
-    'four'
-    'five'
-    'six';
+      'one'
+      'two'
+      'three'
+      'seven'
+      'four'
+      'five'
+      'six';
   }
   .price-cards.disinsection {
     grid-template-areas:
@@ -880,11 +880,11 @@ input[type='range']:active::-webkit-slider-thumb {
   .questions_card-body {
     padding: 0 20px 15px 20px;
   }
-  .questions_card-iconAfter{
+  .questions_card-iconAfter {
     width: 24px;
     height: 24px;
   }
-  .questions_card-iconAfter::after{
+  .questions_card-iconAfter::after {
     width: 12px;
     height: 12px;
   }

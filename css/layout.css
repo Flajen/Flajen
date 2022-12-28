@@ -302,10 +302,17 @@ nav {
   border-radius: 10px;
   padding: 20px;
 }
+header.fly .link {
+  background: #f8f8f8;
+}
 .link.active,
 .link:hover,
 .link:focus-visible {
   background: #fff;
+}
+header.fly .link:hover,
+header.fly .link:focus-visible {
+  background: #f6f6f6;
 }
 .link-title {
   color: #2cad43;

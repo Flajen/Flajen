@@ -480,12 +480,6 @@ form {
     'six six six four';
   grid-gap: 20px;
 }
-.price-cards.disinsection {
-  grid-template-areas:
-    'one two three four'
-    'five five five four'
-    'six six six four';
-}
 .price_card {
   background-color: #f8f8f8;
   border-radius: 10px;
@@ -684,14 +678,6 @@ input[type='range']:active::-webkit-slider-thumb {
       'five five'
       'six six';
   }
-  .price-cards.disinsection {
-    grid-template-areas:
-      'one four'
-      'two four'
-      'three four'
-      'five five'
-      'six six';
-  }
 }
 @media (max-width: 768px) {
   .price-cards {
@@ -715,15 +701,6 @@ input[type='range']:active::-webkit-slider-thumb {
       'two'
       'three'
       'seven'
-      'four'
-      'five'
-      'six';
-  }
-  .price-cards.disinsection {
-    grid-template-areas:
-      'one'
-      'two'
-      'three'
       'four'
       'five'
       'six';

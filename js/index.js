@@ -38,35 +38,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (mySlider.value == 1) {
       sliderValue.innerHTML = '100 м<sup>2</sup> - 200 м<sup>2</sup>';
-      calculationCost.innerHTML = '35 руб./м<sup>2</sup>';
+      calculationCost.innerHTML = 'от 35 руб./м<sup>2</sup>';
     }
     if (mySlider.value == 2) {
       sliderValue.innerHTML = '200 м<sup>2</sup> - 300 м<sup>2</sup>';
-      calculationCost.innerHTML = '30 руб./м<sup>2</sup>';
+      calculationCost.innerHTML = 'от 30 руб./м<sup>2</sup>';
     }
     if (mySlider.value == 3) {
       sliderValue.innerHTML = '300 м<sup>2</sup> - 400 м<sup>2</sup>';
-      calculationCost.innerHTML = '25 руб./м<sup>2</sup>';
+      calculationCost.innerHTML = 'от 25 руб./м<sup>2</sup>';
     }
     if (mySlider.value == 4) {
       sliderValue.innerHTML = '400 м<sup>2</sup> - 500 м<sup>2</sup>';
-      calculationCost.innerHTML = '20 руб./м<sup>2</sup>';
+      calculationCost.innerHTML = 'от 20 руб./м<sup>2</sup>';
     }
     if (mySlider.value == 5) {
       sliderValue.innerHTML = '500 м<sup>2</sup> - 1000 м<sup>2</sup>';
-      calculationCost.innerHTML = '18 руб./м<sup>2</sup>';
+      calculationCost.innerHTML = 'от 18 руб./м<sup>2</sup>';
     }
     if (mySlider.value == 6) {
       sliderValue.innerHTML = '1000 м<sup>2</sup> - 2000 м<sup>2</sup>';
-      calculationCost.innerHTML = '16 руб./м<sup>2</sup>';
+      calculationCost.innerHTML = 'от 16 руб./м<sup>2</sup>';
     }
     if (mySlider.value == 7) {
       sliderValue.innerHTML = '2000 м<sup>2</sup> - 3000 м<sup>2</sup>';
-      calculationCost.innerHTML = '12 руб./м<sup>2</sup>';
+      calculationCost.innerHTML = 'от 12 руб./м<sup>2</sup>';
     }
     if (mySlider.value == 8) {
       sliderValue.innerHTML = 'более 3000 м<sup>2</sup>';
-      calculationCost.innerHTML = '10 руб./м<sup>2</sup>';
+      calculationCost.innerHTML = 'от 10 руб./м<sup>2</sup>';
     }
   }
   slider();

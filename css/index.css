@@ -7,8 +7,8 @@ section:first-child {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   position: relative;
@@ -108,11 +108,11 @@ form {
   grid-auto-flow: column;
   grid-gap: 10px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
 }
 .input-wrapper {
   position: relative;
@@ -155,8 +155,8 @@ form {
   width: 100%;
   height: 100%;
   -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
   opacity: 0.5;
   -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
   transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -181,8 +181,8 @@ form {
 .input_checkbox:checked ~ .input_checkbox-fake::after,
 .input_radio:checked ~ .input_radio-fake::after {
   -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
   opacity: 1;
 }
 .input-text {
@@ -234,15 +234,15 @@ form {
 }
 .area-wrapper.open .area-result::after {
   -webkit-transform: translate(0, -50%) rotate(-180deg);
-      -ms-transform: translate(0, -50%) rotate(-180deg);
-          transform: translate(0, -50%) rotate(-180deg);
+  -ms-transform: translate(0, -50%) rotate(-180deg);
+  transform: translate(0, -50%) rotate(-180deg);
 }
 .area-window {
   width: 100%;
   opacity: 0;
   -webkit-transform: translateY(-10px);
-      -ms-transform: translateY(-10px);
-          transform: translateY(-10px);
+  -ms-transform: translateY(-10px);
+  transform: translateY(-10px);
   overflow: hidden;
   position: absolute;
   left: 0;
@@ -337,57 +337,57 @@ form {
 }
 .form-step.success {
   -webkit-animation: prevStep 0.7s ease 1 forwards;
-          animation: prevStep 0.7s ease 1 forwards;
+  animation: prevStep 0.7s ease 1 forwards;
 }
 .form-step.anim {
   -webkit-animation: nextStep 0.7s ease 1 forwards;
-          animation: nextStep 0.7s ease 1 forwards;
+  animation: nextStep 0.7s ease 1 forwards;
 }
 @-webkit-keyframes prevStep {
   0% {
     -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
     opacity: 1;
   }
   100% {
     -webkit-transform: translateX(-100%) scale(0.5);
-            transform: translateX(-100%) scale(0.5);
+    transform: translateX(-100%) scale(0.5);
     opacity: 0;
   }
 }
 @keyframes prevStep {
   0% {
     -webkit-transform: translateX(0) scale(1);
-            transform: translateX(0) scale(1);
+    transform: translateX(0) scale(1);
     opacity: 1;
   }
   100% {
     -webkit-transform: translateX(-100%) scale(0.5);
-            transform: translateX(-100%) scale(0.5);
+    transform: translateX(-100%) scale(0.5);
     opacity: 0;
   }
 }
 @-webkit-keyframes nextStep {
   0% {
     -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
 @keyframes nextStep {
   0% {
     -webkit-transform: translateX(100%);
-            transform: translateX(100%);
+    transform: translateX(100%);
     opacity: 0;
   }
   100% {
     -webkit-transform: translateX(0);
-            transform: translateX(0);
+    transform: translateX(0);
     opacity: 1;
   }
 }
@@ -427,13 +427,13 @@ form {
     height: 340px;
     padding: 20px;
     -webkit-box-shadow: 0px 0px 30px rgba(202, 202, 202, 0.3);
-            box-shadow: 0px 0px 30px rgba(202, 202, 202, 0.3);
+    box-shadow: 0px 0px 30px rgba(202, 202, 202, 0.3);
     position: absolute;
     top: calc(100% - 75px);
     left: 50%;
     -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
   .form-heading {
     margin-bottom: 10px;
@@ -474,7 +474,7 @@ form {
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   -ms-flex-line-pack: start;
-      align-content: start;
+  align-content: start;
   grid-gap: 20px;
 }
 .advantages_card {
@@ -485,14 +485,14 @@ form {
   grid-template-columns: auto 1fr;
   grid-auto-rows: auto 1fr;
   -ms-grid-rows: auto 10px auto;
-      grid-template-areas:
+  grid-template-areas:
     'icon title'
     'icon subtitle';
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   -ms-flex-line-pack: start;
-      align-content: start;
+  align-content: start;
   background: #f8f8f8;
   border-radius: 10px;
   padding: 35px;
@@ -507,7 +507,7 @@ form {
   height: 70px;
   border-radius: 10px;
   -webkit-box-shadow: 0px 0px 30px -5px rgba(204, 204, 204, 0.25);
-          box-shadow: 0px 0px 30px -5px rgba(204, 204, 204, 0.25);
+  box-shadow: 0px 0px 30px -5px rgba(204, 204, 204, 0.25);
   margin-top: 10px;
 }
 .advantages_card-title {
@@ -541,13 +541,13 @@ form {
     grid-template-columns: 1fr;
   }
   .advantages_card {
-        grid-template-areas:
+    grid-template-areas:
       'icon title'
       'subtitle subtitle';
     grid-gap: 15px 10px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .advantages_card-icon {
     width: 50px;
@@ -583,7 +583,7 @@ form {
   -ms-grid-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
   grid-template-columns: repeat(4, 1fr);
   -ms-grid-rows: auto 20px auto 20px auto;
-      grid-template-areas:
+  grid-template-areas:
     'one two three seven'
     'five five five four'
     'six six six four';
@@ -604,8 +604,8 @@ form {
   height: 18px;
   top: 5px;
   -webkit-transform: translate(0);
-      -ms-transform: translate(0);
-          transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
 }
 .studio-bedroom {
   -ms-grid-row: 1;
@@ -642,8 +642,8 @@ form {
   display: -ms-grid;
   display: grid;
   -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -ms-flex-align: end;
+  align-items: end;
   grid-area: four;
   min-height: 360px;
   padding: 30px;
@@ -655,7 +655,8 @@ form {
   height: 100%;
   background: -webkit-gradient(
     linear,
-    left top, left bottom,
+    left top,
+    left bottom,
     color-stop(48.69%, rgba(34, 39, 32, 0)),
     color-stop(81.77%, rgba(36, 45, 39, 0.65))
   );
@@ -701,8 +702,8 @@ form {
   display: grid;
   grid-auto-flow: column;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-bottom: 35px;
 }
 .calculation-iconAfter::after {
@@ -712,8 +713,8 @@ form {
   background-color: #ffffff;
   width: 90vmin;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
   position: absolute;
@@ -721,10 +722,10 @@ form {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   padding: 30px 20px;
   border-radius: 5px;
 }
@@ -824,7 +825,7 @@ input[type='range']:active::-webkit-slider-thumb {
     grid-template-columns: 1fr 295px;
   }
   .price-cards {
-        grid-template-areas:
+    grid-template-areas:
       'one four'
       'two four'
       'three four'
@@ -879,13 +880,13 @@ input[type='range']:active::-webkit-slider-thumb {
 @media (max-width: 576px) {
   .price-cards {
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-grid-columns: minmax(0, 280px);
     grid-template-columns: minmax(0, 280px);
   }
   .price-cards {
-        grid-template-areas:
+    grid-template-areas:
       'one'
       'two'
       'three'
@@ -976,8 +977,8 @@ input[type='range']:active::-webkit-slider-thumb {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_454_19)'%3e%3cpath d='M12.6982 2.12399C12.296 1.72124 11.6428 1.72149 11.2401 2.12399L4.67747 8.68683L1.76069 5.77007C1.35793 5.36731 0.70507 5.36731 0.302313 5.77007C-0.100445 6.17283 -0.100445 6.82569 0.302313 7.22845L3.94813 10.8743C4.14938 11.0755 4.41328 11.1764 4.6772 11.1764C4.94111 11.1764 5.20526 11.0758 5.40651 10.8743L12.6982 3.58235C13.1009 3.17987 13.1009 2.52673 12.6982 2.12399Z' fill='%232CAD43'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_454_19'%3e%3crect width='13' height='13' fill='white' transform='translate(0.000244141 -0.000732422)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
   top: 5px;
   -webkit-transform: translate(0);
-      -ms-transform: translate(0);
-          transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
 }
 @media (max-width: 768px) {
   .anonymity-title {
@@ -1008,8 +1009,8 @@ input[type='range']:active::-webkit-slider-thumb {
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: 20px;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
+  -ms-flex-align: start;
+  align-items: start;
 }
 .questions-cards {
   display: -ms-grid;
@@ -1026,8 +1027,8 @@ input[type='range']:active::-webkit-slider-thumb {
   grid-auto-flow: column;
   grid-gap: 20px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   border-radius: 10px;
   padding: 20px 35px;
 }
@@ -1053,8 +1054,8 @@ input[type='range']:active::-webkit-slider-thumb {
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='14' height='14' viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_396_69)'%3e%3cpath d='M6 1.00049C6 0.448204 6.44772 0.000488281 7 0.000488281C7.55228 0.000488281 8 0.448204 8 1.00049V13.0005C8 13.5528 7.55228 14.0005 7 14.0005C6.44772 14.0005 6 13.5528 6 13.0005V1.00049Z' fill='%232CAD43'/%3e%3cpath d='M1 8.00049C0.447716 8.00049 2.41411e-08 7.55277 0 7.00049C-2.41411e-08 6.4482 0.447715 6.00049 1 6.00049L13 6.00049C13.5523 6.00049 14 6.4482 14 7.00049C14 7.55277 13.5523 8.00049 13 8.00049L1 8.00049Z' fill='%232CAD43'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_396_69'%3e%3crect width='14' height='14' fill='white' transform='translate(0 0.000488281)'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   -webkit-transition: background-image 0.3s, -webkit-transform 0.4s;
   transition: background-image 0.3s, -webkit-transform 0.4s;
   -o-transition: background-image 0.3s, transform 0.4s;
@@ -1063,8 +1064,8 @@ input[type='range']:active::-webkit-slider-thumb {
 }
 .questions_card.open .questions_card-iconAfter::after {
   -webkit-transform: translate(-50%, -50%) rotate(45deg);
-      -ms-transform: translate(-50%, -50%) rotate(45deg);
-          transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
 }
 .questions_card-btn:hover .questions_card-iconAfter::after,
 .questions_card-btn:focus-visible .questions_card-iconAfter::after {
@@ -1075,7 +1076,21 @@ input[type='range']:active::-webkit-slider-thumb {
   overflow: hidden;
 }
 .questions_card-body {
+  display: grid;
+  grid-gap: 7px;
   padding: 0 35px 20px 35px;
+}
+.questions_card-list {
+  display: grid;
+  grid-gap: 7px;
+  padding-left: 20px;
+}
+.questions_card-list li {
+  position: relative;
+  list-style: disc;
+}
+.questions_card-list li::marker {
+  color: #2cad43;
 }
 @media (max-width: 768px) {
   .questions-wrapper,
@@ -1091,8 +1106,8 @@ input[type='range']:active::-webkit-slider-thumb {
   .questions_card-btn {
     grid-gap: 10px;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 15px 20px;
   }
   .questions_card-heading {

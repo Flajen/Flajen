@@ -1,0 +1,666 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+<style>
+  @font-face {
+    font-family: 'EuropeExt';
+    src: url('Fonts/europeext_bold.otf') format('opentype');
+    font-style: normal;
+    font-weight: 700;
+  }
+  *,
+  *::after,
+  *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  #hSlide {
+    padding: 0;
+  }
+  .historySlider {
+    width: 100%;
+    /* display: grid; */
+    display: flex;
+    padding: 0 50px;
+    justify-content: flex-end;
+  }
+  .historySlider .historySwiper {
+    width: 1495px;
+    height: 780px;
+    padding-right: 650px;
+    padding-left: 325px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+  .historySlider .historySwiper .swiper-wrapper {
+    align-items: center;
+  }
+  .historySlider .historySwiper .swiper-slide {
+    width: 275px;
+    height: 490px;
+  }
+  .historySlider .historySwiper .swiper-slide-active {
+    cursor: pointer;
+  }
+  @media (min-width: 1594px) {
+    .historySlider .historySwiper .swiper-slide-active {
+      width: 520px;
+      padding: 0 40px;
+      height: 780px;
+    }
+  }
+  .historySlider .slide-body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .historySlider .historySwiper .swiper-slide video {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+    z-index: 0;
+  }
+  .historySlider .historySwiper .swiper-slide-active video {
+    display: block;
+    z-index: 2;
+  }
+  .historySlider .slide-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .historySlider .slide-text {
+    font-family: 'EuropeExt';
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    white-space: nowrap;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  .historySlider .historySwiper .swiper-slide-active .slide-text {
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -90%);
+  }
+  .historySlider .slide-descr {
+    width: 100%;
+    display: grid;
+    grid-gap: 15px;
+    padding: 20px;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    user-select: none;
+    pointer-events: none;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    transform: translate(20px);
+  }
+  .historySlider .historySwiper .swiper-slide-active .slide-descr {
+    user-select: auto;
+    pointer-events: all;
+    animation: showDescr 0.5s ease 1 forwards;
+  }
+  @keyframes showDescr {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+  .historySlider .slide-descr p {
+    font-family: 'EuropeExt';
+    font-size: 25px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 3px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .historySlider .slide-descr p span {
+    font-family: 'Overpass', Sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    text-transform: none;
+  }
+  .historySlider .progress-bar {
+    width: 100%;
+    height: 2px;
+    background-color: #767676;
+  }
+  .historySlider .progress-passed {
+    width: 0%;
+    height: 100%;
+    background-color: #fff;
+    transition: width 0.1s linear;
+  }
+  .historySlider .btn-wrapper {
+    width: 560px;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    position: absolute;
+    left: 305px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+    pointer-events: none;
+  }
+  .historySlider .btn-prev,
+  .historySlider .btn-next {
+    width: 30px;
+    height: 30px;
+    background-color: #303030;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    pointer-events: all;
+  }
+  .historySlider .btn-prev::after,
+  .historySlider .btn-next::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.2s;
+  }
+  .historySlider .btn-prev::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.9537 15C11.9537 14.8387 12.0153 14.6774 12.1382 14.5544L16.0081 10.6846C16.2542 10.4385 16.6534 10.4385 16.8994 10.6846C17.1455 10.9307 17.1455 11.3297 16.8994 11.5759L13.4752 15L16.8993 18.424C17.1454 18.6702 17.1454 19.0692 16.8993 19.3153C16.6532 19.5616 16.2541 19.5616 16.008 19.3153L12.1381 15.4455C12.0152 15.3225 11.9537 15.1612 11.9537 15Z' fill='white'/%3e%3c/svg%3e ");
+  }
+  .historySlider .btn-prev:hover {
+    background-color: #fff;
+  }
+  .historySlider .btn-prev:hover::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M11.9537 15C11.9537 14.8387 12.0153 14.6774 12.1382 14.5544L16.0081 10.6846C16.2542 10.4385 16.6534 10.4385 16.8994 10.6846C17.1455 10.9307 17.1455 11.3297 16.8994 11.5759L13.4752 15L16.8993 18.424C17.1454 18.6702 17.1454 19.0692 16.8993 19.3153C16.6532 19.5616 16.2541 19.5616 16.008 19.3153L12.1381 15.4455C12.0152 15.3225 11.9537 15.1612 11.9537 15Z' fill='%230F0F0F'/%3e%3c/svg%3e ");
+  }
+  .historySlider .btn-next::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.0463 15C18.0463 14.8387 17.9847 14.6774 17.8618 14.5544L13.9919 10.6846C13.7458 10.4385 13.3466 10.4385 13.1006 10.6846C12.8545 10.9307 12.8545 11.3297 13.1006 11.5759L16.5248 15L13.1007 18.424C12.8546 18.6702 12.8546 19.0692 13.1007 19.3153C13.3468 19.5616 13.7459 19.5616 13.992 19.3153L17.8619 15.4455C17.9848 15.3225 18.0463 15.1612 18.0463 15Z' fill='white'/%3e%3c/svg%3e ");
+  }
+  .historySlider .btn-next:hover {
+    background-color: #fff;
+  }
+  .historySlider .btn-next:hover::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M18.0463 15C18.0463 14.8387 17.9847 14.6774 17.8618 14.5544L13.9919 10.6846C13.7458 10.4385 13.3466 10.4385 13.1006 10.6846C12.8545 10.9307 12.8545 11.3297 13.1006 11.5759L16.5248 15L13.1007 18.424C12.8546 18.6702 12.8546 19.0692 13.1007 19.3153C13.3468 19.5616 13.7459 19.5616 13.992 19.3153L17.8619 15.4455C17.9848 15.3225 18.0463 15.1612 18.0463 15Z' fill='%230F0F0F'/%3e%3c/svg%3e ");
+  }
+  @media (max-width: 1594px) {
+    .historySlider {
+      justify-content: center;
+    }
+    .historySlider .historySwiper {
+      max-width: 100%;
+      padding-right: 325px;
+      padding: 0;
+    }
+    .historySlider .historySwiper .swiper-slide {
+      width: 440px;
+      padding: 0;
+      height: 780px;
+    }
+    .historySlider .btn-wrapper {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  @media (max-width: 767px) {
+    .historySlider {
+      padding: 0;
+    }
+    .historySlider .historySwiper {
+      height: 495px;
+    }
+    .historySlider .historySwiper .swiper-slide {
+      width: 280px;
+      height: 495px;
+    }
+    .historySlider .slide-descr p {
+      grid-auto-flow: row;
+    }
+    .historySlider .btn-wrapper {
+      display: none;
+    }
+  }
+  @media (max-width: 576px) {
+    .historySlider .historySwiper .slide-text {
+      display: none;
+    }
+    .historySlider .slide-descr p {
+      font-size: 22px;
+    }
+    .historySlider .slide-descr p span {
+      font-size: 15px;
+    }
+  }
+
+  .popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 1110;
+  }
+  .popup.show {
+    display: block;
+  }
+  .popup-blackout {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+  }
+  .popup-content {
+    display: flex;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    overflow: auto;
+    padding: 10px 20px;
+  }
+  .popup-close {
+    width: 30px;
+    height: 30px;
+    background-color: #303030;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    padding: 9px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  .popup-close:hover,
+  .popup-close:focus-visible {
+    background-color: #fff;
+  }
+  .popup-close::after {
+    display: block;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8' standalone='no'?%3e%3csvg width='17px' height='17px' viewBox='0 0 17 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eic_cancel%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='Icons' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3e%3cg id='24-px-Icons' transform='translate(-364.000000, -124.000000)' stroke='%23FFFFFF'%3e%3cg id='ic_cancel' transform='translate(360.000000, 120.000000)'%3e%3cg id='cross'%3e%3cg transform='translate(5.000000, 5.000000)' stroke-width='2'%3e%3cpath d='M0,0 L14.1421356,14.1421356' id='Line'%3e%3c/path%3e%3cpath d='M14,0 L1.77635684e-15,14' id='Line'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: background-image 0.2s;
+  }
+  .popup-close:hover::after,
+  .popup-close:focus-visible::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3c?xml version='1.0' encoding='UTF-8' standalone='no'?%3e%3csvg width='17px' height='17px' viewBox='0 0 17 17' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3e%3c!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch --%3e%3ctitle%3eic_cancel%3c/title%3e%3cdesc%3eCreated with Sketch.%3c/desc%3e%3cdefs%3e%3c/defs%3e%3cg id='Icons' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round'%3e%3cg id='24-px-Icons' transform='translate(-364.000000, -124.000000)' stroke='%230F0F0F'%3e%3cg id='ic_cancel' transform='translate(360.000000, 120.000000)'%3e%3cg id='cross'%3e%3cg transform='translate(5.000000, 5.000000)' stroke-width='2'%3e%3cpath d='M0,0 L14.1421356,14.1421356' id='Line'%3e%3c/path%3e%3cpath d='M14,0 L1.77635684e-15,14' id='Line'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+  }
+  .popup-body {
+    max-width: 1000px;
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    background-color: #fff;
+    margin: auto;
+    overflow: hidden;
+  }
+  .popup-video {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    display: none;
+  }
+  .popup-video.show {
+    display: block;
+  }
+  .popup-video iframe {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+  }
+</style>
+<section class="historySlider">
+  <div class="swiper historySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" data-video="oneslide">
+        <div class="slide-body">
+          <video
+            src="/wp-content/uploads/2022/12/G-drive_Dubai_Trim_Trim.mp4"
+            playsinline
+            type="video/mp4"
+            muted
+            loop
+          ></video>
+          <div
+            class="slide-img"
+            style="
+              background-image: url('http://cf18357.tw1.ru/wp-content/uploads/2022/12/image-8.jpg');
+            "
+          ></div>
+          <p class="slide-text">G-Drive</p>
+          <div class="slide-descr">
+            <p>G-Drive <span>Promo Video</span></p>
+            <div class="progress-bar">
+              <div class="progress-passed"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-video="twoslide">
+        <div class="slide-body">
+          <video
+            src="/wp-content/uploads/2022/12/Zenit_x_Nike_Trim_Trim.mp4"
+            playsinline
+            type="video/mp4"
+            muted
+            loop
+          ></video>
+          <div
+            class="slide-img"
+            style="
+              background-image: url('http://cf18357.tw1.ru/wp-content/uploads/2022/12/4.jpg');
+            "
+          ></div>
+          <p class="slide-text">Зенит X Nike</p>
+          <div class="slide-descr">
+            <p>Зенит X Nike <span>Promo Video</span></p>
+            <div class="progress-bar">
+              <div class="progress-passed"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-video="threeslide">
+        <div class="slide-body">
+          <video
+            src="/wp-content/uploads/2022/12/Winline_Trim-1.mp4"
+            playsinline
+            type="video/mp4"
+            muted
+            loop
+          ></video>
+          <div
+            class="slide-img"
+            style="
+              background-image: url('http://cf18357.tw1.ru/wp-content/uploads/2022/12/image-14.jpg');
+            "
+          ></div>
+          <p class="slide-text">Winline</p>
+          <div class="slide-descr">
+            <p>Winline <span>Promo Video</span></p>
+            <div class="progress-bar">
+              <div class="progress-passed"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-video="fourslide">
+        <div class="slide-body">
+          <video
+            src="/wp-content/uploads/2022/12/MEKON_G__Trim.mp4"
+            playsinline
+            type="video/mp4"
+            muted
+            loop
+          ></video>
+          <div
+            class="slide-img"
+            style="
+              background-image: url('http://cf18357.tw1.ru/wp-content/uploads/2022/12/main-1.jpg');
+            "
+          ></div>
+          <p class="slide-text">Mekong</p>
+          <div class="slide-descr">
+            <p>Mekong <span>Promo Video</span></p>
+            <div class="progress-bar">
+              <div class="progress-passed"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-wrapper">
+      <div class="btn-prev"></div>
+      <div class="btn-next"></div>
+    </div>
+  </div>
+</section>
+<div class="popup">
+  <div class="popup-blackout"></div>
+  <div class="popup-content">
+    <div class="popup-close" role="button" tabindex="0"></div>
+    <div class="popup-body">
+      <div class="popup-video" data-video="oneslide">
+        <iframe
+          width="640"
+          height="360"
+          src="https://www.youtube.com/embed/jV3zqTmovZU?controls=0"
+          title="G-Drive Dubai"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="popup-video" data-video="twoslide">
+        <iframe
+          width="640"
+          height="360"
+          src="https://www.youtube.com/embed/qBSQS3g_iZE?controls=0"
+          title="Zenit x Nike"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="popup-video" data-video="threeslide">
+        <iframe
+          width="640"
+          height="360"
+          src="https://www.youtube.com/embed/f4ay6Z_1eSM?controls=0"
+          title="Тизер к матчу тура Динамо-Спартак"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+      <div class="popup-video" data-video="fourslide">
+        <iframe
+          width="640"
+          height="360"
+          src="https://www.youtube.com/embed/GbGuFUO2bgA?controls=0"
+          title="Меконг"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    var tick;
+    var progress = 0;
+    var currentProgress = 0;
+    var isPaused = false;
+    const delay = 10000;
+    const timeSpeed = 600;
+    var historySwiper = new Swiper('.historySwiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 50,
+      speed: timeSpeed,
+      loopAdditionalSlides: 3,
+      loop: true,
+      navigation: {
+        nextEl: '.btn-next',
+        prevEl: '.btn-prev',
+      },
+    });
+    if (window.innerWidth < 1595) {
+      historySwiper.destroy(true, true);
+      historySwiper = new Swiper('.historySwiper', {
+        slidesPerView: 'auto',
+        speed: timeSpeed,
+        loop: true,
+        navigation: {
+          nextEl: '.btn-next',
+          prevEl: '.btn-prev',
+        },
+        centeredSlides: true,
+        effect: 'creative',
+        breakpoints: {
+          0: {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            centeredSlides: true,
+            creativeEffect: {
+              prev: {
+                translate: ['-105%', 0, 0],
+              },
+              next: {
+                translate: ['105%', 0, 0],
+              },
+            },
+          },
+          450: {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            centeredSlides: true,
+            creativeEffect: {
+              prev: {
+                translate: ['-110%', 0, 0],
+              },
+              next: {
+                translate: ['110%', 0, 0],
+              },
+            },
+          },
+          768: {
+            slidesPerView: 'auto',
+            spaceBetween: 50,
+            creativeEffect: {
+              prev: {
+                translate: ['-130%', 0, -400],
+              },
+              next: {
+                translate: ['130%', 0, -400],
+              },
+            },
+          },
+        },
+      });
+    }
+    historySwiper.on('slideChange', (e) => {
+      currentProgress = 0;
+      startProgress();
+    });
+    function nextVideo() {
+      document.querySelectorAll('.swiper-slide video').forEach((element) => {
+        element.pause();
+      });
+      document.querySelector('.swiper-slide-active video').currentTime = 0;
+      document.querySelector('.swiper-slide-active video').play();
+    }
+    function completionProgress() {
+      progress = currentProgress;
+      if (progress <= 100) {
+        if (progress === 0) {
+          nextVideo();
+        }
+        progress += 1;
+        document.querySelector(
+          '.swiper-slide-active .progress-passed'
+        ).style.width = progress + '%';
+      } else {
+        historySwiper.slideNext(timeSpeed);
+        progress = 0;
+        document.querySelector(
+          '.swiper-slide-active .progress-passed'
+        ).style.width = progress + '%';
+      }
+      currentProgress = progress;
+    }
+    function startProgress() {
+      progress = 0;
+      clearInterval(tick);
+      tick = setInterval(() => completionProgress(), delay / 100);
+      isPaused = true;
+    }
+    var checkVideo = true;
+    document.querySelectorAll('.swiper-slide video').forEach((element) => {
+      element.addEventListener('loadeddata', () => {
+        if (checkVideo) {
+          setTimeout(() => startProgress(), 1000);
+          checkVideo = false;
+        }
+      });
+    });
+
+    const popup = document.querySelector('.popup');
+    var currentSlide;
+    historySwiper.on('click', function (e) {
+      if (
+        isPaused &&
+        e.clickedSlide.classList.contains('swiper-slide-active')
+      ) {
+        currentSlide = e.clickedSlide;
+        clearInterval(tick);
+        currentSlide.querySelector('video').pause();
+        popup.classList.add('show');
+        popup.querySelectorAll('.popup-video').forEach((el) => {
+          if (
+            el.getAttribute('data-video') ==
+            currentSlide.getAttribute('data-video')
+          ) {
+            el.classList.add('show');
+          }
+        });
+      }
+    });
+    popup.addEventListener('click', (e) => {
+      if (
+        e.target.classList.contains('popup-content') ||
+        e.target.classList.contains('popup-close')
+      ) {
+        popup.classList.remove('show');
+        currentSlide.querySelector('video').play();
+        popup.querySelectorAll('.popup-video').forEach((el) => {
+          el.classList.add('show');
+        });
+        startProgress();
+      }
+    });
+  });
+</script>

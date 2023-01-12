@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>slide</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./master.css" />
+  </head>
+  <body>
+    <section class="historySlider">
+      <div class="swiper historySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" data-video="oneslide">
+            <div class="slide-body">
+              <video
+                src="/wp-content/uploads/2022/12/G-drive_Dubai_Trim_Trim.mp4"
+                playsinline
+                type="video/mp4"
+                muted
+                loop
+              ></video>
+              <div
+                class="slide-img"
+                style="
+                  background-image: url('http://cf18357.tw1.ru/wp-content/uploads/2022/12/image-8.jpg');
+                "
+              ></div>
+              <p class="slide-text">G-Drive</p>
+              <div class="slide-descr">
+                <p>G-Drive <span>Promo Video</span></p>
+                <div class="progress-bar">
+                  <div class="progress-passed"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-video="twoslide">
+            <div class="slide-body">
+              <video
+                src="/wp-content/uploads/2022/12/Zenit_x_Nike_Trim_Trim.mp4"
+                playsinline
+                type="video/mp4"
+                muted
+                loop
+              ></video>
+              <div
+                class="slide-img"
+                style="
+                  background-image: url('http://cf18357.tw1.ru/wp-content/uploads/2022/12/4.jpg');
+                "
+              ></div>
+              <p class="slide-text">Зенит X Nike</p>
+              <div class="slide-descr">
+                <p>Зенит X Nike <span>Promo Video</span></p>
+                <div class="progress-bar">
+                  <div class="progress-passed"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-video="threeslide">
+            <div class="slide-body">
+              <video
+                src="/wp-content/uploads/2022/12/Winline_Trim-1.mp4"
+                playsinline
+                type="video/mp4"
+                muted
+                loop
+              ></video>
+              <div
+                class="slide-img"
+                style="
+                  background-image: url('http://cf18357.tw1.ru/wp-content/uploads/2022/12/image-14.jpg');
+                "
+              ></div>
+              <p class="slide-text">Winline</p>
+              <div class="slide-descr">
+                <p>Winline <span>Promo Video</span></p>
+                <div class="progress-bar">
+                  <div class="progress-passed"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide" data-video="fourslide">
+            <div class="slide-body">
+              <video
+                src="/wp-content/uploads/2022/12/MEKON_G__Trim.mp4"
+                playsinline
+                type="video/mp4"
+                muted
+                loop
+              ></video>
+              <div
+                class="slide-img"
+                style="
+                  background-image: url('http://cf18357.tw1.ru/wp-content/uploads/2022/12/main-1.jpg');
+                "
+              ></div>
+              <p class="slide-text">Mekong</p>
+              <div class="slide-descr">
+                <p>Mekong <span>Promo Video</span></p>
+                <div class="progress-bar">
+                  <div class="progress-passed"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-wrapper">
+          <div class="btn-prev"></div>
+          <div class="btn-next"></div>
+        </div>
+      </div>
+    </section>
+    <div class="popup">
+      <div class="popup-blackout"></div>
+      <div class="popup-content">
+        <div class="popup-close" role="button" tabindex="0"></div>
+        <div class="popup-body">
+          <div class="popup-video" data-video="oneslide">
+            <!-- <iframe
+              width="640"
+              height="360"
+              src="https://www.youtube-nocookie.com/embed/jV3zqTmovZU?controls=0"
+              title="G-Drive Dubai"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe> -->
+            <iframe
+              width="640"
+              height="360"
+              src="https://www.youtube.com/embed/jV3zqTmovZU?controls=0"
+              title="G-Drive Dubai"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="popup-video" data-video="twoslide">
+            <iframe
+              width="640"
+              height="360"
+              src="https://www.youtube.com/embed/qBSQS3g_iZE?controls=0"
+              title="Zenit x Nike"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="popup-video" data-video="threeslide">
+            <iframe
+              width="640"
+              height="360"
+              src="https://www.youtube.com/embed/f4ay6Z_1eSM?controls=0"
+              title="Тизер к матчу тура Динамо-Спартак"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="popup-video" data-video="fourslide">
+            <iframe
+              width="640"
+              height="360"
+              src="https://www.youtube.com/embed/GbGuFUO2bgA?controls=0"
+              title="Меконг"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./master.js"></script>
+</html>

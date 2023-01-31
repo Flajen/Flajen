@@ -1,0 +1,339 @@
+main {
+  padding-top: 160px;
+}
+@media (max-width: 1620px) {
+}
+@media (max-width: 992px) {
+}
+@media (max-width: 576px) {
+  main {
+    padding-top: 90px;
+  }
+}
+/* Услуги */
+.home-wrapper {
+  margin-bottom: 190px;
+  position: relative;
+}
+.home-body {
+  display: grid;
+  align-items: end;
+  align-content: end;
+  height: 700px;
+  padding: 90px 135px;
+  position: relative;
+  z-index: 1;
+}
+.home-body h1 {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+.home-body p {
+  color: #e9e9e9;
+  font-size: 18px;
+  font-weight: 500;
+}
+.home-body h1,
+.home-body p {
+  max-width: 520px;
+}
+.home-body.xl h1,
+.home-body.xl p {
+  max-width: 790px;
+}
+.home-body [name='down'] {
+  position: absolute;
+  right: 135px;
+  bottom: 90px;
+}
+.home-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.home-cards {
+  display: grid;
+  grid-template-columns: 1fr 655px 115px;
+  grid-gap: 20px;
+}
+.home-cards.ship {
+  grid-auto-rows: 455px;
+}
+.home_block {
+  display: grid;
+  align-items: center;
+  align-content: center;
+  background-color: #f8f6f4;
+  padding: 79px 135px;
+}
+.home_block-list {
+  display: grid;
+  grid-gap: 10px;
+}
+.home_block-list li {
+  position: relative;
+}
+.home_block-list li::after {
+  content: '';
+  background-color: #1369ff;
+  position: absolute;
+}
+.home_block-list.square li::after {
+  width: 5px;
+  height: 5px;
+  left: -25px;
+  top: 7px;
+}
+.home_block-list.line li {
+  padding-left: 20px;
+}
+.home_block-list.line li::after {
+  width: 10px;
+  height: 2px;
+  left: 0;
+  top: 9px;
+}
+.home_block-heading {
+  color: #2c313a;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.home-grid.fleet .home_block-heading {
+  font-size: 19px;
+  font-weight: 700;
+}
+.home_block-text {
+  margin-top: 10px;
+}
+.home-grid.fleet .home_block-text {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.home-grid.fleet .home_block-text:last-child {
+  margin-bottom: 0;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 80px auto;
+  grid-gap: 20px;
+}
+.home-grid.fleet {
+  grid-template-rows: auto 60px auto;
+}
+.home-grid div {
+  width: 100%;
+  height: 100%;
+  background-color: #f8f6f4;
+}
+.home-grid div:nth-child(1) {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.home-grid div:nth-child(4) {
+  grid-row-start: 2;
+  grid-row-end: 4;
+}
+@media (max-width: 1620px) {
+  .home-wrapper {
+    margin-bottom: 140px;
+  }
+  .home-body [name='down'] {
+    display: none;
+  }
+  .home-cards {
+    grid-template-columns: minmax(0, 972px);
+    grid-template-rows: auto auto 100px;
+    justify-content: center;
+  }
+  .home-grid {
+    grid-template-columns: minmax(0, 972px);
+    grid-template-rows: auto 120px auto 280px;
+    grid-auto-rows: auto;
+    justify-content: center;
+  }
+  /* .home-grid div:nth-child(1),
+  .home-grid div:nth-child(4) {
+    grid-row: auto;
+  } */
+  .home-grid div:nth-child(1) {
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  .home-grid div:nth-child(4) {
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+}
+@media (max-width: 992px) {
+  .home-wrapper {
+    margin-bottom: 110px;
+  }
+  .home-body {
+    padding: 50px;
+  }
+  .home-body h1 {
+    font-size: 32px;
+    margin-bottom: 17px;
+  }
+  .home-body p {
+    font-size: 16px;
+  }
+  .home_block {
+    padding: 50px 70px;
+  }
+  .home_block-heading {
+    font-size: 15px;
+  }
+  .home_block-list.square {
+    padding-left: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .home-wrapper {
+    margin-bottom: 70px;
+  }
+  .home-body {
+    padding: 20px;
+  }
+  .home-body h1 {
+    font-size: 21px;
+    margin-bottom: 10px;
+  }
+  .home-body p {
+    font-size: 13px;
+  }
+  .home-grid {
+    grid-gap: 10px;
+  }
+  .home_block {
+    padding: 20px;
+  }
+  .home_block-heading {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+  .home_block-list.square {
+    padding-left: 10px;
+  }
+  .home_block-list.square li::after {
+    width: 3px;
+    height: 3px;
+    left: -10px;
+  }
+  .home_block-list.line li::after {
+    top: 7px;
+  }
+}
+/* Услуги */
+
+/* Характеристики */
+.characteristics-cards {
+  display: grid;
+  grid-template-columns: 925px 1fr;
+  grid-template-areas:
+    'block oneImg'
+    'block twoImg';
+  grid-gap: 20px;
+}
+.characteristics_block {
+  background-color: #f8f6f4;
+  display: grid;
+  grid-gap: 13px;
+  grid-area: block;
+  align-items: center;
+  align-content: center;
+  padding: 70px 135px;
+}
+.characteristics_block-field {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 20px;
+  align-items: start;
+  align-content: start;
+  justify-content: space-between;
+  padding-bottom: 13px;
+  border-bottom: 1px solid #eae7e5;
+}
+.characteristics_block-data {
+  max-width: 485px;
+  font-weight: 500;
+  text-align: right;
+}
+.characteristics-card {
+  background-color: #1369ff;
+  padding: 40px;
+}
+.characteristics-card:nth-child(1) {
+  grid-area: oneImg;
+}
+.characteristics-card:nth-child(2) {
+  grid-area: twoImg;
+}
+@media (max-width: 1620px) {
+  .characteristics-cards {
+    max-width: 972px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'block block'
+      'oneImg twoImg';
+    margin: 0 auto;
+  }
+  .characteristics_block {
+    padding: 50px 70px;
+  }
+  .characteristics-card {
+    padding: 20px;
+  }
+}
+@media (max-width: 992px) {
+  .home-body {
+    height: 550px;
+  }
+}
+@media (max-width: 576px) {
+  .home-body {
+    height: 400px;
+  }
+  .home-cards {
+    grid-gap: 10px;
+  }
+  .home-grid.fleet .home_block-heading {
+    font-size: 16px;
+  }
+  .home-grid.fleet .home_block-text {
+    margin-bottom: 6px;
+  }
+  .characteristics-cards {
+    max-width: 972px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      'block'
+      'twoImg'
+      'oneImg';
+    margin: 0 auto;
+  }
+  .characteristics-cards {
+    grid-gap: 10px;
+  }
+  .characteristics_block {
+    grid-gap: 8px;
+    padding: 20px;
+  }
+  .characteristics_block-field {
+    padding-bottom: 8px;
+  }
+  .characteristics_block-name {
+    font-size: 12px;
+  }
+  .characteristics-card {
+    padding: 10px;
+  }
+}
+/* Характеристики */

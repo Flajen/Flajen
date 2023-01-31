@@ -48,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   const quality_cards = document.querySelectorAll('.quality_card');
   const quality_cardBtns = document.querySelectorAll('.quality_card-btn');
+  const header_mobile = document.querySelector('.header_mobile');
   quality_cardBtns.forEach((btn) => {
     btn.addEventListener('click', () => {
       quality_cards.forEach((card) => {
@@ -56,7 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (btn.classList.contains('less')) {
         btn.parentElement.parentElement.parentElement.classList.remove('open');
         var scrollId =
-          offset(btn.parentElement.parentElement.parentElement).top - 10;
+          offset(btn.parentElement.parentElement.parentElement).top -
+          header_mobile.clientHeight -
+          10;
         gsap.to(window, {
           duration: 1,
           scrollTo: { y: scrollId },
@@ -68,7 +71,9 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.parentElement.parentElement.querySelector(
               '.quality_card-window'
             )
-          ).top - 10;
+          ).top -
+          header_mobile.clientHeight -
+          10;
         gsap.to(window, {
           duration: 1,
           scrollTo: { y: scrollId },
@@ -78,7 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   const home = document.querySelector('.home');
-  const header_mobile = document.querySelector('.header_mobile');
   window.addEventListener('scroll', () => {
     if (window.scrollY > home.clientHeight - header_mobile.clientHeight) {
       header_mobile.classList.remove('transparent');

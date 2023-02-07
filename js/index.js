@@ -1,3 +1,48 @@
+var tag = document.createElement('script');
+tag.src = 'https://www.youtube.com/iframe_api';
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    videoId: 'SDtw2hpW1ak',
+    playerVars: {
+      controls: 0,
+      loop: 1,
+      showinfo: 0,
+      rel: 0,
+      playsinline: 0,
+      fs: 0,
+      enablejsapi: 1,
+      disablekb: 1,
+      autoplay: 1,
+    },
+    events: {
+      onReady: onPlayerReady,
+      onStateChange: onPlayerStateChange,
+    },
+  });
+}
+function onPlayerReady(event) {
+  if (event.data == null) {
+    event.target.playVideo();
+    player.playVideo();
+  } else {
+    event.target.playVideo();
+    player.playVideo();
+  }
+}
+function onPlayerStateChange(event) {
+  if (event.data == -1 || event.data == 3) {
+    event.target.playVideo();
+    player.playVideo();
+  } else {
+    event.target.playVideo();
+    player.playVideo();
+  }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const cardSlides = document.querySelectorAll('.about_card');
   const controlsBtn = document.querySelectorAll('.about-btn');

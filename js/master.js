@@ -1,18 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
   AOS.init({
-    // once: true,
     disable: 'mobile',
   });
   gsap.registerPlugin(ScrollToPlugin);
-
   function offset(el) {
     var rect = el.getBoundingClientRect(),
       scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
       scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
   }
-
-  // const anchors = document.querySelectorAll('a.nav[href*="#"]');
   const anchors = document.querySelectorAll('a[href^="#"]');
   for (let anchor of anchors) {
     anchor.addEventListener('click', function (e) {
@@ -25,7 +21,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
-
   const downBtn = document.querySelector('button[name="down"]');
   downBtn.addEventListener('click', () => {
     const firstSection = document.querySelector('.home-wrapper');
@@ -35,24 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollTo: { y: scrollId },
     });
   });
-
-  // let disableScroll = function () {
-  //   let pagePosition = window.scrollY;
-  //   let scroll = window.innerWidth - document.documentElement.clientWidth;
-  //   document.body.classList.add('disable-scroll');
-  //   document.body.dataset.position = pagePosition;
-  //   document.body.style.top = -pagePosition + 'px';
-  //   document.body.style.paddingRight = scroll + 'px';
-  // };
-  // let enableScroll = function () {
-  //   let pagePosition = parseInt(document.body.dataset.position, 10);
-  //   document.body.style.top = 'auto';
-  //   document.body.classList.remove('disable-scroll');
-  //   window.scroll({ top: pagePosition, left: 0 });
-  //   document.body.removeAttribute('data-position');
-  //   document.body.style.paddingRight = 0;
-  // };
-
   const header_mobile = document.querySelector('.header_mobile');
   const burger = document.querySelector('.burger');
   burger.addEventListener('click', () => {
@@ -78,7 +55,6 @@ document.addEventListener('DOMContentLoaded', () => {
       burger.classList.add('close');
     });
   });
-
   window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
       if (!burger.classList.contains('open')) {

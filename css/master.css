@@ -9,11 +9,11 @@
   grid-template-columns: 1fr 310px;
   grid-gap: 70px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .home .block-wrapper .body .subtitle {
   font-weight: 400;
@@ -29,7 +29,13 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#449dee), to(#3875ec));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#449dee),
+    to(#3875ec)
+  );
   background: -o-linear-gradient(top, #449dee 0%, #3875ec 100%);
   background: linear-gradient(180deg, #449dee 0%, #3875ec 100%);
   border-radius: 50%;
@@ -50,11 +56,11 @@
   grid-template-columns: 192px 1fr;
   grid-gap: 15px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   padding-top: 35px;
   margin-top: 100px;
 }
@@ -75,15 +81,15 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   border-radius: 25px;
   background-color: #fff;
   -webkit-box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
-          box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
+  box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
   position: relative;
   -webkit-transition: -webkit-transform 0.3s ease;
   transition: -webkit-transform 0.3s ease;
@@ -96,8 +102,8 @@
 }
 .home .materials .card:not(:first-child):hover {
   -webkit-transform: translateY(-20px);
-      -ms-transform: translateY(-20px);
-          transform: translateY(-20px);
+  -ms-transform: translateY(-20px);
+  transform: translateY(-20px);
 }
 .home .materials .card img {
   width: 60px;
@@ -106,8 +112,8 @@
   top: -50%;
   left: 50%;
   -webkit-transform: translate(-50%, 50%);
-      -ms-transform: translate(-50%, 50%);
-          transform: translate(-50%, 50%);
+  -ms-transform: translate(-50%, 50%);
+  transform: translate(-50%, 50%);
 }
 .home .materials .card p:not(.heading) {
   max-width: 140px;
@@ -131,11 +137,11 @@
   }
   .home .materials .cards {
     grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fit, minmax(192px, 192px));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     grid-auto-rows: auto;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
   }
   .home .materials .card {
     min-height: 90px;
@@ -146,8 +152,8 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
   }
   .home .materials .card .heading {
     font-size: 18px;
@@ -158,8 +164,8 @@
     width: 40px;
     height: 40px;
     -webkit-transform: translate(-50%, 55%);
-        -ms-transform: translate(-50%, 55%);
-            transform: translate(-50%, 55%);
+    -ms-transform: translate(-50%, 55%);
+    transform: translate(-50%, 55%);
   }
 }
 @media (max-width: 992px) {
@@ -203,10 +209,19 @@
     max-width: 350px;
     width: 100%;
   }
+  .home .materials .card .heading {
+    font-size: 16px;
+  }
+  .home .materials .cards {
+    grid-template-columns: minmax(130px, 160px) minmax(130px, 160px);
+  }
+  .home .materials .card p:not(.heading) {
+    max-width: 110px;
+  }
 }
 @media (max-width: 375px) {
-  .home .materials .cards {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  .home .materials .card .heading {
+    font-size: 14px;
   }
 }
 /* Главная ↑↑↑ */
@@ -220,7 +235,7 @@
   -ms-grid-rows: 110px 20px minmax(325px, auto);
   grid-template-rows: 110px minmax(325px, auto);
   grid-gap: 20px;
-      grid-template-areas:
+  grid-template-areas:
     'one two'
     'three two';
 }
@@ -250,13 +265,13 @@
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   background: #ffffff;
   -webkit-box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
-          box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
+  box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
   border-radius: 40px;
   padding: 38px 105px;
 }
@@ -266,13 +281,13 @@
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   background: #ffffff;
   -webkit-box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
-          box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
+  box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
   border-radius: 40px;
   padding: 38px 105px;
   position: relative;
@@ -281,7 +296,7 @@
 .safety .cards .card img {
   border-radius: 50%;
   -webkit-box-shadow: 0px 20px 60px -15px rgba(56, 117, 236, 0.4);
-          box-shadow: 0px 20px 60px -15px rgba(56, 117, 236, 0.4);
+  box-shadow: 0px 20px 60px -15px rgba(56, 117, 236, 0.4);
   position: absolute;
   right: -60px;
   bottom: -60px;
@@ -324,7 +339,7 @@
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     -ms-grid-rows: auto 20px auto 20px auto;
-        grid-template-areas:
+    grid-template-areas:
       'one'
       'two'
       'three';
@@ -390,13 +405,13 @@
   grid-template-columns: minmax(530px, 1fr) minmax(0, 505px);
   grid-gap: 75px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .vessels .body .left {
   background: #ffffff;
   -webkit-box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
-          box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
+  box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
   border-radius: 40px;
 }
 .vessels .body .left img {
@@ -416,11 +431,11 @@
   grid-auto-flow: column;
   grid-gap: 20px;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   background: #ffffff;
   -webkit-box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
-          box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
+  box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
   border-radius: 25px;
   padding: 20px 37px;
 }
@@ -436,8 +451,8 @@
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     grid-gap: 0;
@@ -488,11 +503,11 @@
   grid-template-columns: 1fr minmax(315px, 505px);
   grid-gap: 70px;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 .delivery .block-wrapper .body .title {
   max-width: 610px;
@@ -505,7 +520,13 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#449dee), to(#3875ec));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#449dee),
+    to(#3875ec)
+  );
   background: -o-linear-gradient(top, #449dee 0%, #3875ec 100%);
   background: linear-gradient(180deg, #449dee 0%, #3875ec 100%);
   border-radius: 50%;
@@ -578,7 +599,7 @@
   -ms-grid-rows: minmax(365px, auto) 20px 110px;
   grid-template-rows: minmax(365px, auto) 110px;
   grid-gap: 20px;
-      grid-template-areas:
+  grid-template-areas:
     'one two'
     'three two';
 }
@@ -623,13 +644,13 @@
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   background: #ffffff;
   -webkit-box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
-          box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
+  box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
   border-radius: 40px;
   padding: 38px 105px;
 }
@@ -650,13 +671,13 @@
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -ms-flex-line-pack: center;
-      align-content: center;
+  align-content: center;
   background: #ffffff;
   -webkit-box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
-          box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
+  box-shadow: 0px 25px 50px -15px rgba(199, 203, 210, 0.15);
   border-radius: 40px;
   padding: 15px 105px;
   position: relative;
@@ -665,7 +686,7 @@
 .contacts .cards .card img {
   border-radius: 50%;
   -webkit-box-shadow: 0px 20px 60px -15px rgba(56, 117, 236, 0.4);
-          box-shadow: 0px 20px 60px -15px rgba(56, 117, 236, 0.4);
+  box-shadow: 0px 20px 60px -15px rgba(56, 117, 236, 0.4);
   position: absolute;
   right: -60px;
   top: -60px;
@@ -706,8 +727,8 @@
   left: -20px;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .contacts .cards .card h2 {
@@ -731,7 +752,7 @@
     grid-template-columns: 1fr;
     -ms-grid-rows: auto;
     grid-template-rows: auto;
-        grid-template-areas:
+    grid-template-areas:
       'one'
       'three'
       'two';

@@ -1,0 +1,514 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,600&display=swap');
+@font-face {
+  font-family: 'RoadRadio';
+  src: url('../fonts/RoadRadio.eot');
+  src: local('RoadRadio'),
+    url('../fonts/RoadRadio.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RoadRadio.woff2') format('woff2'),
+    url('../fonts/RoadRadio.woff') format('woff'),
+    url('../fonts/RoadRadio.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'RoadRadio';
+  src: url('../fonts/RoadRadio-Bold.eot');
+  src: local('RoadRadio Bold'), local('RoadRadio-Bold'),
+    url('../fonts/RoadRadio-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/RoadRadio-Bold.woff2') format('woff2'),
+    url('../fonts/RoadRadio-Bold.woff') format('woff'),
+    url('../fonts/RoadRadio-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+body {
+  background-color: #fff;
+  color: #49494e;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-feature-settings: 'pnum' on, 'lnum' on;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: none;
+}
+section {
+  margin-bottom: 210px;
+}
+section:last-child {
+  margin-bottom: 40px;
+}
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+button,
+input {
+  font-family: inherit;
+  border: none;
+}
+a,
+button,
+input {
+  transition: color 0.2s ease, border 0.2s ease, background 0.2s ease;
+}
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+}
+li {
+  list-style: none;
+}
+.body-wrapper {
+  overflow: hidden;
+  width: 100%;
+  min-height: 100%;
+}
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+[data-aos='aniOpacity'] {
+  opacity: 0;
+  transition-property: opacity;
+}
+[data-aos='aniOpacity'].aos-animate {
+  opacity: 1;
+}
+[data-aos='showText'] {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition-property: opacity, transform;
+}
+[data-aos='showText'].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section-title {
+  color: #1c1c1f;
+  font-family: 'RoadRadio', sans-serif;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+.logo img {
+  width: 190px;
+}
+
+[data-btn] {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background: linear-gradient(90deg, #972528 0%, #b91d21 100%);
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 100px;
+  position: relative;
+  padding: 18px 60px 19px 60px;
+  cursor: pointer;
+}
+[data-btn]::after {
+  content: '';
+  width: 13px;
+  height: 13px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='13' height='13' viewBox='0 0 13 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_27_127)'%3e%3cpath d='M0.781312 5.58751C0.834494 5.57888 0.888325 5.5749 0.942198 5.5756H10.1134L9.91346 5.48258C9.71798 5.39005 9.54014 5.26415 9.38792 5.11052L6.81608 2.53868C6.47736 2.21534 6.42045 1.69518 6.68121 1.30624C6.9847 0.891772 7.5667 0.801781 7.9812 1.10527C8.01469 1.1298 8.0465 1.15654 8.07642 1.18532L12.7271 5.83604C13.0906 6.19908 13.0909 6.78801 12.7279 7.15146L12.7271 7.15219L8.07642 11.8029C7.71268 12.1656 7.12375 12.1648 6.761 11.8011C6.73245 11.7724 6.7058 11.742 6.68121 11.7099C6.42045 11.3209 6.47736 10.8008 6.81608 10.4775L9.38327 7.90095C9.51974 7.76434 9.67664 7.6498 9.84835 7.56145L10.1274 7.43588H0.993384C0.518227 7.45353 0.101348 7.12161 0.0120831 6.65456C-0.0701475 6.14749 0.274239 5.66977 0.781312 5.58751Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_27_127'%3e%3crect width='13' height='13' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+}
+[data-btn]:hover,
+[data-btn]:focus-visible {
+  background: linear-gradient(90deg, #b91d21 0%, #d73b3f 100%);
+}
+.helpText {
+  color: #1c1c1f;
+  font-weight: 500;
+}
+nav {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 10px;
+  justify-content: center;
+}
+nav a {
+  background: #972528;
+  color: #fff;
+  border-radius: 7px;
+  padding: 10px 15px;
+  white-space: nowrap;
+}
+nav a:hover,
+nav a:focus-visible {
+  background-color: #b91d21;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 17px;
+  }
+}
+@media (max-width: 576px) {
+  body {
+    font-size: 16px;
+  }
+  section {
+    margin-bottom: 80px;
+  }
+  section:last-child {
+    margin-bottom: 40px;
+  }
+  .section-title {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  [data-btn] {
+    font-size: 17px;
+  }
+}
+@media (max-width: 425px) {
+  body {
+    font-size: 15px;
+  }
+  [data-btn] {
+    font-size: 16px;
+  }
+  [data-btn]::after {
+    width: 11px;
+    height: 11px;
+  }
+}
+@media (max-width: 375px) {
+  body {
+    font-size: 14px;
+  }
+  [data-btn] {
+    width: 100%;
+    font-size: 15px;
+    padding: 15px 20px 16px 20px;
+  }
+  [data-btn]::after {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Шапка ↓↓↓ */
+header {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 20px;
+  overflow: hidden;
+}
+header .body {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-gap: 20px;
+  align-content: center;
+  align-items: center;
+  padding: 23px 0;
+  border-bottom: 1px solid #f0eeed;
+}
+header .body .phone {
+  color: #1c1c1f;
+  font-weight: 600;
+  padding-left: 30px;
+  position: relative;
+  white-space: nowrap;
+}
+header .body .phone::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_27_163)'%3e%3ccircle cx='10' cy='10' r='10' fill='%2345AF43'/%3e%3cpath d='M15.614 12.64C15.5812 12.614 13.2 10.8976 12.5464 11.0208C12.2344 11.076 12.056 11.2888 11.698 11.7148C11.6404 11.7836 11.502 11.9484 11.3944 12.0656C11.1682 11.9918 10.9475 11.902 10.734 11.7968C9.63221 11.2604 8.742 10.3702 8.2056 9.2684C8.10035 9.05497 8.01052 8.83427 7.9368 8.608C8.0544 8.5 8.2192 8.3616 8.2896 8.3024C8.7136 7.9464 8.9268 7.768 8.982 7.4552C9.0952 6.8072 7.38 4.4096 7.362 4.388C7.28418 4.27683 7.18262 4.18435 7.06467 4.11724C6.94672 4.05014 6.81533 4.01009 6.68 4C5.9848 4 4 6.5748 4 7.0084C4 7.0336 4.0364 9.5952 7.1952 12.8084C10.4052 15.9636 12.9664 16 12.9916 16C13.4256 16 16 14.0152 16 13.32C15.99 13.1851 15.9502 13.0542 15.8835 12.9366C15.8167 12.819 15.7247 12.7177 15.614 12.64Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_27_163'%3e%3crect width='20' height='20' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: background-image 0.2s ease;
+}
+header .body .phone:hover,
+header .body .phone:focus-visible {
+  color: #b91d21;
+}
+header .body .phone:hover::after,
+header .body .phone:focus-visible::after {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_27_163)'%3e%3ccircle cx='10' cy='10' r='10' fill='%23b91d21'/%3e%3cpath d='M15.614 12.64C15.5812 12.614 13.2 10.8976 12.5464 11.0208C12.2344 11.076 12.056 11.2888 11.698 11.7148C11.6404 11.7836 11.502 11.9484 11.3944 12.0656C11.1682 11.9918 10.9475 11.902 10.734 11.7968C9.63221 11.2604 8.742 10.3702 8.2056 9.2684C8.10035 9.05497 8.01052 8.83427 7.9368 8.608C8.0544 8.5 8.2192 8.3616 8.2896 8.3024C8.7136 7.9464 8.9268 7.768 8.982 7.4552C9.0952 6.8072 7.38 4.4096 7.362 4.388C7.28418 4.27683 7.18262 4.18435 7.06467 4.11724C6.94672 4.05014 6.81533 4.01009 6.68 4C5.9848 4 4 6.5748 4 7.0084C4 7.0336 4.0364 9.5952 7.1952 12.8084C10.4052 15.9636 12.9664 16 12.9916 16C13.4256 16 16 14.0152 16 13.32C15.99 13.1851 15.9502 13.0542 15.8835 12.9366C15.8167 12.819 15.7247 12.7177 15.614 12.64Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_27_163'%3e%3crect width='20' height='20' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+}
+.headerMobile {
+  display: none;
+}
+@media (max-width: 1180px) {
+  header {
+    display: none;
+  }
+  .headerMobile {
+    width: 100%;
+    display: grid;
+    align-items: start;
+    align-content: start;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+  }
+  .headerMobile.open {
+    height: 100%;
+  }
+  .headerMobile .blackout {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(73, 73, 78, 0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+  .headerMobile.open .blackout {
+    display: block;
+  }
+  .headerMobile.anim .blackout {
+    user-select: auto;
+    pointer-events: all;
+  }
+  .headerMobile .cap {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #f0eeed;
+    padding: 20px 0;
+    position: relative;
+    z-index: 2;
+  }
+  .headerMobile .cap .body {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: 16px;
+    align-items: center;
+  }
+  .headerMobile .cap .body .logo img {
+    max-width: 140px;
+    width: 100%;
+  }
+  .headerMobile .cap .body .phone {
+    color: #1c1c1f;
+    font-weight: 600;
+    padding-left: 30px;
+    position: relative;
+    white-space: nowrap;
+    justify-self: end;
+  }
+  .headerMobile .cap .body .phone::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_27_163)'%3e%3ccircle cx='10' cy='10' r='10' fill='%2345AF43'/%3e%3cpath d='M15.614 12.64C15.5812 12.614 13.2 10.8976 12.5464 11.0208C12.2344 11.076 12.056 11.2888 11.698 11.7148C11.6404 11.7836 11.502 11.9484 11.3944 12.0656C11.1682 11.9918 10.9475 11.902 10.734 11.7968C9.63221 11.2604 8.742 10.3702 8.2056 9.2684C8.10035 9.05497 8.01052 8.83427 7.9368 8.608C8.0544 8.5 8.2192 8.3616 8.2896 8.3024C8.7136 7.9464 8.9268 7.768 8.982 7.4552C9.0952 6.8072 7.38 4.4096 7.362 4.388C7.28418 4.27683 7.18262 4.18435 7.06467 4.11724C6.94672 4.05014 6.81533 4.01009 6.68 4C5.9848 4 4 6.5748 4 7.0084C4 7.0336 4.0364 9.5952 7.1952 12.8084C10.4052 15.9636 12.9664 16 12.9916 16C13.4256 16 16 14.0152 16 13.32C15.99 13.1851 15.9502 13.0542 15.8835 12.9366C15.8167 12.819 15.7247 12.7177 15.614 12.64Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_27_163'%3e%3crect width='20' height='20' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: background-image 0.2s ease;
+  }
+  .headerMobile .cap .body .phone:hover,
+  .headerMobile .cap .body .phone:focus-visible {
+    color: #b91d21;
+  }
+  .headerMobile .cap .body .phone:hover::after,
+  .headerMobile .cap .body .phone:focus-visible::after {
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_27_163)'%3e%3ccircle cx='10' cy='10' r='10' fill='%23b91d21'/%3e%3cpath d='M15.614 12.64C15.5812 12.614 13.2 10.8976 12.5464 11.0208C12.2344 11.076 12.056 11.2888 11.698 11.7148C11.6404 11.7836 11.502 11.9484 11.3944 12.0656C11.1682 11.9918 10.9475 11.902 10.734 11.7968C9.63221 11.2604 8.742 10.3702 8.2056 9.2684C8.10035 9.05497 8.01052 8.83427 7.9368 8.608C8.0544 8.5 8.2192 8.3616 8.2896 8.3024C8.7136 7.9464 8.9268 7.768 8.982 7.4552C9.0952 6.8072 7.38 4.4096 7.362 4.388C7.28418 4.27683 7.18262 4.18435 7.06467 4.11724C6.94672 4.05014 6.81533 4.01009 6.68 4C5.9848 4 4 6.5748 4 7.0084C4 7.0336 4.0364 9.5952 7.1952 12.8084C10.4052 15.9636 12.9664 16 12.9916 16C13.4256 16 16 14.0152 16 13.32C15.99 13.1851 15.9502 13.0542 15.8835 12.9366C15.8167 12.819 15.7247 12.7177 15.614 12.64Z' fill='white'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_27_163'%3e%3crect width='20' height='20' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  }
+
+  .burger {
+    width: 30px;
+    height: 20px;
+    background-color: transparent;
+    position: relative;
+  }
+  .burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    border-radius: 10px;
+    background-color: #972528;
+    position: absolute;
+    right: 0;
+    transition: top 0.3s ease, transform 0.3s ease, width 0.3s ease;
+  }
+  .burger span:nth-child(1) {
+    top: 0;
+  }
+  .burger span:nth-child(2) {
+    width: 70%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .burger span:nth-child(3) {
+    top: 100%;
+    transform: translateY(-50%);
+  }
+  .burger.anim span:nth-child(1) {
+    transform: scale(0);
+  }
+  .burger.anim span:nth-child(2) {
+    width: 100%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .burger.anim span:nth-child(3) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .headerMobile .menu {
+    height: 100%;
+    overflow: auto;
+    display: none;
+    user-select: none;
+    pointer-events: none;
+    opacity: 0.4;
+    transform: translate(0px, -120%);
+    padding-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .headerMobile.open .menu {
+    display: block;
+  }
+  .headerMobile.anim .menu {
+    user-select: auto;
+    pointer-events: all;
+  }
+  .headerMobile .menu .body {
+    max-width: 425px;
+    display: grid;
+    grid-gap: 10px;
+    background-color: #fff;
+    border-radius: 0px 0px 15px 15px;
+    padding: 30px;
+    margin-left: auto;
+  }
+  .headerMobile .menu .body a {
+    background-color: #972528;
+    color: #fff;
+    border-radius: 7px;
+    padding: 8px 10px 9px 10px;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
+  .headerMobile .cap .body .logo img {
+    max-width: 110px;
+  }
+  .headerMobile .cap .body .phone {
+    font-size: 13px;
+    padding-left: 15px;
+  }
+  .headerMobile .cap .body .phone::after {
+    width: 10px;
+    height: 10px;
+  }
+}
+/* Шапка ↑↑↑ */
+
+/* Основа ↓↓↓ */
+main {
+  padding-top: 240px;
+}
+@media (max-width: 1280px) {
+  main {
+    padding-top: 200px;
+  }
+}
+@media (max-width: 1180px) {
+  main {
+    padding-top: 150px;
+  }
+}
+@media (max-width: 576px) {
+  main {
+    padding-top: 112px;
+  }
+}
+/* Основа ↑↑↑ */
+
+/* Подвал ↓↓↓ */
+footer .body {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #f0eeed;
+  padding: 25px 0 30px 0;
+}
+@media (max-width: 1000px) {
+  footer .body {
+    grid-auto-flow: row;
+    justify-content: unset;
+    grid-gap: 30px;
+  }
+  footer .body nav {
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(auto-fill, minmax(135px, 1fr));
+    grid-gap: 10px 20px;
+  }
+}
+@media (max-width: 576px) {
+  footer .body .logo img {
+    max-width: 160px;
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  footer .body .logo img {
+    max-width: 130px;
+    width: 100%;
+  }
+  footer .body nav {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+}
+/* Подвал ↑↑↑ */
+
+/*
+p[align] {свойства}  применить ко всем тегам p, у которых есть атрибут align 
+
+p[align="center"] {свойства}  где значение атрибута align равно center 
+
+p[align^="center"] {свойства}  где значение атрибута align начинается на center 
+
+p[align*="center"] {свойства}  где значение атрибута align содержит center 
+
+p[class~="site"] {свойства}  где site может находиться среди других слов, отделенных пробелами (<p class="support site magazine"></p>) 
+
+p[class|="site"] {свойства}  где значение атрибута class состоит только из слова site или начинается им, после чего ставится дефис и пишется остальная часть значения (<p class="site-On"></p> или <p class="site-off"></p>) 
+
+p[class$="site"] {свойства}  где значение атрибута align заканчивается на site 
+*/ ;

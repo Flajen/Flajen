@@ -27,13 +27,11 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
   font-feature-settings: 'pnum' on, 'lnum' on;
 }
 *,
 *::after,
 *::before {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -60,19 +58,13 @@ input {
 a,
 button,
 input {
-  -webkit-transition: color 0.2s ease, border 0.2s ease, background 0.2s ease;
-  -o-transition: color 0.2s ease, border 0.2s ease, background 0.2s ease;
   transition: color 0.2s ease, border 0.2s ease, background 0.2s ease;
 }
 img {
   display: block;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
   object-fit: cover;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
@@ -93,8 +85,6 @@ li {
 
 [data-aos='aniOpacity'] {
   opacity: 0;
-  -webkit-transition-property: opacity;
-  -o-transition-property: opacity;
   transition-property: opacity;
 }
 [data-aos='aniOpacity'].aos-animate {
@@ -102,19 +92,11 @@ li {
 }
 [data-aos='showText'] {
   opacity: 0;
-  -webkit-transform: translateY(-40px);
-  -ms-transform: translateY(-40px);
   transform: translateY(-40px);
-  -webkit-transition-property: opacity, -webkit-transform;
-  transition-property: opacity, -webkit-transform;
-  -o-transition-property: opacity, transform;
   transition-property: opacity, transform;
-  transition-property: opacity, transform, -webkit-transform;
 }
 [data-aos='showText'].aos-animate {
   opacity: 1;
-  -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
   transform: translateY(0);
 }
 
@@ -130,26 +112,12 @@ li {
 }
 
 [data-btn] {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   grid-gap: 10px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
-  -ms-flex-line-pack: center;
   align-content: center;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#972528),
-    to(#b91d21)
-  );
-  background: -o-linear-gradient(left, #972528 0%, #b91d21 100%);
   background: linear-gradient(90deg, #972528 0%, #b91d21 100%);
   color: #fff;
   font-size: 18px;
@@ -170,14 +138,6 @@ li {
 }
 [data-btn]:hover,
 [data-btn]:focus-visible {
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(#b91d21),
-    to(#d73b3f)
-  );
-  background: -o-linear-gradient(left, #b91d21 0%, #d73b3f 100%);
   background: linear-gradient(90deg, #b91d21 0%, #d73b3f 100%);
 }
 .helpText {
@@ -185,12 +145,9 @@ li {
   font-weight: 500;
 }
 nav {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   grid-gap: 10px;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 nav a {
@@ -264,15 +221,10 @@ header {
   overflow: hidden;
 }
 header .body {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 20px 1fr 20px auto;
   grid-template-columns: auto 1fr auto;
   grid-gap: 20px;
-  -ms-flex-line-pack: center;
   align-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 23px 0;
   border-bottom: 1px solid #f0eeed;
@@ -295,11 +247,7 @@ header .body .phone::after {
   position: absolute;
   left: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  -webkit-transition: background-image 0.2s ease;
-  -o-transition: background-image 0.2s ease;
   transition: background-image 0.2s ease;
 }
 header .body .phone:hover,
@@ -319,12 +267,8 @@ header .body .phone:focus-visible::after {
   }
   .headerMobile {
     width: 100%;
-    display: -ms-grid;
     display: grid;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
     align-items: start;
-    -ms-flex-line-pack: start;
     align-content: start;
     position: fixed;
     left: 0;
@@ -343,9 +287,6 @@ header .body .phone:focus-visible::after {
     left: 0;
     top: 0;
     z-index: 0;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     pointer-events: none;
     opacity: 0;
@@ -354,9 +295,6 @@ header .body .phone:focus-visible::after {
     display: block;
   }
   .headerMobile.anim .blackout {
-    -webkit-user-select: auto;
-    -moz-user-select: auto;
-    -ms-user-select: auto;
     user-select: auto;
     pointer-events: all;
   }
@@ -369,13 +307,9 @@ header .body .phone:focus-visible::after {
     z-index: 2;
   }
   .headerMobile .cap .body {
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: auto 16px 1fr 16px auto;
     grid-template-columns: auto 1fr auto;
     grid-gap: 16px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
   }
   .headerMobile .cap .body .logo img {
@@ -388,7 +322,6 @@ header .body .phone:focus-visible::after {
     padding-left: 30px;
     position: relative;
     white-space: nowrap;
-    -ms-grid-column-align: end;
     justify-self: end;
   }
   .headerMobile .cap .body .phone::after {
@@ -402,11 +335,7 @@ header .body .phone:focus-visible::after {
     position: absolute;
     left: 0;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    -webkit-transition: background-image 0.2s ease;
-    -o-transition: background-image 0.2s ease;
     transition: background-image 0.2s ease;
   }
   .headerMobile .cap .body .phone:hover,
@@ -432,13 +361,7 @@ header .body .phone:focus-visible::after {
     background-color: #972528;
     position: absolute;
     right: 0;
-    -webkit-transition: top 0.3s ease, width 0.3s ease,
-      -webkit-transform 0.3s ease;
-    transition: top 0.3s ease, width 0.3s ease, -webkit-transform 0.3s ease;
-    -o-transition: top 0.3s ease, transform 0.3s ease, width 0.3s ease;
     transition: top 0.3s ease, transform 0.3s ease, width 0.3s ease;
-    transition: top 0.3s ease, transform 0.3s ease, width 0.3s ease,
-      -webkit-transform 0.3s ease;
   }
   .burger span:nth-child(1) {
     top: 0;
@@ -446,31 +369,21 @@ header .body .phone:focus-visible::after {
   .burger span:nth-child(2) {
     width: 70%;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   .burger span:nth-child(3) {
     top: 100%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
     transform: translateY(-50%);
   }
   .burger.anim span:nth-child(1) {
-    -webkit-transform: scale(0);
-    -ms-transform: scale(0);
     transform: scale(0);
   }
   .burger.anim span:nth-child(2) {
     width: 100%;
-    -webkit-transform: translateY(-50%) rotate(-45deg);
-    -ms-transform: translateY(-50%) rotate(-45deg);
     transform: translateY(-50%) rotate(-45deg);
   }
   .burger.anim span:nth-child(3) {
     top: 50%;
-    -webkit-transform: translateY(-50%) rotate(45deg);
-    -ms-transform: translateY(-50%) rotate(45deg);
     transform: translateY(-50%) rotate(45deg);
   }
 
@@ -478,14 +391,9 @@ header .body .phone:focus-visible::after {
     height: 100%;
     overflow: auto;
     display: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     pointer-events: none;
     opacity: 0.4;
-    -webkit-transform: translate(0px, -120%);
-    -ms-transform: translate(0px, -120%);
     transform: translate(0px, -120%);
     padding-bottom: 20px;
     position: relative;
@@ -495,15 +403,11 @@ header .body .phone:focus-visible::after {
     display: block;
   }
   .headerMobile.anim .menu {
-    -webkit-user-select: auto;
-    -moz-user-select: auto;
-    -ms-user-select: auto;
     user-select: auto;
     pointer-events: all;
   }
   .headerMobile .menu .body {
     max-width: 425px;
-    display: -ms-grid;
     display: grid;
     grid-gap: 10px;
     background-color: #fff;
@@ -557,14 +461,9 @@ main {
 
 /* Подвал ↓↓↓ */
 footer .body {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   border-top: 1px solid #f0eeed;
   padding: 25px 0 30px 0;
@@ -572,8 +471,6 @@ footer .body {
 @media (max-width: 1000px) {
   footer .body {
     grid-auto-flow: row;
-    -webkit-box-pack: unset;
-    -ms-flex-pack: unset;
     justify-content: unset;
     grid-gap: 30px;
   }

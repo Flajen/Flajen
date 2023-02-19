@@ -31,8 +31,6 @@
   position: absolute;
   left: 475px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 @media (max-width: 1000px) {
@@ -54,8 +52,6 @@
     position: relative;
     left: auto;
     top: auto;
-    -webkit-transform: translate(0);
-    -ms-transform: translate(0);
     transform: translate(0);
   }
 }
@@ -84,13 +80,9 @@
 
 /* О нас ↓↓↓ */
 .about .body {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 540px 90px 505px;
   grid-template-columns: 540px 505px;
   grid-gap: 90px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .about .body .imgs {
@@ -117,7 +109,6 @@
   margin-bottom: 20px;
 }
 .about .body .text {
-  display: -ms-grid;
   display: grid;
   grid-gap: 10px;
   margin-bottom: 15px;
@@ -136,13 +127,10 @@
   position: absolute;
   left: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 @media (max-width: 1180px) {
   .about .body {
-    -ms-grid-columns: 540px 70px 1fr;
     grid-template-columns: 540px 1fr;
     grid-gap: 70px;
   }
@@ -150,14 +138,10 @@
 @media (max-width: 1000px) {
   .about .body {
     grid-gap: 40px;
-    -ms-grid-columns: minmax(0, 540px);
     grid-template-columns: minmax(0, 540px);
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .about .body .info {
-    -ms-grid-row: 1;
     grid-row-start: 1;
   }
 }
@@ -182,14 +166,11 @@
 
 /* Сотрудничество ↓↓↓ */
 .cooperation .body {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
 }
 .cooperation .body .cards {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -197,10 +178,7 @@
   grid-gap: 20px;
 }
 .cooperation .body .cards .card {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   background: #f9f7f6;
   border-radius: 20px;
@@ -221,13 +199,8 @@
   top: 7px;
 }
 .cooperation .body .block {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   position: relative;
   padding: 20px;
@@ -255,10 +228,7 @@
 }
 @media (max-width: 1000px) {
   .cooperation .body {
-    -ms-grid-columns: minmax(0, 610px);
     grid-template-columns: minmax(0, 610px);
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .cooperation .body .cards {
@@ -294,13 +264,9 @@
 
 /* Аренда ↓↓↓ */
 .rent .body {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 540px 90px 505px;
   grid-template-columns: 540px 505px;
   grid-gap: 90px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .rent .body .imgs {
@@ -327,7 +293,6 @@
   margin-bottom: 20px;
 }
 .rent .body .text {
-  display: -ms-grid;
   display: grid;
   grid-gap: 10px;
   margin-bottom: 15px;
@@ -346,13 +311,10 @@
   position: absolute;
   left: 0;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 @media (max-width: 1180px) {
   .rent .body {
-    -ms-grid-columns: 540px 70px 1fr;
     grid-template-columns: 540px 1fr;
     grid-gap: 70px;
   }
@@ -360,14 +322,10 @@
 @media (max-width: 1000px) {
   .rent .body {
     grid-gap: 40px;
-    -ms-grid-columns: minmax(0, 540px);
     grid-template-columns: minmax(0, 540px);
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
   }
   .rent .body .info {
-    -ms-grid-row: 1;
     grid-row-start: 1;
   }
   .rent .body .imgs {
@@ -445,22 +403,15 @@
 
 /* Партнеры ↓↓↓ */
 .partners .cards {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: dense;
   grid-template-columns: repeat(auto-fill, minmax(165px, 1fr));
   grid-gap: 20px;
 }
 .partners .cards .card {
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
-  -o-transition: transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .partners .cards .card:hover {
-  -webkit-transform: scale(1.105);
-  -ms-transform: scale(1.105);
   transform: scale(1.105);
 }
 .partners .cards .card img {
@@ -475,13 +426,9 @@
 
 /* Контакты ↓↓↓ */
 .contacts .body {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 715px;
   grid-template-columns: 1fr 715px;
   grid-gap: 20px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .contacts .map {
@@ -491,21 +438,15 @@
   overflow: hidden;
 }
 .contacts .body .list {
-  display: -ms-grid;
   display: grid;
   grid-gap: 25px;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: start;
   justify-items: start;
 }
 .contacts .body .list li {
-  display: -ms-grid;
   display: grid;
   grid-gap: 10px;
   padding-left: 30px;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
   justify-content: start;
   justify-items: start;
 }
@@ -524,8 +465,6 @@
   position: absolute;
   left: -30px;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 .contacts .body .list .address h3::after {
@@ -547,12 +486,9 @@
   color: #b91d21;
 }
 .contacts .body .list li .phones {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
   grid-gap: 10px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
 }
 .contacts .body .list li .phones span {
@@ -563,7 +499,6 @@
 }
 @media (max-width: 1180px) {
   .contacts .body {
-    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     grid-gap: 25px;
   }

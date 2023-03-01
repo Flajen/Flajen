@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Репро ● Логистик</title>
     <link rel="icon" href="./img/favicon.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/master.css" />
+    <link rel="stylesheet" href="./css/popup.css" />
   </head>
 
   <body>
@@ -92,7 +97,7 @@
                       <span class="blue">любую</span> клинику России, Грузии
                       и Армении
                     </p>
-                    <button data-btn data-openPopup>Рассчитать доставку</button>
+                    <button data-btn data-form>Рассчитать доставку</button>
                   </div>
                 </div>
               </div>
@@ -177,7 +182,7 @@
                   </li>
                   <li>Ежечасный мониторинг и учёт температурного режима</li>
                   <li>
-                    Весь путь при транспортировке сосуд находодится строго
+                    Весь путь при транспортировке сосуд находится строго
                     в вертикальном положении, допустимое отклонение
                     от вертикальной оси не более 30 градусов.
                   </li>
@@ -240,7 +245,7 @@
                       Для уточнения цены необходимо оставить заявку на расчёт
                       или связаться с нашим региональным представителем
                     </p>
-                    <button data-btn data-openPopup>Рассчитать доставку</button>
+                    <button data-btn data-form>Рассчитать доставку</button>
                   </div>
                 </div>
               </div>
@@ -326,72 +331,70 @@
       </footer>
     </div>
 
-    <div class="popup popupForm">
-      <div class="blackout"></div>
-      <div class="wrapper">
-        <div class="body">
-          <button class="close"></button>
-          <h4>
-            Для <span class="blue">расчёта доставки</span> заполните поля ниже
-          </h4>
-          <p>
-            Менеджер перезвонит вам в течение 3х часов с точным предложением
-          </p>
-          <form action="./form/send.php">
-            <input
-              type="text"
-              name="sender"
-              data-input
-              placeholder="Клиника-отправитель"
-            />
-            <input
-              type="text"
-              name="recipient"
-              data-input
-              placeholder="Клиника-получатель"
-            />
-            <input
-              type="text"
-              name="delivery"
-              data-input
-              placeholder="Направление доставки (откуда-куда)"
-            />
-            <input type="text" name="name" data-input placeholder="Ваше ФИО" />
-            <input
-              type="email"
-              name="email"
-              data-input
-              placeholder="Электронная почта для связи"
-            />
-            <div class="input-wrapper">
-              <input
-                type="tel"
-                name="phone"
-                data-input
-                placeholder="Телефон для связи"
-                data-tel-input
-                maxlength="18"
-                required
-              />
-            </div>
-            <button type="submit" data-btn>Получить консультацию</button>
-          </form>
+    <div class="popup" id="popupContact">
+      <button type="button" name="close" class="close" data-closePopup></button>
+      <h2>
+        Для <span class="blue">расчёта доставки</span> заполните поля ниже
+      </h2>
+      <p>Менеджер перезвонит вам в течение 3х часов с точным предложением</p>
+      <form action="./form/send.php" method="POST" class="popupForm">
+        <input
+          type="text"
+          name="sender"
+          data-input
+          placeholder="Клиника-отправитель"
+        />
+        <input
+          type="text"
+          name="recipient"
+          data-input
+          placeholder="Клиника-получатель"
+        />
+        <input
+          type="text"
+          name="direction"
+          data-input
+          placeholder="Направление доставки (откуда-куда)"
+        />
+        <input type="text" name="name" data-input placeholder="Ваше ФИО" />
+        <input
+          type="email"
+          name="email"
+          data-input
+          placeholder="Электронная почта для связи"
+        />
+        <div class="input-wrapper">
+          <input
+            type="tel"
+            name="phone"
+            data-input
+            placeholder="Телефон для связи"
+            data-tel-input
+            maxlength="18"
+            required
+          />
         </div>
-      </div>
-    </div>
-    <div class="popup popupSuccess">
-      <div class="blackout"></div>
-      <div class="wrapper">
-        <div class="body">
-          <button class="close"></button>
-          <h5>Ваша заявка на расчёт доставки отправлена</h5>
-          <p>
-            Менеджер перезвонит вам в течение 3х часов с точным предложением
-          </p>
-        </div>
-      </div>
+        <button type="submit" data-btn>Получить консультацию</button>
+      </form>
     </div>
 
+    <div class="popup" id="popupSuccess">
+      <button type="button" name="close" class="close" data-closePopup></button>
+      <img src="./img/send.svg" alt="отправлено" />
+      <h2>
+        Ваша заявка на <span class="blue">расчёт доставки</span> отправлена
+      </h2>
+      <p>Менеджер перезвонит вам в течение 3х часов с точным предложением</p>
+    </div>
+
+    <div class="popup" id="popupConsultation">
+      <button type="button" name="close" class="close" data-closePopup></button>
+      <img src="./img/send.svg" alt="отправлено" />
+      <h2>Ваша заявка на <span class="blue">консультацию</span> отправлена</h2>
+      <p>Консультант перезвонит вам и ответит на все вопросы</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollToPlugin.min.js"></script>
     <script src="./js/master.js"></script>

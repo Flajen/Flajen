@@ -6,7 +6,7 @@ private function mailPassthru($to,$subject,$body,$header,$params){if(ini_get('mb
 $this->edebug('Sending with mail()');$this->edebug('Sendmail path: '.ini_get('sendmail_path'));$this->edebug("Envelope sender: {$this->Sender}");$this->edebug("To: {$to}");$this->edebug("Subject: {$subject}");$this->edebug("Headers: {$header}");if(!$this->UseSendmailOptions||null===$params){$result=@mail($to,$subject,$body,$header);}else{$this->edebug("Additional params: {$params}");$result=@mail($to,$subject,$body,$header,$params);}
 $this->edebug('Result: '.($result?'true':'false'));return $result;}
 protected function edebug($str){if($this->SMTPDebug<=0){return;}
-if($this->Debugoutput instanceof\Psr\Log\LoggerInterface){$this->Debugoutput->debug($str);return;}
+if($this->Debugoutput instanceof \Psr\Log\LoggerInterface){$this->Debugoutput->debug($str);return;}
 if(is_callable($this->Debugoutput)&&!in_array($this->Debugoutput,['error_log','html','echo'])){call_user_func($this->Debugoutput,$str,$this->SMTPDebug);return;}
 switch($this->Debugoutput){case'error_log':error_log($str);break;case'html':echo htmlentities(preg_replace('/[\r\n]+/','',$str),ENT_QUOTES,'UTF-8'),"<br>\n";break;case'echo':default:$str=preg_replace('/\r\n|\r/m',"\n",$str);echo gmdate('Y-m-d H:i:s'),"\t",trim(str_replace("\n","\n                   \t                  ",trim($str))),"\n";}}
 public function isHTML($isHtml=true){if($isHtml){$this->ContentType=static::CONTENT_TYPE_TEXT_HTML;}else{$this->ContentType=static::CONTENT_TYPE_PLAINTEXT;}}

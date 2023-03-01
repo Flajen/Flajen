@@ -52,6 +52,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 300);
   }
 
+  var faBox = null;
+  document.querySelectorAll('button[data-form]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      faBox = Fancybox.show(
+        [
+          {
+            src: '#popupContact',
+            type: 'inline',
+          },
+        ],
+        {
+          dragToClose: false,
+          closeButton: false,
+        }
+      );
+    });
+  });
+
   var phoneInputs = document.querySelectorAll('input[data-tel-input]');
   var getInputNumbersValue = function (input) {
     return input.value.replace(/\D/g, '');
@@ -116,55 +134,58 @@ document.addEventListener('DOMContentLoaded', () => {
     phoneInput.addEventListener('paste', onPhonePaste, false);
   }
 
-  const popup = document.querySelectorAll('.popup');
-  const popupForm = document.querySelector('.popupForm');
-  const openPopup = document.querySelectorAll('[data-openPopup]');
-  var check = false;
-  let disableScroll = function () {
-    let pagePosition = window.scrollY;
-    let scroll = window.innerWidth - document.documentElement.clientWidth;
-    document.body.classList.add('disable-scroll');
-    document.body.dataset.position = pagePosition;
-    document.body.style.top = -pagePosition + 'px';
-    document.body.style.paddingRight = scroll + 'px';
-    document.querySelector('header').style.paddingRight = scroll + 'px';
-    check = true;
-  };
-  let enableScroll = function () {
-    if (check) {
-      let pagePosition = parseInt(document.body.dataset.position, 10);
-      document.body.style.top = 'auto';
-      document.body.classList.remove('disable-scroll');
-      window.scroll({ top: pagePosition, left: 0 });
-      document.body.removeAttribute('data-position');
-      document.body.style.paddingRight = 0;
-      document.querySelector('header').style.paddingRight = 0;
-    }
-    check = false;
-  };
+  function send(event, php) {
+    event.preventDefault ? event.preventDefault() : (event.returnValue = false);
+    event.target.querySelector('button[type="submit"]').disabled = true;
+    var req = new XMLHttpRequest();
+    req.open('POST', php, true);
+    req.onload = function () {
+      if (req.status >= 200 && req.status < 400) {
+        json = JSON.parse(this.response);
+        if (json.result == 'success') {
+          event.target.querySelector('button[type="submit"]').disabled = false;
+          event.target.reset();
+          if (faBox) {
+            faBox.close();
+          }
+          faBox = Fancybox.show(
+            [
+              {
+                src: '#popupSuccess',
+                type: 'inline',
+              },
+            ],
+            {
+              dragToClose: false,
+              closeButton: false,
+            }
+          );
+        } else {
+          alert('Ошибка. Сообщение не отправлено');
+          event.target.querySelector('button[type="submit"]').disabled = false;
+        }
+      } else {
+        alert('Ошибка сервера. Номер: ' + req.status);
+        event.target.querySelector('button[type="submit"]').disabled = false;
+      }
+    };
+    req.onerror = function () {
+      alert('Ошибка отправки запроса');
+      event.target.querySelector('button[type="submit"]').disabled = false;
+    };
+    req.send(new FormData(event.target));
+  }
 
-  openPopup.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      disableScroll();
-      popupForm.classList.add('show');
-      setTimeout(() => {
-        popupForm.classList.add('anim');
-      }, 10);
+  document.querySelectorAll('.popupForm').forEach((form) => {
+    console.log(form);
+    form.addEventListener('submit', (e) => {
+      send(e, e.target.action);
     });
   });
 
-  popup.forEach((popup) => {
-    popup.addEventListener('click', (e) => {
-      if (
-        e.target.classList.contains('wrapper') ||
-        e.target.classList.contains('close')
-      ) {
-        enableScroll();
-        popup.classList.remove('anim');
-        setTimeout(() => {
-          popup.classList.remove('show');
-        }, 500);
-      }
+  document.querySelectorAll('button[data-closePopup]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      faBox.close();
     });
   });
 });

@@ -1,0 +1,109 @@
+.fancybox__container {
+  --fancybox-bg: rgba(66, 69, 72, 0.4);
+}
+.fancybox__slide {
+  padding: 20px;
+}
+.fancybox__slide::-webkit-scrollbar {
+  width: 0;
+}
+.popup {
+  max-width: 610px;
+  display: none;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 70px 105px;
+  cursor: auto !important;
+}
+.popup button.close {
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  outline: none;
+  border: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_170_386)'%3e%3cpath d='M11.8323 10.0164L19.62 2.22855C20.1268 1.72197 20.1268 0.902882 19.62 0.396366C19.1134 -0.11021 18.2943 -0.11021 17.7878 0.396366L9.99991 8.18416L2.21229 0.396366C1.70547 -0.11021 0.886691 -0.11021 0.380115 0.396366C-0.126705 0.902943 -0.126705 1.72197 0.380115 2.22855L8.16767 10.0164L0.380175 17.8042C-0.126644 18.3108 -0.126644 19.1299 0.380175 19.6364C0.500338 19.7569 0.643127 19.8525 0.80034 19.9176C0.957552 19.9828 1.12609 20.0162 1.29627 20.016C1.62791 20.016 1.95967 19.8891 2.21236 19.6364L9.99991 11.8486L17.7878 19.6364C17.908 19.7569 18.0508 19.8524 18.208 19.9176C18.3652 19.9827 18.5337 20.0162 18.7039 20.016C19.0356 20.016 19.3673 19.8891 19.62 19.6364C20.1268 19.1298 20.1268 18.3108 19.62 17.8042L11.8323 10.0164Z' fill='%23E5E5E5'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_170_386'%3e%3crect width='20' height='20' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  cursor: pointer;
+  transition: background-image 0.2s ease;
+}
+.popup button.close:focus-visible,
+.popup button.close:hover {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cg clip-path='url(%23clip0_170_101)'%3e%3cpath d='M11.8323 10.0164L19.62 2.22853C20.1268 1.72195 20.1268 0.902867 19.62 0.396351C19.1134 -0.110226 18.2943 -0.110226 17.7878 0.396351L9.99991 8.18415L2.21229 0.396351C1.70547 -0.110226 0.886691 -0.110226 0.380115 0.396351C-0.126705 0.902928 -0.126705 1.72195 0.380115 2.22853L8.16767 10.0164L0.380175 17.8042C-0.126644 18.3108 -0.126644 19.1299 0.380175 19.6364C0.500338 19.7569 0.643127 19.8524 0.80034 19.9176C0.957552 19.9827 1.12609 20.0162 1.29627 20.016C1.62791 20.016 1.95967 19.889 2.21236 19.6364L9.99991 11.8486L17.7878 19.6364C17.908 19.7569 18.0508 19.8524 18.208 19.9176C18.3652 19.9827 18.5337 20.0162 18.7039 20.016C19.0356 20.016 19.3673 19.889 19.62 19.6364C20.1268 19.1298 20.1268 18.3108 19.62 17.8042L11.8323 10.0164Z' fill='%233875EC'/%3e%3c/g%3e%3cdefs%3e%3cclipPath id='clip0_170_101'%3e%3crect width='20' height='20' fill='white'/%3e%3c/clipPath%3e%3c/defs%3e%3c/svg%3e ");
+}
+.popup img {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 15px auto;
+}
+.popup h2 {
+  color: #1d2022;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 135%;
+  margin-bottom: 15px;
+}
+#popupSuccess h2,
+#popupConsultation h2 {
+  text-align: center;
+}
+.popup p {
+  line-height: 135%;
+  margin-bottom: 24px;
+}
+#popupSuccess p,
+#popupConsultation p {
+  text-align: center;
+  margin-bottom: 0;
+}
+.popup form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+.popup button:not(.close) {
+  width: 100%;
+}
+
+@media (max-width: 400px) {
+  .popup {
+    border-radius: 15px;
+    padding: 25px 20px;
+  }
+  .popup button.close {
+    width: 15px;
+    height: 15px;
+    top: 15px;
+    right: 15px;
+  }
+  .popup img {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto 10px auto;
+  }
+  .popup h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  #popupSuccess h2,
+  #popupConsultation h2 {
+    font-size: 15px;
+  }
+  .popup p {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+  #popupSuccess p,
+  #popupConsultation p {
+    margin-bottom: 0;
+  }
+  .popup form {
+    grid-gap: 15px;
+  }
+}

@@ -14,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			gsap.to(window, { duration: 1.2, scrollTo: blockID });
 		});
 	}
-
 	const servicesSwiper = new Swiper(".services-swiper", {
 		slidesPerView: "auto",
 		speed: 800,
@@ -88,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		observeSlideChildren: true,
 		observeParents: true,
 	});
-
 	let checkScroll = false;
 	function disableScroll() {
 		if (!checkScroll) {
@@ -109,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		document.querySelector(".body-wrapper").setAttribute("tabindex", 0);
 		checkScroll = false;
 	}
-
 	const servicesCards = document.querySelectorAll(".services-card");
 	servicesCards.forEach((card) => {
 		card.addEventListener("click", () => {
@@ -118,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			popupSwiper.slideTo(servicesSwiper.clickedIndex, 0);
 		});
 	});
-
 	const popups = document.querySelectorAll(".popup");
 	popups.forEach((popup) => {
 		popup.addEventListener("click", (e) => {
@@ -131,7 +127,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
-
 	if (window.innerWidth < 577) {
 		const servicesBtns = document.querySelector(".services-btns");
 		document.querySelector(".services-swiper").after(servicesBtns);

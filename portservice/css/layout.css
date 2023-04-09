@@ -13,6 +13,21 @@ body {
 	height: 100%;
 	overflow-x: hidden;
 }
+@media (max-width: 992px) {
+	body {
+		font-size: 17px;
+	}
+}
+@media (max-width: 768px) {
+	body {
+		font-size: 15px;
+	}
+}
+@media (max-width: 576px) {
+	body {
+		font-size: 13px;
+	}
+}
 
 body::-webkit-scrollbar {
 	width: 8px;
@@ -33,11 +48,23 @@ body::-webkit-scrollbar {
 	outline: 0;
 }
 
-section {
-	padding: 0 70px;
-}
 section:not(:last-child) {
 	margin-bottom: 200px;
+}
+@media (max-width: 992px) {
+	section:not(:last-child) {
+		margin-bottom: 150px;
+	}
+}
+@media (max-width: 768px) {
+	section:not(:last-child) {
+		margin-bottom: 100px;
+	}
+}
+@media (max-width: 576px) {
+	section:not(:last-child) {
+		margin-bottom: 60px;
+	}
 }
 
 a {

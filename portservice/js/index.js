@@ -34,13 +34,29 @@ document.addEventListener("DOMContentLoaded", () => {
 			enabled: true,
 			onlyInViewport: false,
 		},
+		breakpoints: {
+			1: {
+				spaceBetween: 20,
+			},
+			768: {
+				spaceBetween: 30,
+			},
+			1050: {
+				spaceBetween: 40,
+			},
+		},
+		observer: true,
+		observeSlideChildren: true,
+		observeParents: true,
 	});
 	const popupSwiper = new Swiper(".popup-swiper", {
 		slidesPerView: 1,
 		speed: 800,
 		spaceBetween: 40,
+		allowTouchMove: false,
 		pagination: {
-			el: ".swiper-pagination",
+			el: ".popup-swiper__pagination",
+			clickable: true,
 		},
 		navigation: {
 			nextEl: ".popup-btn__next",
@@ -51,7 +67,26 @@ document.addEventListener("DOMContentLoaded", () => {
 			enabled: true,
 			onlyInViewport: false,
 		},
-		//observe
+		breakpoints: {
+			1: {
+				autoHeight: true,
+				spaceBetween: 20,
+			},
+			768: {
+				autoHeight: true,
+				spaceBetween: 30,
+			},
+			1050: {
+				autoHeight: true,
+				spaceBetween: 40,
+			},
+			1440: {
+				autoHeight: false,
+			},
+		},
+		observer: true,
+		observeSlideChildren: true,
+		observeParents: true,
 	});
 
 	let checkScroll = false;
@@ -96,4 +131,9 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 	});
+
+	if (window.innerWidth < 577) {
+		const servicesBtns = document.querySelector(".services-btns");
+		document.querySelector(".services-swiper").after(servicesBtns);
+	}
 });

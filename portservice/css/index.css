@@ -628,6 +628,8 @@ header {
 	height: 100%;
 	border: 0;
 	outline: 0;
+	border-radius: 20px;
+	overflow: hidden;
 }
 @media (max-width: 1550px) {
 	.contact-map__wrapper {

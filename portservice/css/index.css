@@ -74,8 +74,10 @@ header {
 	-webkit-box-align: end;
 	-ms-flex-align: end;
 	align-items: end;
+	max-width: 1772px;
 	height: 100%;
 	position: relative;
+	margin: 0 auto;
 }
 .home-bg {
 	display: block;

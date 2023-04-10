@@ -77,8 +77,9 @@ header {
 	display: flex;
 	-webkit-box-align: end;
 	-ms-flex-align: end;
-	align-items: end;
-	/*max-width: 1772px;*/
+	align-items: flex-end;
+	-ms-flex-line-pack: end;
+	align-content: flex-end;
 	height: 100%;
 	position: relative;
 	margin: 0 auto;
